@@ -1,0 +1,732 @@
+c:\users\juan\documents\visual studio 2010\Projects\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmVentas.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmParentesco.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProducto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmServicio.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuario.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCompras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoItem.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios2.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmClientePrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonalPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedorPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifuntoPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCliente.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios2.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifunto.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmParentesco.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmServicio.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuario.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios2.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmParentesco.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmServicio.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuario.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Proveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Difunto.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Difunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Proveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoCompras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoCompras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoPlanes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCliente.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Difunto.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoCompras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoPlanes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios2.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Proveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifunto.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmParentesco.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmServicio.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuario.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Difunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoCompras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios2.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Proveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmParentesco.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmServicio.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuario.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListado_Planes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListado_Servicios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListado_Planes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListado_Servicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Difunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoCompras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListado_Planes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListado_Servicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios2.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Proveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmParentesco.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmServicio.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuario.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmCliente.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Difunto.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoCompras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListadoPlanes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPlanesFunerarios2.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Proveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDifunto.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmParentesco.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmPersonal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmProveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmServicio.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmUsuario.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmListado_Ventas.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmVerInformacion.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Difunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Proveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmVerInformacion.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 09-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003i_addMaterial.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003ii_addColor.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación2.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003ii_addColor.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003i_addMaterial.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación2.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojResolveAssemblyReference.cache
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003ii_addColor.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003i_addMaterial.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación2.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.Cache
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\RdlCompile.cache
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\RdlCompile.compiled
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\CRHISTOPHER\Desktop\Funeraria Actualizacion Rep Dom\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojAssemblyReference.cache
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003ii_addColor.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003i_addMaterial.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación2.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.cache
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CopyComplete
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003ii_addColor.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003i_addMaterial.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación2.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.cache
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CopyComplete
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\Administrator\Documents\Visual Studio 2019\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm_menu.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojAssemblyReference.cache
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003ii_addColor.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003i_addMaterial.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación2.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm_menu.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.cache
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CopyComplete
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaPresentacion.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbprojAssemblyReference.cache
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003ii_addColor.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003i_addMaterial.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004ii_ModalPlanes.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm00_Login.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm010_Mensaje.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm005_Cliente.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm006_Difunto.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004i_ListadoItem.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm001_MenuPrincipal.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm002_PersonalPrincipal.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008ii_ListadoProductos.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009i_Listado_Planes.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009ii_Listado_Servicios.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm007_Proveedor.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009_Ventas.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm003_ProductosyServicios.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm008_Compras.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.ListadoProveedor.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm009iii_VerInformacion.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm011_MensajedeConfirmación2.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm_menu.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Resources.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm004_PlanesFunerarios.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.FrmDocumento.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.GenerateResource.cache
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.vbproj.CopyComplete
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\MySql.Data.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Google.Protobuf.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Zstandard.Net.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Renci.SshNet.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Buffers.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\netstandard.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Memory.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\CapaLogicaNegocio.dll.config
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\MySql.Data.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Google.Protobuf.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\Renci.SshNet.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Buffers.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Memory.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Numerics.Vectors.xml

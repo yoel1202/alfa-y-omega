@@ -1,0 +1,191 @@
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 28-08-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 05-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 07-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 08-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\Juan\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\EXPERT\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\CRHISTOPHER\Desktop\Sistema - Funeraria 10-09-15\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojResolveAssemblyReference.cache
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.Cache
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\CRHISTOPHER\Desktop\Proyecto Funeraria\Sistema - Funeraria Corregido 03-02\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojAssemblyReference.cache
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.cache
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.CopyComplete
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\Administrator\Documents\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojAssemblyReference.cache
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.cache
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.CopyComplete
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\hp\Documents\Visual Studio 2019\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbprojAssemblyReference.cache
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.Resources.resources
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.GenerateResource.cache
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.vbproj.CopyComplete
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll.config
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\MySql.Data.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Google.Protobuf.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Zstandard.Net.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Renci.SshNet.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\System.Buffers.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\netstandard.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\System.Memory.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\MySql.Data.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Google.Protobuf.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Renci.SshNet.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\System.Buffers.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\System.Memory.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\System.Numerics.Vectors.xml
