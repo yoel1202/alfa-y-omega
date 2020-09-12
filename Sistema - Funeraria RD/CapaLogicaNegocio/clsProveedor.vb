@@ -1,4 +1,5 @@
 ﻿Imports CapaAccesoDatos 'Importamos la Capa Acceso a Datos
+Imports MySql.Data.MySqlClient
 
 Public Class clsProveedor
 
@@ -40,14 +41,14 @@ Public Class clsProveedor
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@RUC", Ruc))
-            lst.Add(New clsParametro("@Razon_Social", RazinSocial))
-            lst.Add(New clsParametro("@Representante", Representante))
-            lst.Add(New clsParametro("@Celular_Representante", Celular))
-            lst.Add(New clsParametro("@Telefono_Empresa", Telefono))
-            lst.Add(New clsParametro("@Direccion", Direccion))
-            lst.Add(New clsParametro("@Email", Email))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@RUCs", Ruc))
+            lst.Add(New clsParametro("@Razon_Socials", RazinSocial))
+            lst.Add(New clsParametro("@Representantes", Representante))
+            lst.Add(New clsParametro("@Celular_Representantes", Celular))
+            lst.Add(New clsParametro("@Telefono_Empresas", Telefono))
+            lst.Add(New clsParametro("@Direccions", Direccion))
+            lst.Add(New clsParametro("@Emails", Email))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Proveedor", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(7).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -64,15 +65,15 @@ Public Class clsProveedor
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Proveedor", CodigoProveedor))
-            lst.Add(New clsParametro("@RUC", Ruc))
-            lst.Add(New clsParametro("@Razon_Social", RazinSocial))
-            lst.Add(New clsParametro("@Representante", Representante))
-            lst.Add(New clsParametro("@Celular_Representante", Celular))
-            lst.Add(New clsParametro("@Telefono_Empresa", Telefono))
-            lst.Add(New clsParametro("@Direccion", Direccion))
-            lst.Add(New clsParametro("@Email", Email))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Proveedors", CodigoProveedor))
+            lst.Add(New clsParametro("@RUCs", Ruc))
+            lst.Add(New clsParametro("@Razon_Socials", RazinSocial))
+            lst.Add(New clsParametro("@Representantes", Representante))
+            lst.Add(New clsParametro("@Celular_Representantes", Celular))
+            lst.Add(New clsParametro("@Telefono_Empresas", Telefono))
+            lst.Add(New clsParametro("@Direccions", Direccion))
+            lst.Add(New clsParametro("@Emails", Email))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Actualizar_Proveedor", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(8).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
