@@ -1,4 +1,5 @@
 ﻿Imports CapaAccesoDatos 'Importamos la Capa Acceso a Datos
+Imports MySql.Data.MySqlClient
 
 Public Class clsCliente
     Dim M As New clsManejador 'Instanciamos la clase clsManejador
@@ -39,14 +40,14 @@ Public Class clsCliente
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Tipo_Persona", TipoPersona))
-            lst.Add(New clsParametro("@Tipo_Documento", TipoDoc))
-            lst.Add(New clsParametro("@Documento", Documento))
-            lst.Add(New clsParametro("@Nombres", Nombres))
-            lst.Add(New clsParametro("@Direccion", Direccion))
-            lst.Add(New clsParametro("@Telefono", Telefono))
-            lst.Add(New clsParametro("@Email", Email))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Tipo_Personas", TipoPersona))
+            lst.Add(New clsParametro("@Tipo_Documentos", TipoDoc))
+            lst.Add(New clsParametro("@Documentos", Documento))
+            lst.Add(New clsParametro("@Nombress", Nombres))
+            lst.Add(New clsParametro("@Direccions", Direccion))
+            lst.Add(New clsParametro("@Telefonos", Telefono))
+            lst.Add(New clsParametro("@Emails", Email))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Cliente", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(7).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -63,15 +64,15 @@ Public Class clsCliente
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Cliente", Codigo_Cliente))
-            lst.Add(New clsParametro("@Tipo_Persona", TipoPersona))
-            lst.Add(New clsParametro("@Tipo_Documento", TipoDoc))
-            lst.Add(New clsParametro("@Documento", Documento))
-            lst.Add(New clsParametro("@Nombres", Nombres))
-            lst.Add(New clsParametro("@Direccion", Direccion))
-            lst.Add(New clsParametro("@Telefono", Telefono))
-            lst.Add(New clsParametro("@Email", Email))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Clientes", Codigo_Cliente))
+            lst.Add(New clsParametro("@Tipo_Personas", TipoPersona))
+            lst.Add(New clsParametro("@Tipo_Documentos", TipoDoc))
+            lst.Add(New clsParametro("@Documentos", Documento))
+            lst.Add(New clsParametro("@Nombress", Nombres))
+            lst.Add(New clsParametro("@Direccions", Direccion))
+            lst.Add(New clsParametro("@Telefonos", Telefono))
+            lst.Add(New clsParametro("@Emails", Email))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Actualizar_Cliente", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(8).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception

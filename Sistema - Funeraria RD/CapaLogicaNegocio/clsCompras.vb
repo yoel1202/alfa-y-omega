@@ -31,12 +31,12 @@ Public Class clsCompras
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Proveedor", CodigoProveedor))
-            lst.Add(New clsParametro("@Fecha_Compra", FechaCompra))
-            lst.Add(New clsParametro("@Tipo_Documento", TipoDocumento))
-            lst.Add(New clsParametro("@Serie", Serie))
-            lst.Add(New clsParametro("@Nro_Documento", NroDocumento))
-            lst.Add(New clsParametro("@Total", Total))
+            lst.Add(New clsParametro("@Codigo_Proveedors", CodigoProveedor))
+            lst.Add(New clsParametro("@Fecha_Compras", FechaCompra))
+            lst.Add(New clsParametro("@Tipo_Documentos", TipoDocumento))
+            lst.Add(New clsParametro("@Series", Serie))
+            lst.Add(New clsParametro("@Nro_Documentos", NroDocumento))
+            lst.Add(New clsParametro("@Totals", Total))
             lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Compras", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(6).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos

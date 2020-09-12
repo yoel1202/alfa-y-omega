@@ -1,4 +1,5 @@
 ﻿Imports CapaAccesoDatos 'Importamos la Capa Acceso a Datos
+Imports MySql.Data.MySqlClient
 
 Public Class clsPlanFunerario
 
@@ -27,10 +28,10 @@ Public Class clsPlanFunerario
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Descripcion", Descripcion))
-            lst.Add(New clsParametro("@Precio", Precio))
-            lst.Add(New clsParametro("@RutaImagen", RutaImagen))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Descripcions", Descripcion))
+            lst.Add(New clsParametro("@Precios", Precio))
+            lst.Add(New clsParametro("@RutaImagens", RutaImagen))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Plan_Funerario", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(3).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -47,11 +48,11 @@ Public Class clsPlanFunerario
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Plan_Funerario", Codigo))
-            lst.Add(New clsParametro("@Descripcion", Descripcion))
-            lst.Add(New clsParametro("@Precio", Precio))
-            lst.Add(New clsParametro("@RutaImagen", RutaImagen))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Plan_Funerarios", Codigo))
+            lst.Add(New clsParametro("@Descripcions", Descripcion))
+            lst.Add(New clsParametro("@Precios", Precio))
+            lst.Add(New clsParametro("@RutaImagens", RutaImagen))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Actualizar_Plan_Funerario", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(4).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -68,10 +69,10 @@ Public Class clsPlanFunerario
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Plan_Funerario", Codigo))
-            lst.Add(New clsParametro("@Codigo_Item", CodigoItem))
-            lst.Add(New clsParametro("@Precio", Precio))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Plan_Funerarios", Codigo))
+            lst.Add(New clsParametro("@Codigo_Items", CodigoItem))
+            lst.Add(New clsParametro("@Precios", Precio))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registra_Detalle_Plan_Funerario", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(3).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -113,7 +114,7 @@ Public Class clsPlanFunerario
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
             lst.Add(New clsParametro("@CodigoDetalle", Codigo))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Eliminar_Detalle_Plan_Funerario", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(1).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception

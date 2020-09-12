@@ -1,4 +1,5 @@
 ﻿Imports CapaAccesoDatos 'Importamos la Capa Acceso a Datos
+Imports MySql.Data.MySqlClient
 
 Public Class clsItem
 
@@ -51,10 +52,10 @@ Public Class clsItem
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Tipo_Item", Codigo_Tipo))
-            lst.Add(New clsParametro("@Nombre", Nombre))
-            lst.Add(New clsParametro("@Precio", Precio))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Tipo_Items", Codigo_Tipo))
+            lst.Add(New clsParametro("@Nombres", Nombre))
+            lst.Add(New clsParametro("@Precios", Precio))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Item", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(3).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -71,11 +72,11 @@ Public Class clsItem
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Item", Codigo_Item))
-            lst.Add(New clsParametro("@Codigo_Tipo_Item", Codigo_Tipo))
-            lst.Add(New clsParametro("@Nombre", Nombre))
-            lst.Add(New clsParametro("@Precio", Precio))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Items", Codigo_Item))
+            lst.Add(New clsParametro("@Codigo_Tipo_Items", Codigo_Tipo))
+            lst.Add(New clsParametro("@Nombres", Nombre))
+            lst.Add(New clsParametro("@Precios", Precio))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Actualizar_Item", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(4).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -91,7 +92,7 @@ Public Class clsItem
         Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@CodigoItem", "", SqlDbType.Int, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@CodigoItems", "", SqlDbType.Int, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Devolver_Codigo_Item", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Codigo = lst(0).Valor.ToString() 'Recuperamos el código de la Base de Datos
         Catch ex As Exception

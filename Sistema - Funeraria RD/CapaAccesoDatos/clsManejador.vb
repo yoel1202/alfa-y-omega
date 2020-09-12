@@ -14,7 +14,7 @@ Public Class clsManejador
         Try
             If (conexion.State = 0) Then 'Verificamos si la conexión se encuentra cerrada
                 conexion.Open() 'Abrimos la conexión
-                MsgBox("perfect")
+
             End If
         Catch ex As Exception
             MsgBox("Can't load Web page" & ex.Message)

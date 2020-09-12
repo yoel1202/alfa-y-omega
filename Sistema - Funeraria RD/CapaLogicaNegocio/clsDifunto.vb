@@ -1,4 +1,5 @@
 ﻿Imports CapaAccesoDatos 'Importamos la Capa Acceso a Datos
+Imports MySql.Data.MySqlClient
 
 Public Class clsDifunto
 
@@ -44,18 +45,18 @@ Public Class clsDifunto
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Dni", Dni))
-            lst.Add(New clsParametro("@Nombres", Nombres))
-            lst.Add(New clsParametro("@Apellidos", Apellidos))
-            lst.Add(New clsParametro("@Sexo", Sexo))
-            lst.Add(New clsParametro("@Fecha_Nacimiento", FechaNacimiento))
-            lst.Add(New clsParametro("@Fecha_Fallecimiento", FechaFallecimiento))
-            lst.Add(New clsParametro("@Hora", Hora))
-            lst.Add(New clsParametro("@Causa_Muerte", CaudaMuerte))
-            lst.Add(New clsParametro("@Lugar_Fallecimiento", LugarFallecimiento))
-            lst.Add(New clsParametro("@Estado_Civil", EstadoCivil))
-            lst.Add(New clsParametro("@Ruta_Acta_Difunto", RutaActa))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Dnis", Dni))
+            lst.Add(New clsParametro("@Nombress", Nombres))
+            lst.Add(New clsParametro("@Apellidoss", Apellidos))
+            lst.Add(New clsParametro("@Sexos", Sexo))
+            lst.Add(New clsParametro("@Fecha_Nacimientos", FechaNacimiento))
+            lst.Add(New clsParametro("@Fecha_Fallecimientos", FechaFallecimiento))
+            lst.Add(New clsParametro("@Horas", Hora))
+            lst.Add(New clsParametro("@Causa_Muertes", CaudaMuerte))
+            lst.Add(New clsParametro("@Lugar_Fallecimientos", LugarFallecimiento))
+            lst.Add(New clsParametro("@Estado_Civils", EstadoCivil))
+            lst.Add(New clsParametro("@Ruta_Acta_Difuntos", RutaActa))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registra_Difunto", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(11).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -72,19 +73,19 @@ Public Class clsDifunto
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Difunto", CodigoDifunto))
-            lst.Add(New clsParametro("@Dni", Dni))
-            lst.Add(New clsParametro("@Nombres", Nombres))
-            lst.Add(New clsParametro("@Apellidos", Apellidos))
-            lst.Add(New clsParametro("@Sexo", Sexo))
-            lst.Add(New clsParametro("@Fecha_Nacimiento", FechaNacimiento))
-            lst.Add(New clsParametro("@Fecha_Fallecimiento", FechaFallecimiento))
-            lst.Add(New clsParametro("@Hora", Hora))
-            lst.Add(New clsParametro("@Causa_Muerte", CaudaMuerte))
-            lst.Add(New clsParametro("@Lugar_Fallecimiento", LugarFallecimiento))
-            lst.Add(New clsParametro("@Estado_Civil", EstadoCivil))
-            lst.Add(New clsParametro("@Ruta_Acta_Difunto", RutaActa))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Difuntos", CodigoDifunto))
+            lst.Add(New clsParametro("@Dnis", Dni))
+            lst.Add(New clsParametro("@Nombress", Nombres))
+            lst.Add(New clsParametro("@Apellidoss", Apellidos))
+            lst.Add(New clsParametro("@Sexos", Sexo))
+            lst.Add(New clsParametro("@Fecha_Nacimientos", FechaNacimiento))
+            lst.Add(New clsParametro("@Fecha_Fallecimientos", FechaFallecimiento))
+            lst.Add(New clsParametro("@Horas", Hora))
+            lst.Add(New clsParametro("@Causa_Muertes", CaudaMuerte))
+            lst.Add(New clsParametro("@Lugar_Fallecimientos", LugarFallecimiento))
+            lst.Add(New clsParametro("@Estado_Civils", EstadoCivil))
+            lst.Add(New clsParametro("@Ruta_Acta_Difuntos", RutaActa))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Actualizar_Difunto", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(12).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception

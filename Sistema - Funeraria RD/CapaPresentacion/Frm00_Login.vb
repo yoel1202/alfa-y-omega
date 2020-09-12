@@ -33,8 +33,8 @@ Public Class Frm00_Login
                 U.Usuario = CStr(txtusuario.Text)
                 U.Clave = CStr(txtClave.Text)
                 Mensaje = U.Loguear()
-                MsgBox(Mensaje
-)
+
+
                 If (Mensaje = "Logueado Correctamente") Then
                     U.Usuario = txtusuario.Text
                     Validar.Codigo_Personal_Online = U.Devolver_Codigo_Personal()

@@ -88,7 +88,7 @@ Public Class Frm002_PersonalPrincipal
     End Sub
 
     Private Sub FrmPersonalPrincipal_Activated(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Activated
-        Frm00_Login.FormActive = 1     
+        Frm00_Login.FormActive = 1
     End Sub
 
     Private Sub txtDatos_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDatos.TextChanged
@@ -233,6 +233,25 @@ Public Class Frm002_PersonalPrincipal
             ErrorProvider1.SetError(txtUsuario, "Ingrese Usuario")
         ElseIf (txtClave.Text.Trim = "") Then
             ErrorProvider1.SetError(txtClave, "Ingrese Clave")
+        ElseIf (cb_personal.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_personal, "Escoja una opcion de permisos del modulo personal")
+        ElseIf (cb_productos_servicios.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_productos_servicios, "Escoja una opcion de permisos del modulo")
+        ElseIf (cb_planes.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_planes, "Escoja una opcion de permisos del modulo")
+        ElseIf (cb_cliente.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_cliente, "Escoja una opcion de permisos del modulo")
+        ElseIf (cb_difunto.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_difunto, "Escoja una opcion de permisos del modulo")
+        ElseIf (cb_provedores.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_provedores, "Escoja una opcion de permisos del modulo")
+        ElseIf (cb_compras.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_compras, "Escoja una opcion de permisos del modulo")
+        ElseIf (cb_ventas.SelectedIndex < 0) Then
+            ErrorProvider1.SetError(cb_ventas, "Escoja una opcion de permisos del modulo")
+
+
+
         Else
             Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
 
@@ -241,6 +260,15 @@ Public Class Frm002_PersonalPrincipal
                     U.CodigoPersona = CInt(txtCodigo.Text)
                     U.Usuario = CStr(txtUsuario.Text)
                     U.Clave = CStr(txtClave.Text)
+                    U.personal = CStr(cb_personal.SelectedItem)
+                    U.productos = CStr(cb_productos_servicios.SelectedItem)
+                    U.planes = CStr(cb_planes.SelectedItem)
+                    U.cliente = CStr(cb_cliente.SelectedItem)
+                    U.difunto = CStr(cb_difunto.SelectedItem)
+                    U.provedores = CStr(cb_provedores.SelectedItem)
+                    U.compras = CStr(cb_compras.Text)
+                    U.ventas = CStr(cb_ventas.Text)
+
                     Mensaje = U.Registrar_Usuarios()
                     If (Mensaje = "Registrado correctamente") Then
                         Listar_Usuario()
@@ -474,4 +502,11 @@ Public Class Frm002_PersonalPrincipal
         End If
     End Sub
 
+    Private Sub Panel_cabecera_Paint(sender As Object, e As PaintEventArgs) Handles Panel_cabecera.Paint
+
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
 End Class

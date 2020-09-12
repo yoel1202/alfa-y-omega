@@ -730,3 +730,5 @@ C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debu
 C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Memory.xml
 C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\Documents\proyectos\Sistema - Funeraria RD\CapaPresentacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
