@@ -1,6 +1,9 @@
-﻿Public Class Frm_menu
+﻿Imports CapaLogicaNegocio
+
+Public Class Frm_menu
     Public paso As Boolean = True
     Public pasar As Boolean = True
+    Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
     'Private Sub comprobar_focus(ByVal valor As Integer)
     '    Select Case (valor)
     '        Case 1
@@ -57,7 +60,7 @@
                 myForm.Show()
 
                 pn_principal.Show()
-               
+
             End If
         Else
             clsMensaje.mostrar_mensaje("Solo el administrador tiene acceso a esta Opción", "error")

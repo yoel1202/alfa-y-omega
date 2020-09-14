@@ -14,6 +14,14 @@ Public Class Frm002_PersonalPrincipal
     Private Sub FrmPersonalPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Listar_Personal()
         Listar_Usuario()
+        cb_personal.SelectedIndex = 0
+        cb_productos_servicios.SelectedIndex = 0
+        cb_planes.SelectedIndex = 0
+        cb_cliente.SelectedIndex = 0
+        cb_difunto.SelectedIndex = 0
+        cb_provedores.SelectedIndex = 0
+        cb_compras.SelectedIndex = 0
+        cb_ventas.SelectedIndex = 0
     End Sub
 
     Private Sub Listar_Personal()
@@ -28,34 +36,34 @@ Public Class Frm002_PersonalPrincipal
 
     Private Sub Llenar_Grilla(ByVal dt As DataTable)
         Dim dt2 As New DataTable
-        DataGridView1.Rows.Clear() 'Limpiamos el control DataGridView1
+        dgv_personal.Rows.Clear() 'Limpiamos el control DataGridView1
 
         'Llenamos el DataGridView1 con todos los elementos que contiene el DataTable
         For i = 0 To dt.Rows.Count - 1 'Recorremos el DataTable
-            DataGridView1.Rows.Add(dt.Rows(i)(0)) 'Agregamos una nueva fila en blanco
-            DataGridView1.Rows(i).Cells(0).Value = dt.Rows(i)(0).ToString()
-            DataGridView1.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
-            DataGridView1.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
-            DataGridView1.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
-            DataGridView1.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
-            DataGridView1.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
-            DataGridView1.Rows(i).Cells(6).Value = dt.Rows(i)(6).ToString()
-            DataGridView1.Rows(i).Cells(7).Value = dt.Rows(i)(7).ToString()
-            DataGridView1.Rows(i).Cells(8).Value = dt.Rows(i)(8).ToString()
-            DataGridView1.Rows(i).Cells(9).Value = "Editar"
+            dgv_personal.Rows.Add(dt.Rows(i)(0)) 'Agregamos una nueva fila en blanco
+            dgv_personal.Rows(i).Cells(0).Value = dt.Rows(i)(0).ToString()
+            dgv_personal.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
+            dgv_personal.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
+            dgv_personal.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
+            dgv_personal.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
+            dgv_personal.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
+            dgv_personal.Rows(i).Cells(6).Value = dt.Rows(i)(6).ToString()
+            dgv_personal.Rows(i).Cells(7).Value = dt.Rows(i)(7).ToString()
+            dgv_personal.Rows(i).Cells(8).Value = dt.Rows(i)(8).ToString()
+            dgv_personal.Rows(i).Cells(9).Value = "Editar"
 
             'Verificar si este personal ya tiene cuenta de usuario
             U.CodigoPersona = CInt(dt.Rows(i)(0))
             dt2 = U.Verificar_Existe_Usuarios()
             If (Convert.ToInt32(dt2.Rows(0)(0)) = 1) Then
-                DataGridView1.Rows(i).Cells(10).Value = "Asignado"
+                dgv_personal.Rows(i).Cells(10).Value = "Asignado"
             Else
-                DataGridView1.Rows(i).Cells(10).Value = "Asignar Usuario"
+                dgv_personal.Rows(i).Cells(10).Value = "Asignar Usuario"
             End If
         Next
-        DataGridView1.ClearSelection() 'Limpiamos la selección del DataGridView1
+        dgv_personal.ClearSelection() 'Limpiamos la selección del DataGridView1
 
-        For Each row As DataGridViewRow In DataGridView1.Rows
+        For Each row As DataGridViewRow In dgv_personal.Rows
             Dim button1 As DataGridViewButtonCell = CType(row.Cells(9), DataGridViewButtonCell)
             Dim button2 As DataGridViewButtonCell = CType(row.Cells(10), DataGridViewButtonCell)
             Dim button3 As DataGridViewButtonCell = CType(row.Cells(8), DataGridViewButtonCell)
@@ -227,7 +235,6 @@ Public Class Frm002_PersonalPrincipal
     End Sub
 
     Private Sub btnGuardarUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarUsuario.Click
-        'Evento para guardar cambios, para registrar y/o actualizar información
         ErrorProvider1.Clear()
         If (txtUsuario.Text.Trim = "") Then
             ErrorProvider1.SetError(txtUsuario, "Ingrese Usuario")
@@ -266,8 +273,9 @@ Public Class Frm002_PersonalPrincipal
                     U.cliente = CStr(cb_cliente.SelectedItem)
                     U.difunto = CStr(cb_difunto.SelectedItem)
                     U.provedores = CStr(cb_provedores.SelectedItem)
-                    U.compras = CStr(cb_compras.Text)
-                    U.ventas = CStr(cb_ventas.Text)
+                    U.compras = CStr(cb_compras.SelectedItem)
+                    U.ventas = CStr(cb_ventas.SelectedItem)
+
 
                     Mensaje = U.Registrar_Usuarios()
                     If (Mensaje = "Registrado correctamente") Then
@@ -284,6 +292,14 @@ Public Class Frm002_PersonalPrincipal
                     U.CodigoPersona = CInt(txtCodigo.Text)
                     U.Usuario = CStr(txtUsuario.Text)
                     U.Clave = CStr(txtClave.Text)
+                    U.personal = CStr(cb_personal.SelectedItem)
+                    U.productos = CStr(cb_productos_servicios.SelectedItem)
+                    U.planes = CStr(cb_planes.SelectedItem)
+                    U.cliente = CStr(cb_cliente.SelectedItem)
+                    U.difunto = CStr(cb_difunto.SelectedItem)
+                    U.provedores = CStr(cb_provedores.SelectedItem)
+                    U.compras = CStr(cb_compras.SelectedItem)
+                    U.ventas = CStr(cb_ventas.SelectedItem)
                     Mensaje = U.Actualizar_Usuarios()
                     If (Mensaje = "Actualizado correctamente") Then
                         Listar_Usuario()
@@ -318,9 +334,12 @@ Public Class Frm002_PersonalPrincipal
             dtgvUsuario.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
             dtgvUsuario.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
             dtgvUsuario.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
+
         Next
         dtgvUsuario.ClearSelection() 'Limpiamos la selección del dtgvUsuario
     End Sub
+
+
 
     Private Sub dtgvUsuario_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dtgvUsuario.CellDoubleClick
         If (Me.dtgvUsuario.Rows.Count > 0) Then
@@ -328,6 +347,9 @@ Public Class Frm002_PersonalPrincipal
             txtDatosPersonal.Text = dtgvUsuario.CurrentRow.Cells(1).Value.ToString()
             txtUsuario.Text = dtgvUsuario.CurrentRow.Cells(2).Value.ToString()
             txtClave.Text = dtgvUsuario.CurrentRow.Cells(3).Value.ToString()
+
+
+
             ValorUsuario = 2
         End If
     End Sub
@@ -339,6 +361,7 @@ Public Class Frm002_PersonalPrincipal
         txtUsuario.Clear()
         txtClave.Clear()
         ValorUsuario = 0
+
         ErrorProvider1.Clear()
     End Sub
 
@@ -348,31 +371,31 @@ Public Class Frm002_PersonalPrincipal
         End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        If (Me.DataGridView1.Columns(e.ColumnIndex).Name.Equals("Button")) Then
-            Me.DataGridView1.ClearSelection()
-            CodigoP = Me.DataGridView1.CurrentRow.Cells(0).Value.ToString()
-            txtDNI.Text = Me.DataGridView1.CurrentRow.Cells(1).Value.ToString()
-            txtNombres.Text = Me.DataGridView1.CurrentRow.Cells(2).Value.ToString()
-            txtApellidos.Text = Me.DataGridView1.CurrentRow.Cells(3).Value.ToString()
-            txtCargo.Text = Me.DataGridView1.CurrentRow.Cells(4).Value.ToString()
-            txtDireccion.Text = Me.DataGridView1.CurrentRow.Cells(5).Value.ToString()
-            txtTelefono.Text = Me.DataGridView1.CurrentRow.Cells(6).Value.ToString()
-            txtEmail.Text = Me.DataGridView1.CurrentRow.Cells(7).Value.ToString()
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgv_personal.CellContentClick
+        If (Me.dgv_personal.Columns(e.ColumnIndex).Name.Equals("Button")) Then
+            Me.dgv_personal.ClearSelection()
+            CodigoP = Me.dgv_personal.CurrentRow.Cells(0).Value.ToString()
+            txtDNI.Text = Me.dgv_personal.CurrentRow.Cells(1).Value.ToString()
+            txtNombres.Text = Me.dgv_personal.CurrentRow.Cells(2).Value.ToString()
+            txtApellidos.Text = Me.dgv_personal.CurrentRow.Cells(3).Value.ToString()
+            txtCargo.Text = Me.dgv_personal.CurrentRow.Cells(4).Value.ToString()
+            txtDireccion.Text = Me.dgv_personal.CurrentRow.Cells(5).Value.ToString()
+            txtTelefono.Text = Me.dgv_personal.CurrentRow.Cells(6).Value.ToString()
+            txtEmail.Text = Me.dgv_personal.CurrentRow.Cells(7).Value.ToString()
             Valor = 1
             TabControl1.SelectTab(TabPage2)
 
-        ElseIf (Me.DataGridView1.Columns(e.ColumnIndex).Name.Equals("Usuario")) Then
-            If (DataGridView1.CurrentRow.Cells(10).Value <> "Asignado") Then
-                txtCodigo.Text = Me.DataGridView1.CurrentRow.Cells(0).Value.ToString()
-                txtDatosPersonal.Text = Me.DataGridView1.CurrentRow.Cells(2).Value.ToString() & " " & Me.DataGridView1.CurrentRow.Cells(3).Value.ToString()
+        ElseIf (Me.dgv_personal.Columns(e.ColumnIndex).Name.Equals("Usuario")) Then
+            If (dgv_personal.CurrentRow.Cells(10).Value <> "Asignado") Then
+                txtCodigo.Text = Me.dgv_personal.CurrentRow.Cells(0).Value.ToString()
+                txtDatosPersonal.Text = Me.dgv_personal.CurrentRow.Cells(2).Value.ToString() & " " & Me.dgv_personal.CurrentRow.Cells(3).Value.ToString()
                 ValorUsuario = 1
                 TabControl1.SelectTab(TabPage3)
             End If
 
-        ElseIf (Me.DataGridView1.Columns(e.ColumnIndex).Name.Equals("Estado")) Then
-            P.Codigo_Personal = Me.DataGridView1.CurrentRow.Cells(0).Value.ToString()
-            P.Estado = Me.DataGridView1.CurrentRow.Cells(8).Value.ToString()
+        ElseIf (Me.dgv_personal.Columns(e.ColumnIndex).Name.Equals("Estado")) Then
+            P.Codigo_Personal = Me.dgv_personal.CurrentRow.Cells(0).Value.ToString()
+            P.Estado = Me.dgv_personal.CurrentRow.Cells(8).Value.ToString()
             P.Actualizar_Estado_Personal() 'Llamamos a la función actualizar estado del Personal
             Listar_Personal() 'Llamamos al método Listar Personal
         End If
@@ -417,7 +440,7 @@ Public Class Frm002_PersonalPrincipal
     End Sub
 
     Private Sub btnExportar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExportar.Click
-        If (DataGridView1.Rows.Count <= 0) Then
+        If (dgv_personal.Rows.Count <= 0) Then
             MsgBox("No hay datos para Exportar a PDF", MsgBoxStyle.Exclamation, "Sistema para Funeraria S.A.C")
         Else
             Dim rpt = MsgBox("Esta Seguro que desea Exportarlo a PDF", vbYesNo + vbExclamation, "Representaciones San Fernando S.A.C")
@@ -441,7 +464,7 @@ Public Class Frm002_PersonalPrincipal
     End Sub
 
     Public Sub ExportarDatosPDF(ByVal document As Document)
-        Dim datatable As New PdfPTable(DataGridView1.ColumnCount)
+        Dim datatable As New PdfPTable(dgv_personal.ColumnCount)
         datatable.DefaultCell.Padding = 3
         Dim headerwidths As Single() = GetColumnasSize()
         datatable.SetWidths(headerwidths)
@@ -454,16 +477,16 @@ Public Class Frm002_PersonalPrincipal
         encabezado.Alignment = Element.ALIGN_CENTER
 
         Dim texto As New Phrase("Reporte de Personal: " + Now.Date(), FontFactory.GetFont("Tahoma", 14, iTextSharp.text.Font.BOLD))
-        For i As Integer = 0 To DataGridView1.ColumnCount - 1
-            datatable.AddCell(New Phrase(DataGridView1.Columns(i).HeaderText, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD, BaseColor.WHITE)))
+        For i As Integer = 0 To dgv_personal.ColumnCount - 1
+            datatable.AddCell(New Phrase(dgv_personal.Columns(i).HeaderText, FontFactory.GetFont("Arial", 10, iTextSharp.text.Font.BOLD, BaseColor.WHITE)))
         Next
 
         datatable.HeaderRows = 1
         datatable.DefaultCell.BorderWidth = 0
         datatable.DefaultCell.BackgroundColor = iTextSharp.text.BaseColor.WHITE
-        For i As Integer = 0 To DataGridView1.Rows.Count - 1
-            For j As Integer = 0 To DataGridView1.Columns.Count - 1
-                datatable.AddCell(New Phrase((DataGridView1(j, i).Value).ToString, FontFactory.GetFont("Arial", 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK)))
+        For i As Integer = 0 To dgv_personal.Rows.Count - 1
+            For j As Integer = 0 To dgv_personal.Columns.Count - 1
+                datatable.AddCell(New Phrase((dgv_personal(j, i).Value).ToString, FontFactory.GetFont("Arial", 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK)))
             Next
             datatable.CompleteRow()
         Next
@@ -475,9 +498,9 @@ Public Class Frm002_PersonalPrincipal
     End Sub
 
     Public Function GetColumnasSize() As Single()
-        Dim values As Single() = New Single(DataGridView1.ColumnCount - 1) {}
-        For i As Integer = 1 To DataGridView1.ColumnCount - 4
-            values(i) = CSng(DataGridView1.Columns(i).Width)
+        Dim values As Single() = New Single(dgv_personal.ColumnCount - 1) {}
+        For i As Integer = 1 To dgv_personal.ColumnCount - 4
+            values(i) = CSng(dgv_personal.Columns(i).Width)
         Next
         Return values
     End Function
@@ -509,4 +532,5 @@ Public Class Frm002_PersonalPrincipal
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
 
     End Sub
+
 End Class
