@@ -49,7 +49,11 @@ Public Class Frm_menu
     End Sub
 
     Private Sub pn_personal(sender As Object, e As EventArgs) Handles Panel1.Click
-        If (usuario_online = "administrador") Then
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos" Or permiso = "Visualizar") Then
             If (Frm00_Login.FormActive = 0) Then
                 'comprobar_focus(1)
                 Dim myForm As Frm002_PersonalPrincipal = New Frm002_PersonalPrincipal()
@@ -89,16 +93,16 @@ Public Class Frm_menu
         Label4.SetBounds(Screen.PrimaryScreen.Bounds.Width - 220, PictureBox1.Height, Label4.Width, Label4.Height)
 
 
-        pn_principal.SetBounds(PictureBox4.Width + 50, PictureBox4.Height + 40, Panel1.Width + Pn_pagos.Width + Panel2.Width + 600, Panel4.Height + Panel1.Height + 100)
+        pn_principal.SetBounds(PictureBox4.Width + 50, PictureBox4.Height + 40, Panel1.Width + Pn_planes.Width + pn_clientes.Width + 600, pn_difuntos.Height + Panel1.Height + 100)
         Panel1.SetBounds(PictureBox4.Width + 50, PictureBox4.Height + 40, Panel1.Width, Panel1.Height)
 
-        pn_empleados.SetBounds(Panel1.Width + 200, PictureBox4.Height + 40, pn_empleados.Width, pn_empleados.Height)
-        Pn_pagos.SetBounds(pn_empleados.Width + 500, PictureBox4.Height + 40, Pn_pagos.Width, Pn_pagos.Height)
-        Panel2.SetBounds(pn_empleados.Width + 800, PictureBox4.Height + 40, Pn_pagos.Width, Pn_pagos.Height)
-        Panel4.SetBounds(PictureBox4.Width + 50, Panel1.Height + 200, Panel4.Width, Panel4.Height)
-        Panel5.SetBounds(Panel4.Width + 200, Panel1.Height + 200, Panel5.Width, Panel5.Height)
-        pn_configuracion.SetBounds(Panel5.Width + 500, Panel1.Height + 200, Panel5.Width, Panel5.Height)
-        Panel3.SetBounds(Panel5.Width + 800, Panel1.Height + 200, Panel5.Width, Panel5.Height)
+        pn_productos.SetBounds(Panel1.Width + 200, PictureBox4.Height + 40, pn_productos.Width, pn_productos.Height)
+        Pn_planes.SetBounds(pn_productos.Width + 500, PictureBox4.Height + 40, Pn_planes.Width, Pn_planes.Height)
+        pn_clientes.SetBounds(pn_productos.Width + 800, PictureBox4.Height + 40, Pn_planes.Width, Pn_planes.Height)
+        pn_difuntos.SetBounds(PictureBox4.Width + 50, Panel1.Height + 200, pn_difuntos.Width, pn_difuntos.Height)
+        pn_provedor.SetBounds(pn_difuntos.Width + 200, Panel1.Height + 200, pn_provedor.Width, pn_provedor.Height)
+        pn_configuracion.SetBounds(pn_provedor.Width + 500, Panel1.Height + 200, pn_provedor.Width, pn_provedor.Height)
+        Panel3.SetBounds(pn_provedor.Width + 800, Panel1.Height + 200, pn_provedor.Width, pn_provedor.Height)
         pn_principal.Hide()
 
 
@@ -140,14 +144,14 @@ Public Class Frm_menu
             pn_principal.Hide()
             If pasar = True Then
                 Panel1.Show()
-                pn_empleados.Show()
-                Pn_pagos.Show()
-                Panel4.Show()
-                Panel5.Show()
+                pn_productos.Show()
+                Pn_planes.Show()
+                pn_difuntos.Show()
+                pn_provedor.Show()
                 pn_configuracion.Show()
             Else
                 Panel1.Show()
-                Panel4.Show()
+                pn_difuntos.Show()
             End If
             paso = False
 
@@ -157,28 +161,28 @@ Public Class Frm_menu
 
             If pasar = True Then
                 Panel1.Hide()
-                pn_empleados.Hide()
-                Pn_pagos.Hide()
-                Panel4.Hide()
-                Panel5.Hide()
+                pn_productos.Hide()
+                Pn_planes.Hide()
+                pn_difuntos.Hide()
+                pn_provedor.Hide()
                 pn_configuracion.Hide()
 
             Else
                 Panel1.Hide()
-                Panel4.Hide()
+                pn_difuntos.Hide()
             End If
             paso = False
         Else
             If pasar = True Then
                 Panel1.Show()
-                pn_empleados.Show()
-                Pn_pagos.Show()
-                Panel4.Show()
-                Panel5.Show()
+                pn_productos.Show()
+                Pn_planes.Show()
+                pn_difuntos.Show()
+                pn_provedor.Show()
                 pn_configuracion.Show()
             Else
                 Panel1.Show()
-                Panel4.Show()
+                pn_difuntos.Show()
             End If
 
             paso = True
@@ -192,29 +196,39 @@ Public Class Frm_menu
         Label12.Text = DateTime.Now.ToLongTimeString()
     End Sub
 
-    Private Sub pn_empleados_Click(sender As Object, e As EventArgs) Handles pn_empleados.Click
+    Private Sub pn_empleados_Click(sender As Object, e As EventArgs) Handles pn_productos.Click
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "producto"
+        Dim permiso As String = U.Devolver_permisos()
 
-        If (Frm00_Login.FormActive = 0) Then
+        If (permiso = "Todos" Or permiso = "Visualizar") Then
+            If (Frm00_Login.FormActive = 0) Then
 
 
-            Dim myForm As Frm003_ProductosyServicios = New Frm003_ProductosyServicios()
+                Dim myForm As Frm003_ProductosyServicios = New Frm003_ProductosyServicios()
 
-            myForm.TopLevel = False
-            myForm.AutoScroll = True
-            pn_principal.Controls.Add(myForm)
-            myForm.Show()
+                myForm.TopLevel = False
+                myForm.AutoScroll = True
+                pn_principal.Controls.Add(myForm)
+                myForm.Show()
 
-            pn_principal.Show()
+                pn_principal.Show()
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 
-    Private Sub Pn_pagos_Click(sender As Object, e As EventArgs) Handles Pn_pagos.Click
-        MsgBox("hola")
+    Private Sub Pn_pagos_Click(sender As Object, e As EventArgs) Handles Pn_planes.Click
 
-        If (usuario_online = "administrador") Then
-            MsgBox("hola2")
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "plan"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos" Or permiso = "Visualizar") Then
+
             If (Frm00_Login.FormActive = 0) Then
-                MsgBox("hola3")
+
 
                 Dim myForm As Frm004_PlanesFunerarios = New Frm004_PlanesFunerarios()
 
@@ -225,76 +239,116 @@ Public Class Frm_menu
                 pn_principal.Show()
             End If
         Else
-            clsMensaje.mostrar_mensaje("Solo el administrador tiene acceso a esta Opción", "error")
+            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 
-    Private Sub Panel2_Click(sender As Object, e As EventArgs) Handles Panel2.Click
-        If (Frm00_Login.FormActive = 0) Then
+    Private Sub Panel2_Click(sender As Object, e As EventArgs) Handles pn_clientes.Click
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "producto"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos" Or permiso = "cliente") Then
+            If (Frm00_Login.FormActive = 0) Then
 
 
-            Dim myForm As Frm005_Cliente = New Frm005_Cliente()
+                Dim myForm As Frm005_Cliente = New Frm005_Cliente()
 
-            myForm.TopLevel = False
-            myForm.AutoScroll = True
-            pn_principal.Controls.Add(myForm)
-            myForm.Show()
-            pn_principal.Show()
+                myForm.TopLevel = False
+                myForm.AutoScroll = True
+                pn_principal.Controls.Add(myForm)
+                myForm.Show()
+                pn_principal.Show()
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 
-    Private Sub Panel4_Click(sender As Object, e As EventArgs) Handles Panel4.Click
-        If (Frm00_Login.FormActive = 0) Then
+    Private Sub Panel4_Click(sender As Object, e As EventArgs) Handles pn_difuntos.Click
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "difunto"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos" Or permiso = "Visualizar") Then
+            If (Frm00_Login.FormActive = 0) Then
 
 
-            Dim myForm As Frm006_Difunto = New Frm006_Difunto()
+                Dim myForm As Frm006_Difunto = New Frm006_Difunto()
 
-            myForm.TopLevel = False
-            myForm.AutoScroll = True
-            pn_principal.Controls.Add(myForm)
-            myForm.Show()
-            pn_principal.Show()
+                myForm.TopLevel = False
+                myForm.AutoScroll = True
+                pn_principal.Controls.Add(myForm)
+                myForm.Show()
+                pn_principal.Show()
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 
-    Private Sub Panel5_Click(sender As Object, e As EventArgs) Handles Panel5.Click
-        If (Frm00_Login.FormActive = 0) Then
+    Private Sub Panel5_Click(sender As Object, e As EventArgs) Handles pn_provedor.Click
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "producto"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos" Or permiso = "provedor") Then
+            If (Frm00_Login.FormActive = 0) Then
 
 
-            Dim myForm As Frm007_Proveedor = New Frm007_Proveedor()
+                Dim myForm As Frm007_Proveedor = New Frm007_Proveedor()
 
-            myForm.TopLevel = False
-            myForm.AutoScroll = True
-            pn_principal.Controls.Add(myForm)
-            myForm.Show()
-            pn_principal.Show()
+                myForm.TopLevel = False
+                myForm.AutoScroll = True
+                pn_principal.Controls.Add(myForm)
+                myForm.Show()
+                pn_principal.Show()
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 
     Private Sub pn_configuracion_Click(sender As Object, e As EventArgs) Handles pn_configuracion.Click
-        If (Frm00_Login.FormActive = 0) Then
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "compra"
+        Dim permiso As String = U.Devolver_permisos()
 
-            Dim myForm As Frm008_Compras = New Frm008_Compras()
+        If (permiso = "Todos" Or permiso = "Visualizar") Then
+            If (Frm00_Login.FormActive = 0) Then
 
-            myForm.TopLevel = False
-            myForm.AutoScroll = True
-            pn_principal.Controls.Add(myForm)
-            myForm.Show()
-            pn_principal.Show()
+                Dim myForm As Frm008_Compras = New Frm008_Compras()
+
+                myForm.TopLevel = False
+                myForm.AutoScroll = True
+                pn_principal.Controls.Add(myForm)
+                myForm.Show()
+                pn_principal.Show()
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 
     Private Sub Panel3_Click(sender As Object, e As EventArgs) Handles Panel3.Click
-        If (Frm00_Login.FormActive = 0) Then
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "venta"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos" Or permiso = "Visualizar") Then
+            If (Frm00_Login.FormActive = 0) Then
 
 
-            Dim myForm As Frm009_Ventas = New Frm009_Ventas()
+                Dim myForm As Frm009_Ventas = New Frm009_Ventas()
 
-            myForm.TopLevel = False
-            myForm.AutoScroll = True
-            pn_principal.Controls.Add(myForm)
-            myForm.Show()
-            pn_principal.Show()
+                myForm.TopLevel = False
+                myForm.AutoScroll = True
+                pn_principal.Controls.Add(myForm)
+                myForm.Show()
+                pn_principal.Show()
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 End Class

@@ -145,63 +145,71 @@ Public Class Frm002_PersonalPrincipal
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
         'Evento para guardar cambios, para registrar y/o actualizar información
-        ErrorProvider1.Clear()
-        If (txtDNI.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtDNI, "Ingrese DNI")
-        ElseIf (txtNombres.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtNombres, "Ingrese Nombres")
-        ElseIf (txtApellidos.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtApellidos, "Ingrese Apellidos")
-        ElseIf (txtCargo.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtCargo, "Ingrese Cargo")
-        ElseIf (txtDireccion.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtDireccion, "Ingrese Direccion")
-        ElseIf (txtTelefono.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtTelefono, "Ingrese Teléfono")
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos") Then
+            ErrorProvider1.Clear()
+            If (txtDNI.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtDNI, "Ingrese DNI")
+            ElseIf (txtNombres.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtNombres, "Ingrese Nombres")
+            ElseIf (txtApellidos.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtApellidos, "Ingrese Apellidos")
+            ElseIf (txtCargo.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtCargo, "Ingrese Cargo")
+            ElseIf (txtDireccion.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtDireccion, "Ingrese Direccion")
+            ElseIf (txtTelefono.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtTelefono, "Ingrese Teléfono")
+            Else
+                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+
+                Try 'Manejamos una excepción de errores
+
+                    If (Valor = 0) Then 'Si es valor cero, registramos
+                        P.DNI = txtDNI.Text
+                        P.Nombres = txtNombres.Text
+                        P.Apellidos = txtApellidos.Text
+                        P.Cargo = txtCargo.Text
+                        P.Direccion = txtDireccion.Text
+                        P.Telefono = txtTelefono.Text
+                        P.Email = txtEmail.Text
+                        Mensaje = P.Registrar_Personal() 'Ejecutamos la función Registrar Personal
+                        If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamentE
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Valor = 0
+                            TabControl1.SelectTab(0)
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+
+                    Else 'Si es valor 1 actualizamos la información
+                        P.Codigo_Personal = CodigoP
+                        P.DNI = txtDNI.Text
+                        P.Nombres = txtNombres.Text
+                        P.Apellidos = txtApellidos.Text
+                        P.Cargo = txtCargo.Text
+                        P.Direccion = txtDireccion.Text
+                        P.Telefono = txtTelefono.Text
+                        P.Email = txtEmail.Text
+                        Mensaje = P.Actualizar_Personal() 'Ejecutamos la función Actualizar Personal
+                        If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se registró correctamentE
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Valor = 0
+                            TabControl1.SelectTab(0)
+                            Listar_Personal()
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD            
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
         Else
-            Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
-
-            Try 'Manejamos una excepción de errores
-
-                If (Valor = 0) Then 'Si es valor cero, registramos
-                    P.DNI = txtDNI.Text
-                    P.Nombres = txtNombres.Text
-                    P.Apellidos = txtApellidos.Text
-                    P.Cargo = txtCargo.Text
-                    P.Direccion = txtDireccion.Text
-                    P.Telefono = txtTelefono.Text
-                    P.Email = txtEmail.Text
-                    Mensaje = P.Registrar_Personal() 'Ejecutamos la función Registrar Personal
-                    If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamentE
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Valor = 0
-                        TabControl1.SelectTab(0)
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-
-                Else 'Si es valor 1 actualizamos la información
-                    P.Codigo_Personal = CodigoP
-                    P.DNI = txtDNI.Text
-                    P.Nombres = txtNombres.Text
-                    P.Apellidos = txtApellidos.Text
-                    P.Cargo = txtCargo.Text
-                    P.Direccion = txtDireccion.Text
-                    P.Telefono = txtTelefono.Text
-                    P.Email = txtEmail.Text
-                    Mensaje = P.Actualizar_Personal() 'Ejecutamos la función Actualizar Personal
-                    If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se registró correctamentE
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Valor = 0
-                        TabControl1.SelectTab(0)
-                        Listar_Personal()
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD            
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 
@@ -235,84 +243,92 @@ Public Class Frm002_PersonalPrincipal
     End Sub
 
     Private Sub btnGuardarUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarUsuario.Click
-        ErrorProvider1.Clear()
-        If (txtUsuario.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtUsuario, "Ingrese Usuario")
-        ElseIf (txtClave.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtClave, "Ingrese Clave")
-        ElseIf (cb_personal.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_personal, "Escoja una opcion de permisos del modulo personal")
-        ElseIf (cb_productos_servicios.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_productos_servicios, "Escoja una opcion de permisos del modulo")
-        ElseIf (cb_planes.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_planes, "Escoja una opcion de permisos del modulo")
-        ElseIf (cb_cliente.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_cliente, "Escoja una opcion de permisos del modulo")
-        ElseIf (cb_difunto.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_difunto, "Escoja una opcion de permisos del modulo")
-        ElseIf (cb_provedores.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_provedores, "Escoja una opcion de permisos del modulo")
-        ElseIf (cb_compras.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_compras, "Escoja una opcion de permisos del modulo")
-        ElseIf (cb_ventas.SelectedIndex < 0) Then
-            ErrorProvider1.SetError(cb_ventas, "Escoja una opcion de permisos del modulo")
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos") Then
+            ErrorProvider1.Clear()
+            If (txtUsuario.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtUsuario, "Ingrese Usuario")
+            ElseIf (txtClave.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtClave, "Ingrese Clave")
+            ElseIf (cb_personal.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_personal, "Escoja una opcion de permisos del modulo personal")
+            ElseIf (cb_productos_servicios.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_productos_servicios, "Escoja una opcion de permisos del modulo")
+            ElseIf (cb_planes.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_planes, "Escoja una opcion de permisos del modulo")
+            ElseIf (cb_cliente.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_cliente, "Escoja una opcion de permisos del modulo")
+            ElseIf (cb_difunto.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_difunto, "Escoja una opcion de permisos del modulo")
+            ElseIf (cb_provedores.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_provedores, "Escoja una opcion de permisos del modulo")
+            ElseIf (cb_compras.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_compras, "Escoja una opcion de permisos del modulo")
+            ElseIf (cb_ventas.SelectedIndex < 0) Then
+                ErrorProvider1.SetError(cb_ventas, "Escoja una opcion de permisos del modulo")
 
 
 
+            Else
+                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+
+                Try
+                    If (ValorUsuario = 1) Then
+                        U.CodigoPersona = CInt(txtCodigo.Text)
+                        U.Usuario = CStr(txtUsuario.Text)
+                        U.Clave = CStr(txtClave.Text)
+                        U.personal = CStr(cb_personal.SelectedItem)
+                        U.productos = CStr(cb_productos_servicios.SelectedItem)
+                        U.planes = CStr(cb_planes.SelectedItem)
+                        U.cliente = CStr(cb_cliente.SelectedItem)
+                        U.difunto = CStr(cb_difunto.SelectedItem)
+                        U.provedores = CStr(cb_provedores.SelectedItem)
+                        U.compras = CStr(cb_compras.SelectedItem)
+                        U.ventas = CStr(cb_ventas.SelectedItem)
+
+
+                        Mensaje = U.Registrar_Usuarios()
+                        If (Mensaje = "Registrado correctamente") Then
+                            Listar_Usuario()
+                            ValorUsuario = 0
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            TabControl1.SelectTab(TabPage1)
+                        Else
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+
+                    ElseIf (ValorUsuario = 2) Then 'Si es valor 1 actualizamos la información
+
+                        U.CodigoPersona = CInt(txtCodigo.Text)
+                        U.Usuario = CStr(txtUsuario.Text)
+                        U.Clave = CStr(txtClave.Text)
+                        U.personal = CStr(cb_personal.SelectedItem)
+                        U.productos = CStr(cb_productos_servicios.SelectedItem)
+                        U.planes = CStr(cb_planes.SelectedItem)
+                        U.cliente = CStr(cb_cliente.SelectedItem)
+                        U.difunto = CStr(cb_difunto.SelectedItem)
+                        U.provedores = CStr(cb_provedores.SelectedItem)
+                        U.compras = CStr(cb_compras.SelectedItem)
+                        U.ventas = CStr(cb_ventas.SelectedItem)
+                        Mensaje = U.Actualizar_Usuarios()
+                        If (Mensaje = "Actualizado correctamente") Then
+                            Listar_Usuario()
+                            ValorUsuario = 0
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            TabControl1.SelectTab(TabPage1)
+                        Else
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
         Else
-            Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
-
-            Try
-                If (ValorUsuario = 1) Then
-                    U.CodigoPersona = CInt(txtCodigo.Text)
-                    U.Usuario = CStr(txtUsuario.Text)
-                    U.Clave = CStr(txtClave.Text)
-                    U.personal = CStr(cb_personal.SelectedItem)
-                    U.productos = CStr(cb_productos_servicios.SelectedItem)
-                    U.planes = CStr(cb_planes.SelectedItem)
-                    U.cliente = CStr(cb_cliente.SelectedItem)
-                    U.difunto = CStr(cb_difunto.SelectedItem)
-                    U.provedores = CStr(cb_provedores.SelectedItem)
-                    U.compras = CStr(cb_compras.SelectedItem)
-                    U.ventas = CStr(cb_ventas.SelectedItem)
-
-
-                    Mensaje = U.Registrar_Usuarios()
-                    If (Mensaje = "Registrado correctamente") Then
-                        Listar_Usuario()
-                        ValorUsuario = 0
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        TabControl1.SelectTab(TabPage1)
-                    Else
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-
-                ElseIf (ValorUsuario = 2) Then 'Si es valor 1 actualizamos la información
-
-                    U.CodigoPersona = CInt(txtCodigo.Text)
-                    U.Usuario = CStr(txtUsuario.Text)
-                    U.Clave = CStr(txtClave.Text)
-                    U.personal = CStr(cb_personal.SelectedItem)
-                    U.productos = CStr(cb_productos_servicios.SelectedItem)
-                    U.planes = CStr(cb_planes.SelectedItem)
-                    U.cliente = CStr(cb_cliente.SelectedItem)
-                    U.difunto = CStr(cb_difunto.SelectedItem)
-                    U.provedores = CStr(cb_provedores.SelectedItem)
-                    U.compras = CStr(cb_compras.SelectedItem)
-                    U.ventas = CStr(cb_ventas.SelectedItem)
-                    Mensaje = U.Actualizar_Usuarios()
-                    If (Mensaje = "Actualizado correctamente") Then
-                        Listar_Usuario()
-                        ValorUsuario = 0
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        TabControl1.SelectTab(TabPage1)
-                    Else
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 
@@ -334,6 +350,14 @@ Public Class Frm002_PersonalPrincipal
             dtgvUsuario.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
             dtgvUsuario.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
             dtgvUsuario.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
+            dtgvUsuario.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
+            dtgvUsuario.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
+            dtgvUsuario.Rows(i).Cells(6).Value = dt.Rows(i)(6).ToString()
+            dtgvUsuario.Rows(i).Cells(7).Value = dt.Rows(i)(7).ToString()
+            dtgvUsuario.Rows(i).Cells(8).Value = dt.Rows(i)(8).ToString()
+            dtgvUsuario.Rows(i).Cells(9).Value = dt.Rows(i)(9).ToString()
+            dtgvUsuario.Rows(i).Cells(10).Value = dt.Rows(i)(10).ToString()
+            dtgvUsuario.Rows(i).Cells(11).Value = dt.Rows(i)(11).ToString()
 
         Next
         dtgvUsuario.ClearSelection() 'Limpiamos la selección del dtgvUsuario
@@ -347,7 +371,15 @@ Public Class Frm002_PersonalPrincipal
             txtDatosPersonal.Text = dtgvUsuario.CurrentRow.Cells(1).Value.ToString()
             txtUsuario.Text = dtgvUsuario.CurrentRow.Cells(2).Value.ToString()
             txtClave.Text = dtgvUsuario.CurrentRow.Cells(3).Value.ToString()
-
+            cb_personal.SelectedItem = dtgvUsuario.CurrentRow.Cells(3).Value.ToString()
+            cb_personal.SelectedItem = dtgvUsuario.CurrentRow.Cells(4).Value.ToString()
+            cb_productos_servicios.SelectedItem = dtgvUsuario.CurrentRow.Cells(5).Value.ToString()
+            cb_planes.SelectedItem = dtgvUsuario.CurrentRow.Cells(6).Value.ToString()
+            cb_cliente.SelectedItem = dtgvUsuario.CurrentRow.Cells(7).Value.ToString()
+            cb_difunto.SelectedItem = dtgvUsuario.CurrentRow.Cells(8).Value.ToString()
+            cb_provedores.SelectedItem = dtgvUsuario.CurrentRow.Cells(9).Value.ToString()
+            cb_compras.SelectedItem = dtgvUsuario.CurrentRow.Cells(10).Value.ToString()
+            cb_ventas.SelectedItem = dtgvUsuario.CurrentRow.Cells(11).Value.ToString()
 
 
             ValorUsuario = 2

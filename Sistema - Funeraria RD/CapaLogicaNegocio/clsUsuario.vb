@@ -18,6 +18,7 @@ Public Class clsUsuario
     Public Property compras() As String
     Public Property ventas() As String
 
+    Public Property tipo() As String
 
 
     Public Function Listar_Usuarios() As DataTable 'Función para listar Usuarios
@@ -136,22 +137,22 @@ Public Class clsUsuario
         Return Codigo_Personal
     End Function
 
-    Public Function Devolver_permisos() As Integer 'Función para devolver codigo de Personal por nombre de usuario
-        Dim Codigo_Personal As Integer
+    Public Function Devolver_permisos() As String 'Función para devolver codigo de Personal por nombre de usuario
+        Dim permiso As String
         Dim lst As New List(Of clsParametro)
         Try 'Manejamos una excepción de errores
-            lst.Add(New clsParametro("@codigo_personal", Usuario))
-            lst.Add(New clsParametro("@tipo", Usuario))
+            lst.Add(New clsParametro("@codigo_personals", CodigoPersona))
+            lst.Add(New clsParametro("@tipo", tipo))
             lst.Add(New clsParametro("@permiso", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             'lst.Add(New clsParametro("@Codigo_personal", "", SqlDbType.Int, ParameterDirection.Output, 0))
-            M.EjecutarSP("Devolver_Codigo_Personal", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Codigo_Personal = lst(1).Valor 'Recuperamos el mensaje de la Base de Datos
+            M.EjecutarSP("Devolver_permisos", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
+            permiso = lst(2).Valor 'Recuperamos el mensaje de la Base de Datos
 
 
             'Return M.Listado("Devolver_Codigo_Personal", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
         Catch ex As Exception
             Throw New Exception("Error al devolver Código Personal, verifique clase clsUsuario") 'Creamos una nueva excepción de errores
         End Try
-        Return Codigo_Personal
+        Return permiso
     End Function
 End Class
