@@ -3,10 +3,11 @@
 Public Class Frm003_ProductosyServicios
 
     Dim S As New clsItem 'Instanciamos la clase clsItem de la Capa Logica de Negocio para usar sus funciones
+    Dim se As New clsServicios
     Dim P As New clsProducto
     Dim C As New clsColor
     Dim M As New clsMaterial
-
+    Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
     Dim Imagen As New CopiarImagen
     Dim Codigo As Integer = 0 'Variable para almacenar el código del servicio
     Dim Valor As Integer = 0 'Variable para verificar si se va a registrar o actualizar la información
@@ -43,8 +44,7 @@ Public Class Frm003_ProductosyServicios
                 dtgProductos.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
                 dtgProductos.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
                 dtgProductos.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
-                dtgProductos.Rows(i).Cells(6).Value = Math.Round(CDec(dt.Rows(i)(6)), 2)
-                dtgProductos.Rows(i).Cells(7).Value = dt.Rows(i)(7).ToString()
+
             Next
             dtgProductos.ClearSelection() 'Limpiamos la selección del DataGridView1
 
@@ -81,83 +81,86 @@ Public Class Frm003_ProductosyServicios
             txtDescripcionProducto.Text = dtgProductos.CurrentRow.Cells(2).Value.ToString()
             cbxColor.Text = dtgProductos.CurrentRow.Cells(3).Value.ToString()
             cbxMaterial.Text = dtgProductos.CurrentRow.Cells(4).Value.ToString()
-            txtStock.Text = dtgProductos.CurrentRow.Cells(5).Value.ToString()
-            txtPrecio.Text = dtgProductos.CurrentRow.Cells(6).Value.ToString()
-            ptbImagen.ImageLocation = dtgProductos.CurrentRow.Cells(7).Value.ToString()
-            rutaAntigua = dtgProductos.CurrentRow.Cells(7).Value.ToString()
+            ptbImagen.ImageLocation = dtgProductos.CurrentRow.Cells(5).Value.ToString()
+            rutaAntigua = dtgProductos.CurrentRow.Cells(5).Value.ToString()
             dtgProductos.Rows(dtgProductos.CurrentRow.Index).Selected = True 'True para mantener seleccionada la fila
             Valor = 1 'Asignamos valor uno para indicarle que va a actualizar la información
         End If
     End Sub
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
 
-        'Evento para guardar cambios, para registrar y/o actualizar información
-        ErrorProvider1.Clear()
-        If (txtNombreProducto.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtNombreProducto, "Ingrese Nombres")
-        ElseIf (txtDescripcionProducto.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtDescripcionProducto, "Ingrese Descripción del Producto")
-        ElseIf (cbxMaterial.SelectedIndex = 0) Then
-            ErrorProvider1.SetError(cbxMaterial, "Debe Seleccionar un Material")
-        ElseIf (cbxColor.SelectedIndex = 0) Then
-            ErrorProvider1.SetError(cbxColor, "Debe Seleccionar un Color")
-        ElseIf (txtPrecio.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtPrecio, "Ingrese Precio del Producto")
-        ElseIf (txtStock.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtStock, "Ingrese Stock del Producto")
+        If (permiso = "Todos") Then
+            'Evento para guardar cambios, para registrar y/o actualizar información
+            ErrorProvider1.Clear()
+            If (txtNombreProducto.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtNombreProducto, "Ingrese Nombres")
+            ElseIf (txtDescripcionProducto.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtDescripcionProducto, "Ingrese Descripción del Producto")
+            ElseIf (cbxMaterial.SelectedIndex = 0) Then
+                ErrorProvider1.SetError(cbxMaterial, "Debe Seleccionar un Material")
+            ElseIf (cbxColor.SelectedIndex = 0) Then
+                ErrorProvider1.SetError(cbxColor, "Debe Seleccionar un Color")
+
+            Else
+                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+                Dim RutaImgen = ""
+                Try 'Manejamos una excepción de errores
+                    If (Valor = 0) Then 'Si es valor cero, registramos
+                        S.Codigo_Tipo = 1
+                        S.Nombre = txtNombreProducto.Text
+
+                        Mensaje = S.Registrar_Item() 'Ejecutamos la función Registrar Servicio
+
+                        If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
+
+                            Dim NombreFoto As String = "Ataud-" & S.Devolver_Codigo_Item()
+                            RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, "", 1)
+                            P.Codigo_Item = S.Devolver_Codigo_Item()
+                            P.Descripcion = txtDescripcionProducto.Text
+                            P.Color = cbxColor.Text
+                            P.Material = cbxMaterial.Text
+
+                            P.RutaImagen = RutaImgen
+                            P.Registrar_Producto()
+                            Call Listar_Productos() 'Llamamos al método listar Productos
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Call Limpiar_Controles() 'Llamamos el método limpiar controles
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+
+                    Else 'Si es valor 1 actualizamos la información
+                        S.Codigo_Item = Codigo
+                        S.Codigo_Tipo = 1
+                        S.Nombre = txtNombreProducto.Text
+                        Mensaje = S.Actualizar_Item() 'Ejecutamos la función Actualizar Servicio
+                        MsgBox(Mensaje)
+                        If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se actualizó correctamente
+                            Dim NombreFoto As String = "Ataud-" & Codigo
+                            RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, rutaAntigua, 1)
+                            P.Codigo_Item = Codigo
+                            P.Descripcion = txtDescripcionProducto.Text
+                            P.Color = cbxColor.Text
+                            P.Material = cbxMaterial.Text
+                            P.RutaImagen = RutaImgen
+                            P.Actualizar_Producto()
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Call Listar_Productos() 'Llamamos al método listar Productos
+                            Call Limpiar_Controles() 'Llamamos el método limpiar controles
+                        Else 'Si no se realizó la actualización correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
         Else
-            Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
-            Dim RutaImgen = ""
-            Try 'Manejamos una excepción de errores
-                If (Valor = 0) Then 'Si es valor cero, registramos
-                    S.Codigo_Tipo = 1
-                    S.Nombre = txtNombreProducto.Text
-                    S.Precio = CDec(txtPrecio.Text)
-                    Mensaje = S.Registrar_Item() 'Ejecutamos la función Registrar Servicio
-                    If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
-                        Dim NombreFoto As String = "Ataud-" & S.Devolver_Codigo_Item()
-                        RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, "", 1)
-                        P.Codigo_Item = S.Devolver_Codigo_Item()
-                        P.Descripcion = txtDescripcionProducto.Text
-                        P.Color = cbxColor.Text
-                        P.Material = cbxMaterial.Text
-                        P.Stock = txtStock.Text
-                        P.RutaImagen = RutaImgen
-                        P.Registrar_Producto()
-                        Call Listar_Productos() 'Llamamos al método listar Productos
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Call Limpiar_Controles() 'Llamamos el método limpiar controles
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-
-                Else 'Si es valor 1 actualizamos la información
-                    S.Codigo_Item = Codigo
-                    S.Codigo_Tipo = 1
-                    S.Nombre = txtNombreProducto.Text
-                    S.Precio = CDec(txtPrecio.Text)
-                    Mensaje = S.Actualizar_Item() 'Ejecutamos la función Actualizar Servicio
-                    If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se actualizó correctamente
-                        Dim NombreFoto As String = "Ataud-" & Codigo
-                        RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, rutaAntigua, 1)
-                        P.Codigo_Item = Codigo
-                        P.Descripcion = txtDescripcionProducto.Text
-                        P.Color = cbxColor.Text
-                        P.Material = cbxMaterial.Text
-                        P.Stock = txtStock.Text
-                        P.RutaImagen = RutaImgen
-                        P.Actualizar_Producto()
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Call Listar_Productos() 'Llamamos al método listar Productos
-                        Call Limpiar_Controles() 'Llamamos el método limpiar controles
-                    Else 'Si no se realizó la actualización correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 
@@ -166,8 +169,7 @@ Public Class Frm003_ProductosyServicios
         txtNombreProducto.Focus()
         txtDescripcionProducto.Clear()
         cbxMaterial.SelectedIndex = 0
-        txtPrecio.Clear()
-        txtStock.Clear()
+
         cbxColor.SelectedIndex = 0
         ptbImagen.ImageLocation = Imagen.loadImagen()
         dtgProductos.ClearSelection()
@@ -190,47 +192,68 @@ Public Class Frm003_ProductosyServicios
     '====================================== TabPage Servicios =========================================
 
     Private Sub btnGuardarServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarServicios.Click
-        'Evento para guardar cambios, para registrar y/o actualizar información
-        ErrorProvider1.Clear()
-        If (txtNombreServicio.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtNombreServicio, "Ingrese Nombre de Servicio")
-        ElseIf (txtPrecioServicio.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtPrecioServicio, "Ingrese Precio de Servicio")
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos") Then
+            'Evento para guardar cambios, para registrar y/o actualizar información
+            ErrorProvider1.Clear()
+            If (txtNombreServicio.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtNombreServicio, "Ingrese Nombre de Servicio")
+            ElseIf (txtPrecioServicio.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtPrecioServicio, "Ingrese Precio de Servicio")
+            Else
+                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+
+                Try 'Manejamos una excepción de errores
+
+                    If (Valor = 0) Then 'Si es valor cero, registramos
+                        S.Codigo_Tipo = 2
+                        S.Nombre = txtNombreServicio.Text
+
+                        Mensaje = S.Registrar_Item() 'Ejecutamos la función Registrar Servicio
+                        If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
+
+                            se.Codigo_Item = S.Devolver_Codigo_Item()
+                            se.tipo = cb_tipo_servicio.SelectedItem
+                            se.km = tb_km.Text
+                            se.precio_km = tb_precio_km.Text
+
+                            se.precio = txtPrecioServicio.Text
+                            se.Registrar_servicio()
+                            Call Listar_Servicios() 'Llamamos al método listar servicios
+                            Call Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+
+                    Else 'Si es valor 1 actualizamos la información
+                        S.Codigo_Item = Codigo
+                        S.Codigo_Tipo = 2
+                        S.Nombre = txtNombreServicio.Text
+                        Mensaje = S.Actualizar_Item() 'Ejecutamos la función Actualizar Servicio
+                        If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se actualizó correctamente
+                            se.Codigo_Item = S.Devolver_Codigo_Item()
+                            se.tipo = cb_tipo_servicio.SelectedItem
+                            se.km = tb_km.Text
+                            se.precio_km = tb_precio_km.Text
+                            se.precio = txtPrecioServicio.Text
+                            se.Actualizar_servicio()
+                            Listar_Servicios() 'Llamamos al método listar servicios
+                            Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                        Else 'Si no se realizó la actualización correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
         Else
-            Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
-
-            Try 'Manejamos una excepción de errores
-
-                If (Valor = 0) Then 'Si es valor cero, registramos
-                    S.Codigo_Tipo = 2
-                    S.Nombre = txtNombreServicio.Text
-                    S.Precio = CDec(txtPrecioServicio.Text)
-                    Mensaje = S.Registrar_Item() 'Ejecutamos la función Registrar Servicio
-                    If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
-                        Call Listar_Servicios() 'Llamamos al método listar servicios
-                        Call Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-
-                Else 'Si es valor 1 actualizamos la información
-                    S.Codigo_Item = Codigo
-                    S.Codigo_Tipo = 2
-                    S.Nombre = txtNombreServicio.Text
-                    S.Precio = CDec(txtPrecioServicio.Text)
-                    Mensaje = S.Actualizar_Item() 'Ejecutamos la función Actualizar Servicio
-                    If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se actualizó correctamente
-                        Listar_Servicios() 'Llamamos al método listar servicios
-                        Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                    Else 'Si no se realizó la actualización correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 
@@ -238,15 +261,18 @@ Public Class Frm003_ProductosyServicios
         Dim dt As New DataTable 'Instanciamos o asignamos memoria al DataTable
 
         Try 'Manejamos una excepción de errores
-            dt = S.Listar_Servicos() 'Poblamos el DataTable
+            dt = se.Listar_Servicios() 'Poblamos el DataTable
             DtgServicios.Rows.Clear() 'Limpiamos el control DataGridView1
 
             'Llenamos el DataGridView1 con todos los elementos que contiene el DataTable
             For i = 0 To dt.Rows.Count - 1 'Recorremos el DataTable
                 DtgServicios.Rows.Add(dt.Rows(i)(0)) 'Agregamos una nueva fila en blanco
                 DtgServicios.Rows(i).Cells(0).Value = dt.Rows(i)(0).ToString()
-                DtgServicios.Rows(i).Cells(1).Value = dt.Rows(i)(2).ToString()
-                DtgServicios.Rows(i).Cells(2).Value = Math.Round(CDec(dt.Rows(i)(3)), 2)
+                DtgServicios.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
+                DtgServicios.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
+                DtgServicios.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
+                DtgServicios.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
+                DtgServicios.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
             Next
             DtgServicios.ClearSelection() 'Limpiamos la selección del DataGridView1
 
@@ -276,7 +302,10 @@ Public Class Frm003_ProductosyServicios
         If (DtgServicios.Rows.Count > 0) Then 'Verificamos que exista por lo menos un registro
             Codigo = CInt(DtgServicios.CurrentRow.Cells(0).Value.ToString())
             txtNombreServicio.Text = DtgServicios.CurrentRow.Cells(1).Value.ToString()
-            txtPrecioServicio.Text = Math.Round(CDec(DtgServicios.CurrentRow.Cells(2).Value), 2)
+            cb_tipo_servicio.SelectedItem = DtgServicios.CurrentRow.Cells(2).Value.ToString()
+            tb_km.Text = DtgServicios.CurrentRow.Cells(3).Value.ToString()
+            tb_precio_km.Text = DtgServicios.CurrentRow.Cells(4).Value.ToString()
+            txtPrecioServicio.Text = DtgServicios.CurrentRow.Cells(5).Value.ToString()
             DtgServicios.Rows(DtgServicios.CurrentRow.Index).Selected = True 'True para mantener seleccionada la fila
             Valor = 1 'Asignamos valor uno para indicarle que va a actualizar la información
         End If
@@ -299,11 +328,11 @@ Public Class Frm003_ProductosyServicios
         Validar.Cerrar_form = 0
     End Sub
 
-    Private Sub txtPrecio_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPrecio.KeyPress
+    Private Sub txtPrecio_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         Validar.Numeros_con_Decimales(e)
     End Sub
 
-    Private Sub txtStock_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtStock.KeyPress
+    Private Sub txtStock_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         Validar.Numeros(e)
     End Sub
 
@@ -370,7 +399,7 @@ Public Class Frm003_ProductosyServicios
     End Function
 
     Private Sub Cerrar_Form()
-        If (txtNombreProducto.Text.Trim = "" And txtDescripcionProducto.Text.Trim = "" And txtPrecio.Text.Trim = "" And txtStock.Text.Trim = "" And txtNombreServicio.Text.Trim = "" And txtPrecioServicio.Text.Trim = "") Then
+        If (txtNombreProducto.Text.Trim = "" And txtDescripcionProducto.Text.Trim = "" And txtNombreServicio.Text.Trim = "" And txtPrecioServicio.Text.Trim = "") Then
             Close()
         Else
             Dim fr As New Frm011_MensajedeConfirmación2
@@ -381,5 +410,11 @@ Public Class Frm003_ProductosyServicios
         End If
     End Sub
 
-  
+    Private Sub Panel_cabecera_Paint(sender As Object, e As PaintEventArgs) Handles Panel_cabecera.Paint
+
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
 End Class

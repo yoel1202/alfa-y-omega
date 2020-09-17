@@ -30,15 +30,11 @@ Partial Class Frm003_ProductosyServicios
         Me.btnNuevoProductos = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.txtStock = New System.Windows.Forms.TextBox()
-        Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.cbxColor = New System.Windows.Forms.ComboBox()
         Me.cbxMaterial = New System.Windows.Forms.ComboBox()
         Me.txtDescripcionProducto = New System.Windows.Forms.TextBox()
         Me.txtNombreProducto = New System.Windows.Forms.TextBox()
         Me.ptbImagen = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -49,18 +45,19 @@ Partial Class Frm003_ProductosyServicios
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DtgServicios = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.tb_precio_km = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.tb_km = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cb_tipo_servicio = New System.Windows.Forms.ComboBox()
         Me.btnGuardarServicios = New System.Windows.Forms.Button()
         Me.btnNuevoServicios = New System.Windows.Forms.Button()
         Me.txtPrecioServicio = New System.Windows.Forms.TextBox()
@@ -75,6 +72,12 @@ Partial Class Frm003_ProductosyServicios
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.ptbIcon = New System.Windows.Forms.PictureBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Km = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio_KM = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,15 +98,11 @@ Partial Class Frm003_ProductosyServicios
         Me.GroupBox1.Controls.Add(Me.btnNuevoProductos)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
-        Me.GroupBox1.Controls.Add(Me.txtStock)
-        Me.GroupBox1.Controls.Add(Me.txtPrecio)
         Me.GroupBox1.Controls.Add(Me.cbxColor)
         Me.GroupBox1.Controls.Add(Me.cbxMaterial)
         Me.GroupBox1.Controls.Add(Me.txtDescripcionProducto)
         Me.GroupBox1.Controls.Add(Me.txtNombreProducto)
         Me.GroupBox1.Controls.Add(Me.ptbImagen)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -171,20 +170,6 @@ Partial Class Frm003_ProductosyServicios
         Me.btnGuardar.Text = "&Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'txtStock
-        '
-        Me.txtStock.Location = New System.Drawing.Point(412, 207)
-        Me.txtStock.Name = "txtStock"
-        Me.txtStock.Size = New System.Drawing.Size(117, 21)
-        Me.txtStock.TabIndex = 6
-        '
-        'txtPrecio
-        '
-        Me.txtPrecio.Location = New System.Drawing.Point(412, 167)
-        Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(117, 21)
-        Me.txtPrecio.TabIndex = 4
-        '
         'cbxColor
         '
         Me.cbxColor.BackColor = System.Drawing.SystemColors.Menu
@@ -233,24 +218,6 @@ Partial Class Frm003_ProductosyServicios
         Me.ptbImagen.TabIndex = 7
         Me.ptbImagen.TabStop = False
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(362, 210)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 15)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Stock:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(360, 170)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 15)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Precio:"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -292,10 +259,10 @@ Partial Class Frm003_ProductosyServicios
         Me.dtgProductos.AllowUserToAddRows = False
         Me.dtgProductos.BackgroundColor = System.Drawing.Color.White
         Me.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.dtgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column8})
         Me.dtgProductos.Location = New System.Drawing.Point(27, 296)
         Me.dtgProductos.Name = "dtgProductos"
-        Me.dtgProductos.Size = New System.Drawing.Size(1000, 113)
+        Me.dtgProductos.Size = New System.Drawing.Size(854, 113)
         Me.dtgProductos.TabIndex = 2
         '
         'Column1
@@ -331,20 +298,6 @@ Partial Class Frm003_ProductosyServicios
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         Me.Column5.Width = 80
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Stock"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 50
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Precio"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 80
         '
         'Column8
         '
@@ -398,38 +351,20 @@ Partial Class Frm003_ProductosyServicios
         Me.DtgServicios.AllowUserToAddRows = False
         Me.DtgServicios.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DtgServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DtgServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.DtgServicios.Location = New System.Drawing.Point(207, 279)
+        Me.DtgServicios.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.Km, Me.Precio_KM, Me.Precio})
+        Me.DtgServicios.Location = New System.Drawing.Point(90, 279)
         Me.DtgServicios.Name = "DtgServicios"
-        Me.DtgServicios.Size = New System.Drawing.Size(645, 202)
+        Me.DtgServicios.Size = New System.Drawing.Size(927, 150)
         Me.DtgServicios.TabIndex = 10
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Código"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Nombre"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 500
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        DataGridViewCellStyle3.Format = "C2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Precio"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 84
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.tb_precio_km)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.tb_km)
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.cb_tipo_servicio)
         Me.GroupBox2.Controls.Add(Me.btnGuardarServicios)
         Me.GroupBox2.Controls.Add(Me.btnNuevoServicios)
         Me.GroupBox2.Controls.Add(Me.txtPrecioServicio)
@@ -443,13 +378,63 @@ Partial Class Frm003_ProductosyServicios
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del Servicio"
         '
+        'tb_precio_km
+        '
+        Me.tb_precio_km.Location = New System.Drawing.Point(363, 82)
+        Me.tb_precio_km.Name = "tb_precio_km"
+        Me.tb_precio_km.Size = New System.Drawing.Size(124, 21)
+        Me.tb_precio_km.TabIndex = 8
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(281, 85)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(76, 15)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "Precio x KM:"
+        '
+        'tb_km
+        '
+        Me.tb_km.Location = New System.Drawing.Point(133, 85)
+        Me.tb_km.Name = "tb_km"
+        Me.tb_km.Size = New System.Drawing.Size(124, 21)
+        Me.tb_km.TabIndex = 6
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(55, 88)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(29, 15)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "KM:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(45, 22)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(53, 15)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Servicio:"
+        '
+        'cb_tipo_servicio
+        '
+        Me.cb_tipo_servicio.FormattingEnabled = True
+        Me.cb_tipo_servicio.Items.AddRange(New Object() {"Transporte", "Floristeria"})
+        Me.cb_tipo_servicio.Location = New System.Drawing.Point(133, 20)
+        Me.cb_tipo_servicio.Name = "cb_tipo_servicio"
+        Me.cb_tipo_servicio.Size = New System.Drawing.Size(191, 23)
+        Me.cb_tipo_servicio.TabIndex = 4
+        '
         'btnGuardarServicios
         '
         Me.btnGuardarServicios.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
         Me.btnGuardarServicios.FlatAppearance.BorderSize = 0
         Me.btnGuardarServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardarServicios.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnGuardarServicios.Location = New System.Drawing.Point(359, 140)
+        Me.btnGuardarServicios.Location = New System.Drawing.Point(359, 149)
         Me.btnGuardarServicios.Name = "btnGuardarServicios"
         Me.btnGuardarServicios.Size = New System.Drawing.Size(150, 40)
         Me.btnGuardarServicios.TabIndex = 3
@@ -462,7 +447,7 @@ Partial Class Frm003_ProductosyServicios
         Me.btnNuevoServicios.FlatAppearance.BorderSize = 0
         Me.btnNuevoServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevoServicios.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnNuevoServicios.Location = New System.Drawing.Point(163, 140)
+        Me.btnNuevoServicios.Location = New System.Drawing.Point(163, 149)
         Me.btnNuevoServicios.Name = "btnNuevoServicios"
         Me.btnNuevoServicios.Size = New System.Drawing.Size(150, 40)
         Me.btnNuevoServicios.TabIndex = 2
@@ -471,14 +456,14 @@ Partial Class Frm003_ProductosyServicios
         '
         'txtPrecioServicio
         '
-        Me.txtPrecioServicio.Location = New System.Drawing.Point(133, 89)
+        Me.txtPrecioServicio.Location = New System.Drawing.Point(133, 122)
         Me.txtPrecioServicio.Name = "txtPrecioServicio"
         Me.txtPrecioServicio.Size = New System.Drawing.Size(124, 21)
         Me.txtPrecioServicio.TabIndex = 1
         '
         'txtNombreServicio
         '
-        Me.txtNombreServicio.Location = New System.Drawing.Point(133, 39)
+        Me.txtNombreServicio.Location = New System.Drawing.Point(133, 48)
         Me.txtNombreServicio.Name = "txtNombreServicio"
         Me.txtNombreServicio.Size = New System.Drawing.Size(442, 21)
         Me.txtNombreServicio.TabIndex = 0
@@ -486,7 +471,7 @@ Partial Class Frm003_ProductosyServicios
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(55, 92)
+        Me.Label8.Location = New System.Drawing.Point(55, 125)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(45, 15)
         Me.Label8.TabIndex = 1
@@ -495,7 +480,7 @@ Partial Class Frm003_ProductosyServicios
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(48, 42)
+        Me.Label9.Location = New System.Drawing.Point(48, 51)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(55, 15)
         Me.Label9.TabIndex = 0
@@ -580,6 +565,45 @@ Partial Class Frm003_ProductosyServicios
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Código"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 500
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Tipo"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 84
+        '
+        'Km
+        '
+        Me.Km.HeaderText = "Km"
+        Me.Km.Name = "Km"
+        '
+        'Precio_KM
+        '
+        Me.Precio_KM.HeaderText = "Precio por KM"
+        Me.Precio_KM.Name = "Precio_KM"
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        '
         'Frm003_ProductosyServicios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -617,15 +641,11 @@ Partial Class Frm003_ProductosyServicios
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents ptbImagen As System.Windows.Forms.PictureBox
     Friend WithEvents txtDescripcionProducto As System.Windows.Forms.TextBox
     Friend WithEvents txtNombreProducto As System.Windows.Forms.TextBox
     Friend WithEvents cbxColor As System.Windows.Forms.ComboBox
     Friend WithEvents cbxMaterial As System.Windows.Forms.ComboBox
-    Friend WithEvents txtStock As System.Windows.Forms.TextBox
-    Friend WithEvents txtPrecio As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents dtgProductos As System.Windows.Forms.DataGridView
@@ -641,14 +661,6 @@ Partial Class Frm003_ProductosyServicios
     Private WithEvents lkbCerrar As System.Windows.Forms.Label
     Private WithEvents lblTitulo As System.Windows.Forms.Label
     Private WithEvents ptbIcon As System.Windows.Forms.PictureBox
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DtgServicios As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents btnNuevoServicios As System.Windows.Forms.Button
@@ -657,11 +669,25 @@ Partial Class Frm003_ProductosyServicios
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents btnGuardarServicios As System.Windows.Forms.Button
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents lkbAddColor As System.Windows.Forms.LinkLabel
     Friend WithEvents lkbAddMaterial As System.Windows.Forms.LinkLabel
-
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents tb_precio_km As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents tb_km As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents cb_tipo_servicio As ComboBox
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents Km As DataGridViewTextBoxColumn
+    Friend WithEvents Precio_KM As DataGridViewTextBoxColumn
+    Friend WithEvents Precio As DataGridViewTextBoxColumn
 End Class

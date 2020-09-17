@@ -9,15 +9,9 @@ Public Class clsItem
     Public Property Codigo_Tipo() As Integer
     Public Property Codigo_Item() As Integer
     Public Property Nombre() As String
-    Public Property Precio() As Decimal
 
-    Public Function Listar_Servicos() As DataTable 'Función para listar servicios
-        Try 'Manejamos una excepción de errores
-            Return M.Listado("Listar_Servicios", Nothing) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
-        Catch ex As Exception
-            Throw New Exception("Error al listar servicios, verifique clase clsItem") 'Creamos una nueva excepción de errores
-        End Try
-    End Function
+
+
 
     Public Function Listar_Item() As DataTable 'Función para listar Item
         Try 'Manejamos una excepción de errores
@@ -54,10 +48,9 @@ Public Class clsItem
             'Agregamos a la lista genérica el nombre y valor de los parámetros
             lst.Add(New clsParametro("@Codigo_Tipo_Items", Codigo_Tipo))
             lst.Add(New clsParametro("@Nombres", Nombre))
-            lst.Add(New clsParametro("@Precios", Precio))
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Item", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Mensaje = lst(3).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+            Mensaje = lst(2).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al registrar el servicio, verifique clase clsItem") 'Creamos una nueva excepción de errores
         End Try
@@ -75,10 +68,9 @@ Public Class clsItem
             lst.Add(New clsParametro("@Codigo_Items", Codigo_Item))
             lst.Add(New clsParametro("@Codigo_Tipo_Items", Codigo_Tipo))
             lst.Add(New clsParametro("@Nombres", Nombre))
-            lst.Add(New clsParametro("@Precios", Precio))
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Actualizar_Item", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Mensaje = lst(4).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+            Mensaje = lst(3).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al actualizar el servicio, verifique clase clsItem") 'Creamos una nueva excepción de errores
         End Try
@@ -92,7 +84,7 @@ Public Class clsItem
         Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@CodigoItems", "", SqlDbType.Int, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@CodigoItems", "", MySqlDbType.Int32, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Devolver_Codigo_Item", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Codigo = lst(0).Valor.ToString() 'Recuperamos el código de la Base de Datos
         Catch ex As Exception

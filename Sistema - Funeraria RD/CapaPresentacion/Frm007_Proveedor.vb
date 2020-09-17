@@ -7,7 +7,7 @@ Public Class Frm007_Proveedor
     Public CodigoPr As Integer = 0 'Variable para almacenar el código del Proveedor
     Public Valor As Integer = 0 'Variable para verificar si se va a registrar o actualizar la información
     Dim valida As Integer = 0
-
+    Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
     Private Sub FrmProveedorPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Listar_Proveedores()
     End Sub
@@ -108,61 +108,69 @@ Public Class Frm007_Proveedor
     End Sub
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        'Evento para guardar cambios, para registrar y/o actualizar información
-        ErrorProvider1.Clear()
-        If (txtRuc.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtRuc, "Ingrese Número de RUC")
-        ElseIf (txtRazonSocial.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtRazonSocial, "Ingrese Razón Social del Proveedor")
-        ElseIf (txtRepresentante.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtRepresentante, "Ingrese el Representante del Proveedor")
-        ElseIf (txtCelular.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtCelular, "Ingrese número de Celular del Representante")
-        ElseIf (txtTelefono.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtTelefono, "Ingrese número de Telefono del Proveedor")
-        ElseIf (txtDireccion.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtTelefono, "Ingrese Dirección")
-        Else
-            Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
-            Try
-                If (Valor = 0) Then
-                    P.Ruc = CStr(txtRuc.Text)
-                    P.RazinSocial = CStr(txtRazonSocial.Text)
-                    P.Representante = CStr(txtRepresentante.Text)
-                    P.Celular = CStr(txtCelular.Text)
-                    P.Telefono = CStr(txtTelefono.Text)
-                    P.Direccion = CStr(txtDireccion.Text)
-                    P.Email = CStr(txtEmail.Text)
-                    Mensaje = P.Registrar_Proveedores()
-                    If (Mensaje = "Registrado correctamente") Then
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        TabControl1.SelectTab(TabPage1)
-                        Valor = 0
-                    Else
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
 
-                Else
-                    P.CodigoProveedor = CInt(CodigoPr)
-                    P.Ruc = CStr(txtRuc.Text)
-                    P.RazinSocial = CStr(txtRazonSocial.Text)
-                    P.Representante = CStr(txtRepresentante.Text)
-                    P.Celular = CStr(txtCelular.Text)
-                    P.Telefono = CStr(txtTelefono.Text)
-                    P.Direccion = CStr(txtDireccion.Text)
-                    P.Email = CStr(txtEmail.Text)
-                    Mensaje = P.Actualizar_Proveedores()
-                    If (Mensaje = "Actualizado correctamente") Then
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        TabControl1.SelectTab(TabPage1)
-                        Valor = 0
+        If (permiso = "Todos") Then
+            'Evento para guardar cambios, para registrar y/o actualizar información
+            ErrorProvider1.Clear()
+            If (txtRuc.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtRuc, "Ingrese Número de RUC")
+            ElseIf (txtRazonSocial.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtRazonSocial, "Ingrese Razón Social del Proveedor")
+            ElseIf (txtRepresentante.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtRepresentante, "Ingrese el Representante del Proveedor")
+            ElseIf (txtCelular.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtCelular, "Ingrese número de Celular del Representante")
+            ElseIf (txtTelefono.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtTelefono, "Ingrese número de Telefono del Proveedor")
+            ElseIf (txtDireccion.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtTelefono, "Ingrese Dirección")
+            Else
+                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+                Try
+                    If (Valor = 0) Then
+                        P.Ruc = CStr(txtRuc.Text)
+                        P.RazinSocial = CStr(txtRazonSocial.Text)
+                        P.Representante = CStr(txtRepresentante.Text)
+                        P.Celular = CStr(txtCelular.Text)
+                        P.Telefono = CStr(txtTelefono.Text)
+                        P.Direccion = CStr(txtDireccion.Text)
+                        P.Email = CStr(txtEmail.Text)
+                        Mensaje = P.Registrar_Proveedores()
+                        If (Mensaje = "Registrado correctamente") Then
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            TabControl1.SelectTab(TabPage1)
+                            Valor = 0
+                        Else
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+
                     Else
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        P.CodigoProveedor = CInt(CodigoPr)
+                        P.Ruc = CStr(txtRuc.Text)
+                        P.RazinSocial = CStr(txtRazonSocial.Text)
+                        P.Representante = CStr(txtRepresentante.Text)
+                        P.Celular = CStr(txtCelular.Text)
+                        P.Telefono = CStr(txtTelefono.Text)
+                        P.Direccion = CStr(txtDireccion.Text)
+                        P.Email = CStr(txtEmail.Text)
+                        Mensaje = P.Actualizar_Proveedores()
+                        If (Mensaje = "Actualizado correctamente") Then
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            TabControl1.SelectTab(TabPage1)
+                            Valor = 0
+                        Else
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
                     End If
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 

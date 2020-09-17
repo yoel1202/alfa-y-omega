@@ -133,6 +133,7 @@
     <Compile Include="clsParentescoDifundo.vb" />
     <Compile Include="clsPersonal.vb" />
     <Compile Include="clsPlanFunerario.vb" />
+    <Compile Include="clsServicios.vb" />
     <Compile Include="clsProducto.vb" />
     <Compile Include="clsProveedor.vb" />
     <Compile Include="clsUsuario.vb" />

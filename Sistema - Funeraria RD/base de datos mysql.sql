@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-09-2020 a las 01:32:43
+-- Tiempo de generación: 17-09-2020 a las 04:59:46
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.33
 
@@ -45,9 +45,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Cliente` (`Codigo_Client
 
  	End$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Detalle_Item` (`Codigo_Items` INT, `Descripcions` VARCHAR(100), `Colors` VARCHAR(50), `Materials` VARCHAR(20), `Stocks` INT, `RutaImagens` VARCHAR(100), OUT `Mensaje` VARCHAR(100))  Begin
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Detalle_Item` (`Codigo_Items` INT, `Descripcions` VARCHAR(100), `Colors` VARCHAR(50), `Materials` VARCHAR(20), `RutaImagens` VARCHAR(100), OUT `Mensaje` VARCHAR(100))  Begin
 
- 		Update Detalle_Item Set Descripcion=Descripcions,Color=Colors,Material=Materials,Stock=Stocks,
+ 		Update Detalle_Item Set Descripcion=Descripcions,Color=Colors,Material=Materials,
 
  		RutaImagen=RutaImagens Where Codigo_Item=Codigo_Items;
 
@@ -125,7 +125,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Informacion_Venta` (`Cod
 
  	End$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Item` (`Codigo_Items` INT, `Codigo_Tipo_Items` INT, `Nombres` VARCHAR(100), `Precios` DOUBLE, OUT `Mensaje` VARCHAR(100))  Begin
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Item` (`Codigo_Items` INT, `Codigo_Tipo_Items` INT, `Nombres` VARCHAR(100), OUT `Mensaje` VARCHAR(100))  Begin
 
  		If(Not Exists(Select * From Item Where Codigo_Item=Codigo_Items))then
 
@@ -137,7 +137,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Item` (`Codigo_Items` IN
 
  				Update Item Set Codigo_Tipo_Item=Codigo_Tipo_Items,
 
- 				Nombre=Nombres,Precio=Precios Where Codigo_Item=Codigo_Items;
+ 				Nombre=Nombres Where Codigo_Item=Codigo_Items;
 
  				Set Mensaje = 'Actualizado Correctamente';
 
@@ -248,7 +248,15 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Proveedor` (`Codigo_Prov
 
  	End$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Usuario` (`Codigo_Personals` INT, `Usuarios` VARCHAR(20), `Claves` VARCHAR(10), `personales` VARCHAR(11), `productos` VARCHAR(11), `planes` VARCHAR(11), `clientes` VARCHAR(11), `difuntos` VARCHAR(11), `provedores` VARCHAR(11), `compras` VARCHAR(11), `ventas` VARCHAR(11), OUT `Mensaje` VARCHAR(100))  Begin
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Servicio` (`Codigo_Items` INT, `tipos` VARCHAR(30), `kms` DECIMAL, `precio_kms` DECIMAL, `precios` DECIMAL, OUT `Mensaje` VARCHAR(100))  BEGIN
+	Update servicios Set tipo=tipos,km=kms,precio_km=precio_kms,
+
+ 		precio=precios Where Codigo_Item=Codigo_Items;
+
+ 		Set Mensaje = 'Actualizado Correctamente';
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Usuario` (`Codigo_Personals` INT, `Usuarios` VARCHAR(20), `Claves` VARCHAR(10), `personales` VARCHAR(20), `productos` VARCHAR(20), `planes` VARCHAR(20), `clientes` VARCHAR(20), `difuntos` VARCHAR(20), `provedores` VARCHAR(20), `compras` VARCHAR(20), `ventas` VARCHAR(20), OUT `Mensaje` VARCHAR(100))  Begin
 
  		If(Exists(Select * From Usuario Where Usuario=Usuarios And Codigo_Personal<>Codigo_Personals)) then
 
@@ -261,14 +269,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Actualizar_Usuario` (`Codigo_Person
  				Update Usuario Set Usuario=Usuarios,Clave=Claves Where Codigo_Personal=Codigo_Personals;
                 set usuarios=(select Codigo_Usuario  from usuario where Codigo_Personal =Codigo_Personals);
 
-update permisos set permiso=personales where fk_usuario=usuarios and tipo='personal' ;
-update permisos set permiso=productos where fk_usuario=usuarios and tipo='producto' ;
-update permisos set permiso=planes where fk_usuario=usuarios and tipo='plan' ;
-update permisos set permiso=clientes where fk_usuario=usuarios and tipo='cliente' ;
-update permisos set permiso=difuntos where fk_usuario=usuarios and tipo='difunto' ;
-update permisos set permiso=provedores where fk_usuario=usuarios and tipo='provedor' ;
-update permisos set permiso=compras where fk_usuario=usuarios and tipo='compra' ;
-update permisos set permiso=ventas where fk_usuario=usuarios and tipo='venta' ;
+update permisos set personal=personales , producto=productos , plan=planes , cliente=clientes , difunto=difuntos ,provedor=provedores , compra=compras ,venta=ventas 
+where fk_usuario=usuarios ;
  				Set Mensaje = 'Actualizado correctamente';
 
  			End if;
@@ -369,8 +371,33 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Devolver_Codigo_Vent` (OUT `CodigoV
  	End$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Devolver_permisos` (`codigo_personals` VARCHAR(20), `tipo` VARCHAR(20), OUT `permiso` VARCHAR(20))  begin
-
- 	set permiso=(Select concat(tipo,"") from Usuario where Codigo_Personal =codigo_personals);
+declare usuarios int;
+  set usuarios=(select Codigo_Usuario  from usuario where Codigo_Personal =Codigo_Personals);
+  
+ if(tipo='personal')then
+ 	set permiso=(Select personal from permisos where fk_usuario  =usuarios);
+    
+    elseif(tipo='producto') then
+    set permiso=(Select producto from permisos where fk_usuario  =usuarios);
+    
+ elseif(tipo='plan') then
+    set permiso=(Select plan from permisos where fk_usuario  =usuarios);
+    
+    elseif(tipo='cliente') then
+    set permiso=(Select cliente from permisos where fk_usuario  =usuarios);
+    
+    elseif(tipo='difunto') then
+    set permiso=(Select difunto from permisos where fk_usuario  =usuarios);
+    
+    elseif(tipo='provedor') then
+    set permiso=(Select provedor from permisos where fk_usuario  =usuarios);
+    
+    elseif(tipo='compra') then
+    set permiso=(Select compra from permisos where fk_usuario  =usuarios);
+    
+    elseif(tipo='venta') then
+    set permiso=(Select ventas from permisos where fk_usuario  =usuarios);
+    end if;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Eliminar_Detalle_Plan_Funerario` (`CodigoDetalle` INT, OUT `Mensaje` VARCHAR(100))  Begin
@@ -519,7 +546,7 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Listar_Productos` ()  Begin
 
- 		Select  I.Codigo_Item,I.Nombre,D.Descripcion,D.Color,D.Material,D.Stock,I.Precio,D.RutaImagen
+ 		Select  I.Codigo_Item,I.Nombre,D.Descripcion,D.Color,D.Material,D.RutaImagen
 
  		From Item I Inner Join Detalle_Item D On I.Codigo_Item=D.Codigo_Item
 
@@ -535,15 +562,15 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Listar_Proveedores` ()  Begin
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Listar_Servicios` ()  Begin
 
- 		Select * From Item Where Codigo_Tipo_Item=2;
+ 		Select it.Codigo_Item,it.Nombre,tipo,km,precio_km,se.precio From Item as  it inner join servicios as se on se.Codigo_Item =it.Codigo_Item Where Codigo_Tipo_Item=2;
 
  	End$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `Listar_Usuarios` ()  Begin
 
- 		Select U.Codigo_Personal,concat(concat(P.Nombre,' '),P.Apellidos) ,U.Usuario,U.Clave
+ 		Select U.Codigo_Personal,concat(concat(P.Nombre,' '),P.Apellidos) ,U.Usuario,U.Clave,personal,producto,plan,cliente,difunto,provedor,compra,venta
 
- 		From Personal P Inner Join Usuario U On P.Codigo_Personal =U.Codigo_Personal  ;
+ 		From Personal P Inner Join Usuario U On P.Codigo_Personal =U.Codigo_Personal inner join permisos on fk_usuario=Codigo_Usuario  ;
 
  	End$$
 
@@ -805,9 +832,9 @@ declare Stock  int;
 
  	End$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Detalle_Item` (`Codigo_Items` INT, `Descripcions` VARCHAR(100), `Colors` VARCHAR(50), `Materials` VARCHAR(20), `Stocks` INT, `RutaImagens` VARCHAR(100), OUT `Mensaje` VARCHAR(100))  Begin
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Detalle_Item` (`Codigo_Items` INT, `Descripcions` VARCHAR(100), `Colors` VARCHAR(50), `Materials` VARCHAR(20), `RutaImagens` VARCHAR(100), OUT `Mensaje` VARCHAR(100))  Begin
 
- 		Insert into Detalle_Item (Codigo_Item,Descripcion,Color,Material,Stock,RutaImagen) Values(Codigo_Items,Descripcions,Colors,Materials,Stocks,RutaImagens);
+ 		Insert into Detalle_Item (Codigo_Item,Descripcion,Color,Material,RutaImagen) Values(Codigo_Items,Descripcions,Colors,Materials,RutaImagens);
 
  		Set Mensaje = 'Registrado Correctamente';
 
@@ -847,7 +874,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Informacion_Venta` (`Codi
 
  	End$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Item` (`Codigo_Tipo_Items` INT, `Nombres` VARCHAR(100), `Precios` DOUBLE, OUT `Mensaje` VARCHAR(100))  Begin
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Item` (`Codigo_Tipo_Items` INT, `Nombres` VARCHAR(100), OUT `Mensaje` VARCHAR(100))  Begin
 
  		If(Exists(Select * From Item Where Nombre=Nombres))then 
 
@@ -857,7 +884,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Item` (`Codigo_Tipo_Items
 
  			
 
- 				Insert into Item (Codigo_Tipo_Item,Nombre,Precio) Values(Codigo_Tipo_Items,Nombres,Precios);
+ 				Insert into Item (Codigo_Tipo_Item,Nombre) Values(Codigo_Tipo_Items,Nombres);
 
  				Set Mensaje = 'Registrado Correctamente'	;			
 
@@ -984,7 +1011,16 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Proveedor` (`RUCs` CHAR(1
 
  	End$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Usuario` (`Codigo_Personals` INT, `Usuarios` VARCHAR(20), `Claves` VARCHAR(10), `personales` VARCHAR(11), `productos` VARCHAR(11), `planes` VARCHAR(11), `clientes` VARCHAR(11), `difuntos` VARCHAR(11), `provedores` VARCHAR(11), `compras` VARCHAR(11), `ventas` VARCHAR(11), OUT `Mensaje` VARCHAR(100))  Begin
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Servicio` (`Codigo_Items` INT, `tipos` VARCHAR(30), `kms` DECIMAL, `precio_kms` DECIMAL, `precios` DECIMAL, OUT `Mensaje` VARCHAR(100))  Begin
+
+ 		Insert into servicios (Codigo_Item,tipo,km,precio_km,precio) Values(Codigo_Items,tipos,kms,precio_kms,precios);
+
+ 		Set Mensaje = 'Registrado Correctamente';
+
+
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Registrar_Usuario` (`Codigo_Personals` INT, `Usuarios` VARCHAR(20), `Claves` VARCHAR(10), `personales` VARCHAR(20), `productos` VARCHAR(20), `planes` VARCHAR(20), `clientes` VARCHAR(20), `difuntos` VARCHAR(20), `provedores` VARCHAR(20), `compras` VARCHAR(20), `ventas` VARCHAR(20), OUT `Mensaje` VARCHAR(100))  Begin
 declare codigousuario int;
  		If(Not Exists(Select * From Personal Where Codigo_Personal=Codigo_Personals))then
 
@@ -1014,8 +1050,7 @@ declare codigousuario int;
                                 
                              
 						set codigousuario=(select Codigo_Usuario  from usuario where Codigo_Personal =codigo_personals);
-INSERT INTO permisos (permiso,tipo,fk_usuario) values (personales,'personal',codigousuario), (productos,'producto',codigousuario), (planes,'plan',codigousuario), 
-(clientes,'cliente',codigousuario), (difuntos,'difunto',codigousuario), (provedores,'provedor',codigousuario), (compras,'compra',codigousuario),(ventas,'venta',codigousuario);
+INSERT INTO permisos (personal,producto,plan,cliente,difunto,provedor,compra,venta,fk_usuario) values (personales,productos,planes,clientes,difuntos,provedores,compras,ventas,codigousuario);
  								
                                 Set Mensaje = 'Registrado correctamente';
 
@@ -1177,6 +1212,14 @@ CREATE TABLE `color` (
   `descripcion` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `color`
+--
+
+INSERT INTO `color` (`Codigo_color`, `descripcion`) VALUES
+(1, 'Selecciona una opción'),
+(2, 'azul');
+
 -- --------------------------------------------------------
 
 --
@@ -1224,6 +1267,13 @@ CREATE TABLE `detalle_item` (
   `Stock` int(11) NOT NULL,
   `RutaImagen` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `detalle_item`
+--
+
+INSERT INTO `detalle_item` (`Codigo_Detalle_Item`, `Codigo_Item`, `Descripcion`, `Color`, `Material`, `Stock`, `RutaImagen`) VALUES
+(1, 10, 'dd', 'azul', 'cemento', 0, 'C:\\Funeraria\\Producto\\foto.jpg');
 
 -- --------------------------------------------------------
 
@@ -1300,9 +1350,18 @@ CREATE TABLE `informacion_venta` (
 CREATE TABLE `item` (
   `Codigo_Item` int(11) NOT NULL,
   `Codigo_Tipo_Item` int(11) NOT NULL,
-  `Nombre` varchar(100) NOT NULL,
-  `Precio` decimal(19,4) NOT NULL
+  `Nombre` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `item`
+--
+
+INSERT INTO `item` (`Codigo_Item`, `Codigo_Tipo_Item`, `Nombre`) VALUES
+(3, 1, 'ataud'),
+(10, 1, 'bb'),
+(11, 2, 'to'),
+(14, 2, 'TRANSPORTE A DOMINICAL');
 
 -- --------------------------------------------------------
 
@@ -1314,6 +1373,14 @@ CREATE TABLE `material` (
   `Codigo_material` int(11) NOT NULL,
   `descripcion` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `material`
+--
+
+INSERT INTO `material` (`Codigo_material`, `descripcion`) VALUES
+(1, 'Selecciona una opción'),
+(2, 'cemento');
 
 -- --------------------------------------------------------
 
@@ -1336,8 +1403,14 @@ CREATE TABLE `parentesco` (
 
 CREATE TABLE `permisos` (
   `id_permiso` int(11) NOT NULL,
-  `tipo` varchar(20) NOT NULL,
-  `permiso` varchar(20) NOT NULL,
+  `personal` varchar(20) NOT NULL,
+  `producto` varchar(20) NOT NULL,
+  `plan` varchar(20) NOT NULL,
+  `cliente` varchar(20) NOT NULL,
+  `difunto` varchar(20) NOT NULL,
+  `provedor` varchar(20) NOT NULL,
+  `compra` varchar(20) NOT NULL,
+  `venta` varchar(20) NOT NULL,
   `fk_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1345,15 +1418,8 @@ CREATE TABLE `permisos` (
 -- Volcado de datos para la tabla `permisos`
 --
 
-INSERT INTO `permisos` (`id_permiso`, `tipo`, `permiso`, `fk_usuario`) VALUES
-(9, 'personal', 'Todos', 9),
-(10, 'producto', 'Visualizar', 9),
-(11, 'plan', 'Todos', 9),
-(12, 'cliente', 'Todos', 9),
-(13, 'difunto', 'Todos', 9),
-(14, 'provedor', 'Todos', 9),
-(15, 'compra', 'Todos', 9),
-(16, 'venta', 'Todos', 9);
+INSERT INTO `permisos` (`id_permiso`, `personal`, `producto`, `plan`, `cliente`, `difunto`, `provedor`, `compra`, `venta`, `fk_usuario`) VALUES
+(17, 'Todos', 'Todos', 'Todos', 'Todos', 'Todos', 'Todos', 'Todos', 'Todos', 10);
 
 -- --------------------------------------------------------
 
@@ -1378,8 +1444,6 @@ CREATE TABLE `personal` (
 --
 
 INSERT INTO `personal` (`Codigo_Personal`, `Dni`, `Nombre`, `Apellidos`, `Cargo`, `Direccion`, `Telefono`, `Email`, `Estado`) VALUES
-(1, '16505263', 'Pedro Antonio', 'Valderrama Tapia', 'Administrador', 'Avenida Saénz Peña 145 - Chiclayo', '415263', 'pedro_vt@hotmail.com', 'Activo'),
-(2, '33185296', 'Juan Jose', 'Reynoso Tapia', 'Vendedor', 'Avenida Luis Gonsalez 368 - Chiclayo', '405066', 'juan008t@hotmail.com', 'Activo'),
 (3, '604140385', 'Yoel Andrey', 'Cerdas Villalobos', 'vendedor', 'ciudad cortes', '87109682', 'yoel1202', 'Activo');
 
 -- --------------------------------------------------------
@@ -1416,6 +1480,28 @@ CREATE TABLE `proveedor` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `servicios`
+--
+
+CREATE TABLE `servicios` (
+  `codigo_servicio` int(11) NOT NULL,
+  `Codigo_Item` int(11) NOT NULL,
+  `tipo` varchar(30) NOT NULL,
+  `km` decimal(10,0) NOT NULL,
+  `precio_km` decimal(10,0) NOT NULL,
+  `precio` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `servicios`
+--
+
+INSERT INTO `servicios` (`codigo_servicio`, `Codigo_Item`, `tipo`, `km`, `precio_km`, `precio`) VALUES
+(3, 14, 'Transporte', '60', '500', '20000');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tipo_item`
 --
 
@@ -1423,6 +1509,14 @@ CREATE TABLE `tipo_item` (
   `Codigo_Tipo_Item` int(11) NOT NULL,
   `Descripción` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tipo_item`
+--
+
+INSERT INTO `tipo_item` (`Codigo_Tipo_Item`, `Descripción`) VALUES
+(1, 'Producto'),
+(2, 'Servicio');
 
 -- --------------------------------------------------------
 
@@ -1434,25 +1528,15 @@ CREATE TABLE `usuario` (
   `Codigo_Usuario` int(11) NOT NULL,
   `Codigo_Personal` int(11) NOT NULL,
   `Usuario` varchar(20) NOT NULL,
-  `Clave` varchar(10) NOT NULL,
-  `Personal` varchar(15) NOT NULL,
-  `Producto` varchar(15) NOT NULL,
-  `Plan` varchar(15) NOT NULL,
-  `Cliente` varchar(15) NOT NULL,
-  `Difunto` varchar(15) NOT NULL,
-  `Provedor` varchar(15) NOT NULL,
-  `Compra` varchar(15) NOT NULL,
-  `Venta` varchar(15) NOT NULL
+  `Clave` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`Codigo_Usuario`, `Codigo_Personal`, `Usuario`, `Clave`, `Personal`, `Producto`, `Plan`, `Cliente`, `Difunto`, `Provedor`, `Compra`, `Venta`) VALUES
-(1, 1, 'administrador', '123456', '', '', '', '', '', '', '', ''),
-(2, 2, 'vendedor', '123', '', '', '', '', '', '', '', ''),
-(9, 3, 'admi', '22', '', '', '', '', '', '', '', '');
+INSERT INTO `usuario` (`Codigo_Usuario`, `Codigo_Personal`, `Usuario`, `Clave`) VALUES
+(10, 3, 'administrador', '1');
 
 -- --------------------------------------------------------
 
@@ -1585,6 +1669,13 @@ ALTER TABLE `proveedor`
   ADD PRIMARY KEY (`Codigo_Proveedor`);
 
 --
+-- Indices de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  ADD PRIMARY KEY (`codigo_servicio`),
+  ADD UNIQUE KEY `Codigo_Item` (`Codigo_Item`);
+
+--
 -- Indices de la tabla `tipo_item`
 --
 ALTER TABLE `tipo_item`
@@ -1619,7 +1710,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de la tabla `color`
 --
 ALTER TABLE `color`
-  MODIFY `Codigo_color` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Codigo_color` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
@@ -1637,7 +1728,7 @@ ALTER TABLE `detalle_compras`
 -- AUTO_INCREMENT de la tabla `detalle_item`
 --
 ALTER TABLE `detalle_item`
-  MODIFY `Codigo_Detalle_Item` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Codigo_Detalle_Item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_plan_funerario`
@@ -1667,13 +1758,13 @@ ALTER TABLE `informacion_venta`
 -- AUTO_INCREMENT de la tabla `item`
 --
 ALTER TABLE `item`
-  MODIFY `Codigo_Item` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Codigo_Item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `material`
 --
 ALTER TABLE `material`
-  MODIFY `Codigo_material` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Codigo_material` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `parentesco`
@@ -1685,7 +1776,7 @@ ALTER TABLE `parentesco`
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
-  MODIFY `id_permiso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_permiso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `personal`
@@ -1706,16 +1797,22 @@ ALTER TABLE `proveedor`
   MODIFY `Codigo_Proveedor` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  MODIFY `codigo_servicio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `tipo_item`
 --
 ALTER TABLE `tipo_item`
-  MODIFY `Codigo_Tipo_Item` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Codigo_Tipo_Item` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Codigo_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Codigo_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
@@ -1784,6 +1881,12 @@ ALTER TABLE `parentesco`
 --
 ALTER TABLE `permisos`
   ADD CONSTRAINT `fk_ondelete` FOREIGN KEY (`fk_usuario`) REFERENCES `usuario` (`Codigo_Usuario`);
+
+--
+-- Filtros para la tabla `servicios`
+--
+ALTER TABLE `servicios`
+  ADD CONSTRAINT `ondelete` FOREIGN KEY (`Codigo_Item`) REFERENCES `item` (`Codigo_Item`);
 
 --
 -- Filtros para la tabla `usuario`

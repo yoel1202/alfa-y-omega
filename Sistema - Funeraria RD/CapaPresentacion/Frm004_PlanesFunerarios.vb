@@ -4,6 +4,7 @@ Public Class Frm004_PlanesFunerarios
     Implements IItem
     Private Shared ReadOnly Item As New List(Of EItem)()
     Dim PF As New clsPlanFunerario 'Instanciamos la clase clsPlanFunerario de la Capa Logica de Negocio para usar sus funciones
+    Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
     Dim Imagen As New CopiarImagen
     Dim Codigo As Integer = 0 'Variable para almacenar el código del servicio
     Dim Valor As Integer = 0 'Variable para verificar si se va a registrar o actualizar la información
@@ -25,53 +26,62 @@ Public Class Frm004_PlanesFunerarios
     End Function
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        'Evento para guardar cambios, para registrar y/o actualizar información
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
 
-        ErrorProvider1.Clear()
-        If (txtDescripcion.Text.Trim() = "") Then
-            ErrorProvider1.SetError(txtDescripcion, "Ingrese Descripción")
-        ElseIf (txtPrecio.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtPrecio, "Ingrese Precio")
+        If (permiso = "Todos") Then
+
+            'Evento para guardar cambios, para registrar y/o actualizar información
+
+            ErrorProvider1.Clear()
+            If (txtDescripcion.Text.Trim() = "") Then
+                ErrorProvider1.SetError(txtDescripcion, "Ingrese Descripción")
+            ElseIf (txtPrecio.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtPrecio, "Ingrese Precio")
+            Else
+                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+                Dim RutaImgen = ""
+
+                Try 'Manejamos una excepción de errores
+
+                    If (Valor = 0) Then 'Si es valor cero, registramos
+                        Dim NombreFoto As String = "Planes-" & contar()
+                        RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, "", 2)
+                        PF.Descripcion = txtDescripcion.Text
+                        PF.Precio = CDec(txtPrecio.Text)
+                        PF.RutaImagen = RutaImgen
+                        Mensaje = PF.Registrar_Plan_Funerario() 'Ejecutamos la función Registrar Plan Funerario
+                        If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
+                            Call Listar_Planes_Funerarios() 'Llamamos al método listar Plan Funerario
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Call Limpiar_Controles() 'Llamamos el método limpiar controles
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+
+                    Else 'Si es valor 1 actualizamos la información
+                        Dim NombreFoto As String = "Planes-" & Codigo
+                        RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, "", 2)
+                        PF.Codigo = Codigo
+                        PF.Descripcion = txtDescripcion.Text
+                        PF.Precio = CDec(txtPrecio.Text)
+                        PF.RutaImagen = RutaImgen
+                        Mensaje = PF.Actualizar_Plan_Funerario() 'Ejecutamos la función Registrar Plan Funerario
+                        If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se registró correctamente
+                            Call Listar_Planes_Funerarios() 'Llamamos al método listar Plan Funerario
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Call Limpiar_Controles() 'Llamamos el método limpiar controles
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
         Else
-            Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
-            Dim RutaImgen = ""
-
-            Try 'Manejamos una excepción de errores
-
-                If (Valor = 0) Then 'Si es valor cero, registramos
-                    Dim NombreFoto As String = "Planes-" & contar()
-                    RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, "", 2)
-                    PF.Descripcion = txtDescripcion.Text
-                    PF.Precio = CDec(txtPrecio.Text)
-                    PF.RutaImagen = RutaImgen
-                    Mensaje = PF.Registrar_Plan_Funerario() 'Ejecutamos la función Registrar Plan Funerario
-                    If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
-                        Call Listar_Planes_Funerarios() 'Llamamos al método listar Plan Funerario
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Call Limpiar_Controles() 'Llamamos el método limpiar controles
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-
-                Else 'Si es valor 1 actualizamos la información
-                    Dim NombreFoto As String = "Planes-" & Codigo
-                    RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, "", 2)
-                    PF.Codigo = Codigo
-                    PF.Descripcion = txtDescripcion.Text
-                    PF.Precio = CDec(txtPrecio.Text)
-                    PF.RutaImagen = RutaImgen
-                    Mensaje = PF.Actualizar_Plan_Funerario() 'Ejecutamos la función Registrar Plan Funerario
-                    If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se registró correctamente
-                        Call Listar_Planes_Funerarios() 'Llamamos al método listar Plan Funerario
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Call Limpiar_Controles() 'Llamamos el método limpiar controles
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 

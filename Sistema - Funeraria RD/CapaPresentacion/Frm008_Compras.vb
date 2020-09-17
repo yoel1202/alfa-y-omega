@@ -11,6 +11,7 @@ Public Class Frm008_Compras
     Public Property Caller() As IProveedor
     Dim CodigoProveedor As Integer = 0
     Dim CodigoProducto As Integer = 0
+    Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
 
     Private Sub lkbBuscar_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lkbBuscar.LinkClicked
         'Instanciamos el FrmPersonalPrincipal
@@ -173,45 +174,53 @@ Public Class Frm008_Compras
     End Sub
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        ErrorProvider1.Clear()
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
 
-        If (txtProveedor.Text.Trim() = "") Then
-            ErrorProvider1.SetError(txtProveedor, "Debe Seleccionar un Proveedor")
-        ElseIf (txtSerie.Text.Trim() = "") Then
-            ErrorProvider1.SetError(txtSerie, "Debe Ingresar Número de Serie del Comprobante")
-        ElseIf (txtNroDocumento.Text.Trim() = "") Then
-            ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
-        ElseIf (DataGridView1.Rows.Count < 1) Then
-            clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
+        If (permiso = "Todos") Then
+            ErrorProvider1.Clear()
+
+            If (txtProveedor.Text.Trim() = "") Then
+                ErrorProvider1.SetError(txtProveedor, "Debe Seleccionar un Proveedor")
+            ElseIf (txtSerie.Text.Trim() = "") Then
+                ErrorProvider1.SetError(txtSerie, "Debe Ingresar Número de Serie del Comprobante")
+            ElseIf (txtNroDocumento.Text.Trim() = "") Then
+                ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
+            ElseIf (DataGridView1.Rows.Count < 1) Then
+                clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
+            Else
+                Dim Mensaje As String = ""
+                Try
+                    C.CodigoProveedor = CInt(CodigoProveedor)
+                    C.FechaCompra = CDate(dtpFecha.Value)
+                    C.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
+                    C.Serie = CStr(txtSerie.Text)
+                    C.NroDocumento = CStr(txtNroDocumento.Text)
+                    C.Total = CDec(lblTotal.Text)
+                    Mensaje = C.Registrar_Compras()
+                    If (Mensaje = "Compra Registrada correctamente") Then
+
+                        For i = 0 To DataGridView1.RowCount - 1
+                            C.CodigoCompras = CInt(C.Devolver_Codigo_Compras())
+                            C.CodigoItem = CInt(DataGridView1.Rows(i).Cells(0).Value)
+                            C.PrecioCompra = CDec(DataGridView1.Rows(i).Cells(2).Value)
+                            C.Cantidad = CInt(DataGridView1.Rows(i).Cells(3).Value)
+                            C.Igv = CDec(DataGridView1.Rows(i).Cells(4).Value)
+                            C.SubTotal = CDec(DataGridView1.Rows(i).Cells(5).Value)
+                            C.Registrar_Detalle_Compras()
+                        Next
+                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                        Limpiar_Controles()
+                    Else
+                        clsMensaje.mostrar_mensaje(Mensaje, "error")
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
         Else
-            Dim Mensaje As String = ""
-            Try
-                C.CodigoProveedor = CInt(CodigoProveedor)
-                C.FechaCompra = CDate(dtpFecha.Value)
-                C.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
-                C.Serie = CStr(txtSerie.Text)
-                C.NroDocumento = CStr(txtNroDocumento.Text)
-                C.Total = CDec(lblTotal.Text)
-                Mensaje = C.Registrar_Compras()
-                If (Mensaje = "Compra Registrada correctamente") Then
-
-                    For i = 0 To DataGridView1.RowCount - 1
-                        C.CodigoCompras = CInt(C.Devolver_Codigo_Compras())
-                        C.CodigoItem = CInt(DataGridView1.Rows(i).Cells(0).Value)
-                        C.PrecioCompra = CDec(DataGridView1.Rows(i).Cells(2).Value)
-                        C.Cantidad = CInt(DataGridView1.Rows(i).Cells(3).Value)
-                        C.Igv = CDec(DataGridView1.Rows(i).Cells(4).Value)
-                        C.SubTotal = CDec(DataGridView1.Rows(i).Cells(5).Value)
-                        C.Registrar_Detalle_Compras()
-                    Next
-                    clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                    Limpiar_Controles()
-                Else
-                    clsMensaje.mostrar_mensaje(Mensaje, "error")
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 

@@ -7,7 +7,7 @@ Public Class Frm005_Cliente
     Dim Valida As Integer = 0
     Dim CodigoC As Integer = 0 'Variable para almacenar el código del Cliente
     Dim Valor As Integer = 0 'Variable para verificar si se va a registrar o actualizar la información
-
+    Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
     Public Property Caller() As IParentesco
     Public Property Caller1() As ICliente
     Public Cliente As Integer = 0
@@ -173,63 +173,71 @@ Public Class Frm005_Cliente
     '==================== Tab Page 2 ======================
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        'Evento para guardar cambios, para registrar y/o actualizar información
-        ErrorProvider1.Clear()
-        If (cbxTipoDoc.SelectedIndex = 0) Then
-            ErrorProvider1.SetError(cbxTipoDoc, "Debe Seleccionar un Tipo de Documento")
-        ElseIf (txtNroDoc.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtNroDoc, "Ingrese Número de Documento")
-        ElseIf (txtNombres.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtNombres, "Ingrese Nombres del Cliente")
-        ElseIf (txtDireccion.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtDireccion, "Ingrese Dirección")
-        ElseIf (txtTelefono.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtTelefono, "Ingrese Teléfono")
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos") Then
+            'Evento para guardar cambios, para registrar y/o actualizar información
+            ErrorProvider1.Clear()
+            If (cbxTipoDoc.SelectedIndex = 0) Then
+                ErrorProvider1.SetError(cbxTipoDoc, "Debe Seleccionar un Tipo de Documento")
+            ElseIf (txtNroDoc.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtNroDoc, "Ingrese Número de Documento")
+            ElseIf (txtNombres.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtNombres, "Ingrese Nombres del Cliente")
+            ElseIf (txtDireccion.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtDireccion, "Ingrese Dirección")
+            ElseIf (txtTelefono.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtTelefono, "Ingrese Teléfono")
+            Else
+                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+
+                Try 'Manejamos una excepción de errores
+
+                    If (Valor = 0) Then 'Si es valor cero, registramos
+                        C.TipoPersona = If(rbnNatural.Checked = True, "Natural", "Jurídica")
+                        C.TipoDoc = cbxTipoDoc.SelectedItem
+                        C.Documento = txtNroDoc.Text
+                        C.Nombres = txtNombres.Text
+                        C.Direccion = txtDireccion.Text
+                        C.Telefono = txtTelefono.Text
+                        C.Email = txtEmail.Text
+                        Mensaje = C.Registrar_Cliente() 'Ejecutamos la función Registrar Cliente
+                        If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            TabControl1.SelectTab(TabPage1)
+                            Valor = 0
+                            'Dim frm As New FrmCliente
+                            Call Limpiar_Controles() 'Llamamos el método limpiar controles
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+
+                    Else 'Si es valor 1 actualizamos la información
+                        C.Codigo_Cliente = CodigoC
+                        C.TipoPersona = If(rbnNatural.Checked = True, "Natural", "Jurídica")
+                        C.TipoDoc = cbxTipoDoc.SelectedItem
+                        C.Documento = txtNroDoc.Text
+                        C.Nombres = txtNombres.Text
+                        C.Direccion = txtDireccion.Text
+                        C.Telefono = txtTelefono.Text
+                        C.Email = txtEmail.Text
+                        Mensaje = C.Actualizar_Item() 'Ejecutamos la función Registrar Cliente
+                        If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se registró correctamente
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            TabControl1.SelectTab(TabPage1)
+                            Valor = 0
+                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                        End If
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
         Else
-            Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
-
-            Try 'Manejamos una excepción de errores
-
-                If (Valor = 0) Then 'Si es valor cero, registramos
-                    C.TipoPersona = If(rbnNatural.Checked = True, "Natural", "Jurídica")
-                    C.TipoDoc = cbxTipoDoc.SelectedItem
-                    C.Documento = txtNroDoc.Text
-                    C.Nombres = txtNombres.Text
-                    C.Direccion = txtDireccion.Text
-                    C.Telefono = txtTelefono.Text
-                    C.Email = txtEmail.Text
-                    Mensaje = C.Registrar_Cliente() 'Ejecutamos la función Registrar Cliente
-                    If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        TabControl1.SelectTab(TabPage1)
-                        Valor = 0
-                        'Dim frm As New FrmCliente
-                        Call Limpiar_Controles() 'Llamamos el método limpiar controles
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-
-                Else 'Si es valor 1 actualizamos la información
-                    C.Codigo_Cliente = CodigoC
-                    C.TipoPersona = If(rbnNatural.Checked = True, "Natural", "Jurídica")
-                    C.TipoDoc = cbxTipoDoc.SelectedItem
-                    C.Documento = txtNroDoc.Text
-                    C.Nombres = txtNombres.Text
-                    C.Direccion = txtDireccion.Text
-                    C.Telefono = txtTelefono.Text
-                    C.Email = txtEmail.Text
-                    Mensaje = C.Actualizar_Item() 'Ejecutamos la función Registrar Cliente
-                    If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se registró correctamente
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        TabControl1.SelectTab(TabPage1)
-                        Valor = 0
-                    Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                        clsMensaje.mostrar_mensaje(Mensaje, "error")
-                    End If
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 

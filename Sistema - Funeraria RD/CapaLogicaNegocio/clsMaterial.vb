@@ -1,4 +1,6 @@
 ﻿Imports CapaAccesoDatos
+Imports MySql.Data.MySqlClient
+
 Public Class clsMaterial
     Dim M As New clsManejador 'Instanciamos la clase clsManejador
 
@@ -12,8 +14,8 @@ Public Class clsMaterial
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Descripcion", Descripcion))
-            lst.Add(New clsParametro("@msj", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Descripcions", Descripcion))
+            lst.Add(New clsParametro("@msj", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Material", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(1).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception

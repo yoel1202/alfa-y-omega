@@ -9,7 +9,7 @@ Public Class Frm009_Ventas
 
     Dim V As New clsVentas
     Dim descri As New DescripcionMonto
-
+    Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
     Private Shared ReadOnly Cliente As New List(Of ECliente)()
     Private Shared ReadOnly Plan As New List(Of EPlanServicio)()
     'Private Shared ReadOnly Producto As New List(Of EProducto)()
@@ -199,59 +199,67 @@ Public Class Frm009_Ventas
     End Sub
 
     Private Sub btnRegistrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRegistrar.Click
-        ErrorProvider1.Clear()
-        If (txtDireccionVelatorio.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtDireccionVelatorio, "Ingreso Dirección del Velatorio")
-        ElseIf (txtCementerio.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtCementerio, "Ingreso nombre del Cementerio")
-        ElseIf (txtDireccionSepelio.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtDireccionSepelio, "Ingreso Dirección del Sepelio")
-        ElseIf (txtCliente.Text.Trim = "") Then
-            ErrorProvider1.SetError(txtCliente, "Seleccione Cliente")
-        ElseIf (DataGridView1.Rows.Count < 1) Then
-            clsMensaje.mostrar_mensaje("No hay ningún Ítem en el Carrito de Ventas", "error")
-        Else
-            Dim Mensaje As String = ""
-            Try
-                V.CodigoCliente = CInt(CodigoCliente)
-                V.CodigoPersonal = Validar.Codigo_Personal_Online
-                V.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
-                V.Serie = CStr(lblSerie.Text)
-                V.NroDocumento = CStr(lblNroDocumento.Text)
-                V.FechaVenta = CDate(DateTimePicker1.Value)
-                V.Total = CDec(lblTotal.Text)
-                Mensaje = V.Registrar_Ventas()
-                If (Mensaje = "Venta Registrada correctamente") Then
-                    'Registramos el detalle de la venta            
-                    For i = 0 To lst.Count - 1
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos") Then
+            ErrorProvider1.Clear()
+            If (txtDireccionVelatorio.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtDireccionVelatorio, "Ingreso Dirección del Velatorio")
+            ElseIf (txtCementerio.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtCementerio, "Ingreso nombre del Cementerio")
+            ElseIf (txtDireccionSepelio.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtDireccionSepelio, "Ingreso Dirección del Sepelio")
+            ElseIf (txtCliente.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtCliente, "Seleccione Cliente")
+            ElseIf (DataGridView1.Rows.Count < 1) Then
+                clsMensaje.mostrar_mensaje("No hay ningún Ítem en el Carrito de Ventas", "error")
+            Else
+                Dim Mensaje As String = ""
+                Try
+                    V.CodigoCliente = CInt(CodigoCliente)
+                    V.CodigoPersonal = Validar.Codigo_Personal_Online
+                    V.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
+                    V.Serie = CStr(lblSerie.Text)
+                    V.NroDocumento = CStr(lblNroDocumento.Text)
+                    V.FechaVenta = CDate(DateTimePicker1.Value)
+                    V.Total = CDec(lblTotal.Text)
+                    Mensaje = V.Registrar_Ventas()
+                    If (Mensaje = "Venta Registrada correctamente") Then
+                        'Registramos el detalle de la venta            
+                        For i = 0 To lst.Count - 1
+                            V.CodigoVenta = CInt(V.Devolver_Codigo_Ventas())
+                            V.CodigoItem = CInt(lst(i).CodigoItem)
+                            V.Cantidad = CInt(lst(i).Cantidad)
+                            V.PrecioVenta = Math.Round(CDec(lst(i).Precio), 2)
+                            V.Igv = Math.Round(CDec(lst(i).Igv), 2)
+                            V.Descuento = CDec(0)
+                            V.SubTotal = Math.Round(CDec(lst(i).SubTotal), 2)
+                            V.Registrar_Detalle_Ventas()
+                        Next
+
+                        'Registramos la información de la venta
                         V.CodigoVenta = CInt(V.Devolver_Codigo_Ventas())
-                        V.CodigoItem = CInt(lst(i).CodigoItem)
-                        V.Cantidad = CInt(lst(i).Cantidad)
-                        V.PrecioVenta = Math.Round(CDec(lst(i).Precio), 2)
-                        V.Igv = Math.Round(CDec(lst(i).Igv), 2)
-                        V.Descuento = CDec(0)
-                        V.SubTotal = Math.Round(CDec(lst(i).SubTotal), 2)
-                        V.Registrar_Detalle_Ventas()
-                    Next
+                        V.DireccionVelatorio = CStr(txtDireccionVelatorio.Text)
+                        V.Cementerio = CStr(txtCementerio.Text)
+                        V.DireccionSepelio = CStr(txtDireccionSepelio.Text)
+                        V.FechaSepelio = CDate(dtpFechaSepelio.Value)
+                        V.Hora = CDate(dtpHora.Value)
+                        V.Registrar_Informacion_Venta()
 
-                    'Registramos la información de la venta
-                    V.CodigoVenta = CInt(V.Devolver_Codigo_Ventas())
-                    V.DireccionVelatorio = CStr(txtDireccionVelatorio.Text)
-                    V.Cementerio = CStr(txtCementerio.Text)
-                    V.DireccionSepelio = CStr(txtDireccionSepelio.Text)
-                    V.FechaSepelio = CDate(dtpFechaSepelio.Value)
-                    V.Hora = CDate(dtpHora.Value)
-                    V.Registrar_Informacion_Venta()
-
-                    clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                    Call GenerarDocumento() 'Llamamos al método para generar el comprobante de pago (BOLETA Y/O FACTURA)
-                    Limpiar_controles()
-                Else
-                    clsMensaje.mostrar_mensaje(Mensaje, "error")
-                End If
-            Catch ex As Exception
-                clsMensaje.mostrar_mensaje(ex.Message, "error")
-            End Try
+                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                        Call GenerarDocumento() 'Llamamos al método para generar el comprobante de pago (BOLETA Y/O FACTURA)
+                        Limpiar_controles()
+                    Else
+                        clsMensaje.mostrar_mensaje(Mensaje, "error")
+                    End If
+                Catch ex As Exception
+                    clsMensaje.mostrar_mensaje(ex.Message, "error")
+                End Try
+            End If
+        Else
+            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 
