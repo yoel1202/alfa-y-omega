@@ -29,15 +29,6 @@ Partial Class Frm007_Proveedor
         Me.rbnNombre = New System.Windows.Forms.RadioButton()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.lkbCerrar = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -49,6 +40,7 @@ Partial Class Frm007_Proveedor
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -66,7 +58,15 @@ Partial Class Frm007_Proveedor
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_cabecera.SuspendLayout()
@@ -105,16 +105,16 @@ Partial Class Frm007_Proveedor
         Me.rbnNDoc.Checked = True
         Me.rbnNDoc.Location = New System.Drawing.Point(68, 19)
         Me.rbnNDoc.Name = "rbnNDoc"
-        Me.rbnNDoc.Size = New System.Drawing.Size(108, 19)
+        Me.rbnNDoc.Size = New System.Drawing.Size(158, 19)
         Me.rbnNDoc.TabIndex = 1
         Me.rbnNDoc.TabStop = True
-        Me.rbnNDoc.Text = "Número R.U.C."
+        Me.rbnNDoc.Text = "Número Cedula Juridica"
         Me.rbnNDoc.UseVisualStyleBackColor = True
         '
         'rbnNombre
         '
         Me.rbnNombre.AutoSize = True
-        Me.rbnNombre.Location = New System.Drawing.Point(218, 18)
+        Me.rbnNombre.Location = New System.Drawing.Point(250, 19)
         Me.rbnNombre.Name = "rbnNombre"
         Me.rbnNombre.Size = New System.Drawing.Size(98, 19)
         Me.rbnNombre.TabIndex = 2
@@ -146,70 +146,6 @@ Partial Class Frm007_Proveedor
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(1192, 279)
         Me.DataGridView1.TabIndex = 7
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Codigo Cliente"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "R.U.C."
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 80
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Razón Social"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 230
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Representante"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 190
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Celular"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 75
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Teléfono"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 75
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Dirección"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 240
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Email"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 170
-        '
-        'Button
-        '
-        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button.HeaderText = "Editar"
-        Me.Button.Name = "Button"
-        Me.Button.ReadOnly = True
-        Me.Button.Width = 80
         '
         'Panel_cabecera
         '
@@ -333,6 +269,19 @@ Partial Class Frm007_Proveedor
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Mantenimiento Proveedores"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer))
+        Me.btnLimpiar.FlatAppearance.BorderSize = 0
+        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window
+        Me.btnLimpiar.Location = New System.Drawing.Point(651, 325)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(150, 40)
+        Me.btnLimpiar.TabIndex = 2
+        Me.btnLimpiar.Text = "&Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
         '
         'btnGuardar
         '
@@ -477,30 +426,81 @@ Partial Class Frm007_Proveedor
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(98, 33)
+        Me.Label1.Location = New System.Drawing.Point(58, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 15)
+        Me.Label1.Size = New System.Drawing.Size(92, 15)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "R.U.C. :"
+        Me.Label1.Text = "Cedula Juridica"
         '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'btnLimpiar
+        'Column1
         '
-        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.btnLimpiar.FlatAppearance.BorderSize = 0
-        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnLimpiar.Location = New System.Drawing.Point(651, 325)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(150, 40)
-        Me.btnLimpiar.TabIndex = 2
-        Me.btnLimpiar.Text = "&Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = False
+        Me.Column1.HeaderText = "Codigo Cliente"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
         '
-        'Frm006_Proveedor
+        'Column4
+        '
+        Me.Column4.HeaderText = "Cedula Juridica"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 80
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Razón Social"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 230
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Representante"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 190
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Celular"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 75
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Teléfono"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 75
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Dirección"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 240
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Email"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 170
+        '
+        'Button
+        '
+        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button.HeaderText = "Editar"
+        Me.Button.Name = "Button"
+        Me.Button.ReadOnly = True
+        Me.Button.Width = 80
+        '
+        'Frm007_Proveedor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -512,7 +512,7 @@ Partial Class Frm007_Proveedor
         Me.Controls.Add(Me.bordeIzquierda)
         Me.Controls.Add(Me.Panel_cabecera)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Frm006_Proveedor"
+        Me.Name = "Frm007_Proveedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmProveedorPrincipal"
         Me.GroupBox1.ResumeLayout(False)
@@ -563,16 +563,16 @@ Partial Class Frm007_Proveedor
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents btnLimpiar As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Button As DataGridViewButtonColumn
 End Class

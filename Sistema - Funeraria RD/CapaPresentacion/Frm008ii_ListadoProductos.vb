@@ -30,8 +30,8 @@ Public Class Frm008ii_ListadoProductos
             dtgProductos.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
             dtgProductos.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
             dtgProductos.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
-            dtgProductos.Rows(i).Cells(6).Value = Math.Round(CDec(dt.Rows(i)(6)), 2)
-            dtgProductos.Rows(i).Cells(7).Value = dt.Rows(i)(7).ToString()
+
+
         Next
         dtgProductos.ClearSelection() 'Limpiamos la selección del DataGridView1
     End Sub
@@ -67,7 +67,7 @@ Public Class Frm008ii_ListadoProductos
             item.CodigoProducto = Convert.ToInt32(row.Cells("Codigo").Value)
             item.NombreProducto = Convert.ToString(row.Cells("Nombre").Value)
             item.Stock = Convert.ToInt32(row.Cells("Stock").Value)
-            item.PrecioCompra = Convert.ToDecimal(row.Cells("Precio").Value)
+
 
             'If (Producto = 0) Then
             'Si no existe llamador para nuestro formulario nos retornamos sin hacer ninguna accion
@@ -104,5 +104,9 @@ Public Class Frm008ii_ListadoProductos
 
     Private Sub txtDatos_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDatos.KeyPress
         Validar.Letras(e)
+    End Sub
+
+    Private Sub Panel_cabecera_Paint(sender As Object, e As PaintEventArgs) Handles Panel_cabecera.Paint
+
     End Sub
 End Class

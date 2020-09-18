@@ -23,14 +23,6 @@ Partial Class Frm008ii_ListadoProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dtgProductos = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Color = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Material = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDatos = New System.Windows.Forms.TextBox()
@@ -42,6 +34,13 @@ Partial Class Frm008ii_ListadoProductos
         Me.bordeDerecha = New System.Windows.Forms.Panel()
         Me.bordeInferior = New System.Windows.Forms.Panel()
         Me.bordeIzquierda = New System.Windows.Forms.Panel()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Color = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Material = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dtgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_cabecera.SuspendLayout()
@@ -53,66 +52,11 @@ Partial Class Frm008ii_ListadoProductos
         Me.dtgProductos.AllowUserToAddRows = False
         Me.dtgProductos.BackgroundColor = System.Drawing.Color.White
         Me.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Column3, Me.Color, Me.Material, Me.Stock, Me.Precio, Me.Column8})
+        Me.dtgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Column3, Me.Color, Me.Material, Me.Stock, Me.Column8})
         Me.dtgProductos.Location = New System.Drawing.Point(34, 158)
         Me.dtgProductos.Name = "dtgProductos"
         Me.dtgProductos.Size = New System.Drawing.Size(991, 311)
         Me.dtgProductos.TabIndex = 3
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        Me.Codigo.Visible = False
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        Me.Nombre.Width = 280
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Descripción"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 350
-        '
-        'Color
-        '
-        Me.Color.HeaderText = "Color"
-        Me.Color.Name = "Color"
-        Me.Color.ReadOnly = True
-        '
-        'Material
-        '
-        Me.Material.HeaderText = "Material"
-        Me.Material.Name = "Material"
-        Me.Material.ReadOnly = True
-        Me.Material.Width = 80
-        '
-        'Stock
-        '
-        Me.Stock.HeaderText = "Stock"
-        Me.Stock.Name = "Stock"
-        Me.Stock.ReadOnly = True
-        Me.Stock.Width = 50
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        Me.Precio.Width = 80
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "RutaImagen"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Visible = False
         '
         'GroupBox1
         '
@@ -231,6 +175,54 @@ Partial Class Frm008ii_ListadoProductos
         Me.bordeIzquierda.Size = New System.Drawing.Size(2, 466)
         Me.bordeIzquierda.TabIndex = 260
         '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Código"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Visible = False
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        Me.Nombre.Width = 280
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Descripción"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 350
+        '
+        'Color
+        '
+        Me.Color.HeaderText = "Color"
+        Me.Color.Name = "Color"
+        Me.Color.ReadOnly = True
+        '
+        'Material
+        '
+        Me.Material.HeaderText = "Material"
+        Me.Material.Name = "Material"
+        Me.Material.ReadOnly = True
+        Me.Material.Width = 80
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        Me.Stock.Width = 50
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "RutaImagen"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Visible = False
+        '
         'Frm008ii_ListadoProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -260,14 +252,6 @@ Partial Class Frm008ii_ListadoProductos
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtDatos As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Codigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Color As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Material As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Stock As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Private WithEvents Panel_cabecera As System.Windows.Forms.Panel
     Private WithEvents panel1 As System.Windows.Forms.Panel
     Private WithEvents lkb_cerrar As System.Windows.Forms.LinkLabel
@@ -276,4 +260,11 @@ Partial Class Frm008ii_ListadoProductos
     Private WithEvents bordeDerecha As System.Windows.Forms.Panel
     Private WithEvents bordeInferior As System.Windows.Forms.Panel
     Private WithEvents bordeIzquierda As System.Windows.Forms.Panel
+    Friend WithEvents Codigo As DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Color As DataGridViewTextBoxColumn
+    Friend WithEvents Material As DataGridViewTextBoxColumn
+    Friend WithEvents Stock As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class

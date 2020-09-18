@@ -51,7 +51,7 @@ Public Class Frm008_Compras
         If Not exists Then
             CodigoProducto = Convert.ToInt32(Product.CodigoProducto)
             txtProducto.Text = Convert.ToString(Product.NombreProducto)
-            txtPrecioCompra.Text = Convert.ToDecimal(Product.PrecioCompra)
+
             'Retornamos True
             Return True
         End If
@@ -88,7 +88,7 @@ Public Class Frm008_Compras
                     Me.DataGridView1.Rows(i).Cells(2).Value = CDec(txtPrecioCompra.Text)
                     Me.DataGridView1.Rows(i).Cells(3).Value = CInt(txtCantidad.Value)
                     SubTotal = (CDec(txtPrecioCompra.Text) * CInt(txtCantidad.Value)) / 1.18
-                    Igv = SubTotal * 0.18
+                    Igv = SubTotal * 0.13
                     Me.DataGridView1.Rows(i).Cells(4).Value = Math.Round(Igv, 2)
                     Me.DataGridView1.Rows(i).Cells(5).Value = Math.Round(SubTotal, 2)
                     Me.DataGridView1.Rows(i).Cells(6).Value = Math.Round(CDec(SubTotal + Igv), 2)

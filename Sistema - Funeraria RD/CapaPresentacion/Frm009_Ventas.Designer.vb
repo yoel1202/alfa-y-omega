@@ -23,10 +23,6 @@ Partial Class Frm009_Ventas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -40,6 +36,10 @@ Partial Class Frm009_Ventas
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCliente = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -58,14 +58,6 @@ Partial Class Frm009_Ventas
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lkbBuscar1 = New System.Windows.Forms.LinkLabel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnIgv = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnSubTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Importe = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblSubTotal = New System.Windows.Forms.Label()
@@ -132,6 +124,14 @@ Partial Class Frm009_Ventas
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VerInformacion = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnIgv = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnSubTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Importe = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_cabecera.SuspendLayout()
@@ -329,72 +329,6 @@ Partial Class Frm009_Ventas
         Me.DataGridView1.Size = New System.Drawing.Size(887, 115)
         Me.DataGridView1.TabIndex = 19
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "CodigoProducto"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Descripcion
-        '
-        Me.Descripcion.HeaderText = "Descripción"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
-        Me.Descripcion.Width = 280
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        '
-        'Cantidad
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle1
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
-        Me.Cantidad.ReadOnly = True
-        Me.Cantidad.Width = 70
-        '
-        'ColumnIgv
-        '
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.ColumnIgv.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnIgv.HeaderText = "IGV"
-        Me.ColumnIgv.Name = "ColumnIgv"
-        Me.ColumnIgv.ReadOnly = True
-        '
-        'ColumnSubTotal
-        '
-        DataGridViewCellStyle3.Format = "C2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.ColumnSubTotal.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnSubTotal.HeaderText = "SubTotal"
-        Me.ColumnSubTotal.Name = "ColumnSubTotal"
-        Me.ColumnSubTotal.ReadOnly = True
-        '
-        'Importe
-        '
-        DataGridViewCellStyle4.Format = "C2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.Importe.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Importe.HeaderText = "Importe"
-        Me.Importe.Name = "Importe"
-        Me.Importe.ReadOnly = True
-        '
-        'Eliminar
-        '
-        Me.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Eliminar.HeaderText = "Opción"
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.ReadOnly = True
-        Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.Eliminar.Width = 90
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -411,9 +345,9 @@ Partial Class Frm009_Ventas
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(630, 405)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(40, 13)
+        Me.Label7.Size = New System.Drawing.Size(39, 13)
         Me.Label7.TabIndex = 29
-        Me.Label7.Text = "I.G.V."
+        Me.Label7.Text = "I..V.A"
         '
         'lblSubTotal
         '
@@ -571,7 +505,7 @@ Partial Class Frm009_Ventas
         Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBorrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnBorrar.Location = New System.Drawing.Point(39, 394)
+        Me.btnBorrar.Location = New System.Drawing.Point(40, 386)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(105, 32)
         Me.btnBorrar.TabIndex = 266
@@ -1064,6 +998,72 @@ Partial Class Frm009_Ventas
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "CodigoProducto"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Descripcion
+        '
+        Me.Descripcion.HeaderText = "Descripción"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.ReadOnly = True
+        Me.Descripcion.Width = 280
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        '
+        'Cantidad
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle1
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.ReadOnly = True
+        Me.Cantidad.Width = 70
+        '
+        'ColumnIgv
+        '
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.ColumnIgv.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnIgv.HeaderText = "IVA"
+        Me.ColumnIgv.Name = "ColumnIgv"
+        Me.ColumnIgv.ReadOnly = True
+        '
+        'ColumnSubTotal
+        '
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.ColumnSubTotal.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColumnSubTotal.HeaderText = "SubTotal"
+        Me.ColumnSubTotal.Name = "ColumnSubTotal"
+        Me.ColumnSubTotal.ReadOnly = True
+        '
+        'Importe
+        '
+        DataGridViewCellStyle4.Format = "C2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.Importe.DefaultCellStyle = DataGridViewCellStyle4
+        Me.Importe.HeaderText = "Importe"
+        Me.Importe.Name = "Importe"
+        Me.Importe.ReadOnly = True
+        '
+        'Eliminar
+        '
+        Me.Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Eliminar.HeaderText = "Opción"
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.ReadOnly = True
+        Me.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.Eliminar.Width = 90
+        '
         'Frm009_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1148,14 +1148,6 @@ Partial Class Frm009_Ventas
     Friend WithEvents dtpHora As System.Windows.Forms.DateTimePicker
     Friend WithEvents lblSerie As System.Windows.Forms.Label
     Friend WithEvents lblNroDocumento As System.Windows.Forms.Label
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnIgv As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnSubTotal As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Importe As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Eliminar As System.Windows.Forms.DataGridViewButtonColumn
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents panelComprobante As System.Windows.Forms.Panel
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
@@ -1196,4 +1188,12 @@ Partial Class Frm009_Ventas
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Descripcion As DataGridViewTextBoxColumn
+    Friend WithEvents Precio As DataGridViewTextBoxColumn
+    Friend WithEvents Cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnIgv As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnSubTotal As DataGridViewTextBoxColumn
+    Friend WithEvents Importe As DataGridViewTextBoxColumn
+    Friend WithEvents Eliminar As DataGridViewButtonColumn
 End Class
