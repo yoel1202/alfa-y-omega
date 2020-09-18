@@ -25,48 +25,47 @@ Partial Class Frm_menu
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_menu))
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lb_cedula = New System.Windows.Forms.Label()
+        Me.lb_nombre = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.pn_configuracion = New System.Windows.Forms.Panel()
+        Me.pn_compras = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.pn_provedor = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lb_provedores = New System.Windows.Forms.Label()
+        Me.lb_difuntos = New System.Windows.Forms.Label()
         Me.pn_difuntos = New System.Windows.Forms.Panel()
         Me.Pn_planes = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.pn_productos = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.lb_productos = New System.Windows.Forms.Label()
+        Me.pn_personales = New System.Windows.Forms.Panel()
+        Me.lb_personal = New System.Windows.Forms.Label()
+        Me.pb_siguiente = New System.Windows.Forms.PictureBox()
+        Me.lb_fecha = New System.Windows.Forms.Label()
+        Me.pb_boton_inicio = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.pn_clientes = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.pn_ventas = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.pn_principal = New System.Windows.Forms.Panel()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pn_configuracion.SuspendLayout()
+        Me.pn_compras.SuspendLayout()
         Me.pn_provedor.SuspendLayout()
         Me.pn_difuntos.SuspendLayout()
         Me.Pn_planes.SuspendLayout()
         Me.pn_productos.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pn_personales.SuspendLayout()
+        CType(Me.pb_siguiente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_boton_inicio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pn_clientes.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.pn_ventas.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label12
@@ -80,42 +79,30 @@ Partial Class Frm_menu
         Me.Label12.TabIndex = 32
         Me.Label12.Text = "Label12"
         '
-        'Label4
+        'lb_cedula
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.DimGray
-        Me.Label4.Location = New System.Drawing.Point(867, 49)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 14)
-        Me.Label4.TabIndex = 30
-        Me.Label4.Text = "604140385"
+        Me.lb_cedula.AutoSize = True
+        Me.lb_cedula.BackColor = System.Drawing.Color.Transparent
+        Me.lb_cedula.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_cedula.ForeColor = System.Drawing.Color.DimGray
+        Me.lb_cedula.Location = New System.Drawing.Point(834, 49)
+        Me.lb_cedula.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lb_cedula.Name = "lb_cedula"
+        Me.lb_cedula.Size = New System.Drawing.Size(81, 19)
+        Me.lb_cedula.TabIndex = 30
+        Me.lb_cedula.Text = "604140385"
         '
-        'Label3
+        'lb_nombre
         '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(845, 19)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 30)
-        Me.Label3.TabIndex = 29
-        Me.Label3.Text = "torres"
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DimGray
-        Me.Label2.Location = New System.Drawing.Point(784, 19)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 30)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "yermi"
+        Me.lb_nombre.BackColor = System.Drawing.Color.Transparent
+        Me.lb_nombre.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_nombre.ForeColor = System.Drawing.Color.DimGray
+        Me.lb_nombre.Location = New System.Drawing.Point(751, 19)
+        Me.lb_nombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lb_nombre.Name = "lb_nombre"
+        Me.lb_nombre.Size = New System.Drawing.Size(164, 30)
+        Me.lb_nombre.TabIndex = 28
+        Me.lb_nombre.Text = "Yoel Cerdas Villalobos"
         '
         'Label1
         '
@@ -123,7 +110,7 @@ Partial Class Frm_menu
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DimGray
-        Me.Label1.Location = New System.Drawing.Point(102, 31)
+        Me.Label1.Location = New System.Drawing.Point(175, 31)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(190, 40)
@@ -133,11 +120,11 @@ Partial Class Frm_menu
         'PictureBox4
         '
         Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox4.Location = New System.Drawing.Point(21, 23)
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(11, 19)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(87, 64)
+        Me.PictureBox4.Size = New System.Drawing.Size(93, 52)
         Me.PictureBox4.TabIndex = 33
         Me.PictureBox4.TabStop = False
         '
@@ -165,17 +152,17 @@ Partial Class Frm_menu
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
-        'pn_configuracion
+        'pn_compras
         '
-        Me.pn_configuracion.BackColor = System.Drawing.Color.SteelBlue
-        Me.pn_configuracion.BackgroundImage = CType(resources.GetObject("pn_configuracion.BackgroundImage"), System.Drawing.Image)
-        Me.pn_configuracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pn_configuracion.Controls.Add(Me.Label10)
-        Me.pn_configuracion.Location = New System.Drawing.Point(629, 354)
-        Me.pn_configuracion.Margin = New System.Windows.Forms.Padding(2)
-        Me.pn_configuracion.Name = "pn_configuracion"
-        Me.pn_configuracion.Size = New System.Drawing.Size(227, 200)
-        Me.pn_configuracion.TabIndex = 25
+        Me.pn_compras.BackColor = System.Drawing.Color.SteelBlue
+        Me.pn_compras.BackgroundImage = CType(resources.GetObject("pn_compras.BackgroundImage"), System.Drawing.Image)
+        Me.pn_compras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pn_compras.Controls.Add(Me.Label10)
+        Me.pn_compras.Location = New System.Drawing.Point(629, 354)
+        Me.pn_compras.Margin = New System.Windows.Forms.Padding(2)
+        Me.pn_compras.Name = "pn_compras"
+        Me.pn_compras.Size = New System.Drawing.Size(227, 200)
+        Me.pn_compras.TabIndex = 25
         '
         'Label10
         '
@@ -194,43 +181,43 @@ Partial Class Frm_menu
         Me.pn_provedor.BackColor = System.Drawing.Color.SteelBlue
         Me.pn_provedor.BackgroundImage = CType(resources.GetObject("pn_provedor.BackgroundImage"), System.Drawing.Image)
         Me.pn_provedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pn_provedor.Controls.Add(Me.Label13)
+        Me.pn_provedor.Controls.Add(Me.lb_provedores)
         Me.pn_provedor.Location = New System.Drawing.Point(372, 354)
         Me.pn_provedor.Margin = New System.Windows.Forms.Padding(2)
         Me.pn_provedor.Name = "pn_provedor"
         Me.pn_provedor.Size = New System.Drawing.Size(227, 200)
         Me.pn_provedor.TabIndex = 24
         '
-        'Label13
+        'lb_provedores
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(86, 166)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(79, 19)
-        Me.Label13.TabIndex = 3
-        Me.Label13.Text = "Provedores"
+        Me.lb_provedores.AutoSize = True
+        Me.lb_provedores.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_provedores.ForeColor = System.Drawing.Color.Black
+        Me.lb_provedores.Location = New System.Drawing.Point(86, 166)
+        Me.lb_provedores.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lb_provedores.Name = "lb_provedores"
+        Me.lb_provedores.Size = New System.Drawing.Size(79, 19)
+        Me.lb_provedores.TabIndex = 3
+        Me.lb_provedores.Text = "Provedores"
         '
-        'Label9
+        'lb_difuntos
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(85, 160)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(59, 19)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "Difuntos"
+        Me.lb_difuntos.AutoSize = True
+        Me.lb_difuntos.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_difuntos.ForeColor = System.Drawing.Color.Black
+        Me.lb_difuntos.Location = New System.Drawing.Point(85, 160)
+        Me.lb_difuntos.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lb_difuntos.Name = "lb_difuntos"
+        Me.lb_difuntos.Size = New System.Drawing.Size(59, 19)
+        Me.lb_difuntos.TabIndex = 2
+        Me.lb_difuntos.Text = "Difuntos"
         '
         'pn_difuntos
         '
         Me.pn_difuntos.BackColor = System.Drawing.Color.SteelBlue
         Me.pn_difuntos.BackgroundImage = CType(resources.GetObject("pn_difuntos.BackgroundImage"), System.Drawing.Image)
         Me.pn_difuntos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pn_difuntos.Controls.Add(Me.Label9)
+        Me.pn_difuntos.Controls.Add(Me.lb_difuntos)
         Me.pn_difuntos.Location = New System.Drawing.Point(109, 360)
         Me.pn_difuntos.Margin = New System.Windows.Forms.Padding(2)
         Me.pn_difuntos.Name = "pn_difuntos"
@@ -254,95 +241,95 @@ Partial Class Frm_menu
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(61, 162)
+        Me.Label7.Location = New System.Drawing.Point(75, 171)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(116, 19)
+        Me.Label7.Size = New System.Drawing.Size(86, 19)
         Me.Label7.TabIndex = 2
-        Me.Label7.Text = "Planes Funerarios"
+        Me.Label7.Text = "Cotizaciones"
         '
         'pn_productos
         '
         Me.pn_productos.BackColor = System.Drawing.Color.SteelBlue
         Me.pn_productos.BackgroundImage = CType(resources.GetObject("pn_productos.BackgroundImage"), System.Drawing.Image)
         Me.pn_productos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.pn_productos.Controls.Add(Me.Label6)
+        Me.pn_productos.Controls.Add(Me.lb_productos)
         Me.pn_productos.Location = New System.Drawing.Point(372, 99)
         Me.pn_productos.Margin = New System.Windows.Forms.Padding(2)
         Me.pn_productos.Name = "pn_productos"
         Me.pn_productos.Size = New System.Drawing.Size(227, 200)
         Me.pn_productos.TabIndex = 21
         '
-        'Label6
+        'lb_productos
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(44, 171)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(143, 19)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Productos Y Servicios"
+        Me.lb_productos.AutoSize = True
+        Me.lb_productos.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_productos.ForeColor = System.Drawing.Color.Black
+        Me.lb_productos.Location = New System.Drawing.Point(44, 171)
+        Me.lb_productos.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lb_productos.Name = "lb_productos"
+        Me.lb_productos.Size = New System.Drawing.Size(143, 19)
+        Me.lb_productos.TabIndex = 1
+        Me.lb_productos.Text = "Productos Y Servicios"
         '
-        'Panel1
+        'pn_personales
         '
-        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Location = New System.Drawing.Point(109, 99)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(227, 200)
-        Me.Panel1.TabIndex = 20
+        Me.pn_personales.BackColor = System.Drawing.Color.SteelBlue
+        Me.pn_personales.BackgroundImage = CType(resources.GetObject("pn_personales.BackgroundImage"), System.Drawing.Image)
+        Me.pn_personales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pn_personales.Controls.Add(Me.lb_personal)
+        Me.pn_personales.Location = New System.Drawing.Point(109, 99)
+        Me.pn_personales.Margin = New System.Windows.Forms.Padding(2)
+        Me.pn_personales.Name = "pn_personales"
+        Me.pn_personales.Size = New System.Drawing.Size(227, 200)
+        Me.pn_personales.TabIndex = 20
         '
-        'Label5
+        'lb_personal
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(69, 171)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 19)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Personal"
+        Me.lb_personal.AutoSize = True
+        Me.lb_personal.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lb_personal.ForeColor = System.Drawing.Color.Black
+        Me.lb_personal.Location = New System.Drawing.Point(69, 171)
+        Me.lb_personal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lb_personal.Name = "lb_personal"
+        Me.lb_personal.Size = New System.Drawing.Size(61, 19)
+        Me.lb_personal.TabIndex = 0
+        Me.lb_personal.Text = "Personal"
         '
-        'PictureBox5
+        'pb_siguiente
         '
-        Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox5.Location = New System.Drawing.Point(965, 710)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(83, 67)
-        Me.PictureBox5.TabIndex = 37
-        Me.PictureBox5.TabStop = False
+        Me.pb_siguiente.BackColor = System.Drawing.Color.Transparent
+        Me.pb_siguiente.BackgroundImage = CType(resources.GetObject("pb_siguiente.BackgroundImage"), System.Drawing.Image)
+        Me.pb_siguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pb_siguiente.Location = New System.Drawing.Point(965, 710)
+        Me.pb_siguiente.Margin = New System.Windows.Forms.Padding(2)
+        Me.pb_siguiente.Name = "pb_siguiente"
+        Me.pb_siguiente.Size = New System.Drawing.Size(83, 67)
+        Me.pb_siguiente.TabIndex = 37
+        Me.pb_siguiente.TabStop = False
         '
-        'Label11
+        'lb_fecha
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Location = New System.Drawing.Point(899, 732)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(45, 13)
-        Me.Label11.TabIndex = 36
-        Me.Label11.Text = "Label11"
+        Me.lb_fecha.AutoSize = True
+        Me.lb_fecha.BackColor = System.Drawing.Color.Transparent
+        Me.lb_fecha.Location = New System.Drawing.Point(899, 732)
+        Me.lb_fecha.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lb_fecha.Name = "lb_fecha"
+        Me.lb_fecha.Size = New System.Drawing.Size(45, 13)
+        Me.lb_fecha.TabIndex = 36
+        Me.lb_fecha.Text = "Label11"
         '
-        'PictureBox2
+        'pb_boton_inicio
         '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 688)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(84, 64)
-        Me.PictureBox2.TabIndex = 35
-        Me.PictureBox2.TabStop = False
+        Me.pb_boton_inicio.BackColor = System.Drawing.Color.Transparent
+        Me.pb_boton_inicio.BackgroundImage = CType(resources.GetObject("pb_boton_inicio.BackgroundImage"), System.Drawing.Image)
+        Me.pb_boton_inicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pb_boton_inicio.Location = New System.Drawing.Point(0, 688)
+        Me.pb_boton_inicio.Margin = New System.Windows.Forms.Padding(2)
+        Me.pb_boton_inicio.Name = "pb_boton_inicio"
+        Me.pb_boton_inicio.Size = New System.Drawing.Size(84, 64)
+        Me.pb_boton_inicio.TabIndex = 35
+        Me.pb_boton_inicio.TabStop = False
         '
         'Timer1
         '
@@ -364,24 +351,24 @@ Partial Class Frm_menu
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(91, 162)
+        Me.Label8.Location = New System.Drawing.Point(91, 171)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(57, 19)
         Me.Label8.TabIndex = 2
         Me.Label8.Text = "Clientes"
         '
-        'Panel3
+        'pn_ventas
         '
-        Me.Panel3.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
-        Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel3.Controls.Add(Me.Label14)
-        Me.Panel3.Location = New System.Drawing.Point(882, 354)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(227, 200)
-        Me.Panel3.TabIndex = 26
+        Me.pn_ventas.BackColor = System.Drawing.Color.SteelBlue
+        Me.pn_ventas.BackgroundImage = CType(resources.GetObject("pn_ventas.BackgroundImage"), System.Drawing.Image)
+        Me.pn_ventas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.pn_ventas.Controls.Add(Me.Label14)
+        Me.pn_ventas.Location = New System.Drawing.Point(882, 354)
+        Me.pn_ventas.Margin = New System.Windows.Forms.Padding(2)
+        Me.pn_ventas.Name = "pn_ventas"
+        Me.pn_ventas.Size = New System.Drawing.Size(227, 200)
+        Me.pn_ventas.TabIndex = 26
         '
         'Label14
         '
@@ -409,25 +396,24 @@ Partial Class Frm_menu
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1179, 788)
         Me.Controls.Add(Me.pn_principal)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.pn_ventas)
         Me.Controls.Add(Me.pn_clientes)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.pb_siguiente)
+        Me.Controls.Add(Me.lb_fecha)
+        Me.Controls.Add(Me.pb_boton_inicio)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lb_cedula)
+        Me.Controls.Add(Me.lb_nombre)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.pn_configuracion)
+        Me.Controls.Add(Me.pn_compras)
         Me.Controls.Add(Me.pn_provedor)
         Me.Controls.Add(Me.pn_difuntos)
         Me.Controls.Add(Me.Pn_planes)
         Me.Controls.Add(Me.pn_productos)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pn_personales)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Frm_menu"
         Me.Text = "Frm_menu"
@@ -435,8 +421,8 @@ Partial Class Frm_menu
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pn_configuracion.ResumeLayout(False)
-        Me.pn_configuracion.PerformLayout()
+        Me.pn_compras.ResumeLayout(False)
+        Me.pn_compras.PerformLayout()
         Me.pn_provedor.ResumeLayout(False)
         Me.pn_provedor.PerformLayout()
         Me.pn_difuntos.ResumeLayout(False)
@@ -445,14 +431,14 @@ Partial Class Frm_menu
         Me.Pn_planes.PerformLayout()
         Me.pn_productos.ResumeLayout(False)
         Me.pn_productos.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pn_personales.ResumeLayout(False)
+        Me.pn_personales.PerformLayout()
+        CType(Me.pb_siguiente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_boton_inicio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pn_clientes.ResumeLayout(False)
         Me.pn_clientes.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.pn_ventas.ResumeLayout(False)
+        Me.pn_ventas.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -460,31 +446,30 @@ Partial Class Frm_menu
     Friend WithEvents Label12 As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lb_cedula As Label
+    Friend WithEvents lb_nombre As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents pn_configuracion As Panel
+    Friend WithEvents pn_compras As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents pn_provedor As Panel
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lb_difuntos As Label
     Friend WithEvents pn_difuntos As Panel
     Friend WithEvents Pn_planes As Panel
     Friend WithEvents Label7 As Label
     Friend WithEvents pn_productos As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents lb_productos As Label
+    Friend WithEvents pn_personales As Panel
+    Friend WithEvents lb_personal As Label
+    Friend WithEvents pb_siguiente As PictureBox
+    Friend WithEvents lb_fecha As Label
+    Friend WithEvents pb_boton_inicio As PictureBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents pn_clientes As Panel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents pn_ventas As Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label13 As Label
+    Friend WithEvents lb_provedores As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents pn_principal As Panel
 End Class

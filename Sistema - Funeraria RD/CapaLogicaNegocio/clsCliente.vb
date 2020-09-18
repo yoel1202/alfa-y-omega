@@ -7,7 +7,7 @@ Public Class clsCliente
     'Declaramos nuestras propiedades
     Public Property Codigo_Cliente As Integer
     Public Property TipoPersona() As String
-    Public Property TipoDoc() As String
+    Public Property segundadireccion() As String
     Public Property Documento() As String
     Public Property Nombres() As String
     Public Property Direccion() As String
@@ -41,7 +41,7 @@ Public Class clsCliente
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
             lst.Add(New clsParametro("@Tipo_Personas", TipoPersona))
-            lst.Add(New clsParametro("@Tipo_Documentos", TipoDoc))
+            lst.Add(New clsParametro("@segundadireccion", segundadireccion))
             lst.Add(New clsParametro("@Documentos", Documento))
             lst.Add(New clsParametro("@Nombress", Nombres))
             lst.Add(New clsParametro("@Direccions", Direccion))
@@ -66,7 +66,7 @@ Public Class clsCliente
             'Agregamos a la lista genérica el nombre y valor de los parámetros
             lst.Add(New clsParametro("@Codigo_Clientes", Codigo_Cliente))
             lst.Add(New clsParametro("@Tipo_Personas", TipoPersona))
-            lst.Add(New clsParametro("@Tipo_Documentos", TipoDoc))
+            lst.Add(New clsParametro("@segundadireccion", segundadireccion))
             lst.Add(New clsParametro("@Documentos", Documento))
             lst.Add(New clsParametro("@Nombress", Nombres))
             lst.Add(New clsParametro("@Direccions", Direccion))

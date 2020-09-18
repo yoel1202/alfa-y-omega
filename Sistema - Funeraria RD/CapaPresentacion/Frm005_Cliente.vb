@@ -106,10 +106,11 @@ Public Class Frm005_Cliente
             Else
                 rbnJuridica.Checked = True
             End If
-            cbxTipoDoc.Text = Me.DataGridView1.CurrentRow.Cells(2).Value.ToString()
-            txtNroDoc.Text = Me.DataGridView1.CurrentRow.Cells(3).Value.ToString()
-            txtNombres.Text = Me.DataGridView1.CurrentRow.Cells(4).Value.ToString()
-            txtDireccion.Text = Me.DataGridView1.CurrentRow.Cells(5).Value.ToString()
+
+            txtNroDoc.Text = Me.DataGridView1.CurrentRow.Cells(2).Value.ToString()
+            txtNombres.Text = Me.DataGridView1.CurrentRow.Cells(3).Value.ToString()
+            txtDireccion.Text = Me.DataGridView1.CurrentRow.Cells(4).Value.ToString()
+            tb_segunda_direccion.Text = Me.DataGridView1.CurrentRow.Cells(5).Value.ToString()
             txtTelefono.Text = Me.DataGridView1.CurrentRow.Cells(6).Value.ToString()
             txtEmail.Text = Me.DataGridView1.CurrentRow.Cells(7).Value.ToString()
             Valor = 1
@@ -133,7 +134,7 @@ Public Class Frm005_Cliente
             item.CodigoCliente = Convert.ToInt32(row.Cells("Codigo").Value)
             item.Datos = Convert.ToString(row.Cells("Nombres").Value)
             item.Direccion = Convert.ToString(row.Cells("Direccion").Value)
-            item.TipoDocumento = Convert.ToString(row.Cells("TipoDoc").Value)
+
             item.Documento = Convert.ToString(row.Cells("NroDoc").Value)
 
             If (Cliente = 0) Then 'Si es valor cero, enviamos los datos al formulario parentesco
@@ -180,8 +181,8 @@ Public Class Frm005_Cliente
         If (permiso = "Todos") Then
             'Evento para guardar cambios, para registrar y/o actualizar información
             ErrorProvider1.Clear()
-            If (cbxTipoDoc.SelectedIndex = 0) Then
-                ErrorProvider1.SetError(cbxTipoDoc, "Debe Seleccionar un Tipo de Documento")
+            If (tb_segunda_direccion.Text = "") Then
+                ErrorProvider1.SetError(tb_segunda_direccion, "Ingrese Direccion")
             ElseIf (txtNroDoc.Text.Trim = "") Then
                 ErrorProvider1.SetError(txtNroDoc, "Ingrese Número de Documento")
             ElseIf (txtNombres.Text.Trim = "") Then
@@ -197,7 +198,7 @@ Public Class Frm005_Cliente
 
                     If (Valor = 0) Then 'Si es valor cero, registramos
                         C.TipoPersona = If(rbnNatural.Checked = True, "Natural", "Jurídica")
-                        C.TipoDoc = cbxTipoDoc.SelectedItem
+                        C.segundadireccion = tb_segunda_direccion.Text
                         C.Documento = txtNroDoc.Text
                         C.Nombres = txtNombres.Text
                         C.Direccion = txtDireccion.Text
@@ -217,7 +218,7 @@ Public Class Frm005_Cliente
                     Else 'Si es valor 1 actualizamos la información
                         C.Codigo_Cliente = CodigoC
                         C.TipoPersona = If(rbnNatural.Checked = True, "Natural", "Jurídica")
-                        C.TipoDoc = cbxTipoDoc.SelectedItem
+                        C.segundadireccion = tb_segunda_direccion.Text
                         C.Documento = txtNroDoc.Text
                         C.Nombres = txtNombres.Text
                         C.Direccion = txtDireccion.Text
@@ -245,7 +246,7 @@ Public Class Frm005_Cliente
         txtDatos.Clear()
         rbnNatural.Checked = True
         rbnNDoc.Checked = True
-        cbxTipoDoc.SelectedIndex = 0
+        tb_segunda_direccion.Clear()
         txtNroDoc.Clear()
         txtNombres.Clear()
         txtDireccion.Clear()
@@ -281,10 +282,10 @@ Public Class Frm005_Cliente
         Validar.Numeros(e)
     End Sub
 
-    Private Sub cbxTipoDoc_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbxTipoDoc.SelectedIndexChanged
-        If (cbxTipoDoc.SelectedIndex = 1) Then
-            txtNroDoc.MaxLength = 8
-        ElseIf (cbxTipoDoc.SelectedIndex = 2) Then
+    Private Sub cbxTipoDoc_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If (rbnNatural.Checked) Then
+            txtNroDoc.MaxLength = 9
+        ElseIf (rbnJuridica.Checked) Then
             txtNroDoc.MaxLength = 11
         End If
     End Sub

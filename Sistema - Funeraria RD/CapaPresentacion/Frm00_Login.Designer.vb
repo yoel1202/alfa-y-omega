@@ -242,10 +242,10 @@ Partial Class Frm00_Login
         '
         Me.pb_logo.BackgroundImage = CType(resources.GetObject("pb_logo.BackgroundImage"), System.Drawing.Image)
         Me.pb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pb_logo.Location = New System.Drawing.Point(99, 63)
+        Me.pb_logo.Location = New System.Drawing.Point(133, 61)
         Me.pb_logo.Margin = New System.Windows.Forms.Padding(2)
         Me.pb_logo.Name = "pb_logo"
-        Me.pb_logo.Size = New System.Drawing.Size(207, 77)
+        Me.pb_logo.Size = New System.Drawing.Size(147, 77)
         Me.pb_logo.TabIndex = 260
         Me.pb_logo.TabStop = False
         '

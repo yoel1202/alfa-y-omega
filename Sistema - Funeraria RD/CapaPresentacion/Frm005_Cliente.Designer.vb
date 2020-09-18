@@ -29,15 +29,6 @@ Partial Class Frm005_Cliente
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NroDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.lkbCerrar = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -55,8 +46,6 @@ Partial Class Frm005_Cliente
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.cbxTipoDoc = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtNombres = New System.Windows.Forms.TextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
@@ -68,6 +57,17 @@ Partial Class Frm005_Cliente
         Me.rbnNatural = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.tb_segunda_direccion = New System.Windows.Forms.TextBox()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NroDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.segunda = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_cabecera.SuspendLayout()
@@ -141,74 +141,12 @@ Partial Class Frm005_Cliente
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Column2, Me.TipoDoc, Me.NroDoc, Me.Nombres, Me.Direccion, Me.Column7, Me.Column8, Me.Button})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Column2, Me.NroDoc, Me.Nombres, Me.Direccion, Me.segunda, Me.Column7, Me.Column8, Me.Button})
         Me.DataGridView1.Location = New System.Drawing.Point(23, 117)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(1157, 266)
         Me.DataGridView1.TabIndex = 6
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Codigo Cliente"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        Me.Codigo.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Tipo Persona"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'TipoDoc
-        '
-        Me.TipoDoc.HeaderText = "Tipo Doc."
-        Me.TipoDoc.Name = "TipoDoc"
-        Me.TipoDoc.ReadOnly = True
-        Me.TipoDoc.Width = 80
-        '
-        'NroDoc
-        '
-        Me.NroDoc.HeaderText = "Nro Doc."
-        Me.NroDoc.Name = "NroDoc"
-        Me.NroDoc.ReadOnly = True
-        '
-        'Nombres
-        '
-        Me.Nombres.HeaderText = "Nombres"
-        Me.Nombres.Name = "Nombres"
-        Me.Nombres.ReadOnly = True
-        Me.Nombres.Width = 230
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "Dirección"
-        Me.Direccion.Name = "Direccion"
-        Me.Direccion.ReadOnly = True
-        Me.Direccion.Width = 230
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Teléfono"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 90
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Email"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 200
-        '
-        'Button
-        '
-        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button.HeaderText = "Editar"
-        Me.Button.Name = "Button"
-        Me.Button.ReadOnly = True
-        Me.Button.Width = 80
         '
         'Panel_cabecera
         '
@@ -361,11 +299,11 @@ Partial Class Frm005_Cliente
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.tb_segunda_direccion)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.cbxTipoDoc)
-        Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtNombres)
         Me.GroupBox2.Controls.Add(Me.txtEmail)
         Me.GroupBox2.Controls.Add(Me.txtTelefono)
@@ -376,7 +314,7 @@ Partial Class Frm005_Cliente
         Me.GroupBox2.Controls.Add(Me.rbnJuridica)
         Me.GroupBox2.Controls.Add(Me.rbnNatural)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Location = New System.Drawing.Point(273, 29)
+        Me.GroupBox2.Location = New System.Drawing.Point(285, 15)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(624, 291)
         Me.GroupBox2.TabIndex = 0
@@ -386,7 +324,7 @@ Partial Class Frm005_Cliente
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(85, 244)
+        Me.Label7.Location = New System.Drawing.Point(85, 225)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(46, 15)
         Me.Label7.TabIndex = 10
@@ -395,7 +333,7 @@ Partial Class Frm005_Cliente
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(24, 210)
+        Me.Label6.Location = New System.Drawing.Point(24, 191)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(106, 15)
         Me.Label6.TabIndex = 9
@@ -404,36 +342,15 @@ Partial Class Frm005_Cliente
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(68, 177)
+        Me.Label5.Location = New System.Drawing.Point(68, 135)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 15)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Dirección:"
         '
-        'cbxTipoDoc
-        '
-        Me.cbxTipoDoc.BackColor = System.Drawing.SystemColors.Menu
-        Me.cbxTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbxTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cbxTipoDoc.FormattingEnabled = True
-        Me.cbxTipoDoc.Items.AddRange(New Object() {"Seleccione", "Cedula Fisica", "Cedula Juridica"})
-        Me.cbxTipoDoc.Location = New System.Drawing.Point(181, 70)
-        Me.cbxTipoDoc.Name = "cbxTipoDoc"
-        Me.cbxTipoDoc.Size = New System.Drawing.Size(196, 23)
-        Me.cbxTipoDoc.TabIndex = 3
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(34, 73)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 15)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Tipo Documento:"
-        '
         'txtNombres
         '
-        Me.txtNombres.Location = New System.Drawing.Point(181, 139)
+        Me.txtNombres.Location = New System.Drawing.Point(181, 97)
         Me.txtNombres.Name = "txtNombres"
         Me.txtNombres.Size = New System.Drawing.Size(393, 21)
         Me.txtNombres.TabIndex = 5
@@ -441,21 +358,21 @@ Partial Class Frm005_Cliente
         'txtEmail
         '
         Me.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
-        Me.txtEmail.Location = New System.Drawing.Point(181, 241)
+        Me.txtEmail.Location = New System.Drawing.Point(181, 222)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(393, 21)
         Me.txtEmail.TabIndex = 8
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(181, 207)
+        Me.txtTelefono.Location = New System.Drawing.Point(181, 188)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(196, 21)
         Me.txtTelefono.TabIndex = 7
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(181, 174)
+        Me.txtDireccion.Location = New System.Drawing.Point(181, 132)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(393, 21)
         Me.txtDireccion.TabIndex = 6
@@ -463,7 +380,7 @@ Partial Class Frm005_Cliente
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(71, 142)
+        Me.Label3.Location = New System.Drawing.Point(71, 100)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(61, 15)
         Me.Label3.TabIndex = 4
@@ -471,7 +388,7 @@ Partial Class Frm005_Cliente
         '
         'txtNroDoc
         '
-        Me.txtNroDoc.Location = New System.Drawing.Point(181, 106)
+        Me.txtNroDoc.Location = New System.Drawing.Point(181, 64)
         Me.txtNroDoc.MaxLength = 11
         Me.txtNroDoc.Name = "txtNroDoc"
         Me.txtNroDoc.Size = New System.Drawing.Size(196, 21)
@@ -480,7 +397,7 @@ Partial Class Frm005_Cliente
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(43, 109)
+        Me.Label2.Location = New System.Drawing.Point(43, 67)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(91, 15)
         Me.Label2.TabIndex = 2
@@ -521,6 +438,83 @@ Partial Class Frm005_Cliente
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(19, 162)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(115, 15)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Segunda Dirección:"
+        '
+        'tb_segunda_direccion
+        '
+        Me.tb_segunda_direccion.Location = New System.Drawing.Point(181, 159)
+        Me.tb_segunda_direccion.Name = "tb_segunda_direccion"
+        Me.tb_segunda_direccion.Size = New System.Drawing.Size(393, 21)
+        Me.tb_segunda_direccion.TabIndex = 11
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Codigo Cliente"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Tipo Persona"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'NroDoc
+        '
+        Me.NroDoc.HeaderText = "Nro Doc."
+        Me.NroDoc.Name = "NroDoc"
+        Me.NroDoc.ReadOnly = True
+        '
+        'Nombres
+        '
+        Me.Nombres.HeaderText = "Nombres"
+        Me.Nombres.Name = "Nombres"
+        Me.Nombres.ReadOnly = True
+        Me.Nombres.Width = 230
+        '
+        'Direccion
+        '
+        Me.Direccion.HeaderText = "Dirección"
+        Me.Direccion.Name = "Direccion"
+        Me.Direccion.ReadOnly = True
+        Me.Direccion.Width = 230
+        '
+        'segunda
+        '
+        Me.segunda.HeaderText = "Segunda Direccion"
+        Me.segunda.Name = "segunda"
+        Me.segunda.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Teléfono"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 90
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Email"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 200
+        '
+        'Button
+        '
+        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button.HeaderText = "Editar"
+        Me.Button.Name = "Button"
+        Me.Button.ReadOnly = True
+        Me.Button.Width = 80
         '
         'Frm005_Cliente
         '
@@ -574,8 +568,6 @@ Partial Class Frm005_Cliente
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents cbxTipoDoc As System.Windows.Forms.ComboBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtNombres As System.Windows.Forms.TextBox
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
     Friend WithEvents txtTelefono As System.Windows.Forms.TextBox
@@ -589,13 +581,15 @@ Partial Class Frm005_Cliente
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents btnLimpiar As System.Windows.Forms.Button
-    Friend WithEvents Codigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents TipoDoc As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents NroDoc As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Nombres As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Direccion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents Label4 As Label
+    Friend WithEvents tb_segunda_direccion As TextBox
+    Friend WithEvents Codigo As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents NroDoc As DataGridViewTextBoxColumn
+    Friend WithEvents Nombres As DataGridViewTextBoxColumn
+    Friend WithEvents Direccion As DataGridViewTextBoxColumn
+    Friend WithEvents segunda As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Button As DataGridViewButtonColumn
 End Class

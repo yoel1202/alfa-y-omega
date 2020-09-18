@@ -470,12 +470,15 @@ Public Class Frm004_PlanesFunerarios
         element.Brush = New PdfSolidBrush(New PdfColor(126, 155, 203))
         result = element.Draw(page, New PointF(10, (result.Bounds.Bottom + 25)))
         'Draw Bill address
-        element = New PdfTextElement(String.Format("{0}, {1}, {2}", "Tel: 2783 3753", "\n59 Ciudad Neily ", " "), New PdfStandardFont(PdfFontFamily.TimesRoman, 10))
+        element = New PdfTextElement(String.Format("{0}, {1}, {2}", "Tel: 2783 3753", " Ciudad Neily ", " "), New PdfStandardFont(PdfFontFamily.TimesRoman, 10))
         element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93))
         result = element.Draw(page, New RectangleF(10, (result.Bounds.Bottom + 3), (g.ClientSize.Width / 2), 100))
         'Draw Bill line
         g.DrawLine(New PdfPen(New PdfColor(126, 151, 173), 0.7!), New PointF(0, (result.Bounds.Bottom + 3)), New PointF(g.ClientSize.Width, (result.Bounds.Bottom + 3)))
         'Creates the datasource for the table
+
+
+        Dim Font As PdfStandardFont = New PdfStandardFont(PdfFontFamily.TimesRoman, 14)
 
 
 
@@ -506,22 +509,26 @@ Public Class Frm004_PlanesFunerarios
         'Dim pdfGridHeader As PdfGridRow = grid.Headers(0)
 
 
-        grid.Columns.Add(dtgDetallesPlanes.Columns.Count)
+        grid.Columns.Add(dtgDetallesPlanes.Columns.Count - 1)
         grid.Headers.Add(1)
         Dim pdfGridHeader As PdfGridRow = grid.Headers(0)
         For Each column As DataGridViewColumn In dtgDetallesPlanes.Columns
+            If (column.HeaderText = "Eliminar") Then
 
-
-            pdfGridHeader.Cells(column.Index).Value = column.HeaderText
+            Else
+                pdfGridHeader.Cells(column.Index).Value = column.HeaderText
+            End If
         Next
 
         'Dim pdfGridRow As PdfGridRow = grid.Rows.Add()
         For Each row As DataGridViewRow In dtgDetallesPlanes.Rows
             grid.Rows.Add()
             For Each cell As DataGridViewCell In row.Cells
+                If (cell.Value.ToString() = "Eliminar") Then
 
-                grid.Rows(row.Index).Cells(cell.ColumnIndex).Value = cell.Value.ToString()
-
+                Else
+                    grid.Rows(row.Index).Cells(cell.ColumnIndex).Value = cell.Value.ToString()
+                End If
             Next
         Next
         'Adds the data source
@@ -555,6 +562,7 @@ Public Class Frm004_PlanesFunerarios
         layoutFormat.Layout = PdfLayoutType.Paginate
         'Draws the grid to the PDF page.
         Dim gridResult As PdfGridLayoutResult = grid.Draw(page, New RectangleF(New PointF(0, result.Bounds.Bottom + 40), New SizeF(g.ClientSize.Width, g.ClientSize.Height - 100)), layoutFormat)
+        g.DrawString("Total: " + lblTotal.Text, Font, PdfBrushes.Black, New PointF(result.Bounds.Right + 250, result.Bounds.Bottom + 100))
         document.Save("Sample.pdf")
         document.Close(True)
         System.Diagnostics.Process.Start("Sample.pdf")
