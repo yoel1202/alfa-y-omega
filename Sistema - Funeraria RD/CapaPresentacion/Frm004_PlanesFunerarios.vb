@@ -1,4 +1,9 @@
-﻿Imports CapaLogicaNegocio 'Importamos la capa lógica de negocio
+﻿Imports System.IO
+Imports CapaLogicaNegocio 'Importamos la capa lógica de negocio
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Graphics
+Imports Syncfusion.Pdf.Grid
 
 Public Class Frm004_PlanesFunerarios
     Implements IItem
@@ -216,7 +221,7 @@ Public Class Frm004_PlanesFunerarios
                 dtgDetallesPlanes.Rows(i).Cells(3).Value = Item(i).Precio
                 dtgDetallesPlanes.Rows(i).Cells(4).Value = "Eliminar"
                 Total += (Item(i).Precio)
-                
+
             Next
             Me.DataGridView1.ClearSelection()
             For Each row As DataGridViewRow In dtgDetallesPlanes.Rows
@@ -379,4 +384,180 @@ Public Class Frm004_PlanesFunerarios
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'If dtgDetallesPlanes.Rows.Count > 0 Then
+        '    Dim sfd As SaveFileDialog = New SaveFileDialog()
+        '    sfd.Filter = "PDF (*.pdf)|*.pdf"
+        '    sfd.FileName = "Output.pdf"
+        '    Dim fileError As Boolean = False
+
+        '    If Not fileError Then
+
+        '        Try
+        '            Dim pdfTable As PdfPTable = New PdfPTable(dtgDetallesPlanes.Columns.Count)
+        '            pdfTable.DefaultCell.Padding = 3
+        '            pdfTable.WidthPercentage = 100
+        '            pdfTable.HorizontalAlignment = iTextSharp.text.Element.ALIGN_LEFT
+
+        '            For Each column As DataGridViewColumn In dtgDetallesPlanes.Columns
+        '                Dim cell As PdfPCell = New PdfPCell(New iTextSharp.text.Phrase(column.HeaderText))
+        '                pdfTable.AddCell(cell)
+        '            Next
+
+        '            For Each row As DataGridViewRow In dtgDetallesPlanes.Rows
+
+        '                For Each cell As DataGridViewCell In row.Cells
+        '                    pdfTable.AddCell(cell.Value.ToString())
+        '                Next
+        '            Next
+
+        '            Using stream As FileStream = New FileStream(sfd.FileName, FileMode.Create)
+        '                Dim pdfDoc As iTextSharp.text.Document = New iTextSharp.text.Document(iTextSharp.text.PageSize.A4.Rotate(), 10.0F, 20.0F, 20.0F, 10.0F)
+        '                PdfWriter.GetInstance(pdfDoc, stream)
+        '                pdfDoc.Open()
+        '                Dim image1 As iTextSharp.text.Image = iTextSharp.text.Image.GetInstance("rh.png")
+        '                image1.ScaleAbsoluteWidth(150)
+        '                image1.ScaleAbsoluteHeight(45)
+        '                pdfDoc.Add(image1)
+        '                Dim title As iTextSharp.text.Paragraph = New iTextSharp.text.Paragraph()
+        '                title.Alignment = iTextSharp.text.Element.ALIGN_CENTER
+        '                title.Font = iTextSharp.text.FontFactory.GetFont(iTextSharp.text.FontFactory.TIMES, 20.0F, iTextSharp.text.BaseColor.BLACK)
+        '                title.Add("Ploforma")
+        '                title.SpacingAfter = 20
+        '                pdfDoc.Add(title)
+        '                pdfDoc.Add(pdfTable)
+        '                pdfDoc.Close()
+        '                stream.Close()
+        '            End Using
+
+        '            System.Diagnostics.Process.Start(sfd.FileName)
+        '            MessageBox.Show("Informacion se exporto correctamente !!!", "Info")
+        '        Catch ex As Exception
+        '            MessageBox.Show("Error :" & ex.Message)
+        '        End Try
+        '    End If
+        'End If
+
+
+
+        'Creates a new PDF document
+        Dim document As New PdfDocument()
+        'Adds page settings
+        document.PageSettings.Orientation = PdfPageOrientation.Landscape
+        document.PageSettings.Margins.All = 50
+        'Adds a page to the document
+        Dim page As PdfPage = document.Pages.Add()
+        'Loads the image from disk 
+        Dim image As PdfImage = PdfImage.FromFile("C:\Funeraria\alfa-y-omega-logo.png")
+        'Draws the image to the PDF page
+        Dim g As PdfGraphics = page.Graphics
+        page.Graphics.DrawImage(image, New RectangleF(176, 0, 390, 130))
+        Dim result As PdfLayoutResult = New PdfLayoutResult(page, New RectangleF(0, 0, page.Graphics.ClientSize.Width / 2, 95))
+        Dim subHeadingFont As PdfFont = New PdfStandardFont(PdfFontFamily.TimesRoman, 14)
+        'Draw Rectangle place on location
+        g.DrawRectangle(New PdfSolidBrush(New PdfColor(126, 151, 173)), New RectangleF(0, (result.Bounds.Bottom + 40), g.ClientSize.Width, 30))
+        Dim dayNumber As Integer = Date.Today.Day
+        Dim mesNumber As Integer = Date.Today.Month
+        Dim anoNumber As Integer = Date.Today.Year
+        Dim element As PdfTextElement = New PdfTextElement(("Factura " + dayNumber.ToString() + mesNumber.ToString() + anoNumber.ToString()), subHeadingFont)
+        element.Brush = PdfBrushes.White
+        result = element.Draw(page, New PointF(10, (result.Bounds.Bottom + 48)))
+        Dim currentDate As String = ("Fecha " + DateTime.Now.ToString("MM/dd/yyyy"))
+        Dim textSize As SizeF = subHeadingFont.MeasureString(currentDate)
+        g.DrawString(currentDate, subHeadingFont, element.Brush, New PointF((g.ClientSize.Width - (textSize.Width - 10)), result.Bounds.Y))
+        'Draw Bill header
+        element = New PdfTextElement("FUNERALES ALFA Y OMEGA", New PdfStandardFont(PdfFontFamily.TimesRoman, 10))
+        element.Brush = New PdfSolidBrush(New PdfColor(126, 155, 203))
+        result = element.Draw(page, New PointF(10, (result.Bounds.Bottom + 25)))
+        'Draw Bill address
+        element = New PdfTextElement(String.Format("{0}, {1}, {2}", "Tel: 2783 3753", "\n59 Ciudad Neily ", " "), New PdfStandardFont(PdfFontFamily.TimesRoman, 10))
+        element.Brush = New PdfSolidBrush(New PdfColor(89, 89, 93))
+        result = element.Draw(page, New RectangleF(10, (result.Bounds.Bottom + 3), (g.ClientSize.Width / 2), 100))
+        'Draw Bill line
+        g.DrawLine(New PdfPen(New PdfColor(126, 151, 173), 0.7!), New PointF(0, (result.Bounds.Bottom + 3)), New PointF(g.ClientSize.Width, (result.Bounds.Bottom + 3)))
+        'Creates the datasource for the table
+
+
+
+
+        'Create a PDF grid
+        Dim grid As New PdfGrid()
+        'Dim column1 As New PdfGridColumn(grid)
+        'column1.Width = 100
+        'Dim column2 As New PdfGridColumn(grid)
+        'column2.Width = 200
+        'Dim column3 As New PdfGridColumn(grid)
+        'column3.Width = 100
+        'Dim column4 As New PdfGridColumn(grid)
+        'column4.Width = 100
+        'Dim column5 As New PdfGridColumn(grid)
+        'column5.Width = 100
+        ''Add three columns.
+        'grid.Columns.Add(column1)
+        'grid.Columns.Add(column2)
+        'grid.Columns.Add(column3)
+        'grid.Columns.Add(column4)
+        'grid.Columns.Add(column5)
+        'Add header.
+
+
+        'grid.Headers.Add(1)
+
+        'Dim pdfGridHeader As PdfGridRow = grid.Headers(0)
+
+
+        grid.Columns.Add(dtgDetallesPlanes.Columns.Count)
+        grid.Headers.Add(1)
+        Dim pdfGridHeader As PdfGridRow = grid.Headers(0)
+        For Each column As DataGridViewColumn In dtgDetallesPlanes.Columns
+
+
+            pdfGridHeader.Cells(column.Index).Value = column.HeaderText
+        Next
+
+        'Dim pdfGridRow As PdfGridRow = grid.Rows.Add()
+        For Each row As DataGridViewRow In dtgDetallesPlanes.Rows
+            grid.Rows.Add()
+            For Each cell As DataGridViewCell In row.Cells
+
+                grid.Rows(row.Index).Cells(cell.ColumnIndex).Value = cell.Value.ToString()
+
+            Next
+        Next
+        'Adds the data source
+        grid.DataSource = dtgDetallesPlanes.DataSource
+        'creates the grid cell styles
+        Dim cellStyle As New PdfGridCellStyle()
+        cellStyle.Borders.All = PdfPens.White
+        Dim header As PdfGridRow = grid.Headers(0)
+        'Creates the header style
+        Dim headerStyle As New PdfGridCellStyle()
+        headerStyle.Borders.All = New PdfPen(New PdfColor(126, 151, 173))
+        headerStyle.BackgroundBrush = New PdfSolidBrush(New PdfColor(126, 151, 173))
+        headerStyle.TextBrush = PdfBrushes.White
+        headerStyle.Font = New PdfStandardFont(PdfFontFamily.TimesRoman, 14.0F, PdfFontStyle.Regular)
+        'Adds cell customizations
+        For i As Integer = 0 To header.Cells.Count - 1
+            If i = 0 OrElse i = 1 Then
+                header.Cells(i).StringFormat = New PdfStringFormat(PdfTextAlignment.Left, PdfVerticalAlignment.Middle)
+            Else
+                header.Cells(i).StringFormat = New PdfStringFormat(PdfTextAlignment.Right, PdfVerticalAlignment.Middle)
+            End If
+        Next
+        'Applies the header style
+        header.ApplyStyle(headerStyle)
+        cellStyle.Borders.Bottom = New PdfPen(New PdfColor(217, 217, 217), 0.7F)
+        cellStyle.Font = New PdfStandardFont(PdfFontFamily.TimesRoman, 12.0F)
+        cellStyle.TextBrush = New PdfSolidBrush(New PdfColor(131, 130, 136))
+        'Creates the layout format for grid
+        Dim layoutFormat As New PdfGridLayoutFormat()
+        'Layout format settings to allow the table pagination
+        layoutFormat.Layout = PdfLayoutType.Paginate
+        'Draws the grid to the PDF page.
+        Dim gridResult As PdfGridLayoutResult = grid.Draw(page, New RectangleF(New PointF(0, result.Bounds.Bottom + 40), New SizeF(g.ClientSize.Width, g.ClientSize.Height - 100)), layoutFormat)
+        document.Save("Sample.pdf")
+        document.Close(True)
+        System.Diagnostics.Process.Start("Sample.pdf")
+        MessageBox.Show("Informacion se exporto correctamente !!!", "Info")
+    End Sub
 End Class

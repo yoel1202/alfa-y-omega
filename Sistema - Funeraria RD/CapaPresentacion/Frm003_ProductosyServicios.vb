@@ -198,62 +198,68 @@ Public Class Frm003_ProductosyServicios
 
         If (permiso = "Todos") Then
             'Evento para guardar cambios, para registrar y/o actualizar información
+
             ErrorProvider1.Clear()
             If (txtNombreServicio.Text.Trim = "") Then
                 ErrorProvider1.SetError(txtNombreServicio, "Ingrese Nombre de Servicio")
             ElseIf (txtPrecioServicio.Text.Trim = "") Then
                 ErrorProvider1.SetError(txtPrecioServicio, "Ingrese Precio de Servicio")
+            ElseIf (tb_precio_km.Text.Trim = "") Then
+                ErrorProvider1.SetError(tb_precio_km, "Ingrese Precio de Servicio")
+            ElseIf (tb_km.Text.Trim = "") Then
+                ErrorProvider1.SetError(tb_km, "Ingrese Precio de Servicio")
             Else
-                Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
+                    Dim Mensaje As String = "" 'Variable para recuperar el mensaje del procedimiento almacenado de la BD
 
-                Try 'Manejamos una excepción de errores
+                    Try 'Manejamos una excepción de errores
 
-                    If (Valor = 0) Then 'Si es valor cero, registramos
-                        S.Codigo_Tipo = 2
-                        S.Nombre = txtNombreServicio.Text
+                        If (Valor = 0) Then 'Si es valor cero, registramos
+                            S.Codigo_Tipo = 2
+                            S.Nombre = txtNombreServicio.Text
+                            S.precio = txtPrecioServicio.Text
+                            Mensaje = S.Registrar_Item() 'Ejecutamos la función Registrar Servicio
+                            If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
 
-                        Mensaje = S.Registrar_Item() 'Ejecutamos la función Registrar Servicio
-                        If (Mensaje = "Registrado Correctamente") Then 'Varificamos si se registró correctamente
+                                se.Codigo_Item = S.Devolver_Codigo_Item()
+                                se.tipo = cb_tipo_servicio.SelectedItem
+                                se.km = tb_km.Text
+                                se.precio_km = tb_precio_km.Text
 
-                            se.Codigo_Item = S.Devolver_Codigo_Item()
-                            se.tipo = cb_tipo_servicio.SelectedItem
-                            se.km = tb_km.Text
-                            se.precio_km = tb_precio_km.Text
 
-                            se.precio = txtPrecioServicio.Text
-                            se.Registrar_servicio()
-                            Call Listar_Servicios() 'Llamamos al método listar servicios
-                            Call Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
-                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
-                            clsMensaje.mostrar_mensaje(Mensaje, "error")
+                                se.Registrar_servicio()
+                                Call Listar_Servicios() 'Llamamos al método listar servicios
+                                Call Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
+                                clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Else 'Si no se realizó el registro correctamente, mostramos el mensaje de error de la BD
+                                clsMensaje.mostrar_mensaje(Mensaje, "error")
+                            End If
+
+                        Else 'Si es valor 1 actualizamos la información
+                            S.Codigo_Item = Codigo
+                            S.Codigo_Tipo = 2
+                            S.Nombre = txtNombreServicio.Text
+                            S.precio = txtPrecioServicio.Text
+                            Mensaje = S.Actualizar_Item() 'Ejecutamos la función Actualizar Servicio
+                            If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se actualizó correctamente
+                                se.Codigo_Item = S.Devolver_Codigo_Item()
+                                se.tipo = cb_tipo_servicio.SelectedItem
+                                se.km = tb_km.Text
+                                se.precio_km = tb_precio_km.Text
+
+                                se.Actualizar_servicio()
+                                Listar_Servicios() 'Llamamos al método listar servicios
+                                Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
+                                clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            Else 'Si no se realizó la actualización correctamente, mostramos el mensaje de error de la BD
+                                clsMensaje.mostrar_mensaje(Mensaje, "error")
+                            End If
                         End If
-
-                    Else 'Si es valor 1 actualizamos la información
-                        S.Codigo_Item = Codigo
-                        S.Codigo_Tipo = 2
-                        S.Nombre = txtNombreServicio.Text
-                        Mensaje = S.Actualizar_Item() 'Ejecutamos la función Actualizar Servicio
-                        If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se actualizó correctamente
-                            se.Codigo_Item = S.Devolver_Codigo_Item()
-                            se.tipo = cb_tipo_servicio.SelectedItem
-                            se.km = tb_km.Text
-                            se.precio_km = tb_precio_km.Text
-                            se.precio = txtPrecioServicio.Text
-                            se.Actualizar_servicio()
-                            Listar_Servicios() 'Llamamos al método listar servicios
-                            Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
-                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Else 'Si no se realizó la actualización correctamente, mostramos el mensaje de error de la BD
-                            clsMensaje.mostrar_mensaje(Mensaje, "error")
-                        End If
-                    End If
-                Catch ex As Exception
-                    clsMensaje.mostrar_mensaje(ex.Message, "error")
-                End Try
-            End If
-        Else
-            clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
+                    Catch ex As Exception
+                        clsMensaje.mostrar_mensaje(ex.Message, "error")
+                    End Try
+                End If
+            Else
+                clsMensaje.mostrar_mensaje("no  tiene permisos para esta Opción", "error")
         End If
     End Sub
 
@@ -416,5 +422,50 @@ Public Class Frm003_ProductosyServicios
 
     Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
 
+    End Sub
+
+    Private Sub tb_km_TextChanged(sender As Object, e As EventArgs) Handles tb_km.TextChanged
+        If (tb_km.Text = "" Or tb_precio_km.Text = "") Then
+
+        Else
+            Dim resultado = 0
+
+            resultado = Integer.Parse(tb_km.Text) * Integer.Parse(tb_precio_km.Text)
+            txtPrecioServicio.Text = resultado.ToString()
+        End If
+
+    End Sub
+
+    Private Sub tb_km_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_km.KeyPress
+        Validar.Numeros(e)
+    End Sub
+
+    Private Sub tb_precio_km_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_precio_km.KeyPress
+        Validar.Numeros(e)
+    End Sub
+
+    Private Sub tb_precio_km_TextChanged(sender As Object, e As EventArgs) Handles tb_precio_km.TextChanged
+        If (tb_km.Text = "" Or tb_precio_km.Text = "") Then
+
+        Else
+            Dim resultado = 0
+
+            resultado = Integer.Parse(tb_km.Text) * Integer.Parse(tb_precio_km.Text)
+            txtPrecioServicio.Text = resultado.ToString()
+        End If
+    End Sub
+
+    Private Sub cb_tipo_servicio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cb_tipo_servicio.SelectedIndexChanged
+        If (cb_tipo_servicio.SelectedIndex = 1) Then
+            tb_km.Enabled = False
+            tb_precio_km.Enabled = False
+            tb_km.Text = 0
+            tb_precio_km.Text = 0
+        ElseIf (cb_tipo_servicio.SelectedIndex = 0) Then
+            tb_km.Enabled = True
+            tb_precio_km.Enabled = True
+            tb_km.Clear()
+            tb_precio_km.Clear()
+        End If
     End Sub
 End Class

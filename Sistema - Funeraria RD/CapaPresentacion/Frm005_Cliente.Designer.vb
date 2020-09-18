@@ -29,6 +29,15 @@ Partial Class Frm005_Cliente
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TipoDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NroDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.lkbCerrar = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -59,15 +68,6 @@ Partial Class Frm005_Cliente
         Me.rbnNatural = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TipoDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NroDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_cabecera.SuspendLayout()
@@ -147,6 +147,68 @@ Partial Class Frm005_Cliente
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(1157, 266)
         Me.DataGridView1.TabIndex = 6
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Codigo Cliente"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Tipo Persona"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'TipoDoc
+        '
+        Me.TipoDoc.HeaderText = "Tipo Doc."
+        Me.TipoDoc.Name = "TipoDoc"
+        Me.TipoDoc.ReadOnly = True
+        Me.TipoDoc.Width = 80
+        '
+        'NroDoc
+        '
+        Me.NroDoc.HeaderText = "Nro Doc."
+        Me.NroDoc.Name = "NroDoc"
+        Me.NroDoc.ReadOnly = True
+        '
+        'Nombres
+        '
+        Me.Nombres.HeaderText = "Nombres"
+        Me.Nombres.Name = "Nombres"
+        Me.Nombres.ReadOnly = True
+        Me.Nombres.Width = 230
+        '
+        'Direccion
+        '
+        Me.Direccion.HeaderText = "Dirección"
+        Me.Direccion.Name = "Direccion"
+        Me.Direccion.ReadOnly = True
+        Me.Direccion.Width = 230
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Teléfono"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 90
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Email"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 200
+        '
+        'Button
+        '
+        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button.HeaderText = "Editar"
+        Me.Button.Name = "Button"
+        Me.Button.ReadOnly = True
+        Me.Button.Width = 80
         '
         'Panel_cabecera
         '
@@ -354,7 +416,7 @@ Partial Class Frm005_Cliente
         Me.cbxTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxTipoDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbxTipoDoc.FormattingEnabled = True
-        Me.cbxTipoDoc.Items.AddRange(New Object() {"Seleccione", "D.N.I.", "R.U.C."})
+        Me.cbxTipoDoc.Items.AddRange(New Object() {"Seleccione", "Cedula Fisica", "Cedula Juridica"})
         Me.cbxTipoDoc.Location = New System.Drawing.Point(181, 70)
         Me.cbxTipoDoc.Name = "cbxTipoDoc"
         Me.cbxTipoDoc.Size = New System.Drawing.Size(196, 23)
@@ -429,10 +491,10 @@ Partial Class Frm005_Cliente
         Me.rbnJuridica.AutoSize = True
         Me.rbnJuridica.Location = New System.Drawing.Point(296, 35)
         Me.rbnJuridica.Name = "rbnJuridica"
-        Me.rbnJuridica.Size = New System.Drawing.Size(68, 19)
+        Me.rbnJuridica.Size = New System.Drawing.Size(110, 19)
         Me.rbnJuridica.TabIndex = 2
         Me.rbnJuridica.TabStop = True
-        Me.rbnJuridica.Text = "Jurídica"
+        Me.rbnJuridica.Text = "Cedula Juridica"
         Me.rbnJuridica.UseVisualStyleBackColor = True
         '
         'rbnNatural
@@ -441,10 +503,10 @@ Partial Class Frm005_Cliente
         Me.rbnNatural.Checked = True
         Me.rbnNatural.Location = New System.Drawing.Point(181, 36)
         Me.rbnNatural.Name = "rbnNatural"
-        Me.rbnNatural.Size = New System.Drawing.Size(65, 19)
+        Me.rbnNatural.Size = New System.Drawing.Size(99, 19)
         Me.rbnNatural.TabIndex = 1
         Me.rbnNatural.TabStop = True
-        Me.rbnNatural.Text = "Natural"
+        Me.rbnNatural.Text = "Cedula Fisica"
         Me.rbnNatural.UseVisualStyleBackColor = True
         '
         'Label1
@@ -459,68 +521,6 @@ Partial Class Frm005_Cliente
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Codigo Cliente"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        Me.Codigo.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Tipo Persona"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'TipoDoc
-        '
-        Me.TipoDoc.HeaderText = "Tipo Doc."
-        Me.TipoDoc.Name = "TipoDoc"
-        Me.TipoDoc.ReadOnly = True
-        Me.TipoDoc.Width = 80
-        '
-        'NroDoc
-        '
-        Me.NroDoc.HeaderText = "Nro Doc."
-        Me.NroDoc.Name = "NroDoc"
-        Me.NroDoc.ReadOnly = True
-        '
-        'Nombres
-        '
-        Me.Nombres.HeaderText = "Nombres"
-        Me.Nombres.Name = "Nombres"
-        Me.Nombres.ReadOnly = True
-        Me.Nombres.Width = 230
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "Dirección"
-        Me.Direccion.Name = "Direccion"
-        Me.Direccion.ReadOnly = True
-        Me.Direccion.Width = 230
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Teléfono"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 90
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Email"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 200
-        '
-        'Button
-        '
-        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button.HeaderText = "Editar"
-        Me.Button.Name = "Button"
-        Me.Button.ReadOnly = True
-        Me.Button.Width = 80
         '
         'Frm005_Cliente
         '
