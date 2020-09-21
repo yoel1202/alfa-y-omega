@@ -23,13 +23,13 @@ Partial Class Frm008_Compras
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle64 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle65 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle66 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle67 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle68 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtProveedor = New System.Windows.Forms.TextBox()
@@ -96,22 +96,31 @@ Partial Class Frm008_Compras
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel_cabecera = New System.Windows.Forms.Panel()
-        Me.lkbCerrar = New System.Windows.Forms.Label()
-        Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.ptbIcon = New System.Windows.Forms.PictureBox()
         Me.bordeIzquierda = New System.Windows.Forms.Panel()
         Me.bordeDerecha = New System.Windows.Forms.Panel()
         Me.bordeInferior = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.tb_precio_venta = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.tb_utilidad = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Utilidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Preciov = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.ptbIcon = New System.Windows.Forms.PictureBox()
+        Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.lkbCerrar = New System.Windows.Forms.Label()
+        Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -125,13 +134,16 @@ Partial Class Frm008_Compras
         Me.GroupBox5.SuspendLayout()
         CType(Me.dtgvListadoDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgvListadoCompras, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel_cabecera.SuspendLayout()
-        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_cabecera.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.RadioButton1)
+        Me.GroupBox2.Controls.Add(Me.RadioButton2)
+        Me.GroupBox2.Controls.Add(Me.Label18)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.txtProveedor)
         Me.GroupBox2.Controls.Add(Me.lkbBuscar)
@@ -151,7 +163,7 @@ Partial Class Frm008_Compras
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 32)
+        Me.Label1.Location = New System.Drawing.Point(19, 25)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(66, 15)
         Me.Label1.TabIndex = 0
@@ -160,7 +172,7 @@ Partial Class Frm008_Compras
         'txtProveedor
         '
         Me.txtProveedor.BackColor = System.Drawing.SystemColors.Window
-        Me.txtProveedor.Location = New System.Drawing.Point(137, 25)
+        Me.txtProveedor.Location = New System.Drawing.Point(137, 18)
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.ReadOnly = True
         Me.txtProveedor.Size = New System.Drawing.Size(307, 21)
@@ -169,7 +181,7 @@ Partial Class Frm008_Compras
         'lkbBuscar
         '
         Me.lkbBuscar.AutoSize = True
-        Me.lkbBuscar.Location = New System.Drawing.Point(469, 28)
+        Me.lkbBuscar.Location = New System.Drawing.Point(469, 21)
         Me.lkbBuscar.Name = "lkbBuscar"
         Me.lkbBuscar.Size = New System.Drawing.Size(45, 15)
         Me.lkbBuscar.TabIndex = 7
@@ -179,7 +191,7 @@ Partial Class Frm008_Compras
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(19, 62)
+        Me.Label2.Location = New System.Drawing.Point(19, 55)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 15)
         Me.Label2.TabIndex = 3
@@ -188,7 +200,7 @@ Partial Class Frm008_Compras
         'rbnFactura
         '
         Me.rbnFactura.AutoSize = True
-        Me.rbnFactura.Location = New System.Drawing.Point(281, 91)
+        Me.rbnFactura.Location = New System.Drawing.Point(281, 84)
         Me.rbnFactura.Name = "rbnFactura"
         Me.rbnFactura.Size = New System.Drawing.Size(66, 19)
         Me.rbnFactura.TabIndex = 6
@@ -197,7 +209,7 @@ Partial Class Frm008_Compras
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(137, 56)
+        Me.dtpFecha.Location = New System.Drawing.Point(137, 49)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(249, 21)
         Me.dtpFecha.TabIndex = 4
@@ -206,7 +218,7 @@ Partial Class Frm008_Compras
         '
         Me.rbnBoleta.AutoSize = True
         Me.rbnBoleta.Checked = True
-        Me.rbnBoleta.Location = New System.Drawing.Point(137, 91)
+        Me.rbnBoleta.Location = New System.Drawing.Point(137, 84)
         Me.rbnBoleta.Name = "rbnBoleta"
         Me.rbnBoleta.Size = New System.Drawing.Size(60, 19)
         Me.rbnBoleta.TabIndex = 6
@@ -217,7 +229,7 @@ Partial Class Frm008_Compras
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(19, 95)
+        Me.Label3.Location = New System.Drawing.Point(19, 88)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(104, 15)
         Me.Label3.TabIndex = 5
@@ -282,6 +294,10 @@ Partial Class Frm008_Compras
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.tb_utilidad)
+        Me.GroupBox3.Controls.Add(Me.Label17)
+        Me.GroupBox3.Controls.Add(Me.tb_precio_venta)
+        Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.txtPrecioCompra)
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.txtCantidad)
@@ -300,7 +316,7 @@ Partial Class Frm008_Compras
         '
         'txtPrecioCompra
         '
-        Me.txtPrecioCompra.Location = New System.Drawing.Point(347, 60)
+        Me.txtPrecioCompra.Location = New System.Drawing.Point(347, 47)
         Me.txtPrecioCompra.Name = "txtPrecioCompra"
         Me.txtPrecioCompra.Size = New System.Drawing.Size(97, 21)
         Me.txtPrecioCompra.TabIndex = 18
@@ -308,7 +324,7 @@ Partial Class Frm008_Compras
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(227, 64)
+        Me.Label9.Location = New System.Drawing.Point(227, 51)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(92, 15)
         Me.Label9.TabIndex = 17
@@ -316,7 +332,7 @@ Partial Class Frm008_Compras
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(105, 60)
+        Me.txtCantidad.Location = New System.Drawing.Point(105, 47)
         Me.txtCantidad.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.txtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtCantidad.Name = "txtCantidad"
@@ -327,7 +343,7 @@ Partial Class Frm008_Compras
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(27, 64)
+        Me.Label7.Location = New System.Drawing.Point(27, 51)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(59, 15)
         Me.Label7.TabIndex = 15
@@ -336,7 +352,7 @@ Partial Class Frm008_Compras
         'txtProducto
         '
         Me.txtProducto.BackColor = System.Drawing.SystemColors.Window
-        Me.txtProducto.Location = New System.Drawing.Point(105, 28)
+        Me.txtProducto.Location = New System.Drawing.Point(105, 15)
         Me.txtProducto.Name = "txtProducto"
         Me.txtProducto.ReadOnly = True
         Me.txtProducto.Size = New System.Drawing.Size(339, 21)
@@ -345,7 +361,7 @@ Partial Class Frm008_Compras
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(27, 35)
+        Me.Label8.Location = New System.Drawing.Point(27, 22)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(59, 15)
         Me.Label8.TabIndex = 11
@@ -354,7 +370,7 @@ Partial Class Frm008_Compras
         'LinkLabel3
         '
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(469, 31)
+        Me.LinkLabel3.Location = New System.Drawing.Point(469, 18)
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.Size = New System.Drawing.Size(45, 15)
         Me.LinkLabel3.TabIndex = 13
@@ -364,7 +380,7 @@ Partial Class Frm008_Compras
         'lkbAgregar
         '
         Me.lkbAgregar.AutoSize = True
-        Me.lkbAgregar.Location = New System.Drawing.Point(469, 66)
+        Me.lkbAgregar.Location = New System.Drawing.Point(469, 53)
         Me.lkbAgregar.Name = "lkbAgregar"
         Me.lkbAgregar.Size = New System.Drawing.Size(50, 15)
         Me.lkbAgregar.TabIndex = 13
@@ -376,10 +392,10 @@ Partial Class Frm008_Compras
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column7, Me.Column5, Me.Column8, Me.Eliminar})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Utilidad, Me.Preciov, Me.Column4, Me.Column7, Me.Column5, Me.Column8, Me.Eliminar})
         Me.DataGridView1.Location = New System.Drawing.Point(36, 277)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(887, 121)
+        Me.DataGridView1.Size = New System.Drawing.Size(897, 121)
         Me.DataGridView1.TabIndex = 18
         '
         'Label10
@@ -702,9 +718,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn6
         '
-        DataGridViewCellStyle8.Format = "C2"
-        DataGridViewCellStyle8.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle64.Format = "C2"
+        DataGridViewCellStyle64.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle64
         Me.DataGridViewTextBoxColumn6.HeaderText = "IGV"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
@@ -712,9 +728,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle9.Format = "C2"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle65.Format = "C2"
+        DataGridViewCellStyle65.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle65
         Me.DataGridViewTextBoxColumn7.HeaderText = "SubTotal"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
@@ -722,9 +738,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn8
         '
-        DataGridViewCellStyle10.Format = "C2"
-        DataGridViewCellStyle10.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle66.Format = "C2"
+        DataGridViewCellStyle66.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle66
         Me.DataGridViewTextBoxColumn8.HeaderText = "Total"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
@@ -750,8 +766,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn10
         '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle67
         Me.DataGridViewTextBoxColumn10.HeaderText = "R.U.C."
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
@@ -766,8 +782,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn12
         '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle68
         Me.DataGridViewTextBoxColumn12.HeaderText = "Comprobante"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
@@ -775,8 +791,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn13
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle69
         Me.DataGridViewTextBoxColumn13.HeaderText = "Fecha Compra"
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
         Me.DataGridViewTextBoxColumn13.ReadOnly = True
@@ -784,62 +800,14 @@ Partial Class Frm008_Compras
         '
         'Column6
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.Format = "C2"
-        DataGridViewCellStyle14.NullValue = Nothing
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle70.Format = "C2"
+        DataGridViewCellStyle70.NullValue = Nothing
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle70
         Me.Column6.HeaderText = "Total"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
         Me.Column6.Width = 120
-        '
-        'Panel_cabecera
-        '
-        Me.Panel_cabecera.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.Panel_cabecera.Controls.Add(Me.lkbCerrar)
-        Me.Panel_cabecera.Controls.Add(Me.lblTitulo)
-        Me.Panel_cabecera.Controls.Add(Me.ptbIcon)
-        Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_cabecera.Name = "Panel_cabecera"
-        Me.Panel_cabecera.Size = New System.Drawing.Size(968, 40)
-        Me.Panel_cabecera.TabIndex = 254
-        '
-        'lkbCerrar
-        '
-        Me.lkbCerrar.BackColor = System.Drawing.Color.Transparent
-        Me.lkbCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lkbCerrar.Dock = System.Windows.Forms.DockStyle.Right
-        Me.lkbCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lkbCerrar.ForeColor = System.Drawing.SystemColors.Window
-        Me.lkbCerrar.Location = New System.Drawing.Point(937, 0)
-        Me.lkbCerrar.Name = "lkbCerrar"
-        Me.lkbCerrar.Size = New System.Drawing.Size(31, 40)
-        Me.lkbCerrar.TabIndex = 206
-        Me.lkbCerrar.Text = "X"
-        Me.lkbCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblTitulo
-        '
-        Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTitulo.Location = New System.Drawing.Point(44, 10)
-        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(69, 17)
-        Me.lblTitulo.TabIndex = 205
-        Me.lblTitulo.Text = "Compras"
-        '
-        'ptbIcon
-        '
-        Me.ptbIcon.Image = Global.CapaPresentacion.My.Resources.Resources.ic_Compras
-        Me.ptbIcon.Location = New System.Drawing.Point(11, 4)
-        Me.ptbIcon.Name = "ptbIcon"
-        Me.ptbIcon.Size = New System.Drawing.Size(25, 26)
-        Me.ptbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ptbIcon.TabIndex = 162
-        Me.ptbIcon.TabStop = False
         '
         'bordeIzquierda
         '
@@ -872,6 +840,69 @@ Partial Class Frm008_Compras
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'tb_precio_venta
+        '
+        Me.tb_precio_venta.Location = New System.Drawing.Point(347, 79)
+        Me.tb_precio_venta.Name = "tb_precio_venta"
+        Me.tb_precio_venta.Size = New System.Drawing.Size(97, 21)
+        Me.tb_precio_venta.TabIndex = 20
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(227, 83)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(79, 15)
+        Me.Label16.TabIndex = 19
+        Me.Label16.Text = "Precio Venta:"
+        '
+        'tb_utilidad
+        '
+        Me.tb_utilidad.Location = New System.Drawing.Point(105, 79)
+        Me.tb_utilidad.Name = "tb_utilidad"
+        Me.tb_utilidad.Size = New System.Drawing.Size(97, 21)
+        Me.tb_utilidad.TabIndex = 22
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(27, 83)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(52, 15)
+        Me.Label17.TabIndex = 21
+        Me.Label17.Text = "Utilidad:"
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(281, 105)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(70, 19)
+        Me.RadioButton1.TabIndex = 10
+        Me.RadioButton1.Text = "Reventa"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Checked = True
+        Me.RadioButton2.Location = New System.Drawing.Point(137, 105)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(57, 19)
+        Me.RadioButton2.TabIndex = 9
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Gasto"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(19, 109)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(87, 15)
+        Me.Label18.TabIndex = 8
+        Me.Label18.Text = " Tipo  Compra:"
+        '
         'Column1
         '
         Me.Column1.HeaderText = "CodigoProducto"
@@ -888,9 +919,19 @@ Partial Class Frm008_Compras
         '
         'Column3
         '
-        Me.Column3.HeaderText = "Precio"
+        Me.Column3.HeaderText = "Precio Compra"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
+        '
+        'Utilidad
+        '
+        Me.Utilidad.HeaderText = "Utilidad"
+        Me.Utilidad.Name = "Utilidad"
+        '
+        'Preciov
+        '
+        Me.Preciov.HeaderText = "Precio Venta"
+        Me.Preciov.Name = "Preciov"
         '
         'Column4
         '
@@ -926,6 +967,54 @@ Partial Class Frm008_Compras
         Me.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         Me.Eliminar.Width = 90
         '
+        'ptbIcon
+        '
+        Me.ptbIcon.Image = Global.CapaPresentacion.My.Resources.Resources.ic_Compras
+        Me.ptbIcon.Location = New System.Drawing.Point(11, 4)
+        Me.ptbIcon.Name = "ptbIcon"
+        Me.ptbIcon.Size = New System.Drawing.Size(25, 26)
+        Me.ptbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbIcon.TabIndex = 162
+        Me.ptbIcon.TabStop = False
+        '
+        'lblTitulo
+        '
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.ForeColor = System.Drawing.SystemColors.Window
+        Me.lblTitulo.Location = New System.Drawing.Point(44, 10)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(69, 17)
+        Me.lblTitulo.TabIndex = 205
+        Me.lblTitulo.Text = "Compras"
+        '
+        'lkbCerrar
+        '
+        Me.lkbCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.lkbCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lkbCerrar.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lkbCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lkbCerrar.ForeColor = System.Drawing.SystemColors.Window
+        Me.lkbCerrar.Location = New System.Drawing.Point(937, 0)
+        Me.lkbCerrar.Name = "lkbCerrar"
+        Me.lkbCerrar.Size = New System.Drawing.Size(31, 40)
+        Me.lkbCerrar.TabIndex = 206
+        Me.lkbCerrar.Text = "X"
+        Me.lkbCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel_cabecera
+        '
+        Me.Panel_cabecera.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.Panel_cabecera.Controls.Add(Me.lkbCerrar)
+        Me.Panel_cabecera.Controls.Add(Me.lblTitulo)
+        Me.Panel_cabecera.Controls.Add(Me.ptbIcon)
+        Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_cabecera.Name = "Panel_cabecera"
+        Me.Panel_cabecera.Size = New System.Drawing.Size(968, 40)
+        Me.Panel_cabecera.TabIndex = 254
+        '
         'Frm008_Compras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -960,10 +1049,10 @@ Partial Class Frm008_Compras
         Me.GroupBox5.PerformLayout()
         CType(Me.dtgvListadoDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgvListadoCompras, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_cabecera.ResumeLayout(False)
         Me.Panel_cabecera.PerformLayout()
-        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1002,10 +1091,6 @@ Partial Class Frm008_Compras
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Private WithEvents Panel_cabecera As System.Windows.Forms.Panel
-    Private WithEvents lkbCerrar As System.Windows.Forms.Label
-    Private WithEvents lblTitulo As System.Windows.Forms.Label
-    Private WithEvents ptbIcon As System.Windows.Forms.PictureBox
     Private WithEvents bordeIzquierda As System.Windows.Forms.Panel
     Private WithEvents bordeDerecha As System.Windows.Forms.Panel
     Private WithEvents bordeInferior As System.Windows.Forms.Panel
@@ -1041,12 +1126,25 @@ Partial Class Frm008_Compras
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents tb_utilidad As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents tb_precio_venta As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents Label18 As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Utilidad As DataGridViewTextBoxColumn
+    Friend WithEvents Preciov As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Eliminar As DataGridViewButtonColumn
+    Private WithEvents Panel_cabecera As Panel
+    Private WithEvents lkbCerrar As Label
+    Private WithEvents lblTitulo As Label
+    Private WithEvents ptbIcon As PictureBox
 End Class

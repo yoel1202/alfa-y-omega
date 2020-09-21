@@ -86,13 +86,15 @@ Public Class Frm008_Compras
                     Me.DataGridView1.Rows(i).Cells(0).Value = CodigoProducto
                     Me.DataGridView1.Rows(i).Cells(1).Value = CStr(txtProducto.Text)
                     Me.DataGridView1.Rows(i).Cells(2).Value = CDec(txtPrecioCompra.Text)
-                    Me.DataGridView1.Rows(i).Cells(3).Value = CInt(txtCantidad.Value)
-                    SubTotal = (CDec(txtPrecioCompra.Text) * CInt(txtCantidad.Value)) / 1.18
+                    Me.DataGridView1.Rows(i).Cells(3).Value = CDec(tb_utilidad.Text)
+                    Me.DataGridView1.Rows(i).Cells(4).Value = CDec(tb_precio_venta.Text)
+                    Me.DataGridView1.Rows(i).Cells(5).Value = CInt(txtCantidad.Value)
+                    SubTotal = CDec(txtPrecioCompra.Text) * CDec(txtCantidad.Value)
                     Igv = SubTotal * 0.13
-                    Me.DataGridView1.Rows(i).Cells(4).Value = Math.Round(Igv, 2)
-                    Me.DataGridView1.Rows(i).Cells(5).Value = Math.Round(SubTotal, 2)
-                    Me.DataGridView1.Rows(i).Cells(6).Value = Math.Round(CDec(SubTotal + Igv), 2)
-                    Me.DataGridView1.Rows(i).Cells(7).Value = "Eliminar"
+                    Me.DataGridView1.Rows(i).Cells(6).Value = Math.Round(Igv, 2)
+                    Me.DataGridView1.Rows(i).Cells(7).Value = Math.Round(SubTotal, 2)
+                    Me.DataGridView1.Rows(i).Cells(8).Value = Math.Round(CDec(SubTotal + Igv), 2)
+                    Me.DataGridView1.Rows(i).Cells(9).Value = "Eliminar"
 
                     Me.DataGridView1.ClearSelection()
                     Call asignar_color_boton()
@@ -111,7 +113,7 @@ Public Class Frm008_Compras
 
     Private Sub asignar_color_boton()
         For Each row As DataGridViewRow In DataGridView1.Rows
-            Dim button1 As DataGridViewButtonCell = CType(row.Cells(7), DataGridViewButtonCell)
+            Dim button1 As DataGridViewButtonCell = CType(row.Cells(9), DataGridViewButtonCell)
             button1.Style.BackColor = Color.FromArgb(217, 83, 79)
             button1.Style.ForeColor = Color.White
             button1.Style.Font = New Font("Arial", 9, FontStyle.Bold)
@@ -138,7 +140,7 @@ Public Class Frm008_Compras
     Private Function CalcularIgv() As Decimal
         Dim igv As Decimal = 0
         For i = 0 To DataGridView1.RowCount - 1
-            igv += ((CDec(DataGridView1.Rows(i).Cells(2).Value) * CInt(DataGridView1.Rows(i).Cells(3).Value)) / 1.18) * 0.18
+            igv += ((CDec(DataGridView1.Rows(i).Cells(2).Value) * CInt(DataGridView1.Rows(i).Cells(3).Value)) * 0.13)
         Next
         Return Math.Round(igv, 2)
     End Function
@@ -146,7 +148,7 @@ Public Class Frm008_Compras
     Private Function CalcularSubTotal() As Decimal
         Dim SubTotal As Decimal = 0
         For i = 0 To DataGridView1.RowCount - 1
-            SubTotal += (CDec(DataGridView1.Rows(i).Cells(2).Value) * CInt(DataGridView1.Rows(i).Cells(3).Value)) / 1.18
+            SubTotal += (CDec(DataGridView1.Rows(i).Cells(2).Value) * CInt(DataGridView1.Rows(i).Cells(3).Value))
         Next
         Return Math.Round(SubTotal, 2)
     End Function
@@ -170,6 +172,8 @@ Public Class Frm008_Compras
         txtProducto.Clear()
         txtCantidad.Value = 1
         txtPrecioCompra.Clear()
+        tb_utilidad.Clear()
+        tb_precio_venta.Clear()
         txtProducto.Focus()
     End Sub
 
@@ -187,6 +191,10 @@ Public Class Frm008_Compras
                 ErrorProvider1.SetError(txtSerie, "Debe Ingresar Número de Serie del Comprobante")
             ElseIf (txtNroDocumento.Text.Trim() = "") Then
                 ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
+            ElseIf (tb_precio_venta.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_precio_venta, "Debe Ingresar Precio de Venta")
+            ElseIf (tb_utilidad.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_utilidad, "Debe Ingresar la Utilidad")
             ElseIf (DataGridView1.Rows.Count < 1) Then
                 clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
             Else
@@ -195,6 +203,7 @@ Public Class Frm008_Compras
                     C.CodigoProveedor = CInt(CodigoProveedor)
                     C.FechaCompra = CDate(dtpFecha.Value)
                     C.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
+                    C.Tipocompra = If(rbnBoleta.Checked = True, "Gasto", "Reventa")
                     C.Serie = CStr(txtSerie.Text)
                     C.NroDocumento = CStr(txtNroDocumento.Text)
                     C.Total = CDec(lblTotal.Text)
@@ -205,9 +214,12 @@ Public Class Frm008_Compras
                             C.CodigoCompras = CInt(C.Devolver_Codigo_Compras())
                             C.CodigoItem = CInt(DataGridView1.Rows(i).Cells(0).Value)
                             C.PrecioCompra = CDec(DataGridView1.Rows(i).Cells(2).Value)
-                            C.Cantidad = CInt(DataGridView1.Rows(i).Cells(3).Value)
-                            C.Igv = CDec(DataGridView1.Rows(i).Cells(4).Value)
-                            C.SubTotal = CDec(DataGridView1.Rows(i).Cells(5).Value)
+                            C.utilidad = CDec(DataGridView1.Rows(i).Cells(3).Value)
+                            C.Precioventa = CDec(DataGridView1.Rows(i).Cells(4).Value)
+
+                            C.Cantidad = CInt(DataGridView1.Rows(i).Cells(5).Value)
+                            C.Igv = CDec(DataGridView1.Rows(i).Cells(6).Value)
+                            C.SubTotal = CDec(DataGridView1.Rows(i).Cells(7).Value)
                             C.Registrar_Detalle_Compras()
                         Next
                         clsMensaje.mostrar_mensaje(Mensaje, "ok")
@@ -383,4 +395,31 @@ Public Class Frm008_Compras
         End If
     End Sub
 
+    Private Sub txtPrecioCompra_TextChanged(sender As Object, e As EventArgs) Handles txtPrecioCompra.TextChanged
+        If (tb_utilidad.Text <> "" And txtPrecioCompra.Text <> "") Then
+            Dim resultado = 0
+            resultado = (CDec(txtPrecioCompra.Text) / 100 * CDec(tb_utilidad.Text)) + CDec(txtPrecioCompra.Text)
+            tb_precio_venta.Text = resultado.ToString()
+        End If
+    End Sub
+
+    Private Sub Panel_cabecera_Paint(sender As Object, e As PaintEventArgs) Handles Panel_cabecera.Paint
+
+    End Sub
+
+    Private Sub tb_utilidad_TextChanged(sender As Object, e As EventArgs) Handles tb_utilidad.TextChanged
+        If (tb_utilidad.Text <> "" And txtPrecioCompra.Text <> "") Then
+            Dim resultado = 0
+            resultado = (CDec(txtPrecioCompra.Text) / 100 * CDec(tb_utilidad.Text)) + CDec(txtPrecioCompra.Text)
+            tb_precio_venta.Text = resultado.ToString()
+        End If
+    End Sub
+
+    Private Sub tb_utilidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_utilidad.KeyPress
+        Validar.Numeros(e)
+    End Sub
+
+    Private Sub tb_precio_venta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_precio_venta.KeyPress
+        Validar.Numeros(e)
+    End Sub
 End Class
