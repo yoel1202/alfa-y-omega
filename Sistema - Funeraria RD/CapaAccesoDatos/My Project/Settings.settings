@@ -3,7 +3,14 @@
   <Profiles />
   <Settings>
     <Setting Name="Setting" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Server=localhost\MSSQLSERVER01;Database=master;Trusted_Connection=True;</Value>
+      <Value Profile="(Default)">&lt;system.web&gt;
+    &lt;siteMap defaultProvider="PageSiteMap" enabled="true"&gt;
+        &lt;providers&gt;   
+            &lt;remove name="MySqlSiteMapProvider" /&gt;
+            ...
+        &lt;/providers&gt;
+    &lt;/siteMap&gt;
+&lt;/system.web&gt;</Value>
     </Setting>
   </Settings>
 </SettingsFile>
