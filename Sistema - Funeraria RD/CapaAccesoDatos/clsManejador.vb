@@ -5,8 +5,9 @@ Imports MySql.Data.MySqlClient
 
 Public Class clsManejador
 
-    'Declaramos la variable de conexión hacia la Base de Datos
-    Public conexion = New MySqlConnection("Server=localhost; Database=Funeraria; Uid=root; Pwd=")
+    'Declaramos la variable de conexión hacia la Base de Datos"SERVER= 185.125.78.217;PORT=3306; DATABASE=funerar4_alfayomega; UID=funerar4_usr_sis; PASSWORD=P@ssword.123*;"
+
+    Public conexion = New MySqlConnection("SERVER= 185.125.78.217;PORT=3306; DATABASE=funerar4_alfayomega; UID=funerar4_usr_sis; PASSWORD=P@ssword.123*;")
 
     'Método para abrir la conexión de la Base de Datos
     Sub abrir()
@@ -17,7 +18,7 @@ Public Class clsManejador
 
             End If
         Catch ex As Exception
-            MsgBox("Can't load Web page" & ex.Message)
+            MsgBox("" & ex.Message)
 
         End Try
 
