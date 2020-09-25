@@ -39,12 +39,13 @@ Public Class clsCompras
             lst.Add(New clsParametro("@Codigo_Proveedors", CodigoProveedor))
             lst.Add(New clsParametro("@Fecha_Compras", FechaCompra))
             lst.Add(New clsParametro("@Tipo_Documentos", TipoDocumento))
+            lst.Add(New clsParametro("@Tipo_compras", Tipocompra))
             lst.Add(New clsParametro("@Series", Serie))
             lst.Add(New clsParametro("@Nro_Documentos", NroDocumento))
             lst.Add(New clsParametro("@Totals", Total))
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Compras", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Mensaje = lst(6).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+            Mensaje = lst(7).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al registrar compras, verifique clase clsCompras") 'Creamos una nueva excepción de errores
         End Try
@@ -58,7 +59,7 @@ Public Class clsCompras
         Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@CodigoCompras", "", MySqlDbType.Int16, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@CodigoCompra", "", MySqlDbType.Int16, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Devolver_Codigo_Compras", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Codigo = lst(0).Valor.ToString() 'Recuperamos el código de la Base de Datos
         Catch ex As Exception
@@ -77,12 +78,14 @@ Public Class clsCompras
             lst.Add(New clsParametro("@Codigo_Comprass", CodigoCompras))
             lst.Add(New clsParametro("@Codigo_Items", CodigoItem))
             lst.Add(New clsParametro("@Precio_Compras", PrecioCompra))
+            lst.Add(New clsParametro("@utilidades", utilidad))
+            lst.Add(New clsParametro("@precio_venta", Precioventa))
             lst.Add(New clsParametro("@Cantidads", Cantidad))
             lst.Add(New clsParametro("@Igvs", Igv))
             lst.Add(New clsParametro("@Sub_Totals", SubTotal))
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Detalle_Compras", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Mensaje = lst(6).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+            Mensaje = lst(8).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al registrar detalle de compras, verifique clase clsCompras") 'Creamos una nueva excepción de errores
         End Try

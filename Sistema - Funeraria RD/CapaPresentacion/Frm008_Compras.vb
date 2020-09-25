@@ -1,4 +1,6 @@
-﻿Imports CapaLogicaNegocio 'Importamos la capa lógica de negocio
+﻿Imports System.IO
+Imports System.Xml
+Imports CapaLogicaNegocio 'Importamos la capa lógica de negocio
 
 Public Class Frm008_Compras
 
@@ -75,6 +77,10 @@ Public Class Frm008_Compras
             ErrorProvider1.SetError(txtProducto, "Debe Seleccionar un Producto")
         ElseIf (txtPrecioCompra.Text.Trim = "" Or txtPrecioCompra.Text = "0") Then
             ErrorProvider1.SetError(txtPrecioCompra, "Ingrese Correctamente el Precio de Compra del Producto")
+        ElseIf (tb_precio_venta.Text.Trim = "" Or txtPrecioCompra.Text = "0") Then
+            ErrorProvider1.SetError(tb_precio_venta, "Ingrese Correctamente el Precio de venta del Producto")
+        ElseIf (tb_utilidad.Text.Trim = "" Or txtPrecioCompra.Text = "0") Then
+            ErrorProvider1.SetError(tb_utilidad, "Ingrese Correctamente el utilidad de Compra del Producto")
         Else
             Dim i As Integer = DataGridView1.Rows.Count
             Dim SubTotal As Decimal = 0
@@ -89,7 +95,7 @@ Public Class Frm008_Compras
                     Me.DataGridView1.Rows(i).Cells(3).Value = CDec(tb_utilidad.Text)
                     Me.DataGridView1.Rows(i).Cells(4).Value = CDec(tb_precio_venta.Text)
                     Me.DataGridView1.Rows(i).Cells(5).Value = CInt(txtCantidad.Value)
-                    SubTotal = CDec(txtPrecioCompra.Text) * CDec(txtCantidad.Value)
+                    SubTotal = CDec(tb_precio_venta.Text) * CDec(txtCantidad.Value)
                     Igv = SubTotal * 0.13
                     Me.DataGridView1.Rows(i).Cells(6).Value = Math.Round(Igv, 2)
                     Me.DataGridView1.Rows(i).Cells(7).Value = Math.Round(SubTotal, 2)
@@ -132,7 +138,7 @@ Public Class Frm008_Compras
     Private Function CalcularTotal() As Decimal
         Dim Total As Decimal = 0
         For i = 0 To DataGridView1.RowCount - 1
-            Total += CDec(DataGridView1.Rows(i).Cells(6).Value)
+            Total += CDec(DataGridView1.Rows(i).Cells(8).Value)
         Next
         Return Total
     End Function
@@ -140,7 +146,7 @@ Public Class Frm008_Compras
     Private Function CalcularIgv() As Decimal
         Dim igv As Decimal = 0
         For i = 0 To DataGridView1.RowCount - 1
-            igv += ((CDec(DataGridView1.Rows(i).Cells(2).Value) * CInt(DataGridView1.Rows(i).Cells(3).Value)) * 0.13)
+            igv += ((CDec(DataGridView1.Rows(i).Cells(4).Value) * CInt(DataGridView1.Rows(i).Cells(5).Value)) * 0.13)
         Next
         Return Math.Round(igv, 2)
     End Function
@@ -148,7 +154,7 @@ Public Class Frm008_Compras
     Private Function CalcularSubTotal() As Decimal
         Dim SubTotal As Decimal = 0
         For i = 0 To DataGridView1.RowCount - 1
-            SubTotal += (CDec(DataGridView1.Rows(i).Cells(2).Value) * CInt(DataGridView1.Rows(i).Cells(3).Value))
+            SubTotal += (CDec(DataGridView1.Rows(i).Cells(4).Value) * CInt(DataGridView1.Rows(i).Cells(5).Value))
         Next
         Return Math.Round(SubTotal, 2)
     End Function
@@ -191,10 +197,10 @@ Public Class Frm008_Compras
                 ErrorProvider1.SetError(txtSerie, "Debe Ingresar Número de Serie del Comprobante")
             ElseIf (txtNroDocumento.Text.Trim() = "") Then
                 ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
-            ElseIf (tb_precio_venta.Text.Trim() = "") Then
-                ErrorProvider1.SetError(tb_precio_venta, "Debe Ingresar Precio de Venta")
-            ElseIf (tb_utilidad.Text.Trim() = "") Then
-                ErrorProvider1.SetError(tb_utilidad, "Debe Ingresar la Utilidad")
+            ElseIf (ckb_gasto.Checked Or ckb_reventa.Checked) Then
+                ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
+            ElseIf (rbnFactura.Checked Or rbnBoleta.Checked) Then
+                ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
             ElseIf (DataGridView1.Rows.Count < 1) Then
                 clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
             Else
@@ -203,7 +209,7 @@ Public Class Frm008_Compras
                     C.CodigoProveedor = CInt(CodigoProveedor)
                     C.FechaCompra = CDate(dtpFecha.Value)
                     C.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
-                    C.Tipocompra = If(rbnBoleta.Checked = True, "Gasto", "Reventa")
+                    C.Tipocompra = If(ckb_gasto.Checked = True, "Gasto", "Reventa")
                     C.Serie = CStr(txtSerie.Text)
                     C.NroDocumento = CStr(txtNroDocumento.Text)
                     C.Total = CDec(lblTotal.Text)
@@ -421,5 +427,54 @@ Public Class Frm008_Compras
 
     Private Sub tb_precio_venta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_precio_venta.KeyPress
         Validar.Numeros(e)
+    End Sub
+
+    Private Sub rb_gasto_CheckedChanged(sender As Object, e As EventArgs)
+        tb_utilidad.Text = 0
+        tb_utilidad.Enabled = False
+        tb_precio_venta.Text = 0
+        tb_precio_venta.Enabled = False
+    End Sub
+
+    Private Sub rb_reventa_CheckedChanged(sender As Object, e As EventArgs)
+        tb_utilidad.Text = ""
+        tb_utilidad.Enabled = True
+        tb_precio_venta.Text = ""
+        tb_precio_venta.Enabled = True
+    End Sub
+
+    Private Sub ckb_gasto_CheckedChanged(sender As Object, e As EventArgs) Handles ckb_gasto.CheckedChanged
+        ckb_reventa.Checked = False
+    End Sub
+
+    Private Sub ckb_reventa_CheckedChanged(sender As Object, e As EventArgs) Handles ckb_reventa.CheckedChanged
+        ckb_gasto.Checked = False
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim ofd As OpenFileDialog = New OpenFileDialog()
+        ofd.Filter = "XML Files (*.xml)|*.xml"
+        ofd.FilterIndex = 0
+        ofd.DefaultExt = "xml"
+
+        If ofd.ShowDialog() = DialogResult.OK Then
+
+            If Not String.Equals(Path.GetExtension(ofd.FileName), ".xml", StringComparison.OrdinalIgnoreCase) Then
+                MessageBox.Show("The type of the selected file is not supported by this application. You must select an XML file.", "Invalid File Type", MessageBoxButtons.OK, MessageBoxIcon.[Error])
+            Else
+                Dim xmldoc As New XmlDataDocument()
+                Dim xmlnode As XmlNodeList
+                Dim i As Integer
+                Dim str As String
+                Dim fs As New FileStream(ofd.FileName, FileMode.Open, FileAccess.Read)
+                xmldoc.Load(fs)
+                xmlnode = xmldoc.GetElementsByTagName("NumeroConsecutivo")
+                For i = 0 To xmlnode.Count - 1
+                    xmlnode(i).ChildNodes.Item(0).InnerText.Trim()
+                    str = xmlnode(i).ChildNodes.Item(0).InnerText.Trim()
+                    MsgBox(str)
+                Next
+            End If
+        End If
     End Sub
 End Class

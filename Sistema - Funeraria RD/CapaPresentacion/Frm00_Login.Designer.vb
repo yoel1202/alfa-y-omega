@@ -60,9 +60,10 @@ Partial Class Frm00_Login
         Me.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngresar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnIngresar.Location = New System.Drawing.Point(92, 292)
+        Me.btnIngresar.Location = New System.Drawing.Point(123, 359)
+        Me.btnIngresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(229, 45)
+        Me.btnIngresar.Size = New System.Drawing.Size(305, 55)
         Me.btnIngresar.TabIndex = 2
         Me.btnIngresar.Text = "&Ingresar"
         Me.btnIngresar.UseVisualStyleBackColor = False
@@ -70,9 +71,10 @@ Partial Class Frm00_Login
         'lblmsj
         '
         Me.lblmsj.AutoSize = True
-        Me.lblmsj.Location = New System.Drawing.Point(130, 378)
+        Me.lblmsj.Location = New System.Drawing.Point(173, 465)
+        Me.lblmsj.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblmsj.Name = "lblmsj"
-        Me.lblmsj.Size = New System.Drawing.Size(144, 13)
+        Me.lblmsj.Size = New System.Drawing.Size(195, 17)
         Me.lblmsj.TabIndex = 253
         Me.lblmsj.Text = "Bienvenido (a): Administrador"
         Me.lblmsj.Visible = False
@@ -81,9 +83,10 @@ Partial Class Frm00_Login
         '
         Me.bordeDerecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeDerecha.Dock = System.Windows.Forms.DockStyle.Right
-        Me.bordeDerecha.Location = New System.Drawing.Point(414, 38)
+        Me.bordeDerecha.Location = New System.Drawing.Point(552, 47)
+        Me.bordeDerecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bordeDerecha.Name = "bordeDerecha"
-        Me.bordeDerecha.Size = New System.Drawing.Size(2, 473)
+        Me.bordeDerecha.Size = New System.Drawing.Size(3, 582)
         Me.bordeDerecha.TabIndex = 254
         '
         'Timer1
@@ -99,10 +102,10 @@ Partial Class Frm00_Login
         Me.lblTitulo.AutoSize = True
         Me.lblTitulo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTitulo.Location = New System.Drawing.Point(12, 8)
-        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTitulo.Location = New System.Drawing.Point(16, 10)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(43, 17)
+        Me.lblTitulo.Size = New System.Drawing.Size(57, 22)
         Me.lblTitulo.TabIndex = 205
         Me.lblTitulo.Text = "Login"
         '
@@ -112,9 +115,10 @@ Partial Class Frm00_Login
         Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.Controls.Add(Me.lkb_cerrar)
         Me.Panel3.Controls.Add(Me.lkb_min)
-        Me.Panel3.Location = New System.Drawing.Point(364, 0)
+        Me.Panel3.Location = New System.Drawing.Point(485, 0)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(53, 30)
+        Me.Panel3.Size = New System.Drawing.Size(71, 37)
         Me.Panel3.TabIndex = 206
         '
         'lkb_cerrar
@@ -124,9 +128,10 @@ Partial Class Frm00_Login
         Me.lkb_cerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lkb_cerrar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.lkb_cerrar.LinkColor = System.Drawing.Color.White
-        Me.lkb_cerrar.Location = New System.Drawing.Point(31, 5)
+        Me.lkb_cerrar.Location = New System.Drawing.Point(41, 6)
+        Me.lkb_cerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lkb_cerrar.Name = "lkb_cerrar"
-        Me.lkb_cerrar.Size = New System.Drawing.Size(16, 20)
+        Me.lkb_cerrar.Size = New System.Drawing.Size(22, 25)
         Me.lkb_cerrar.TabIndex = 1
         Me.lkb_cerrar.TabStop = True
         Me.lkb_cerrar.Text = "x"
@@ -138,9 +143,10 @@ Partial Class Frm00_Login
         Me.lkb_min.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lkb_min.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.lkb_min.LinkColor = System.Drawing.Color.White
-        Me.lkb_min.Location = New System.Drawing.Point(11, 6)
+        Me.lkb_min.Location = New System.Drawing.Point(15, 7)
+        Me.lkb_min.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lkb_min.Name = "lkb_min"
-        Me.lkb_min.Size = New System.Drawing.Size(14, 20)
+        Me.lkb_min.Size = New System.Drawing.Size(19, 25)
         Me.lkb_min.TabIndex = 0
         Me.lkb_min.TabStop = True
         Me.lkb_min.Text = "-"
@@ -152,8 +158,9 @@ Partial Class Frm00_Login
         Me.Panel_cabecera.Controls.Add(Me.lblTitulo)
         Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_cabecera.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel_cabecera.Name = "Panel_cabecera"
-        Me.Panel_cabecera.Size = New System.Drawing.Size(416, 38)
+        Me.Panel_cabecera.Size = New System.Drawing.Size(555, 47)
         Me.Panel_cabecera.TabIndex = 252
         '
         'LinkLabel2
@@ -161,10 +168,9 @@ Partial Class Frm00_Login
         Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.MediumSeaGreen
         Me.LinkLabel2.DisabledLinkColor = System.Drawing.Color.MediumSeaGreen
         Me.LinkLabel2.LinkColor = System.Drawing.Color.MediumSeaGreen
-        Me.LinkLabel2.Location = New System.Drawing.Point(96, 186)
-        Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LinkLabel2.Location = New System.Drawing.Point(128, 229)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(239, 16)
+        Me.LinkLabel2.Size = New System.Drawing.Size(319, 20)
         Me.LinkLabel2.TabIndex = 265
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "                                                                                 " &
@@ -176,10 +182,10 @@ Partial Class Frm00_Login
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox3.Location = New System.Drawing.Point(62, 165)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Location = New System.Drawing.Point(83, 203)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(32, 28)
+        Me.PictureBox3.Size = New System.Drawing.Size(43, 34)
         Me.PictureBox3.TabIndex = 264
         Me.PictureBox3.TabStop = False
         '
@@ -190,22 +196,22 @@ Partial Class Frm00_Login
         Me.txtusuario.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtusuario.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtusuario.ForeColor = System.Drawing.Color.Black
-        Me.txtusuario.Location = New System.Drawing.Point(99, 165)
-        Me.txtusuario.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtusuario.Location = New System.Drawing.Point(132, 203)
+        Me.txtusuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtusuario.Multiline = True
         Me.txtusuario.Name = "txtusuario"
-        Me.txtusuario.Size = New System.Drawing.Size(222, 28)
+        Me.txtusuario.Size = New System.Drawing.Size(296, 34)
         Me.txtusuario.TabIndex = 258
+        Me.txtusuario.Text = "administrador"
         '
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.MediumSeaGreen
         Me.LinkLabel1.DisabledLinkColor = System.Drawing.Color.MediumSeaGreen
         Me.LinkLabel1.LinkColor = System.Drawing.Color.MediumSeaGreen
-        Me.LinkLabel1.Location = New System.Drawing.Point(96, 231)
-        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LinkLabel1.Location = New System.Drawing.Point(128, 284)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(239, 16)
+        Me.LinkLabel1.Size = New System.Drawing.Size(319, 20)
         Me.LinkLabel1.TabIndex = 263
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "                                                                                 " &
@@ -217,10 +223,10 @@ Partial Class Frm00_Login
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox2.Location = New System.Drawing.Point(62, 210)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Location = New System.Drawing.Point(83, 258)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(32, 28)
+        Me.PictureBox2.Size = New System.Drawing.Size(43, 34)
         Me.PictureBox2.TabIndex = 262
         Me.PictureBox2.TabStop = False
         '
@@ -231,21 +237,22 @@ Partial Class Frm00_Login
         Me.txtClave.Cursor = System.Windows.Forms.Cursors.Default
         Me.txtClave.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtClave.ForeColor = System.Drawing.Color.Black
-        Me.txtClave.Location = New System.Drawing.Point(99, 210)
-        Me.txtClave.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtClave.Location = New System.Drawing.Point(132, 258)
+        Me.txtClave.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtClave.Multiline = True
         Me.txtClave.Name = "txtClave"
-        Me.txtClave.Size = New System.Drawing.Size(222, 28)
+        Me.txtClave.Size = New System.Drawing.Size(296, 34)
         Me.txtClave.TabIndex = 259
+        Me.txtClave.Text = "1"
         '
         'pb_logo
         '
         Me.pb_logo.BackgroundImage = CType(resources.GetObject("pb_logo.BackgroundImage"), System.Drawing.Image)
         Me.pb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pb_logo.Location = New System.Drawing.Point(133, 61)
-        Me.pb_logo.Margin = New System.Windows.Forms.Padding(2)
+        Me.pb_logo.Location = New System.Drawing.Point(177, 75)
+        Me.pb_logo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pb_logo.Name = "pb_logo"
-        Me.pb_logo.Size = New System.Drawing.Size(147, 77)
+        Me.pb_logo.Size = New System.Drawing.Size(196, 95)
         Me.pb_logo.TabIndex = 260
         Me.pb_logo.TabStop = False
         '
@@ -254,9 +261,10 @@ Partial Class Frm00_Login
         Me.bordeInferior.BackColor = System.Drawing.Color.Black
         Me.bordeInferior.Controls.Add(Me.Label3)
         Me.bordeInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.bordeInferior.Location = New System.Drawing.Point(0, 463)
+        Me.bordeInferior.Location = New System.Drawing.Point(0, 570)
+        Me.bordeInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bordeInferior.Name = "bordeInferior"
-        Me.bordeInferior.Size = New System.Drawing.Size(414, 48)
+        Me.bordeInferior.Size = New System.Drawing.Size(552, 59)
         Me.bordeInferior.TabIndex = 257
         '
         'Label3
@@ -264,19 +272,18 @@ Partial Class Frm00_Login
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 10.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(12, 17)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(16, 21)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(219, 17)
+        Me.Label3.Size = New System.Drawing.Size(283, 22)
         Me.Label3.TabIndex = 266
         Me.Label3.Text = "© 2017 - Todos los derechos reservados"
         '
         'Frm00_Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.ClientSize = New System.Drawing.Size(416, 511)
+        Me.ClientSize = New System.Drawing.Size(555, 629)
         Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.txtusuario)
@@ -291,6 +298,7 @@ Partial Class Frm00_Login
         Me.Controls.Add(Me.btnIngresar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm00_Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Frm00_Login"
