@@ -477,4 +477,28 @@ Public Class Frm008_Compras
             End If
         End If
     End Sub
+
+    Private Sub chk_contado_CheckedChanged(sender As Object, e As EventArgs) Handles chk_contado.CheckedChanged
+        lb_plazo.Hide()
+        tb_plazo.Hide()
+        lb_cuota.Hide()
+        tb_cuota.Hide()
+        chk_Credito.Checked = False
+        tb_plazo.Text = 0
+        tb_cuota.Text = 0
+    End Sub
+
+    Private Sub chk_Credito_CheckedChanged(sender As Object, e As EventArgs) Handles chk_Credito.CheckedChanged
+        lb_plazo.Show()
+        tb_plazo.Show()
+        lb_cuota.Show()
+        tb_cuota.Show()
+        tb_cuota.Clear()
+        tb_plazo.Clear()
+        chk_contado.Checked = False
+    End Sub
+
+    Private Sub tb_plazo_TextChanged(sender As Object, e As EventArgs) Handles tb_plazo.TextChanged
+
+    End Sub
 End Class

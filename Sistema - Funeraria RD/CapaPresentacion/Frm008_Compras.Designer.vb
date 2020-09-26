@@ -23,14 +23,16 @@ Partial Class Frm008_Compras
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ckb_reventa = New System.Windows.Forms.CheckBox()
+        Me.ckb_gasto = New System.Windows.Forms.CheckBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtProveedor = New System.Windows.Forms.TextBox()
@@ -79,6 +81,7 @@ Partial Class Frm008_Compras
         Me.lblSubTotal = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
@@ -119,9 +122,13 @@ Partial Class Frm008_Compras
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lkbCerrar = New System.Windows.Forms.Label()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
-        Me.ckb_gasto = New System.Windows.Forms.CheckBox()
-        Me.ckb_reventa = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tb_plazo = New System.Windows.Forms.TextBox()
+        Me.lb_plazo = New System.Windows.Forms.Label()
+        Me.tb_cuota = New System.Windows.Forms.TextBox()
+        Me.lb_cuota = New System.Windows.Forms.Label()
+        Me.chk_contado = New System.Windows.Forms.CheckBox()
+        Me.chk_Credito = New System.Windows.Forms.CheckBox()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -142,8 +149,15 @@ Partial Class Frm008_Compras
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.tb_cuota)
+        Me.GroupBox2.Controls.Add(Me.chk_contado)
+        Me.GroupBox2.Controls.Add(Me.chk_Credito)
+        Me.GroupBox2.Controls.Add(Me.lb_cuota)
+        Me.GroupBox2.Controls.Add(Me.Label23)
         Me.GroupBox2.Controls.Add(Me.ckb_reventa)
+        Me.GroupBox2.Controls.Add(Me.tb_plazo)
         Me.GroupBox2.Controls.Add(Me.ckb_gasto)
+        Me.GroupBox2.Controls.Add(Me.lb_plazo)
         Me.GroupBox2.Controls.Add(Me.Label18)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.txtProveedor)
@@ -154,19 +168,41 @@ Partial Class Frm008_Compras
         Me.GroupBox2.Controls.Add(Me.rbnBoleta)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(48, 21)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Location = New System.Drawing.Point(48, 8)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox2.Size = New System.Drawing.Size(749, 164)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(749, 193)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Proveedor"
         '
+        'ckb_reventa
+        '
+        Me.ckb_reventa.AutoSize = True
+        Me.ckb_reventa.Location = New System.Drawing.Point(370, 108)
+        Me.ckb_reventa.Name = "ckb_reventa"
+        Me.ckb_reventa.Size = New System.Drawing.Size(84, 22)
+        Me.ckb_reventa.TabIndex = 13
+        Me.ckb_reventa.Text = "Reventa"
+        Me.ckb_reventa.UseVisualStyleBackColor = True
+        '
+        'ckb_gasto
+        '
+        Me.ckb_gasto.AutoSize = True
+        Me.ckb_gasto.Checked = True
+        Me.ckb_gasto.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ckb_gasto.Location = New System.Drawing.Point(183, 108)
+        Me.ckb_gasto.Name = "ckb_gasto"
+        Me.ckb_gasto.Size = New System.Drawing.Size(71, 22)
+        Me.ckb_gasto.TabIndex = 11
+        Me.ckb_gasto.Text = "Gasto"
+        Me.ckb_gasto.UseVisualStyleBackColor = True
+        '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(25, 134)
+        Me.Label18.Location = New System.Drawing.Point(25, 113)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(107, 18)
@@ -186,8 +222,8 @@ Partial Class Frm008_Compras
         'txtProveedor
         '
         Me.txtProveedor.BackColor = System.Drawing.SystemColors.Window
-        Me.txtProveedor.Location = New System.Drawing.Point(183, 22)
-        Me.txtProveedor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtProveedor.Location = New System.Drawing.Point(183, 17)
+        Me.txtProveedor.Margin = New System.Windows.Forms.Padding(4)
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.ReadOnly = True
         Me.txtProveedor.Size = New System.Drawing.Size(408, 24)
@@ -207,7 +243,7 @@ Partial Class Frm008_Compras
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 68)
+        Me.Label2.Location = New System.Drawing.Point(25, 59)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 18)
@@ -217,8 +253,8 @@ Partial Class Frm008_Compras
         'rbnFactura
         '
         Me.rbnFactura.AutoSize = True
-        Me.rbnFactura.Location = New System.Drawing.Point(375, 103)
-        Me.rbnFactura.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbnFactura.Location = New System.Drawing.Point(375, 84)
+        Me.rbnFactura.Margin = New System.Windows.Forms.Padding(4)
         Me.rbnFactura.Name = "rbnFactura"
         Me.rbnFactura.Size = New System.Drawing.Size(79, 22)
         Me.rbnFactura.TabIndex = 6
@@ -227,8 +263,8 @@ Partial Class Frm008_Compras
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(183, 60)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpFecha.Location = New System.Drawing.Point(183, 50)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(331, 24)
         Me.dtpFecha.TabIndex = 4
@@ -237,8 +273,8 @@ Partial Class Frm008_Compras
         '
         Me.rbnBoleta.AutoSize = True
         Me.rbnBoleta.Checked = True
-        Me.rbnBoleta.Location = New System.Drawing.Point(183, 103)
-        Me.rbnBoleta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbnBoleta.Location = New System.Drawing.Point(183, 81)
+        Me.rbnBoleta.Margin = New System.Windows.Forms.Padding(4)
         Me.rbnBoleta.Name = "rbnBoleta"
         Me.rbnBoleta.Size = New System.Drawing.Size(71, 22)
         Me.rbnBoleta.TabIndex = 6
@@ -249,7 +285,7 @@ Partial Class Frm008_Compras
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 108)
+        Me.Label3.Location = New System.Drawing.Point(25, 85)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(127, 18)
@@ -264,10 +300,10 @@ Partial Class Frm008_Compras
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(828, 21)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Location = New System.Drawing.Point(828, 8)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(403, 164)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
@@ -275,7 +311,7 @@ Partial Class Frm008_Compras
         'txtNroDocumento
         '
         Me.txtNroDocumento.Location = New System.Drawing.Point(135, 102)
-        Me.txtNroDocumento.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNroDocumento.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNroDocumento.MaxLength = 7
         Me.txtNroDocumento.Name = "txtNroDocumento"
         Me.txtNroDocumento.Size = New System.Drawing.Size(200, 24)
@@ -284,7 +320,7 @@ Partial Class Frm008_Compras
         'txtSerie
         '
         Me.txtSerie.Location = New System.Drawing.Point(135, 59)
-        Me.txtSerie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtSerie.Margin = New System.Windows.Forms.Padding(4)
         Me.txtSerie.MaxLength = 3
         Me.txtSerie.Name = "txtSerie"
         Me.txtSerie.Size = New System.Drawing.Size(127, 24)
@@ -335,10 +371,10 @@ Partial Class Frm008_Compras
         Me.GroupBox3.Controls.Add(Me.LinkLabel3)
         Me.GroupBox3.Controls.Add(Me.lkbAgregar)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(48, 192)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Location = New System.Drawing.Point(48, 203)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(749, 130)
         Me.GroupBox3.TabIndex = 17
         Me.GroupBox3.TabStop = False
@@ -347,7 +383,7 @@ Partial Class Frm008_Compras
         'tb_utilidad
         '
         Me.tb_utilidad.Location = New System.Drawing.Point(140, 97)
-        Me.tb_utilidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tb_utilidad.Margin = New System.Windows.Forms.Padding(4)
         Me.tb_utilidad.Name = "tb_utilidad"
         Me.tb_utilidad.Size = New System.Drawing.Size(128, 24)
         Me.tb_utilidad.TabIndex = 22
@@ -365,7 +401,7 @@ Partial Class Frm008_Compras
         'tb_precio_venta
         '
         Me.tb_precio_venta.Location = New System.Drawing.Point(463, 97)
-        Me.tb_precio_venta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tb_precio_venta.Margin = New System.Windows.Forms.Padding(4)
         Me.tb_precio_venta.Name = "tb_precio_venta"
         Me.tb_precio_venta.Size = New System.Drawing.Size(128, 24)
         Me.tb_precio_venta.TabIndex = 20
@@ -383,7 +419,7 @@ Partial Class Frm008_Compras
         'txtPrecioCompra
         '
         Me.txtPrecioCompra.Location = New System.Drawing.Point(463, 58)
-        Me.txtPrecioCompra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPrecioCompra.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPrecioCompra.Name = "txtPrecioCompra"
         Me.txtPrecioCompra.Size = New System.Drawing.Size(128, 24)
         Me.txtPrecioCompra.TabIndex = 18
@@ -401,7 +437,7 @@ Partial Class Frm008_Compras
         'txtCantidad
         '
         Me.txtCantidad.Location = New System.Drawing.Point(140, 58)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCantidad.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.txtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtCantidad.Name = "txtCantidad"
@@ -423,7 +459,7 @@ Partial Class Frm008_Compras
         '
         Me.txtProducto.BackColor = System.Drawing.SystemColors.Window
         Me.txtProducto.Location = New System.Drawing.Point(140, 18)
-        Me.txtProducto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtProducto.Margin = New System.Windows.Forms.Padding(4)
         Me.txtProducto.Name = "txtProducto"
         Me.txtProducto.ReadOnly = True
         Me.txtProducto.Size = New System.Drawing.Size(451, 24)
@@ -468,7 +504,7 @@ Partial Class Frm008_Compras
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Utilidad, Me.Preciov, Me.Column4, Me.Column7, Me.Column5, Me.Column8, Me.Eliminar})
         Me.DataGridView1.Location = New System.Drawing.Point(48, 341)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(1196, 149)
@@ -574,7 +610,7 @@ Partial Class Frm008_Compras
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.SystemColors.Window
         Me.btnGuardar.Location = New System.Drawing.Point(84, 41)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(240, 62)
         Me.btnGuardar.TabIndex = 21
@@ -639,7 +675,7 @@ Partial Class Frm008_Compras
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 49)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1291, 719)
@@ -660,22 +696,31 @@ Partial Class Frm008_Compras
         Me.TabPage1.Controls.Add(Me.lblTotal)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Size = New System.Drawing.Size(1283, 690)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Realizar Compras"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(59, 505)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 27
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.btnGuardar)
-        Me.GroupBox4.Location = New System.Drawing.Point(828, 192)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Location = New System.Drawing.Point(828, 180)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox4.Size = New System.Drawing.Size(403, 130)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox4.Size = New System.Drawing.Size(403, 153)
         Me.GroupBox4.TabIndex = 26
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Opciones"
@@ -693,9 +738,9 @@ Partial Class Frm008_Compras
         Me.TabPage2.Controls.Add(Me.dtgvListadoDetalle)
         Me.TabPage2.Controls.Add(Me.dtgvListadoCompras)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Size = New System.Drawing.Size(1283, 690)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listado de Compras"
@@ -705,9 +750,9 @@ Partial Class Frm008_Compras
         '
         Me.GroupBox6.Controls.Add(Me.btnConsultar)
         Me.GroupBox6.Location = New System.Drawing.Point(975, 12)
-        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox6.Size = New System.Drawing.Size(265, 80)
         Me.GroupBox6.TabIndex = 50
         Me.GroupBox6.TabStop = False
@@ -721,7 +766,7 @@ Partial Class Frm008_Compras
         Me.btnConsultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConsultar.ForeColor = System.Drawing.SystemColors.Window
         Me.btnConsultar.Location = New System.Drawing.Point(29, 22)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnConsultar.Name = "btnConsultar"
         Me.btnConsultar.Size = New System.Drawing.Size(207, 43)
         Me.btnConsultar.TabIndex = 47
@@ -737,9 +782,9 @@ Partial Class Frm008_Compras
         Me.GroupBox5.Controls.Add(Me.dtpFechaFinal)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox5.Location = New System.Drawing.Point(36, 12)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Size = New System.Drawing.Size(931, 80)
         Me.GroupBox5.TabIndex = 49
         Me.GroupBox5.TabStop = False
@@ -749,7 +794,7 @@ Partial Class Frm008_Compras
         Me.dtpFechaInicial.Enabled = False
         Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaInicial.Location = New System.Drawing.Point(300, 30)
-        Me.dtpFechaInicial.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpFechaInicial.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFechaInicial.Name = "dtpFechaInicial"
         Me.dtpFechaInicial.Size = New System.Drawing.Size(225, 24)
         Me.dtpFechaInicial.TabIndex = 45
@@ -758,7 +803,7 @@ Partial Class Frm008_Compras
         '
         Me.ckbConsultar.AutoSize = True
         Me.ckbConsultar.Location = New System.Drawing.Point(25, 33)
-        Me.ckbConsultar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ckbConsultar.Margin = New System.Windows.Forms.Padding(4)
         Me.ckbConsultar.Name = "ckbConsultar"
         Me.ckbConsultar.Size = New System.Drawing.Size(94, 22)
         Me.ckbConsultar.TabIndex = 48
@@ -790,7 +835,7 @@ Partial Class Frm008_Compras
         Me.dtpFechaFinal.Enabled = False
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaFinal.Location = New System.Drawing.Point(668, 30)
-        Me.dtpFechaFinal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpFechaFinal.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
         Me.dtpFechaFinal.Size = New System.Drawing.Size(225, 24)
         Me.dtpFechaFinal.TabIndex = 44
@@ -865,7 +910,7 @@ Partial Class Frm008_Compras
         Me.dtgvListadoDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgvListadoDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.dtgvListadoDetalle.Location = New System.Drawing.Point(36, 266)
-        Me.dtgvListadoDetalle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtgvListadoDetalle.Margin = New System.Windows.Forms.Padding(4)
         Me.dtgvListadoDetalle.Name = "dtgvListadoDetalle"
         Me.dtgvListadoDetalle.RowHeadersWidth = 51
         Me.dtgvListadoDetalle.Size = New System.Drawing.Size(1204, 155)
@@ -913,9 +958,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn6
         '
-        DataGridViewCellStyle22.Format = "C2"
-        DataGridViewCellStyle22.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewTextBoxColumn6.HeaderText = "IGV"
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
@@ -924,9 +969,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle23.Format = "C2"
-        DataGridViewCellStyle23.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn7.HeaderText = "SubTotal"
         Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
@@ -935,9 +980,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn8
         '
-        DataGridViewCellStyle24.Format = "C2"
-        DataGridViewCellStyle24.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewTextBoxColumn8.HeaderText = "Total"
         Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
@@ -951,7 +996,7 @@ Partial Class Frm008_Compras
         Me.dtgvListadoCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgvListadoCompras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.Column6})
         Me.dtgvListadoCompras.Location = New System.Drawing.Point(36, 110)
-        Me.dtgvListadoCompras.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtgvListadoCompras.Margin = New System.Windows.Forms.Padding(4)
         Me.dtgvListadoCompras.Name = "dtgvListadoCompras"
         Me.dtgvListadoCompras.RowHeadersWidth = 51
         Me.dtgvListadoCompras.Size = New System.Drawing.Size(1204, 149)
@@ -968,8 +1013,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn10
         '
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn10.HeaderText = "R.U.C."
         Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
@@ -986,8 +1031,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn12
         '
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewTextBoxColumn12.HeaderText = "Comprobante"
         Me.DataGridViewTextBoxColumn12.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
@@ -996,8 +1041,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn13
         '
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn13.HeaderText = "Fecha Compra"
         Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
@@ -1006,10 +1051,10 @@ Partial Class Frm008_Compras
         '
         'Column6
         '
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle28.Format = "C2"
-        DataGridViewCellStyle28.NullValue = Nothing
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Format = "C2"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle7
         Me.Column6.HeaderText = "Total"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
@@ -1021,7 +1066,7 @@ Partial Class Frm008_Compras
         Me.bordeIzquierda.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeIzquierda.Dock = System.Windows.Forms.DockStyle.Left
         Me.bordeIzquierda.Location = New System.Drawing.Point(0, 49)
-        Me.bordeIzquierda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bordeIzquierda.Margin = New System.Windows.Forms.Padding(4)
         Me.bordeIzquierda.Name = "bordeIzquierda"
         Me.bordeIzquierda.Size = New System.Drawing.Size(3, 719)
         Me.bordeIzquierda.TabIndex = 255
@@ -1031,7 +1076,7 @@ Partial Class Frm008_Compras
         Me.bordeDerecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeDerecha.Dock = System.Windows.Forms.DockStyle.Right
         Me.bordeDerecha.Location = New System.Drawing.Point(1288, 49)
-        Me.bordeDerecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bordeDerecha.Margin = New System.Windows.Forms.Padding(4)
         Me.bordeDerecha.Name = "bordeDerecha"
         Me.bordeDerecha.Size = New System.Drawing.Size(3, 719)
         Me.bordeDerecha.TabIndex = 256
@@ -1041,7 +1086,7 @@ Partial Class Frm008_Compras
         Me.bordeInferior.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeInferior.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.bordeInferior.Location = New System.Drawing.Point(3, 766)
-        Me.bordeInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.bordeInferior.Margin = New System.Windows.Forms.Padding(4)
         Me.bordeInferior.Name = "bordeInferior"
         Me.bordeInferior.Size = New System.Drawing.Size(1285, 2)
         Me.bordeInferior.TabIndex = 257
@@ -1054,7 +1099,7 @@ Partial Class Frm008_Compras
         '
         Me.ptbIcon.Image = Global.CapaPresentacion.My.Resources.Resources.ic_Compras
         Me.ptbIcon.Location = New System.Drawing.Point(15, 5)
-        Me.ptbIcon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ptbIcon.Margin = New System.Windows.Forms.Padding(4)
         Me.ptbIcon.Name = "ptbIcon"
         Me.ptbIcon.Size = New System.Drawing.Size(33, 32)
         Me.ptbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -1096,41 +1141,78 @@ Partial Class Frm008_Compras
         Me.Panel_cabecera.Controls.Add(Me.ptbIcon)
         Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_cabecera.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel_cabecera.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_cabecera.Name = "Panel_cabecera"
         Me.Panel_cabecera.Size = New System.Drawing.Size(1291, 49)
         Me.Panel_cabecera.TabIndex = 254
         '
-        'ckb_gasto
+        'tb_plazo
         '
-        Me.ckb_gasto.AutoSize = True
-        Me.ckb_gasto.Checked = True
-        Me.ckb_gasto.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ckb_gasto.Location = New System.Drawing.Point(183, 134)
-        Me.ckb_gasto.Name = "ckb_gasto"
-        Me.ckb_gasto.Size = New System.Drawing.Size(71, 22)
-        Me.ckb_gasto.TabIndex = 11
-        Me.ckb_gasto.Text = "Gasto"
-        Me.ckb_gasto.UseVisualStyleBackColor = True
+        Me.tb_plazo.Location = New System.Drawing.Point(183, 161)
+        Me.tb_plazo.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_plazo.Name = "tb_plazo"
+        Me.tb_plazo.Size = New System.Drawing.Size(103, 24)
+        Me.tb_plazo.TabIndex = 24
         '
-        'ckb_reventa
+        'lb_plazo
         '
-        Me.ckb_reventa.AutoSize = True
-        Me.ckb_reventa.Location = New System.Drawing.Point(370, 130)
-        Me.ckb_reventa.Name = "ckb_reventa"
-        Me.ckb_reventa.Size = New System.Drawing.Size(84, 22)
-        Me.ckb_reventa.TabIndex = 13
-        Me.ckb_reventa.Text = "Reventa"
-        Me.ckb_reventa.UseVisualStyleBackColor = True
+        Me.lb_plazo.AutoSize = True
+        Me.lb_plazo.Location = New System.Drawing.Point(60, 167)
+        Me.lb_plazo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_plazo.Name = "lb_plazo"
+        Me.lb_plazo.Size = New System.Drawing.Size(50, 18)
+        Me.lb_plazo.TabIndex = 23
+        Me.lb_plazo.Text = "Plazo:"
         '
-        'Button1
+        'tb_cuota
         '
-        Me.Button1.Location = New System.Drawing.Point(333, 502)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.tb_cuota.Location = New System.Drawing.Point(370, 161)
+        Me.tb_cuota.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_cuota.Name = "tb_cuota"
+        Me.tb_cuota.Size = New System.Drawing.Size(176, 24)
+        Me.tb_cuota.TabIndex = 26
+        '
+        'lb_cuota
+        '
+        Me.lb_cuota.AutoSize = True
+        Me.lb_cuota.Location = New System.Drawing.Point(311, 161)
+        Me.lb_cuota.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_cuota.Name = "lb_cuota"
+        Me.lb_cuota.Size = New System.Drawing.Size(52, 18)
+        Me.lb_cuota.TabIndex = 25
+        Me.lb_cuota.Text = "Cuota:"
+        '
+        'chk_contado
+        '
+        Me.chk_contado.AutoSize = True
+        Me.chk_contado.Location = New System.Drawing.Point(370, 138)
+        Me.chk_contado.Name = "chk_contado"
+        Me.chk_contado.Size = New System.Drawing.Size(87, 22)
+        Me.chk_contado.TabIndex = 16
+        Me.chk_contado.Text = "Contado"
+        Me.chk_contado.UseVisualStyleBackColor = True
+        '
+        'chk_Credito
+        '
+        Me.chk_Credito.AutoSize = True
+        Me.chk_Credito.Checked = True
+        Me.chk_Credito.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_Credito.Location = New System.Drawing.Point(183, 137)
+        Me.chk_Credito.Name = "chk_Credito"
+        Me.chk_Credito.Size = New System.Drawing.Size(78, 22)
+        Me.chk_Credito.TabIndex = 15
+        Me.chk_Credito.Text = "Credito"
+        Me.chk_Credito.UseVisualStyleBackColor = True
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(25, 142)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(88, 18)
+        Me.Label23.TabIndex = 14
+        Me.Label23.Text = " Tipo  Pago:"
         '
         'Frm008_Compras
         '
@@ -1144,7 +1226,7 @@ Partial Class Frm008_Compras
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel_cabecera)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm008_Compras"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmCompras"
@@ -1266,4 +1348,11 @@ Partial Class Frm008_Compras
     Friend WithEvents ckb_reventa As CheckBox
     Friend WithEvents ckb_gasto As CheckBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents chk_contado As CheckBox
+    Friend WithEvents chk_Credito As CheckBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents tb_cuota As TextBox
+    Friend WithEvents lb_cuota As Label
+    Friend WithEvents tb_plazo As TextBox
+    Friend WithEvents lb_plazo As Label
 End Class
