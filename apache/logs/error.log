@@ -7,3 +7,14 @@
 [Fri Sep 25 19:33:47.863169 2020] [ssl:warn] [pid 4128:tid 600] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Fri Sep 25 19:33:47.976918 2020] [ssl:warn] [pid 4128:tid 600] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Fri Sep 25 19:33:48.032886 2020] [mpm_winnt:notice] [pid 4128:tid 600] AH00354: Child: Starting 150 worker threads.
+[Fri Sep 25 19:54:08.680272 2020] [ssl:warn] [pid 11660:tid 580] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Sep 25 19:54:08.828666 2020] [core:warn] [pid 11660:tid 580] AH00098: pid file C:/Users/HP/Documents/GitHub/alfa-y-omega/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Sep 25 19:54:08.840661 2020] [ssl:warn] [pid 11660:tid 580] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Sep 25 19:54:08.892630 2020] [mpm_winnt:notice] [pid 11660:tid 580] AH00455: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.10 configured -- resuming normal operations
+[Fri Sep 25 19:54:08.892630 2020] [mpm_winnt:notice] [pid 11660:tid 580] AH00456: Apache Lounge VC15 Server built: Aug  4 2020 11:50:23
+[Fri Sep 25 19:54:08.892630 2020] [core:notice] [pid 11660:tid 580] AH00094: Command line: 'c:\\users\\hp\\documents\\github\\alfa-y-omega\\apache\\bin\\httpd.exe -d C:/Users/HP/Documents/GitHub/alfa-y-omega/apache'
+[Fri Sep 25 19:54:08.902627 2020] [mpm_winnt:notice] [pid 11660:tid 580] AH00418: Parent: Created child process 4888
+[Fri Sep 25 19:54:09.804496 2020] [ssl:warn] [pid 4888:tid 620] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Sep 25 19:54:09.915148 2020] [ssl:warn] [pid 4888:tid 620] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Sep 25 19:54:09.955131 2020] [mpm_winnt:notice] [pid 4888:tid 620] AH00354: Child: Starting 150 worker threads.
+[Fri Sep 25 20:05:51.600620 2020] [mpm_winnt:crit] [pid 4888:tid 620] AH02538: Child: Parent process exited abruptly. Child process is ending
