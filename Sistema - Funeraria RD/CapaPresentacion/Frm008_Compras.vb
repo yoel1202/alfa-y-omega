@@ -197,10 +197,10 @@ Public Class Frm008_Compras
                 ErrorProvider1.SetError(txtSerie, "Debe Ingresar Número de Serie del Comprobante")
             ElseIf (txtNroDocumento.Text.Trim() = "") Then
                 ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
-            ElseIf (ckb_gasto.Checked Or ckb_reventa.Checked) Then
-                ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
-            ElseIf (rbnFactura.Checked Or rbnBoleta.Checked) Then
-                ErrorProvider1.SetError(txtNroDocumento, "Debe Ingresar Número de Comprobante")
+                'ElseIf (ckb_gasto.Checked Or ckb_reventa.Checked) Then
+                '    ErrorProvider1.SetError(ckb_gasto, "Debe Ingresar Número de Comprobante")
+                'ElseIf (rbnFactura.Checked Or rbnBoleta.Checked) Then
+                '    ErrorProvider1.SetError(rbnFactura, "Debe Ingresar Número de Comprobante")
             ElseIf (DataGridView1.Rows.Count < 1) Then
                 clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
             Else
@@ -210,9 +210,12 @@ Public Class Frm008_Compras
                     C.FechaCompra = CDate(dtpFecha.Value)
                     C.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
                     C.Tipocompra = If(ckb_gasto.Checked = True, "Gasto", "Reventa")
+                    C.TipoPago = C.Tipocompra = If(ckb_gasto.Checked = True, "Credito", "Contado")
                     C.Serie = CStr(txtSerie.Text)
                     C.NroDocumento = CStr(txtNroDocumento.Text)
                     C.Total = CDec(lblTotal.Text)
+                    C.plazo = tb_plazo.Text
+                    C.cuota = tb_cuota.Text
                     Mensaje = C.Registrar_Compras()
                     If (Mensaje = "Compra Registrada correctamente") Then
 
@@ -496,9 +499,18 @@ Public Class Frm008_Compras
         tb_cuota.Clear()
         tb_plazo.Clear()
         chk_contado.Checked = False
+
     End Sub
 
     Private Sub tb_plazo_TextChanged(sender As Object, e As EventArgs) Handles tb_plazo.TextChanged
 
+    End Sub
+
+    Private Sub tb_plazo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_plazo.KeyPress
+        Validar.Numeros(e)
+    End Sub
+
+    Private Sub tb_cuota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_cuota.KeyPress
+        Validar.Numeros(e)
     End Sub
 End Class

@@ -9,11 +9,13 @@ Public Class clsCompras
     Public Property CodigoProveedor() As Integer
     Public Property FechaCompra() As Date
     Public Property TipoDocumento() As String
+    Public Property TipoPago() As String
     Public Property Tipocompra() As String
     Public Property Serie() As String
     Public Property NroDocumento() As String
+    Public Property cuota() As Decimal
+    Public Property plazo() As Integer
     Public Property Total() As Decimal
-
     'Propiedades del Detalle de Compras
     Public Property CodigoCompras() As Integer
     Public Property CodigoItem() As String

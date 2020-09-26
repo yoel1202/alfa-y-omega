@@ -23,16 +23,30 @@ Partial Class Frm008_Compras
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle45 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle46 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle47 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle48 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.tb_cuota = New System.Windows.Forms.TextBox()
+        Me.chk_contado = New System.Windows.Forms.CheckBox()
+        Me.chk_Credito = New System.Windows.Forms.CheckBox()
+        Me.lb_cuota = New System.Windows.Forms.Label()
+        Me.lb_tipo_pago = New System.Windows.Forms.Label()
         Me.ckb_reventa = New System.Windows.Forms.CheckBox()
+        Me.tb_plazo = New System.Windows.Forms.TextBox()
         Me.ckb_gasto = New System.Windows.Forms.CheckBox()
+        Me.lb_plazo = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtProveedor = New System.Windows.Forms.TextBox()
@@ -122,13 +136,37 @@ Partial Class Frm008_Compras
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lkbCerrar = New System.Windows.Forms.Label()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
-        Me.tb_plazo = New System.Windows.Forms.TextBox()
-        Me.lb_plazo = New System.Windows.Forms.Label()
-        Me.tb_cuota = New System.Windows.Forms.TextBox()
-        Me.lb_cuota = New System.Windows.Forms.Label()
-        Me.chk_contado = New System.Windows.Forms.CheckBox()
-        Me.chk_Credito = New System.Windows.Forms.CheckBox()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -145,6 +183,11 @@ Partial Class Frm008_Compras
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_cabecera.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -153,7 +196,7 @@ Partial Class Frm008_Compras
         Me.GroupBox2.Controls.Add(Me.chk_contado)
         Me.GroupBox2.Controls.Add(Me.chk_Credito)
         Me.GroupBox2.Controls.Add(Me.lb_cuota)
-        Me.GroupBox2.Controls.Add(Me.Label23)
+        Me.GroupBox2.Controls.Add(Me.lb_tipo_pago)
         Me.GroupBox2.Controls.Add(Me.ckb_reventa)
         Me.GroupBox2.Controls.Add(Me.tb_plazo)
         Me.GroupBox2.Controls.Add(Me.ckb_gasto)
@@ -177,6 +220,56 @@ Partial Class Frm008_Compras
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Proveedor"
         '
+        'tb_cuota
+        '
+        Me.tb_cuota.Location = New System.Drawing.Point(370, 161)
+        Me.tb_cuota.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_cuota.Name = "tb_cuota"
+        Me.tb_cuota.Size = New System.Drawing.Size(176, 24)
+        Me.tb_cuota.TabIndex = 26
+        '
+        'chk_contado
+        '
+        Me.chk_contado.AutoSize = True
+        Me.chk_contado.Location = New System.Drawing.Point(370, 138)
+        Me.chk_contado.Name = "chk_contado"
+        Me.chk_contado.Size = New System.Drawing.Size(87, 22)
+        Me.chk_contado.TabIndex = 16
+        Me.chk_contado.Text = "Contado"
+        Me.chk_contado.UseVisualStyleBackColor = True
+        '
+        'chk_Credito
+        '
+        Me.chk_Credito.AutoSize = True
+        Me.chk_Credito.Checked = True
+        Me.chk_Credito.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chk_Credito.Location = New System.Drawing.Point(183, 137)
+        Me.chk_Credito.Name = "chk_Credito"
+        Me.chk_Credito.Size = New System.Drawing.Size(78, 22)
+        Me.chk_Credito.TabIndex = 15
+        Me.chk_Credito.Text = "Credito"
+        Me.chk_Credito.UseVisualStyleBackColor = True
+        '
+        'lb_cuota
+        '
+        Me.lb_cuota.AutoSize = True
+        Me.lb_cuota.Location = New System.Drawing.Point(311, 161)
+        Me.lb_cuota.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_cuota.Name = "lb_cuota"
+        Me.lb_cuota.Size = New System.Drawing.Size(52, 18)
+        Me.lb_cuota.TabIndex = 25
+        Me.lb_cuota.Text = "Cuota:"
+        '
+        'lb_tipo_pago
+        '
+        Me.lb_tipo_pago.AutoSize = True
+        Me.lb_tipo_pago.Location = New System.Drawing.Point(21, 142)
+        Me.lb_tipo_pago.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_tipo_pago.Name = "lb_tipo_pago"
+        Me.lb_tipo_pago.Size = New System.Drawing.Size(88, 18)
+        Me.lb_tipo_pago.TabIndex = 14
+        Me.lb_tipo_pago.Text = " Tipo  Pago:"
+        '
         'ckb_reventa
         '
         Me.ckb_reventa.AutoSize = True
@@ -186,6 +279,14 @@ Partial Class Frm008_Compras
         Me.ckb_reventa.TabIndex = 13
         Me.ckb_reventa.Text = "Reventa"
         Me.ckb_reventa.UseVisualStyleBackColor = True
+        '
+        'tb_plazo
+        '
+        Me.tb_plazo.Location = New System.Drawing.Point(183, 161)
+        Me.tb_plazo.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_plazo.Name = "tb_plazo"
+        Me.tb_plazo.Size = New System.Drawing.Size(103, 24)
+        Me.tb_plazo.TabIndex = 24
         '
         'ckb_gasto
         '
@@ -199,10 +300,20 @@ Partial Class Frm008_Compras
         Me.ckb_gasto.Text = "Gasto"
         Me.ckb_gasto.UseVisualStyleBackColor = True
         '
+        'lb_plazo
+        '
+        Me.lb_plazo.AutoSize = True
+        Me.lb_plazo.Location = New System.Drawing.Point(29, 167)
+        Me.lb_plazo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_plazo.Name = "lb_plazo"
+        Me.lb_plazo.Size = New System.Drawing.Size(50, 18)
+        Me.lb_plazo.TabIndex = 23
+        Me.lb_plazo.Text = "Plazo:"
+        '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(25, 113)
+        Me.Label18.Location = New System.Drawing.Point(20, 113)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(107, 18)
@@ -285,7 +396,7 @@ Partial Class Frm008_Compras
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(25, 85)
+        Me.Label3.Location = New System.Drawing.Point(20, 85)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(127, 18)
@@ -673,6 +784,7 @@ Partial Class Frm008_Compras
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 49)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
@@ -958,9 +1070,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn6
         '
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle43.Format = "C2"
+        DataGridViewCellStyle43.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle43
         Me.DataGridViewTextBoxColumn6.HeaderText = "IGV"
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
@@ -969,9 +1081,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle44.Format = "C2"
+        DataGridViewCellStyle44.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle44
         Me.DataGridViewTextBoxColumn7.HeaderText = "SubTotal"
         Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
@@ -980,9 +1092,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn8
         '
-        DataGridViewCellStyle3.Format = "C2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle45.Format = "C2"
+        DataGridViewCellStyle45.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle45
         Me.DataGridViewTextBoxColumn8.HeaderText = "Total"
         Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
@@ -1013,8 +1125,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn10
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle46
         Me.DataGridViewTextBoxColumn10.HeaderText = "R.U.C."
         Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
@@ -1031,8 +1143,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn12
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle47
         Me.DataGridViewTextBoxColumn12.HeaderText = "Comprobante"
         Me.DataGridViewTextBoxColumn12.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
@@ -1041,8 +1153,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn13
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle48
         Me.DataGridViewTextBoxColumn13.HeaderText = "Fecha Compra"
         Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
@@ -1051,10 +1163,10 @@ Partial Class Frm008_Compras
         '
         'Column6
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.Format = "C2"
-        DataGridViewCellStyle7.NullValue = Nothing
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle49.Format = "C2"
+        DataGridViewCellStyle49.NullValue = Nothing
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle49
         Me.Column6.HeaderText = "Total"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
@@ -1146,73 +1258,340 @@ Partial Class Frm008_Compras
         Me.Panel_cabecera.Size = New System.Drawing.Size(1291, 49)
         Me.Panel_cabecera.TabIndex = 254
         '
-        'tb_plazo
+        'TabPage3
         '
-        Me.tb_plazo.Location = New System.Drawing.Point(183, 161)
-        Me.tb_plazo.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_plazo.Name = "tb_plazo"
-        Me.tb_plazo.Size = New System.Drawing.Size(103, 24)
-        Me.tb_plazo.TabIndex = 24
+        Me.TabPage3.Controls.Add(Me.GroupBox7)
+        Me.TabPage3.Controls.Add(Me.GroupBox8)
+        Me.TabPage3.Controls.Add(Me.Label24)
+        Me.TabPage3.Controls.Add(Me.Label25)
+        Me.TabPage3.Controls.Add(Me.Label26)
+        Me.TabPage3.Controls.Add(Me.Label27)
+        Me.TabPage3.Controls.Add(Me.Label28)
+        Me.TabPage3.Controls.Add(Me.Label29)
+        Me.TabPage3.Controls.Add(Me.DataGridView2)
+        Me.TabPage3.Controls.Add(Me.DataGridView3)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TabPage3.Size = New System.Drawing.Size(1283, 690)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Listado de Credito"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'lb_plazo
+        'GroupBox7
         '
-        Me.lb_plazo.AutoSize = True
-        Me.lb_plazo.Location = New System.Drawing.Point(60, 167)
-        Me.lb_plazo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lb_plazo.Name = "lb_plazo"
-        Me.lb_plazo.Size = New System.Drawing.Size(50, 18)
-        Me.lb_plazo.TabIndex = 23
-        Me.lb_plazo.Text = "Plazo:"
+        Me.GroupBox7.Controls.Add(Me.Button2)
+        Me.GroupBox7.Location = New System.Drawing.Point(986, 46)
+        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox7.Size = New System.Drawing.Size(265, 80)
+        Me.GroupBox7.TabIndex = 60
+        Me.GroupBox7.TabStop = False
         '
-        'tb_cuota
+        'Button2
         '
-        Me.tb_cuota.Location = New System.Drawing.Point(370, 161)
-        Me.tb_cuota.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_cuota.Name = "tb_cuota"
-        Me.tb_cuota.Size = New System.Drawing.Size(176, 24)
-        Me.tb_cuota.TabIndex = 26
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.Button2.Enabled = False
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Window
+        Me.Button2.Location = New System.Drawing.Point(29, 22)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(207, 43)
+        Me.Button2.TabIndex = 47
+        Me.Button2.Text = "&Consultar"
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'lb_cuota
+        'GroupBox8
         '
-        Me.lb_cuota.AutoSize = True
-        Me.lb_cuota.Location = New System.Drawing.Point(311, 161)
-        Me.lb_cuota.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lb_cuota.Name = "lb_cuota"
-        Me.lb_cuota.Size = New System.Drawing.Size(52, 18)
-        Me.lb_cuota.TabIndex = 25
-        Me.lb_cuota.Text = "Cuota:"
+        Me.GroupBox8.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox8.Controls.Add(Me.CheckBox1)
+        Me.GroupBox8.Controls.Add(Me.Label21)
+        Me.GroupBox8.Controls.Add(Me.Label22)
+        Me.GroupBox8.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox8.Location = New System.Drawing.Point(47, 46)
+        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox8.Size = New System.Drawing.Size(931, 80)
+        Me.GroupBox8.TabIndex = 59
+        Me.GroupBox8.TabStop = False
         '
-        'chk_contado
+        'DateTimePicker1
         '
-        Me.chk_contado.AutoSize = True
-        Me.chk_contado.Location = New System.Drawing.Point(370, 138)
-        Me.chk_contado.Name = "chk_contado"
-        Me.chk_contado.Size = New System.Drawing.Size(87, 22)
-        Me.chk_contado.TabIndex = 16
-        Me.chk_contado.Text = "Contado"
-        Me.chk_contado.UseVisualStyleBackColor = True
+        Me.DateTimePicker1.Enabled = False
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(300, 30)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(225, 24)
+        Me.DateTimePicker1.TabIndex = 45
         '
-        'chk_Credito
+        'CheckBox1
         '
-        Me.chk_Credito.AutoSize = True
-        Me.chk_Credito.Checked = True
-        Me.chk_Credito.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_Credito.Location = New System.Drawing.Point(183, 137)
-        Me.chk_Credito.Name = "chk_Credito"
-        Me.chk_Credito.Size = New System.Drawing.Size(78, 22)
-        Me.chk_Credito.TabIndex = 15
-        Me.chk_Credito.Text = "Credito"
-        Me.chk_Credito.UseVisualStyleBackColor = True
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(25, 33)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(94, 22)
+        Me.CheckBox1.TabIndex = 48
+        Me.CheckBox1.Text = "Consultar"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Label23
+        'Label21
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(25, 142)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(88, 18)
-        Me.Label23.TabIndex = 14
-        Me.Label23.Text = " Tipo  Pago:"
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(187, 34)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(93, 18)
+        Me.Label21.TabIndex = 43
+        Me.Label21.Text = "Fecha Inicial:"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(553, 34)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(88, 18)
+        Me.Label22.TabIndex = 46
+        Me.Label22.Text = "Fecha Final:"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Enabled = False
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(668, 30)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(225, 24)
+        Me.DateTimePicker2.TabIndex = 44
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(587, 484)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(100, 17)
+        Me.Label24.TabIndex = 58
+        Me.Label24.Text = "SUB TOTAL:"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(850, 484)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(49, 17)
+        Me.Label25.TabIndex = 57
+        Me.Label25.Text = "I.G.V."
+        '
+        'Label26
+        '
+        Me.Label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label26.Location = New System.Drawing.Point(702, 478)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(115, 28)
+        Me.Label26.TabIndex = 54
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label27
+        '
+        Me.Label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label27.Location = New System.Drawing.Point(911, 477)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(115, 28)
+        Me.Label27.TabIndex = 55
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label28
+        '
+        Me.Label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label28.Location = New System.Drawing.Point(1128, 477)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(115, 28)
+        Me.Label28.TabIndex = 56
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(1054, 483)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(64, 17)
+        Me.Label29.TabIndex = 53
+        Me.Label29.Text = "TOTAL:"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn21})
+        Me.DataGridView2.Location = New System.Drawing.Point(47, 300)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.Size = New System.Drawing.Size(1204, 155)
+        Me.DataGridView2.TabIndex = 52
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.HeaderText = "Producto"
+        Me.DataGridViewTextBoxColumn14.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        Me.DataGridViewTextBoxColumn14.Width = 250
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.HeaderText = "Color"
+        Me.DataGridViewTextBoxColumn15.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.ReadOnly = True
+        Me.DataGridViewTextBoxColumn15.Width = 90
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.HeaderText = "Material"
+        Me.DataGridViewTextBoxColumn16.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.ReadOnly = True
+        Me.DataGridViewTextBoxColumn16.Width = 90
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.HeaderText = "Precio Compra"
+        Me.DataGridViewTextBoxColumn17.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.ReadOnly = True
+        Me.DataGridViewTextBoxColumn17.Width = 125
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.HeaderText = "Cantidad"
+        Me.DataGridViewTextBoxColumn18.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.ReadOnly = True
+        Me.DataGridViewTextBoxColumn18.Width = 60
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        DataGridViewCellStyle50.Format = "C2"
+        DataGridViewCellStyle50.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn19.DefaultCellStyle = DataGridViewCellStyle50
+        Me.DataGridViewTextBoxColumn19.HeaderText = "IGV"
+        Me.DataGridViewTextBoxColumn19.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.ReadOnly = True
+        Me.DataGridViewTextBoxColumn19.Width = 90
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        DataGridViewCellStyle51.Format = "C2"
+        DataGridViewCellStyle51.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn20.DefaultCellStyle = DataGridViewCellStyle51
+        Me.DataGridViewTextBoxColumn20.HeaderText = "SubTotal"
+        Me.DataGridViewTextBoxColumn20.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.ReadOnly = True
+        Me.DataGridViewTextBoxColumn20.Width = 90
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        DataGridViewCellStyle52.Format = "C2"
+        DataGridViewCellStyle52.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle52
+        Me.DataGridViewTextBoxColumn21.HeaderText = "Total"
+        Me.DataGridViewTextBoxColumn21.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
+        Me.DataGridViewTextBoxColumn21.Width = 90
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27})
+        Me.DataGridView3.Location = New System.Drawing.Point(47, 144)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowHeadersWidth = 51
+        Me.DataGridView3.Size = New System.Drawing.Size(1204, 149)
+        Me.DataGridView3.TabIndex = 51
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.HeaderText = "CodigoCompras"
+        Me.DataGridViewTextBoxColumn22.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
+        Me.DataGridViewTextBoxColumn22.Visible = False
+        Me.DataGridViewTextBoxColumn22.Width = 125
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle53
+        Me.DataGridViewTextBoxColumn23.HeaderText = "R.U.C."
+        Me.DataGridViewTextBoxColumn23.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
+        Me.DataGridViewTextBoxColumn23.Width = 130
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.HeaderText = "Razón Social"
+        Me.DataGridViewTextBoxColumn24.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = True
+        Me.DataGridViewTextBoxColumn24.Width = 360
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle54
+        Me.DataGridViewTextBoxColumn25.HeaderText = "Comprobante"
+        Me.DataGridViewTextBoxColumn25.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
+        Me.DataGridViewTextBoxColumn25.Width = 130
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle55
+        Me.DataGridViewTextBoxColumn26.HeaderText = "Fecha Compra"
+        Me.DataGridViewTextBoxColumn26.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.ReadOnly = True
+        Me.DataGridViewTextBoxColumn26.Width = 120
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle56.Format = "C2"
+        DataGridViewCellStyle56.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle56
+        Me.DataGridViewTextBoxColumn27.HeaderText = "Total"
+        Me.DataGridViewTextBoxColumn27.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        Me.DataGridViewTextBoxColumn27.Width = 120
         '
         'Frm008_Compras
         '
@@ -1253,6 +1632,13 @@ Partial Class Frm008_Compras
         CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_cabecera.ResumeLayout(False)
         Me.Panel_cabecera.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1350,9 +1736,40 @@ Partial Class Frm008_Compras
     Friend WithEvents Button1 As Button
     Friend WithEvents chk_contado As CheckBox
     Friend WithEvents chk_Credito As CheckBox
-    Friend WithEvents Label23 As Label
+    Friend WithEvents lb_tipo_pago As Label
     Friend WithEvents tb_cuota As TextBox
     Friend WithEvents lb_cuota As Label
     Friend WithEvents tb_plazo As TextBox
     Friend WithEvents lb_plazo As Label
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents GroupBox7 As GroupBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents GroupBox8 As GroupBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
 End Class
