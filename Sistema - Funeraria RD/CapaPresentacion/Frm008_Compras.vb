@@ -13,6 +13,7 @@ Public Class Frm008_Compras
     Public Property Caller() As IProveedor
     Dim CodigoProveedor As Integer = 0
     Dim CodigoProducto As Integer = 0
+    Dim CodigoCompra As Integer = 0
     Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
 
     Private Sub lkbBuscar_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lkbBuscar.LinkClicked
@@ -29,6 +30,7 @@ Public Class Frm008_Compras
         lblSubTotal.Text = "0.0"
         lblIgv.Text = "0.0"
         Listar_Compras()
+        tb_fecha.Text = DateTime.Now
     End Sub
 
     Public Function LoadDataRow(ByVal Proveed As EProveedor) As Boolean Implements IProveedor.LoadDataRow
@@ -210,7 +212,7 @@ Public Class Frm008_Compras
                     C.FechaCompra = CDate(dtpFecha.Value)
                     C.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
                     C.Tipocompra = If(ckb_gasto.Checked = True, "Gasto", "Reventa")
-                    C.TipoPago = C.Tipocompra = If(ckb_gasto.Checked = True, "Credito", "Contado")
+                    C.TipoPago = If(chk_Credito.Checked = True, "Credito", "Contado")
                     C.Serie = CStr(txtSerie.Text)
                     C.NroDocumento = CStr(txtNroDocumento.Text)
                     C.Total = CDec(lblTotal.Text)
@@ -265,6 +267,9 @@ Public Class Frm008_Compras
     Private Sub Listar_Compras()
         Llenar_Grilla(C.Listar_Compras())
     End Sub
+    Private Sub Listar_Creditos()
+        Llenar_Grilla_credito(C.Listar_creditos())
+    End Sub
     Private Sub Llenar_Grilla(ByVal dt As DataTable)
         Try
             dtgvListadoCompras.Rows.Clear()
@@ -283,7 +288,27 @@ Public Class Frm008_Compras
             clsMensaje.mostrar_mensaje(ex.Message, "error")
         End Try
     End Sub
+    Private Sub Llenar_Grilla_credito(ByVal dt As DataTable)
+        Try
+            dgv_creditos.Rows.Clear()
 
+            For i = 0 To dt.Rows.Count - 1
+                dgv_creditos.Rows.Add(dt.Rows(i)(0))
+                dgv_creditos.Rows(i).Cells(0).Value = dt.Rows(i)(0).ToString()
+                dgv_creditos.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
+                dgv_creditos.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
+                dgv_creditos.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
+                dgv_creditos.Rows(i).Cells(4).Value = Format(dt.Rows(i)(4), "dd/MM/yyyy")
+                dgv_creditos.Rows(i).Cells(5).Value = Math.Round(dt.Rows(i)(5), 2)
+                dgv_creditos.Rows(i).Cells(6).Value = dt.Rows(i)(6).ToString()
+                dgv_creditos.Rows(i).Cells(7).Value = dt.Rows(i)(7).ToString()
+
+            Next
+            Me.DataGridView1.ClearSelection()
+        Catch ex As Exception
+            clsMensaje.mostrar_mensaje(ex.Message, "error")
+        End Try
+    End Sub
     Private Sub dtgvListadoCompras_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dtgvListadoCompras.CellClick
         If (dtgvListadoCompras.Rows.Count > 0) Then
             dtgvListadoCompras.Rows(dtgvListadoCompras.CurrentRow.Index).Selected = True
@@ -504,6 +529,10 @@ Public Class Frm008_Compras
 
     Private Sub tb_plazo_TextChanged(sender As Object, e As EventArgs) Handles tb_plazo.TextChanged
 
+        If (lblTotal.Text.Length > 3 And tb_plazo.Text <> "" And tb_plazo.Text <> "0") Then
+            tb_cuota.Text = CDec(lblTotal.Text.Trim()) / CDec(tb_plazo.Text)
+        End If
+
     End Sub
 
     Private Sub tb_plazo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_plazo.KeyPress
@@ -512,5 +541,56 @@ Public Class Frm008_Compras
 
     Private Sub tb_cuota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tb_cuota.KeyPress
         Validar.Numeros(e)
+    End Sub
+
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lb_plazo_Click(sender As Object, e As EventArgs) Handles lb_plazo.Click
+
+    End Sub
+
+    Private Sub tb_cuota_TextChanged(sender As Object, e As EventArgs) Handles tb_cuota.TextChanged
+
+    End Sub
+
+    Private Sub lb_cuota_Click(sender As Object, e As EventArgs) Handles lb_cuota.Click
+
+    End Sub
+
+    Private Sub tb_Datos_TextChanged(sender As Object, e As EventArgs) Handles tb_Datos.TextChanged
+
+
+        If (tb_Datos.Text.Trim() <> "") Then
+            Try
+                C.datos = tb_Datos.Text
+                Listar_Creditos()
+            Catch ex As Exception
+                clsMensaje.mostrar_mensaje(ex.Message, "error")
+            End Try
+        Else
+
+        End If
+    End Sub
+
+    Private Sub lblTotal_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub lblTotal_TextChanged(sender As Object, e As EventArgs) Handles lblTotal.TextChanged
+        If (lblTotal.Text.Length > 3 And tb_plazo.Text <> "" And tb_plazo.Text <> "0") Then
+            tb_cuota.Text = CDec(lblTotal.Text) / CDec(tb_plazo.Text)
+        End If
+    End Sub
+
+    Private Sub dgv_creditos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_creditos.CellContentClick
+        CodigoCompra = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+        tb_monto_abono.Text = dgv_creditos.CurrentRow.Cells(7).Value.ToString()
+        lb_total.Text = dgv_creditos.CurrentRow.Cells(5).Value.ToString()
+        lb_subtotal.Text = CDec(dgv_creditos.CurrentRow.Cells(5).Value.ToString()) / 1.13
+        lb_iva.Text = (CDec(dgv_creditos.CurrentRow.Cells(5).Value.ToString()) / 1.13) * 0.13
+        C.CodigoComprass = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+        tb_monto_actual.Text = C.Devolver_monto_credito()
     End Sub
 End Class

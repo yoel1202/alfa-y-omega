@@ -17,6 +17,8 @@ Public Class clsCompras
     Public Property plazo() As Integer
     Public Property Total() As Decimal
     'Propiedades del Detalle de Compras
+
+
     Public Property CodigoCompras() As Integer
     Public Property CodigoItem() As String
     Public Property PrecioCompra() As Decimal
@@ -30,7 +32,10 @@ Public Class clsCompras
     'Propiedades para Consultar Compras por Rangos de Fecha
     Public Property Fecha1() As Date
     Public Property Fecha2() As Date
+    Public Property datos As String
 
+
+    Public Property CodigoComprass() As Integer
     Public Function Registrar_Compras() As String 'Función para registrar Compras
         Dim Mensaje As String = "" 'Declaramos la variable para recuperar el Mensaje
 
@@ -45,9 +50,12 @@ Public Class clsCompras
             lst.Add(New clsParametro("@Series", Serie))
             lst.Add(New clsParametro("@Nro_Documentos", NroDocumento))
             lst.Add(New clsParametro("@Totals", Total))
+            lst.Add(New clsParametro("@cuotas", cuota))
+            lst.Add(New clsParametro("@plazos", plazo))
+            lst.Add(New clsParametro("@tipo_pagos", TipoPago))
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Compras", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Mensaje = lst(7).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+            Mensaje = lst(10).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al registrar compras, verifique clase clsCompras") 'Creamos una nueva excepción de errores
         End Try
@@ -68,6 +76,23 @@ Public Class clsCompras
             Throw New Exception("Error al devolver el código de la compra, verifique clase clsCompras") 'Creamos una nueva excepción de errores
         End Try
         Return Codigo 'Retornamos el código recuperado
+    End Function
+
+    Public Function Devolver_monto_credito() As Integer
+        Dim monto As Decimal = 0
+
+        Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
+        Try 'Manejamos una excepción de errores
+            'Agregamos a la lista genérica el nombre y valor de los parámetros
+
+            lst.Add(New clsParametro("@codigo_comprass", CodigoComprass))
+            lst.Add(New clsParametro("@monto", "", MySqlDbType.Decimal, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            M.EjecutarSP("Devolver_monto_credito", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
+            monto = lst(1).Valor.ToString() 'Recuperamos el monto de la Base de Datos
+        Catch ex As Exception
+            Throw New Exception("Error al devolver el código de la compra, verifique clase clsCompras") 'Creamos una nueva excepción de errores
+        End Try
+        Return monto 'Retornamos el monto recuperado
     End Function
 
     Public Function Registrar_Detalle_Compras() As String 'Función para registrar Detalle de  Compras
@@ -100,6 +125,15 @@ Public Class clsCompras
             Return M.Listado("Listar_Compras", Nothing) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
         Catch ex As Exception
             Throw New Exception("Error al listar compras, verifique clase clsCompras") 'Creamos una nueva excepción de errores
+        End Try
+    End Function
+    Public Function Listar_creditos() As DataTable 'Función para listar Compras
+        Dim lst As New List(Of clsParametro)
+        Try 'Manejamos una excepción de errores
+            lst.Add(New clsParametro("@Datos", Datos))
+            Return M.Listado("Buscar_facturas_credito", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
+        Catch ex As Exception
+            Throw New Exception("Error al filtrar Personal, verifique clase clsPersonal") 'Creamos una nueva excepción de errores
         End Try
     End Function
 

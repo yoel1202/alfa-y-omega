@@ -39,3 +39,13 @@
 [Fri Sep 25 20:14:13.344210 2020] [ssl:warn] [pid 4184:tid 620] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Fri Sep 25 20:14:13.469194 2020] [ssl:warn] [pid 4184:tid 620] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
 [Fri Sep 25 20:14:13.500456 2020] [mpm_winnt:notice] [pid 4184:tid 620] AH00354: Child: Starting 150 worker threads.
+[Sat Sep 26 16:04:40.718341 2020] [ssl:warn] [pid 17948:tid 568] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Sep 26 16:04:41.006316 2020] [core:warn] [pid 17948:tid 568] AH00098: pid file C:/Users/HP/Documents/GitHub/alfa-y-omega/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Sep 26 16:04:41.102316 2020] [ssl:warn] [pid 17948:tid 568] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Sep 26 16:04:47.281717 2020] [mpm_winnt:notice] [pid 17948:tid 568] AH00455: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.10 configured -- resuming normal operations
+[Sat Sep 26 16:04:47.281717 2020] [mpm_winnt:notice] [pid 17948:tid 568] AH00456: Apache Lounge VC15 Server built: Aug  4 2020 11:50:23
+[Sat Sep 26 16:04:47.281717 2020] [core:notice] [pid 17948:tid 568] AH00094: Command line: 'c:\\users\\hp\\documents\\github\\alfa-y-omega\\apache\\bin\\httpd.exe -d C:/Users/HP/Documents/GitHub/alfa-y-omega/apache'
+[Sat Sep 26 16:04:47.281717 2020] [mpm_winnt:notice] [pid 17948:tid 568] AH00418: Parent: Created child process 956
+[Sat Sep 26 16:04:48.849584 2020] [ssl:warn] [pid 956:tid 548] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Sep 26 16:04:49.194348 2020] [ssl:warn] [pid 956:tid 548] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Sep 26 16:04:49.234344 2020] [mpm_winnt:notice] [pid 956:tid 548] AH00354: Child: Starting 150 worker threads.
