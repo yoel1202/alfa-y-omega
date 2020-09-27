@@ -6,7 +6,7 @@ Imports MySql.Data.MySqlClient
 Public Class clsManejador
 
     'Declaramos la variable de conexión hacia la Base de Datos
-    Public conexion = New MySqlConnection("Server=localhost; Database=funeraria; Uid=root; Pwd=")
+    Public conexion = New MySqlConnection("Server=26.175.69.64; Database=funeraria; Uid=admi; Pwd=Funeraria123")
 
     'Método para abrir la conexión de la Base de Datos
     Sub abrir()
