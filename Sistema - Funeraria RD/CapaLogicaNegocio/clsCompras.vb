@@ -33,9 +33,17 @@ Public Class clsCompras
     Public Property Fecha1() As Date
     Public Property Fecha2() As Date
     Public Property datos As String
+    'Propiedades del abono
+    Public Property MontoAbono() As Decimal
+    Public Property MontoActual() As Decimal
+    Public Property NComprobante() As String
+    Public Property FechaAbono() As Date
 
 
     Public Property CodigoComprass() As Integer
+
+
+
     Public Function Registrar_Compras() As String 'Función para registrar Compras
         Dim Mensaje As String = "" 'Declaramos la variable para recuperar el Mensaje
 
@@ -62,7 +70,27 @@ Public Class clsCompras
 
         Return Mensaje 'Retornamos el mensaje recuperado
     End Function
+    Public Function Registrar_Abono() As String 'Función para registrar Compras
+        Dim Mensaje As String = "" 'Declaramos la variable para recuperar el Mensaje
 
+        Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
+
+        Try 'Manejamos una excepción de errores
+            'Agregamos a la lista genérica el nombre y valor de los parámetros
+            lst.Add(New clsParametro("@Codigo_compras", CodigoComprass))
+            lst.Add(New clsParametro("@Monto_abonos", MontoAbono))
+            lst.Add(New clsParametro("@Monto_actuals", MontoActual))
+            lst.Add(New clsParametro("@Fecha_abonos", FechaAbono))
+            lst.Add(New clsParametro("@NComprobantes", NComprobante))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            M.EjecutarSP("Registrar_Abono", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
+            Mensaje = lst(5).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+        Catch ex As Exception
+            Throw New Exception("Error al registrar compras, verifique clase clsCompras") 'Creamos una nueva excepción de errores
+        End Try
+
+        Return Mensaje 'Retornamos el mensaje recuperado
+    End Function
     Public Function Devolver_Codigo_Compras() As Integer
         Dim Codigo As Integer = 0
 

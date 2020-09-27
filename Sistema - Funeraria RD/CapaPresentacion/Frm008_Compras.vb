@@ -14,6 +14,8 @@ Public Class Frm008_Compras
     Dim CodigoProveedor As Integer = 0
     Dim CodigoProducto As Integer = 0
     Dim CodigoCompra As Integer = 0
+    Dim selecionar_credito = False
+
     Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
 
     Private Sub lkbBuscar_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lkbBuscar.LinkClicked
@@ -592,5 +594,50 @@ Public Class Frm008_Compras
         lb_iva.Text = (CDec(dgv_creditos.CurrentRow.Cells(5).Value.ToString()) / 1.13) * 0.13
         C.CodigoComprass = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
         tb_monto_actual.Text = C.Devolver_monto_credito()
+        selecionar_credito = True
+    End Sub
+
+    Private Sub btn_abonar_Click(sender As Object, e As EventArgs) Handles btn_abonar.Click
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos") Then
+            ErrorProvider1.Clear()
+
+            If (tb_monto_abono.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_monto_abono, "Debe Ingresar el Monto del Abono")
+            ElseIf (tb_monto_actual.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_monto_actual, "Debe Ingresar monto actual")
+            ElseIf (tb_comprobante.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_comprobante, "Debe Ingresar Número de Comprobante")
+
+            ElseIf (dgv_creditos.Rows.Count < 1) Then
+                clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
+            Else
+                If (selecionar_credito) Then
+                    Dim Mensaje As String = ""
+                    Try
+                        Dim resultado = 0
+                        resultado = CDec(tb_monto_actual.Text) - CDec(tb_monto_abono.Text)
+                        If (resultado >= 0) Then
+                            C.MontoAbono = tb_monto_abono.Text
+                            C.MontoActual = resultado
+                            C.FechaAbono = CDate(tb_fecha.Text)
+                            C.NComprobante = tb_comprobante.Text
+                            Mensaje = C.Registrar_Abono()
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                        Else
+                            clsMensaje.mostrar_mensaje("el monto del abono supera el monto actual", "error")
+                        End If
+
+                    Catch ex As Exception
+                        clsMensaje.mostrar_mensaje(ex.Message, "error")
+                    End Try
+                End If
+
+            End If
+
+            End If
     End Sub
 End Class

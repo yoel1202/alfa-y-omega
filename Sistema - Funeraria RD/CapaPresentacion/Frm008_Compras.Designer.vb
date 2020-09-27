@@ -23,17 +23,17 @@ Partial Class Frm008_Compras
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.tb_cuota = New System.Windows.Forms.TextBox()
         Me.chk_contado = New System.Windows.Forms.CheckBox()
@@ -119,9 +119,27 @@ Partial Class Frm008_Compras
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dtgvListadoCompras = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.btn_abonar = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.tb_fecha = New System.Windows.Forms.TextBox()
+        Me.lb_fecha = New System.Windows.Forms.Label()
+        Me.tb_comprobante = New System.Windows.Forms.TextBox()
+        Me.lb_comprobante = New System.Windows.Forms.Label()
+        Me.tb_monto_actual = New System.Windows.Forms.TextBox()
+        Me.lb_monto_actual = New System.Windows.Forms.Label()
+        Me.tb_Datos = New System.Windows.Forms.TextBox()
+        Me.rbnNombre = New System.Windows.Forms.RadioButton()
+        Me.tb_monto_abono = New System.Windows.Forms.TextBox()
+        Me.rbnNDoc = New System.Windows.Forms.RadioButton()
+        Me.lb_monto_abono = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.lb_subtotal = New System.Windows.Forms.Label()
@@ -129,19 +147,6 @@ Partial Class Frm008_Compras
         Me.lb_total = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.dgv_creditos = New System.Windows.Forms.DataGridView()
-        Me.bordeIzquierda = New System.Windows.Forms.Panel()
-        Me.bordeDerecha = New System.Windows.Forms.Panel()
-        Me.bordeInferior = New System.Windows.Forms.Panel()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ptbIcon = New System.Windows.Forms.PictureBox()
-        Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.lkbCerrar = New System.Windows.Forms.Label()
-        Me.Panel_cabecera = New System.Windows.Forms.Panel()
-        Me.tb_Datos = New System.Windows.Forms.TextBox()
-        Me.rbnNDoc = New System.Windows.Forms.RadioButton()
-        Me.rbnNombre = New System.Windows.Forms.RadioButton()
-        Me.tb_monto_abono = New System.Windows.Forms.TextBox()
-        Me.lb_monto_abono = New System.Windows.Forms.Label()
         Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -150,19 +155,14 @@ Partial Class Frm008_Compras
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Plazo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cuota = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btn_abonar = New System.Windows.Forms.Button()
-        Me.tb_monto_actual = New System.Windows.Forms.TextBox()
-        Me.lb_monto_actual = New System.Windows.Forms.Label()
-        Me.tb_comprobante = New System.Windows.Forms.TextBox()
-        Me.lb_comprobante = New System.Windows.Forms.Label()
-        Me.tb_fecha = New System.Windows.Forms.TextBox()
-        Me.lb_fecha = New System.Windows.Forms.Label()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.bordeIzquierda = New System.Windows.Forms.Panel()
+        Me.bordeDerecha = New System.Windows.Forms.Panel()
+        Me.bordeInferior = New System.Windows.Forms.Panel()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ptbIcon = New System.Windows.Forms.PictureBox()
+        Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.lkbCerrar = New System.Windows.Forms.Label()
+        Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -1065,9 +1065,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn6
         '
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle23.Format = "C2"
+        DataGridViewCellStyle23.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle23
         Me.DataGridViewTextBoxColumn6.HeaderText = "IGV"
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
@@ -1076,9 +1076,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle24.Format = "C2"
+        DataGridViewCellStyle24.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle24
         Me.DataGridViewTextBoxColumn7.HeaderText = "SubTotal"
         Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
@@ -1087,9 +1087,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn8
         '
-        DataGridViewCellStyle3.Format = "C2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle25.Format = "C2"
+        DataGridViewCellStyle25.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle25
         Me.DataGridViewTextBoxColumn8.HeaderText = "Total"
         Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
@@ -1108,6 +1108,65 @@ Partial Class Frm008_Compras
         Me.dtgvListadoCompras.RowHeadersWidth = 51
         Me.dtgvListadoCompras.Size = New System.Drawing.Size(1204, 149)
         Me.dtgvListadoCompras.TabIndex = 2
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "CodigoCompras"
+        Me.DataGridViewTextBoxColumn9.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        Me.DataGridViewTextBoxColumn9.Width = 125
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle26
+        Me.DataGridViewTextBoxColumn10.HeaderText = "Identificacion"
+        Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Width = 130
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Razón Social"
+        Me.DataGridViewTextBoxColumn11.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        Me.DataGridViewTextBoxColumn11.Width = 360
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle27
+        Me.DataGridViewTextBoxColumn12.HeaderText = "Comprobante"
+        Me.DataGridViewTextBoxColumn12.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.ReadOnly = True
+        Me.DataGridViewTextBoxColumn12.Width = 130
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle28
+        Me.DataGridViewTextBoxColumn13.HeaderText = "Fecha Compra"
+        Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.Width = 120
+        '
+        'Column6
+        '
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle29.Format = "C2"
+        DataGridViewCellStyle29.NullValue = Nothing
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle29
+        Me.Column6.HeaderText = "Total"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 120
         '
         'TabPage3
         '
@@ -1139,6 +1198,21 @@ Partial Class Frm008_Compras
         Me.GroupBox7.TabIndex = 60
         Me.GroupBox7.TabStop = False
         '
+        'btn_abonar
+        '
+        Me.btn_abonar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btn_abonar.FlatAppearance.BorderSize = 0
+        Me.btn_abonar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_abonar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_abonar.ForeColor = System.Drawing.SystemColors.Window
+        Me.btn_abonar.Location = New System.Drawing.Point(30, 95)
+        Me.btn_abonar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_abonar.Name = "btn_abonar"
+        Me.btn_abonar.Size = New System.Drawing.Size(207, 43)
+        Me.btn_abonar.TabIndex = 48
+        Me.btn_abonar.Text = "Abonar"
+        Me.btn_abonar.UseVisualStyleBackColor = False
+        '
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.tb_fecha)
@@ -1161,6 +1235,112 @@ Partial Class Frm008_Compras
         Me.GroupBox8.TabIndex = 59
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Abonos"
+        '
+        'tb_fecha
+        '
+        Me.tb_fecha.Location = New System.Drawing.Point(636, 123)
+        Me.tb_fecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_fecha.Name = "tb_fecha"
+        Me.tb_fecha.ReadOnly = True
+        Me.tb_fecha.Size = New System.Drawing.Size(251, 24)
+        Me.tb_fecha.TabIndex = 71
+        '
+        'lb_fecha
+        '
+        Me.lb_fecha.AutoSize = True
+        Me.lb_fecha.Location = New System.Drawing.Point(496, 129)
+        Me.lb_fecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_fecha.Name = "lb_fecha"
+        Me.lb_fecha.Size = New System.Drawing.Size(53, 18)
+        Me.lb_fecha.TabIndex = 70
+        Me.lb_fecha.Text = "Fecha:"
+        '
+        'tb_comprobante
+        '
+        Me.tb_comprobante.Location = New System.Drawing.Point(636, 78)
+        Me.tb_comprobante.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_comprobante.Name = "tb_comprobante"
+        Me.tb_comprobante.Size = New System.Drawing.Size(251, 24)
+        Me.tb_comprobante.TabIndex = 67
+        '
+        'lb_comprobante
+        '
+        Me.lb_comprobante.AutoSize = True
+        Me.lb_comprobante.Location = New System.Drawing.Point(482, 81)
+        Me.lb_comprobante.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_comprobante.Name = "lb_comprobante"
+        Me.lb_comprobante.Size = New System.Drawing.Size(124, 18)
+        Me.lb_comprobante.TabIndex = 66
+        Me.lb_comprobante.Text = "N° Comprobante:"
+        '
+        'tb_monto_actual
+        '
+        Me.tb_monto_actual.Location = New System.Drawing.Point(242, 129)
+        Me.tb_monto_actual.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_monto_actual.Name = "tb_monto_actual"
+        Me.tb_monto_actual.ReadOnly = True
+        Me.tb_monto_actual.Size = New System.Drawing.Size(134, 24)
+        Me.tb_monto_actual.TabIndex = 65
+        '
+        'lb_monto_actual
+        '
+        Me.lb_monto_actual.AutoSize = True
+        Me.lb_monto_actual.Location = New System.Drawing.Point(88, 132)
+        Me.lb_monto_actual.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_monto_actual.Name = "lb_monto_actual"
+        Me.lb_monto_actual.Size = New System.Drawing.Size(121, 18)
+        Me.lb_monto_actual.TabIndex = 64
+        Me.lb_monto_actual.Text = "Monto del actual:"
+        '
+        'tb_Datos
+        '
+        Me.tb_Datos.Location = New System.Drawing.Point(58, 43)
+        Me.tb_Datos.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_Datos.Name = "tb_Datos"
+        Me.tb_Datos.Size = New System.Drawing.Size(829, 24)
+        Me.tb_Datos.TabIndex = 61
+        '
+        'rbnNombre
+        '
+        Me.rbnNombre.AutoSize = True
+        Me.rbnNombre.Location = New System.Drawing.Point(336, 12)
+        Me.rbnNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbnNombre.Name = "rbnNombre"
+        Me.rbnNombre.Size = New System.Drawing.Size(154, 22)
+        Me.rbnNombre.TabIndex = 63
+        Me.rbnNombre.Text = "Nombre / Apellidos"
+        Me.rbnNombre.UseVisualStyleBackColor = True
+        '
+        'tb_monto_abono
+        '
+        Me.tb_monto_abono.Location = New System.Drawing.Point(242, 78)
+        Me.tb_monto_abono.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_monto_abono.Name = "tb_monto_abono"
+        Me.tb_monto_abono.Size = New System.Drawing.Size(134, 24)
+        Me.tb_monto_abono.TabIndex = 62
+        '
+        'rbnNDoc
+        '
+        Me.rbnNDoc.AutoSize = True
+        Me.rbnNDoc.Checked = True
+        Me.rbnNDoc.Location = New System.Drawing.Point(91, 13)
+        Me.rbnNDoc.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbnNDoc.Name = "rbnNDoc"
+        Me.rbnNDoc.Size = New System.Drawing.Size(172, 22)
+        Me.rbnNDoc.TabIndex = 62
+        Me.rbnNDoc.TabStop = True
+        Me.rbnNDoc.Text = "Número Identificacion"
+        Me.rbnNDoc.UseVisualStyleBackColor = True
+        '
+        'lb_monto_abono
+        '
+        Me.lb_monto_abono.AutoSize = True
+        Me.lb_monto_abono.Location = New System.Drawing.Point(88, 84)
+        Me.lb_monto_abono.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_monto_abono.Name = "lb_monto_abono"
+        Me.lb_monto_abono.Size = New System.Drawing.Size(124, 18)
+        Me.lb_monto_abono.TabIndex = 61
+        Me.lb_monto_abono.Text = "Monto del abono:"
         '
         'Label24
         '
@@ -1237,6 +1417,79 @@ Partial Class Frm008_Compras
         Me.dgv_creditos.RowHeadersWidth = 51
         Me.dgv_creditos.Size = New System.Drawing.Size(1204, 149)
         Me.dgv_creditos.TabIndex = 51
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.HeaderText = "CodigoCompras"
+        Me.DataGridViewTextBoxColumn22.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
+        Me.DataGridViewTextBoxColumn22.Visible = False
+        Me.DataGridViewTextBoxColumn22.Width = 125
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle30
+        Me.DataGridViewTextBoxColumn23.HeaderText = "Identificacion"
+        Me.DataGridViewTextBoxColumn23.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
+        Me.DataGridViewTextBoxColumn23.Width = 130
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.HeaderText = "Razón Social"
+        Me.DataGridViewTextBoxColumn24.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = True
+        Me.DataGridViewTextBoxColumn24.Width = 360
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle31
+        Me.DataGridViewTextBoxColumn25.HeaderText = "Comprobante"
+        Me.DataGridViewTextBoxColumn25.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
+        Me.DataGridViewTextBoxColumn25.Width = 130
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle32
+        Me.DataGridViewTextBoxColumn26.HeaderText = "Fecha Compra"
+        Me.DataGridViewTextBoxColumn26.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.ReadOnly = True
+        Me.DataGridViewTextBoxColumn26.Width = 120
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle33.Format = "C2"
+        DataGridViewCellStyle33.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle33
+        Me.DataGridViewTextBoxColumn27.HeaderText = "Total"
+        Me.DataGridViewTextBoxColumn27.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        Me.DataGridViewTextBoxColumn27.Width = 120
+        '
+        'Plazo
+        '
+        Me.Plazo.HeaderText = "Plazo"
+        Me.Plazo.MinimumWidth = 6
+        Me.Plazo.Name = "Plazo"
+        Me.Plazo.Width = 125
+        '
+        'Cuota
+        '
+        Me.Cuota.HeaderText = "Cuota"
+        Me.Cuota.MinimumWidth = 6
+        Me.Cuota.Name = "Cuota"
+        Me.Cuota.Width = 125
         '
         'bordeIzquierda
         '
@@ -1322,259 +1575,6 @@ Partial Class Frm008_Compras
         Me.Panel_cabecera.Name = "Panel_cabecera"
         Me.Panel_cabecera.Size = New System.Drawing.Size(1291, 49)
         Me.Panel_cabecera.TabIndex = 254
-        '
-        'tb_Datos
-        '
-        Me.tb_Datos.Location = New System.Drawing.Point(58, 43)
-        Me.tb_Datos.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_Datos.Name = "tb_Datos"
-        Me.tb_Datos.Size = New System.Drawing.Size(829, 24)
-        Me.tb_Datos.TabIndex = 61
-        '
-        'rbnNDoc
-        '
-        Me.rbnNDoc.AutoSize = True
-        Me.rbnNDoc.Checked = True
-        Me.rbnNDoc.Location = New System.Drawing.Point(91, 13)
-        Me.rbnNDoc.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbnNDoc.Name = "rbnNDoc"
-        Me.rbnNDoc.Size = New System.Drawing.Size(172, 22)
-        Me.rbnNDoc.TabIndex = 62
-        Me.rbnNDoc.TabStop = True
-        Me.rbnNDoc.Text = "Número Identificacion"
-        Me.rbnNDoc.UseVisualStyleBackColor = True
-        '
-        'rbnNombre
-        '
-        Me.rbnNombre.AutoSize = True
-        Me.rbnNombre.Location = New System.Drawing.Point(336, 12)
-        Me.rbnNombre.Margin = New System.Windows.Forms.Padding(4)
-        Me.rbnNombre.Name = "rbnNombre"
-        Me.rbnNombre.Size = New System.Drawing.Size(154, 22)
-        Me.rbnNombre.TabIndex = 63
-        Me.rbnNombre.Text = "Nombre / Apellidos"
-        Me.rbnNombre.UseVisualStyleBackColor = True
-        '
-        'tb_monto_abono
-        '
-        Me.tb_monto_abono.Location = New System.Drawing.Point(242, 78)
-        Me.tb_monto_abono.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_monto_abono.Name = "tb_monto_abono"
-        Me.tb_monto_abono.Size = New System.Drawing.Size(134, 24)
-        Me.tb_monto_abono.TabIndex = 62
-        '
-        'lb_monto_abono
-        '
-        Me.lb_monto_abono.AutoSize = True
-        Me.lb_monto_abono.Location = New System.Drawing.Point(88, 84)
-        Me.lb_monto_abono.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lb_monto_abono.Name = "lb_monto_abono"
-        Me.lb_monto_abono.Size = New System.Drawing.Size(124, 18)
-        Me.lb_monto_abono.TabIndex = 61
-        Me.lb_monto_abono.Text = "Monto del abono:"
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.HeaderText = "CodigoCompras"
-        Me.DataGridViewTextBoxColumn22.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        Me.DataGridViewTextBoxColumn22.ReadOnly = True
-        Me.DataGridViewTextBoxColumn22.Visible = False
-        Me.DataGridViewTextBoxColumn22.Width = 125
-        '
-        'DataGridViewTextBoxColumn23
-        '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle8
-        Me.DataGridViewTextBoxColumn23.HeaderText = "Identificacion"
-        Me.DataGridViewTextBoxColumn23.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        Me.DataGridViewTextBoxColumn23.ReadOnly = True
-        Me.DataGridViewTextBoxColumn23.Width = 130
-        '
-        'DataGridViewTextBoxColumn24
-        '
-        Me.DataGridViewTextBoxColumn24.HeaderText = "Razón Social"
-        Me.DataGridViewTextBoxColumn24.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
-        Me.DataGridViewTextBoxColumn24.ReadOnly = True
-        Me.DataGridViewTextBoxColumn24.Width = 360
-        '
-        'DataGridViewTextBoxColumn25
-        '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle9
-        Me.DataGridViewTextBoxColumn25.HeaderText = "Comprobante"
-        Me.DataGridViewTextBoxColumn25.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
-        Me.DataGridViewTextBoxColumn25.ReadOnly = True
-        Me.DataGridViewTextBoxColumn25.Width = 130
-        '
-        'DataGridViewTextBoxColumn26
-        '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridViewTextBoxColumn26.HeaderText = "Fecha Compra"
-        Me.DataGridViewTextBoxColumn26.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
-        Me.DataGridViewTextBoxColumn26.ReadOnly = True
-        Me.DataGridViewTextBoxColumn26.Width = 120
-        '
-        'DataGridViewTextBoxColumn27
-        '
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.Format = "C2"
-        DataGridViewCellStyle11.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle11
-        Me.DataGridViewTextBoxColumn27.HeaderText = "Total"
-        Me.DataGridViewTextBoxColumn27.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        Me.DataGridViewTextBoxColumn27.ReadOnly = True
-        Me.DataGridViewTextBoxColumn27.Width = 120
-        '
-        'Plazo
-        '
-        Me.Plazo.HeaderText = "Plazo"
-        Me.Plazo.MinimumWidth = 6
-        Me.Plazo.Name = "Plazo"
-        Me.Plazo.Width = 125
-        '
-        'Cuota
-        '
-        Me.Cuota.HeaderText = "Cuota"
-        Me.Cuota.MinimumWidth = 6
-        Me.Cuota.Name = "Cuota"
-        Me.Cuota.Width = 125
-        '
-        'btn_abonar
-        '
-        Me.btn_abonar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btn_abonar.Enabled = False
-        Me.btn_abonar.FlatAppearance.BorderSize = 0
-        Me.btn_abonar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_abonar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_abonar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btn_abonar.Location = New System.Drawing.Point(30, 95)
-        Me.btn_abonar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btn_abonar.Name = "btn_abonar"
-        Me.btn_abonar.Size = New System.Drawing.Size(207, 43)
-        Me.btn_abonar.TabIndex = 48
-        Me.btn_abonar.Text = "Abonar"
-        Me.btn_abonar.UseVisualStyleBackColor = False
-        '
-        'tb_monto_actual
-        '
-        Me.tb_monto_actual.Location = New System.Drawing.Point(242, 129)
-        Me.tb_monto_actual.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_monto_actual.Name = "tb_monto_actual"
-        Me.tb_monto_actual.Size = New System.Drawing.Size(134, 24)
-        Me.tb_monto_actual.TabIndex = 65
-        '
-        'lb_monto_actual
-        '
-        Me.lb_monto_actual.AutoSize = True
-        Me.lb_monto_actual.Location = New System.Drawing.Point(88, 132)
-        Me.lb_monto_actual.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lb_monto_actual.Name = "lb_monto_actual"
-        Me.lb_monto_actual.Size = New System.Drawing.Size(121, 18)
-        Me.lb_monto_actual.TabIndex = 64
-        Me.lb_monto_actual.Text = "Monto del actual:"
-        '
-        'tb_comprobante
-        '
-        Me.tb_comprobante.Location = New System.Drawing.Point(636, 78)
-        Me.tb_comprobante.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_comprobante.Name = "tb_comprobante"
-        Me.tb_comprobante.Size = New System.Drawing.Size(251, 24)
-        Me.tb_comprobante.TabIndex = 67
-        '
-        'lb_comprobante
-        '
-        Me.lb_comprobante.AutoSize = True
-        Me.lb_comprobante.Location = New System.Drawing.Point(482, 81)
-        Me.lb_comprobante.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lb_comprobante.Name = "lb_comprobante"
-        Me.lb_comprobante.Size = New System.Drawing.Size(124, 18)
-        Me.lb_comprobante.TabIndex = 66
-        Me.lb_comprobante.Text = "N° Comprobante:"
-        '
-        'tb_fecha
-        '
-        Me.tb_fecha.Location = New System.Drawing.Point(636, 123)
-        Me.tb_fecha.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_fecha.Name = "tb_fecha"
-        Me.tb_fecha.ReadOnly = True
-        Me.tb_fecha.Size = New System.Drawing.Size(134, 24)
-        Me.tb_fecha.TabIndex = 71
-        '
-        'lb_fecha
-        '
-        Me.lb_fecha.AutoSize = True
-        Me.lb_fecha.Location = New System.Drawing.Point(496, 129)
-        Me.lb_fecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lb_fecha.Name = "lb_fecha"
-        Me.lb_fecha.Size = New System.Drawing.Size(53, 18)
-        Me.lb_fecha.TabIndex = 70
-        Me.lb_fecha.Text = "Fecha:"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.HeaderText = "CodigoCompras"
-        Me.DataGridViewTextBoxColumn9.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
-        Me.DataGridViewTextBoxColumn9.Width = 125
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle4
-        Me.DataGridViewTextBoxColumn10.HeaderText = "Identificacion"
-        Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        Me.DataGridViewTextBoxColumn10.Width = 130
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Razón Social"
-        Me.DataGridViewTextBoxColumn11.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.ReadOnly = True
-        Me.DataGridViewTextBoxColumn11.Width = 360
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridViewTextBoxColumn12.HeaderText = "Comprobante"
-        Me.DataGridViewTextBoxColumn12.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        Me.DataGridViewTextBoxColumn12.Width = 130
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridViewTextBoxColumn13.HeaderText = "Fecha Compra"
-        Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        Me.DataGridViewTextBoxColumn13.Width = 120
-        '
-        'Column6
-        '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.Format = "C2"
-        DataGridViewCellStyle7.NullValue = Nothing
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle7
-        Me.Column6.HeaderText = "Total"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 120
         '
         'Frm008_Compras
         '
