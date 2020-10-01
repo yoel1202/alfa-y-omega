@@ -627,6 +627,7 @@ Public Class Frm008_Compras
                             C.NComprobante = tb_comprobante.Text
                             Mensaje = C.Registrar_Abono()
                             clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            tb_monto_actual.Text = C.Devolver_monto_credito()
                         Else
                             clsMensaje.mostrar_mensaje("el monto del abono supera el monto actual", "error")
                         End If

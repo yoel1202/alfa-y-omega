@@ -23,6 +23,7 @@ Public Class Frm003_ProductosyServicios
 
         Call Listar_Material()
         Call Listar_Colores()
+        cb_tipo_servicio.SelectedIndex = 0
         'cbxMaterial.SelectedIndex = 0
         'cbxColor.SelectedIndex = 0
 
@@ -224,9 +225,9 @@ Public Class Frm003_ProductosyServicios
                                 se.tipo = cb_tipo_servicio.SelectedItem
                                 se.km = tb_km.Text
                                 se.precio_km = tb_precio_km.Text
+                            se.precio = txtPrecioServicio.Text
 
-
-                                se.Registrar_servicio()
+                            se.Registrar_servicio()
                                 Call Listar_Servicios() 'Llamamos al método listar servicios
                                 Call Limpiar_Controles_Servicios() 'Llamamos el método limpiar controles
                                 clsMensaje.mostrar_mensaje(Mensaje, "ok")
@@ -292,6 +293,10 @@ Public Class Frm003_ProductosyServicios
         txtNombreServicio.Clear()
         txtPrecioServicio.Clear()
         txtNombreServicio.Focus()
+        tb_km.Clear()
+        tb_precio_km.Clear()
+        cb_tipo_servicio.SelectedIndex = 0
+
         DtgServicios.ClearSelection()
         Valor = 0 'Inicializamos variable valor en cero
     End Sub

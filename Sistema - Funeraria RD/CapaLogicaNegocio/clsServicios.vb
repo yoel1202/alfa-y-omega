@@ -43,9 +43,10 @@ Public Class clsServicios : Inherits clsItem 'Hereda propiedades y Atributos de 
             lst.Add(New clsParametro("@tipos", tipo))
             lst.Add(New clsParametro("@kms", km))
             lst.Add(New clsParametro("@precio_kms", precio_km))
+            lst.Add(New clsParametro("@precios", precio))
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Servicio", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Mensaje = lst(4).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+            Mensaje = lst(5).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al registrar el servicio, verifique clase clsservicio") 'Creamos una nueva excepción de errores
         End Try

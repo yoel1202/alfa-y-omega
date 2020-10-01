@@ -1,130 +1,251 @@
 InnoDB: using atomic writes.
-2020-09-25 19:33:51 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
-2020-09-25 19:33:51 0 [Note] InnoDB: Uses event mutexes
-2020-09-25 19:33:51 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2020-09-25 19:33:51 0 [Note] InnoDB: Number of pools: 1
-2020-09-25 19:33:51 0 [Note] InnoDB: Using SSE2 crc32 instructions
-2020-09-25 19:33:51 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
-2020-09-25 19:33:51 0 [Note] InnoDB: Completed initialization of buffer pool
-2020-09-25 19:33:52 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=300288
-2020-09-25 19:33:52 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
-2020-09-25 19:33:52 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
-2020-09-25 19:33:52 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2020-09-25 19:33:52 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2020-09-25 19:33:52 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
-2020-09-25 19:33:52 0 [Note] InnoDB: Waiting for purge to start
-2020-09-25 19:33:52 0 [Note] InnoDB: 10.4.14 started; log sequence number 300297; transaction id 171
-2020-09-25 19:33:52 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
-2020-09-25 19:33:52 0 [Note] Plugin 'FEEDBACK' is disabled.
-2020-09-25 19:33:52 0 [Note] Server socket created on IP: '::'.
+2020-09-28 15:13:25 0 [Note] InnoDB: The first innodb_system data file 'ibdata1' did not exist. A new tablespace will be created!
+2020-09-28 15:13:25 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:13:25 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:13:25 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:13:25 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:13:25 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:13:25 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:13:25 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:13:25 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibdata1' size to 10 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:13:25 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibdata1' size is now 10 MB.
+2020-09-28 15:13:25 0 [Note] InnoDB: Setting log file C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_logfile101 size to 5242880 bytes
+2020-09-28 15:13:25 0 [Note] InnoDB: Setting log file C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_logfile1 size to 5242880 bytes
+2020-09-28 15:13:25 0 [Note] InnoDB: Renaming log file C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_logfile101 to C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_logfile0
+2020-09-28 15:13:25 0 [Note] InnoDB: New log files created, LSN=11451
+2020-09-28 15:13:25 0 [Note] InnoDB: Doublewrite buffer not found: creating new
+2020-09-28 15:13:26 0 [Note] InnoDB: Doublewrite buffer created
+2020-09-28 15:13:26 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:13:26 0 [Note] InnoDB: Creating foreign key constraint system tables.
+2020-09-28 15:13:26 0 [Note] InnoDB: Creating tablespace and datafile system tables.
+2020-09-28 15:13:26 0 [Note] InnoDB: Creating sys_virtual system tables.
+2020-09-28 15:13:26 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:13:26 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:13:26 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:13:26 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:13:26 0 [Note] InnoDB: 10.4.14 started; log sequence number 0; transaction id 7
+2020-09-28 15:13:26 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:13:26 0 [Note] Zerofilling moved table:  '.\mysql\plugin'
+2020-09-28 15:13:26 0 [Note] Zerofilling moved table:  '.\mysql\servers'
+2020-09-28 15:13:26 0 [Note] Server socket created on IP: '::'.
 InnoDB: using atomic writes.
-2020-09-25 19:54:08 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
-2020-09-25 19:54:08 0 [Note] InnoDB: Uses event mutexes
-2020-09-25 19:54:08 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2020-09-25 19:54:08 0 [Note] InnoDB: Number of pools: 1
-2020-09-25 19:54:08 0 [Note] InnoDB: Using SSE2 crc32 instructions
-2020-09-25 19:54:08 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
-2020-09-25 19:54:08 0 [Note] InnoDB: Completed initialization of buffer pool
-2020-09-25 19:54:09 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=301038
-2020-09-25 19:54:09 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
-2020-09-25 19:54:09 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
-2020-09-25 19:54:09 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2020-09-25 19:54:09 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2020-09-25 19:54:09 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
-2020-09-25 19:54:09 0 [Note] InnoDB: Waiting for purge to start
-2020-09-25 19:54:09 0 [Note] InnoDB: 10.4.14 started; log sequence number 301047; transaction id 197
-2020-09-25 19:54:09 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
-2020-09-25 19:54:09 0 [Note] Plugin 'FEEDBACK' is disabled.
-2020-09-25 19:54:10 0 [Note] Server socket created on IP: '::'.
-2020-09-25 20:07:09 0 [Note] mysqld.exe: Aria engine: starting recovery
-recovered pages: 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% (0.0 seconds); tables to flush: 1 0
- (0.1 seconds); 
-2020-09-25 20:07:09 0 [Note] mysqld.exe: Aria engine: recovery done
+2020-09-28 15:16:13 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:16:13 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:16:13 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:16:13 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:16:13 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:16:13 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:16:13 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:16:13 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:16:13 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:16:13 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:16:13 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:16:13 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:16:14 0 [Note] InnoDB: 10.4.14 started; log sequence number 47054; transaction id 9
+2020-09-28 15:16:14 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:16:14 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:16:14 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:16:14
+2020-09-28 15:16:14 0 [Note] Server socket created on IP: '::'.
 InnoDB: using atomic writes.
-2020-09-25 20:07:09 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
-2020-09-25 20:07:09 0 [Note] InnoDB: Uses event mutexes
-2020-09-25 20:07:09 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2020-09-25 20:07:09 0 [Note] InnoDB: Number of pools: 1
-2020-09-25 20:07:09 0 [Note] InnoDB: Using SSE2 crc32 instructions
-2020-09-25 20:07:09 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
-2020-09-25 20:07:09 0 [Note] InnoDB: Completed initialization of buffer pool
-2020-09-25 20:07:09 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3681993
-2020-09-25 20:07:10 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
-2020-09-25 20:07:10 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
-2020-09-25 20:07:10 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2020-09-25 20:07:10 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2020-09-25 20:07:10 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
-2020-09-25 20:07:10 0 [Note] InnoDB: Waiting for purge to start
-2020-09-25 20:07:10 0 [Note] InnoDB: 10.4.14 started; log sequence number 3682002; transaction id 1765
-2020-09-25 20:07:10 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
-2020-09-25 20:07:10 0 [Note] Plugin 'FEEDBACK' is disabled.
-2020-09-25 20:07:10 0 [Note] Server socket created on IP: '::'.
-2020-09-25 20:14:12 0 [Note] mysqld.exe: Aria engine: starting recovery
-recovered pages: 0% 17% 38% 56% 78% 98% 100% (0.0 seconds); tables to flush: 1 0
- (0.0 seconds); 
-2020-09-25 20:14:12 0 [Note] mysqld.exe: Aria engine: recovery done
+2020-09-28 15:16:52 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:16:52 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:16:52 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:16:52 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:16:52 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:16:52 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:16:52 0 [Note] InnoDB: Completed initialization of buffer pool
 InnoDB: using atomic writes.
-2020-09-25 20:14:13 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
-2020-09-25 20:14:13 0 [Note] InnoDB: Uses event mutexes
-2020-09-25 20:14:13 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2020-09-25 20:14:13 0 [Note] InnoDB: Number of pools: 1
-2020-09-25 20:14:13 0 [Note] InnoDB: Using SSE2 crc32 instructions
-2020-09-25 20:14:13 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
-2020-09-25 20:14:13 0 [Note] InnoDB: Completed initialization of buffer pool
-2020-09-25 20:14:13 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3682011
-2020-09-25 20:14:13 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
-2020-09-25 20:14:13 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
-2020-09-25 20:14:13 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2020-09-25 20:14:13 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2020-09-25 20:14:13 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
-2020-09-25 20:14:13 0 [Note] InnoDB: Waiting for purge to start
-2020-09-25 20:14:14 0 [Note] InnoDB: 10.4.14 started; log sequence number 3682020; transaction id 1765
-2020-09-25 20:14:14 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
-2020-09-25 20:14:14 0 [Note] Plugin 'FEEDBACK' is disabled.
-2020-09-25 20:14:14 0 [Note] Server socket created on IP: '::'.
-2020-09-26 16:04:35 0 [Note] mysqld.exe: Aria engine: starting recovery
-recovered pages: 0% 12% 23% 37% 48% 62% 73% 87% 98% 100% (0.1 seconds); tables to flush: 1 0
- (0.2 seconds); 
-2020-09-26 16:04:36 0 [Note] mysqld.exe: Aria engine: recovery done
+2020-09-28 15:16:54 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:16:54 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:16:54 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:16:54 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:16:54 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:16:54 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:16:54 0 [Note] InnoDB: Completed initialization of buffer pool
 InnoDB: using atomic writes.
-2020-09-26 16:04:36 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
-2020-09-26 16:04:36 0 [Note] InnoDB: Uses event mutexes
-2020-09-26 16:04:36 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2020-09-26 16:04:36 0 [Note] InnoDB: Number of pools: 1
-2020-09-26 16:04:36 0 [Note] InnoDB: Using SSE2 crc32 instructions
-2020-09-26 16:04:36 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
-2020-09-26 16:04:36 0 [Note] InnoDB: Completed initialization of buffer pool
-2020-09-26 16:04:37 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3685729
-2020-09-26 16:04:51 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
-2020-09-26 16:04:51 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
-2020-09-26 16:04:51 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2020-09-26 16:04:51 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2020-09-26 16:04:51 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
-2020-09-26 16:04:51 0 [Note] InnoDB: Waiting for purge to start
-2020-09-26 16:04:51 0 [Note] InnoDB: 10.4.14 started; log sequence number 3685738; transaction id 1828
-2020-09-26 16:04:51 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
-2020-09-26 16:04:51 0 [Note] Plugin 'FEEDBACK' is disabled.
-2020-09-26 16:04:51 0 [Note] Server socket created on IP: '::'.
-2020-09-27  9:40:12 0 [Note] mysqld.exe: Aria engine: starting recovery
-recovered pages: 0% 11% 22% 33% 44% 54% 64% 75% 86% 97% 100% (0.1 seconds); tables to flush: 1 0
- (0.1 seconds); 
-2020-09-27  9:40:12 0 [Note] mysqld.exe: Aria engine: recovery done
+2020-09-28 15:16:56 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:16:56 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:16:56 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:16:56 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:16:56 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:16:56 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:16:56 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:16:56 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:16:56 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:16:56 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:16:56 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:16:56 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:16:56 0 [Note] InnoDB: 10.4.14 started; log sequence number 47063; transaction id 9
+2020-09-28 15:16:56 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:16:56 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:16:56 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:16:56
+2020-09-28 15:16:56 0 [Note] Server socket created on IP: '::'.
 InnoDB: using atomic writes.
-2020-09-27  9:40:12 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
-2020-09-27  9:40:12 0 [Note] InnoDB: Uses event mutexes
-2020-09-27  9:40:12 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
-2020-09-27  9:40:12 0 [Note] InnoDB: Number of pools: 1
-2020-09-27  9:40:12 0 [Note] InnoDB: Using SSE2 crc32 instructions
-2020-09-27  9:40:12 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
-2020-09-27  9:40:12 0 [Note] InnoDB: Completed initialization of buffer pool
-2020-09-27  9:40:13 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3824259
-2020-09-27  9:40:17 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
-2020-09-27  9:40:17 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
-2020-09-27  9:40:17 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2020-09-27  9:40:17 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2020-09-27  9:40:17 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
-2020-09-27  9:40:17 0 [Note] InnoDB: Waiting for purge to start
-2020-09-27  9:40:18 0 [Note] InnoDB: 10.4.14 started; log sequence number 3824268; transaction id 2149
-2020-09-27  9:40:18 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
-2020-09-27  9:40:18 0 [Note] Plugin 'FEEDBACK' is disabled.
-2020-09-27  9:40:18 0 [Note] Server socket created on IP: '::'.
+2020-09-28 15:18:16 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:18:16 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:18:16 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:18:16 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:18:16 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:18:16 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:18:16 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:18:17 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:18:17 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:18:17 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:18:17 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:18:17 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:18:17 0 [Note] InnoDB: 10.4.14 started; log sequence number 47072; transaction id 9
+2020-09-28 15:18:17 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:18:17 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:18:17 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:18:17
+2020-09-28 15:18:17 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2020-09-28 15:23:50 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:23:50 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:23:50 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:23:50 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:23:50 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:23:50 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:23:50 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:23:50 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:23:50 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:23:50 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:23:50 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:23:50 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:23:50 0 [Note] InnoDB: 10.4.14 started; log sequence number 47081; transaction id 9
+2020-09-28 15:23:50 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:23:50 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:23:50 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:23:50
+2020-09-28 15:23:50 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2020-09-28 15:24:28 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:24:28 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:24:28 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:24:28 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:24:28 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:24:28 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:24:28 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:24:28 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:24:28 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:24:28 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:24:28 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:24:28 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:24:29 0 [Note] InnoDB: 10.4.14 started; log sequence number 47090; transaction id 9
+2020-09-28 15:24:29 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:24:29 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:24:29 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:24:29
+2020-09-28 15:24:29 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2020-09-28 15:28:34 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:28:34 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:28:34 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:28:34 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:28:34 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:28:34 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:28:34 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:28:35 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:28:35 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:28:35 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:28:35 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:28:35 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:28:35 0 [Note] InnoDB: 10.4.14 started; log sequence number 47099; transaction id 9
+2020-09-28 15:28:35 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:28:35 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:28:35 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:28:35
+2020-09-28 15:28:35 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2020-09-28 15:32:28 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:32:28 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:32:28 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:32:28 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:32:28 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:32:28 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:32:28 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:32:28 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:32:28 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:32:28 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:32:28 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:32:28 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:32:28 0 [Note] InnoDB: 10.4.14 started; log sequence number 47124; transaction id 9
+2020-09-28 15:32:28 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:32:28 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:32:28 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:32:28
+2020-09-28 15:32:28 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2020-09-28 15:32:46 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:32:46 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:32:46 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:32:46 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:32:46 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:32:46 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:32:46 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:32:47 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:32:47 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:32:47 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:32:47 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:32:47 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:32:47 0 [Note] InnoDB: 10.4.14 started; log sequence number 47133; transaction id 9
+2020-09-28 15:32:47 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:32:47 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:32:47 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:32:47
+2020-09-28 15:32:47 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2020-09-28 15:36:11 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 15:36:11 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 15:36:11 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 15:36:11 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 15:36:11 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 15:36:11 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 15:36:11 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 15:36:11 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 15:36:11 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 15:36:11 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 15:36:11 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 15:36:11 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 15:36:11 0 [Note] InnoDB: 10.4.14 started; log sequence number 47142; transaction id 9
+2020-09-28 15:36:11 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 15:36:11 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 15:36:11 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 15:36:11
+2020-09-28 15:36:11 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2020-09-28 16:03:21 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 16:03:21 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 16:03:21 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 16:03:21 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 16:03:21 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 16:03:21 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 16:03:21 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 16:03:21 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 16:03:21 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 16:03:21 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 16:03:21 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 16:03:21 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 16:03:21 0 [Note] InnoDB: 10.4.14 started; log sequence number 47151; transaction id 9
+2020-09-28 16:03:21 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 16:03:21 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 16:03:21 0 [Note] Zerofilling moved table:  '.\mysql\plugin'
+2020-09-28 16:03:21 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 16:03:21
+2020-09-28 16:03:22 0 [Note] Zerofilling moved table:  '.\mysql\servers'
+2020-09-28 16:03:22 0 [Note] Server socket created on IP: '::'.
+2020-09-28 16:04:18 0 [Note] mysqld.exe: Aria engine: starting recovery
+recovered pages: 0% 100% (0.1 seconds); 
+2020-09-28 16:04:18 0 [Note] mysqld.exe: Aria engine: recovery done
+InnoDB: using atomic writes.
+2020-09-28 16:04:19 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2020-09-28 16:04:19 0 [Note] InnoDB: Uses event mutexes
+2020-09-28 16:04:19 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2020-09-28 16:04:19 0 [Note] InnoDB: Number of pools: 1
+2020-09-28 16:04:19 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2020-09-28 16:04:19 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2020-09-28 16:04:19 0 [Note] InnoDB: Completed initialization of buffer pool
+2020-09-28 16:04:19 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=47151
+2020-09-28 16:04:19 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2020-09-28 16:04:19 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2020-09-28 16:04:19 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2020-09-28 16:04:19 0 [Note] InnoDB: Setting file 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2020-09-28 16:04:19 0 [Note] InnoDB: File 'C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ibtmp1' size is now 12 MB.
+2020-09-28 16:04:19 0 [Note] InnoDB: Waiting for purge to start
+2020-09-28 16:04:19 0 [Note] InnoDB: 10.4.14 started; log sequence number 47160; transaction id 9
+2020-09-28 16:04:19 0 [Note] InnoDB: Loading buffer pool(s) from C:\Users\HP\Documents\GitHub\alfa-y-omega\mysql\data\ib_buffer_pool
+2020-09-28 16:04:19 0 [Note] Plugin 'FEEDBACK' is disabled.
+2020-09-28 16:04:19 0 [Note] InnoDB: Buffer pool(s) load completed at 200928 16:04:19
+2020-09-28 16:04:19 0 [Note] Server socket created on IP: '::'.
