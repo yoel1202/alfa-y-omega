@@ -15,7 +15,7 @@ Public Class Frm008_Compras
     Dim CodigoProducto As Integer = 0
     Dim CodigoCompra As Integer = 0
     Dim selecionar_credito = False
-
+    Dim Tipo_Dato As Integer = 0 'Variable para verificar si el texto Ingresado es Letra o Número (0=Letras | 1=Números)
     Dim U As New clsUsuario 'Instanciamos la clase clsUsuario de la Capa Logica de Negocio para usar sus funciones
 
     Private Sub lkbBuscar_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lkbBuscar.LinkClicked
@@ -32,6 +32,7 @@ Public Class Frm008_Compras
         lblSubTotal.Text = "0.0"
         lblIgv.Text = "0.0"
         Listar_Compras()
+        Listar_Creditos()
         tb_fecha.Text = DateTime.Now
     End Sub
 
@@ -561,12 +562,12 @@ Public Class Frm008_Compras
 
     End Sub
 
-    Private Sub tb_Datos_TextChanged(sender As Object, e As EventArgs) Handles tb_Datos.TextChanged
+    Private Sub tb_Datos_TextChanged(sender As Object, e As EventArgs) Handles txtDatos.TextChanged
 
 
-        If (tb_Datos.Text.Trim() <> "") Then
+        If (txtDatos.Text.Trim() <> "") Then
             Try
-                C.datos = tb_Datos.Text
+                C.datos = txtDatos.Text
                 Listar_Creditos()
             Catch ex As Exception
                 clsMensaje.mostrar_mensaje(ex.Message, "error")
@@ -639,6 +640,34 @@ Public Class Frm008_Compras
 
             End If
 
-            End If
+        End If
+    End Sub
+
+    Private Sub rbnNombre_CheckedChanged(sender As Object, e As EventArgs) Handles rbnNombre.CheckedChanged
+        Listar_Creditos()
+        txtDatos.MaxLength = 256
+        txtDatos.Clear()
+        Tipo_Dato = 1
+        txtDatos.Focus()
+    End Sub
+
+    Private Sub rbnNDoc_CheckedChanged(sender As Object, e As EventArgs) Handles rbnNDoc.CheckedChanged
+        Listar_Creditos()
+        txtDatos.MaxLength = 8
+        txtDatos.Clear()
+        Tipo_Dato = 0
+        txtDatos.Focus()
+    End Sub
+
+    Private Sub TabPage3_Click(sender As Object, e As EventArgs) Handles TabPage3.Click
+
+    End Sub
+
+    Private Sub txtDatos_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDatos.KeyPress
+        If (Tipo_Dato = 0) Then
+            Validar.Numeros(e)
+        Else
+            Validar.Letras(e)
+        End If
     End Sub
 End Class

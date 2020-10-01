@@ -23,17 +23,17 @@ Partial Class Frm008_Compras
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.tb_cuota = New System.Windows.Forms.TextBox()
         Me.chk_contado = New System.Windows.Forms.CheckBox()
@@ -135,7 +135,7 @@ Partial Class Frm008_Compras
         Me.lb_comprobante = New System.Windows.Forms.Label()
         Me.tb_monto_actual = New System.Windows.Forms.TextBox()
         Me.lb_monto_actual = New System.Windows.Forms.Label()
-        Me.tb_Datos = New System.Windows.Forms.TextBox()
+        Me.txtDatos = New System.Windows.Forms.TextBox()
         Me.rbnNombre = New System.Windows.Forms.RadioButton()
         Me.tb_monto_abono = New System.Windows.Forms.TextBox()
         Me.rbnNDoc = New System.Windows.Forms.RadioButton()
@@ -1065,9 +1065,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn6
         '
-        DataGridViewCellStyle23.Format = "C2"
-        DataGridViewCellStyle23.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewTextBoxColumn6.HeaderText = "IGV"
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
@@ -1076,9 +1076,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle24.Format = "C2"
-        DataGridViewCellStyle24.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn7.HeaderText = "SubTotal"
         Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
@@ -1087,9 +1087,9 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn8
         '
-        DataGridViewCellStyle25.Format = "C2"
-        DataGridViewCellStyle25.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewTextBoxColumn8.HeaderText = "Total"
         Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
@@ -1120,8 +1120,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn10
         '
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn10.HeaderText = "Identificacion"
         Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
@@ -1138,8 +1138,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn12
         '
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewTextBoxColumn12.HeaderText = "Comprobante"
         Me.DataGridViewTextBoxColumn12.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
@@ -1148,8 +1148,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn13
         '
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn13.HeaderText = "Fecha Compra"
         Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
@@ -1158,10 +1158,10 @@ Partial Class Frm008_Compras
         '
         'Column6
         '
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle29.Format = "C2"
-        DataGridViewCellStyle29.NullValue = Nothing
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Format = "C2"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle7
         Me.Column6.HeaderText = "Total"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
@@ -1221,7 +1221,7 @@ Partial Class Frm008_Compras
         Me.GroupBox8.Controls.Add(Me.lb_comprobante)
         Me.GroupBox8.Controls.Add(Me.tb_monto_actual)
         Me.GroupBox8.Controls.Add(Me.lb_monto_actual)
-        Me.GroupBox8.Controls.Add(Me.tb_Datos)
+        Me.GroupBox8.Controls.Add(Me.txtDatos)
         Me.GroupBox8.Controls.Add(Me.rbnNombre)
         Me.GroupBox8.Controls.Add(Me.tb_monto_abono)
         Me.GroupBox8.Controls.Add(Me.rbnNDoc)
@@ -1292,13 +1292,13 @@ Partial Class Frm008_Compras
         Me.lb_monto_actual.TabIndex = 64
         Me.lb_monto_actual.Text = "Monto del actual:"
         '
-        'tb_Datos
+        'txtDatos
         '
-        Me.tb_Datos.Location = New System.Drawing.Point(58, 43)
-        Me.tb_Datos.Margin = New System.Windows.Forms.Padding(4)
-        Me.tb_Datos.Name = "tb_Datos"
-        Me.tb_Datos.Size = New System.Drawing.Size(829, 24)
-        Me.tb_Datos.TabIndex = 61
+        Me.txtDatos.Location = New System.Drawing.Point(58, 43)
+        Me.txtDatos.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDatos.Name = "txtDatos"
+        Me.txtDatos.Size = New System.Drawing.Size(829, 24)
+        Me.txtDatos.TabIndex = 61
         '
         'rbnNombre
         '
@@ -1429,8 +1429,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn23
         '
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridViewTextBoxColumn23.HeaderText = "Identificacion"
         Me.DataGridViewTextBoxColumn23.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
@@ -1447,8 +1447,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn25
         '
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewTextBoxColumn25.HeaderText = "Comprobante"
         Me.DataGridViewTextBoxColumn25.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
@@ -1457,8 +1457,8 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn26
         '
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridViewTextBoxColumn26.HeaderText = "Fecha Compra"
         Me.DataGridViewTextBoxColumn26.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
@@ -1467,10 +1467,10 @@ Partial Class Frm008_Compras
         '
         'DataGridViewTextBoxColumn27
         '
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle33.Format = "C2"
-        DataGridViewCellStyle33.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.Format = "C2"
+        DataGridViewCellStyle11.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridViewTextBoxColumn27.HeaderText = "Total"
         Me.DataGridViewTextBoxColumn27.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
@@ -1727,7 +1727,7 @@ Partial Class Frm008_Compras
     Friend WithEvents lb_total As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents dgv_creditos As DataGridView
-    Friend WithEvents tb_Datos As TextBox
+    Friend WithEvents txtDatos As TextBox
     Friend WithEvents rbnNombre As RadioButton
     Friend WithEvents rbnNDoc As RadioButton
     Friend WithEvents btn_abonar As Button
