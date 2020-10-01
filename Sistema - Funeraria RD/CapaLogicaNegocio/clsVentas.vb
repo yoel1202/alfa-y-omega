@@ -1,4 +1,5 @@
 ﻿Imports CapaAccesoDatos 'Importamos la Capa Acceso a Datos
+Imports MySql.Data.MySqlClient
 
 Public Class clsVentas
 
@@ -40,8 +41,8 @@ Public Class clsVentas
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Serie", "", SqlDbType.Char, ParameterDirection.Output, 3)) 'Especificamos que el parámetro @Mensaje es de tipo salida
-            M.EjecutarSP("[Serie Documento]", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
+            lst.Add(New clsParametro("@Serie", "", MySqlDbType.VarChar, ParameterDirection.Output, 3)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            M.EjecutarSP("Serie_Documento", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Serie = lst(0).Valor.ToString() 'Recuperamos el código de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al devolver la Serie del documento, verifique clase clsVentas") 'Creamos una nueva excepción de errores
@@ -55,9 +56,9 @@ Public Class clsVentas
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@TipoDocumento", TipoDocumento))
-            lst.Add(New clsParametro("@NroCorrelativo", "", SqlDbType.Char, ParameterDirection.Output, 7)) 'Especificamos que el parámetro @Mensaje es de tipo salida
-            M.EjecutarSP("[Numero Correlativo]", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
+            lst.Add(New clsParametro("@TipoDocumentos", TipoDocumento))
+            lst.Add(New clsParametro("@NroCorrelativos", "", MySqlDbType.VarChar, ParameterDirection.Output, 7)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            M.EjecutarSP("Numero_Correlativo", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Serie = lst(1).Valor.ToString() 'Recuperamos el código de la Base de Datos
         Catch ex As Exception
             Throw New Exception("Error al devolver el número correlativo del documento, verifique clase clsVentas") 'Creamos una nueva excepción de errores

@@ -24,8 +24,7 @@ Public Class Frm009_Ventas
 
     Private Sub FrmVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Generar_Serie() 'Llamamos al método generar serie del documento
-        dtpHora.Format = DateTimePickerFormat.Custom
-        dtpHora.CustomFormat = "hh:mm tt"
+
         Call Listar_Ventas()
         If (Plan IsNot Nothing) Then 'Verificamos si la lista genérica es diferente a vacía
             Call Listar_planes() 'Llamamos al método Listar_planes
@@ -205,9 +204,8 @@ Public Class Frm009_Ventas
 
         If (permiso = "Todos") Then
             ErrorProvider1.Clear()
-            If (txtDireccionVelatorio.Text.Trim = "") Then
-                ErrorProvider1.SetError(txtDireccionVelatorio, "Ingreso Dirección del Velatorio")
-            ElseIf (txtCementerio.Text.Trim = "") Then
+
+            If (txtCementerio.Text.Trim = "") Then
                 ErrorProvider1.SetError(txtCementerio, "Ingreso nombre del Cementerio")
             ElseIf (txtDireccionSepelio.Text.Trim = "") Then
                 ErrorProvider1.SetError(txtDireccionSepelio, "Ingreso Dirección del Sepelio")
@@ -223,8 +221,8 @@ Public Class Frm009_Ventas
                     V.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
                     V.Serie = CStr(lblSerie.Text)
                     V.NroDocumento = CStr(lblNroDocumento.Text)
-                    V.FechaVenta = CDate(DateTimePicker1.Value)
-                    V.Total = CDec(lblTotal.Text)
+
+                V.Total = CDec(lblTotal.Text)
                     Mensaje = V.Registrar_Ventas()
                     If (Mensaje = "Venta Registrada correctamente") Then
                         'Registramos el detalle de la venta            
@@ -241,14 +239,12 @@ Public Class Frm009_Ventas
 
                         'Registramos la información de la venta
                         V.CodigoVenta = CInt(V.Devolver_Codigo_Ventas())
-                        V.DireccionVelatorio = CStr(txtDireccionVelatorio.Text)
-                        V.Cementerio = CStr(txtCementerio.Text)
-                        V.DireccionSepelio = CStr(txtDireccionSepelio.Text)
+                    V.Cementerio = CStr(txtCementerio.Text)
+                    V.DireccionSepelio = CStr(txtDireccionSepelio.Text)
                         V.FechaSepelio = CDate(dtpFechaSepelio.Value)
-                        V.Hora = CDate(dtpHora.Value)
-                        V.Registrar_Informacion_Venta()
+                    V.Registrar_Informacion_Venta()
 
-                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                    clsMensaje.mostrar_mensaje(Mensaje, "ok")
                         Call GenerarDocumento() 'Llamamos al método para generar el comprobante de pago (BOLETA Y/O FACTURA)
                         Limpiar_controles()
                     Else
@@ -269,7 +265,7 @@ Public Class Frm009_Ventas
         lblTotal.Text = ""
         DataGridView1.Rows.Clear()
         txtCliente.Clear()
-        DateTimePicker1.Value = Now
+
         Generar_Nro_Documento()
         CodigoCliente = 0
         'CodigoProducto = 0
@@ -277,8 +273,7 @@ Public Class Frm009_Ventas
         Plan.Clear()
         txtCementerio.Clear()
         txtDireccionSepelio.Clear()
-        txtDireccionVelatorio.Clear()
-        dtpHora.Value = Now
+
         dtpFechaSepelio.Value = Now
     End Sub
 
@@ -322,7 +317,7 @@ Public Class Frm009_Ventas
         invoice.Direccion = CStr(DireccionCliente)
         invoice.TipoIdentificacion = CStr(TipoDocumento)
         invoice.Documento = CStr(Documento)
-        invoice.FechaVenta = CDate(DateTimePicker1.Value)
+
         invoice.TipoDocumento = If(rbnBoleta.Checked = True, "BOLETA DE VENTA", "FACTURA")
         invoice.Serie = CStr(lblSerie.Text)
         invoice.NroCorrelativo = CStr(lblNroDocumento.Text)
@@ -513,7 +508,7 @@ Public Class Frm009_Ventas
     End Function
 
     Private Sub Cerrar_Form()
-        If (txtDireccionVelatorio.Text.Trim = "" And txtCementerio.Text.Trim = "" And txtDireccionSepelio.Text.Trim = "" And txtCliente.Text.Trim = "") Then
+        If (txtCementerio.Text.Trim = "" And txtDireccionSepelio.Text.Trim = "" And txtCliente.Text.Trim = "") Then
             Close()
         Else
             Dim fr As New Frm011_MensajedeConfirmación2
@@ -524,4 +519,11 @@ Public Class Frm009_Ventas
         End If
     End Sub
 
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub GroupBox5_Enter(sender As Object, e As EventArgs) Handles GroupBox5.Enter
+
+    End Sub
 End Class

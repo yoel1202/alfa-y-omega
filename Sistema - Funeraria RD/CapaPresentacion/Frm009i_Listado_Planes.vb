@@ -27,12 +27,8 @@ Public Class Frm009i_Listado_Planes
                 DataGridView1.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
                 DataGridView1.Rows(i).Cells(4).Value = "Ver Plan"
                 PF.CodigoItem = Convert.ToInt32(dt.Rows(i)(0)) 'Enviamos el código del Plan Funerario
-                dt2 = PF.Listar_Detalle_Plane_Funerario() 'Consultamos si el plan tiene sus detalles
-                dt3 = PF.Verificar_Stock_Plan() 'Consultamos si el plan tiene Stock Disponible
-                If (dt2.Rows.Count = 0) Then 'Si devuelve 0 filas
-                    DataGridView1.Rows(i).DefaultCellStyle.BackColor = Color.Red 'Pintamos toda la fila de color rojo
-                    DataGridView1.Rows(i).DefaultCellStyle.ForeColor = Color.White 'Asiganmos color blanco al texto
-                ElseIf (dt3.Rows(0)(0) <= 0) Then 'Si el Stock es menor a Cero
+                dt3 = PF.Verificar_Stock_Productos() 'Consultamos si el plan tiene Stock Disponible
+                If (dt3.Rows(0)(0) <= 0) Then 'Si el Stock es menor a Cero
                     DataGridView1.Rows(i).DefaultCellStyle.BackColor = Color.FromArgb(255, 135, 135) 'Pintamos toda la fila de color rojo claro 
                     DataGridView1.Rows(i).DefaultCellStyle.ForeColor = Color.White 'Asiganmos color blanco al texto
                 Else
@@ -70,6 +66,7 @@ Public Class Frm009i_Listado_Planes
 
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Dim dt As New DataTable
+        Dim dt2 As New DataTable
         Try
             'Si el row en el que hicimos doble click es el encabezado del DataGridView, nos retornamos.
             If e.RowIndex = -1 Then
@@ -97,24 +94,26 @@ Public Class Frm009i_Listado_Planes
             RptaDefecto = 1
             'Mostramos la descripción, el título y el valor por defecto
             Rpta = InputBox(descripcion, titulo, RptaDefecto)
+
+            PF.CodigoItem = Convert.ToInt32(row.Cells("Codigo").Value) 'Enviamos el código del Plan Funerario
+            dt2 = PF.Verificar_Stock_Productos()
+            Stock_Plan = dt2.Rows(0)(0)
             If (Rpta > Stock_Plan) Then
                 clsMensaje.mostrar_mensaje("El Stock del Plan Seleccionado es Insuficiente", "error")
             ElseIf (Rpta.ToString.Trim <> "") Then
                 PF.CodigoItem = Convert.ToInt32(row.Cells("Codigo").Value)
-                dt = PF.Listar_Detalle_Plane_Funerario()
 
-                If (verificarPlan(CInt(dt.Rows(0)(2))) = False) Then
-                    'Llenamos la lista genérica
-                    For i = 0 To dt.Rows.Count - 1
-                        lst.Add(New EDetalleItem With {.CodigoItem = CInt(dt.Rows(i)(0)),
-                                                       .CodigoPlan = CInt(dt.Rows(i)(2)),
-                                                       .Nombre = CStr(dt.Rows(i)(3)),
-                                                       .Precio = CDec(dt.Rows(i)(4)),
+                dt = PF.Listar_Detalle_Producto()
+
+
+                lst.Add(New EDetalleItem With {.CodigoItem = CInt(dt.Rows(0)(0)),
+                                                       .CodigoPlan = CInt(dt.Rows(0)(1)),
+                                                       .Nombre = CStr(dt.Rows(0)(2)),
+                                                       .Precio = CDec(dt.Rows(0)(3)),
                                                        .Cantidad = CInt(Rpta),
-                                                       .SubTotal = (.Precio * .Cantidad) / 1.18,
-                                                       .Igv = .SubTotal * 0.18})
-                    Next
-                End If
+                                                       .SubTotal = (.Precio * .Cantidad) / 1.13,
+                                                       .Igv = .SubTotal * 0.13})
+
 
                 'Instanciamos la clase EPlanServicio para cargar los datos tomandolos de las celdas del row
                 'Recuerde convertir al tipo de dato correcto

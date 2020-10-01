@@ -23,6 +23,13 @@ Partial Class Frm008ii_ListadoProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dtgProductos = New System.Windows.Forms.DataGridView()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Color = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Material = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtDatos = New System.Windows.Forms.TextBox()
@@ -34,13 +41,6 @@ Partial Class Frm008ii_ListadoProductos
         Me.bordeDerecha = New System.Windows.Forms.Panel()
         Me.bordeInferior = New System.Windows.Forms.Panel()
         Me.bordeIzquierda = New System.Windows.Forms.Panel()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Color = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Material = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Stock = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dtgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel_cabecera.SuspendLayout()
@@ -53,19 +53,81 @@ Partial Class Frm008ii_ListadoProductos
         Me.dtgProductos.BackgroundColor = System.Drawing.Color.White
         Me.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Nombre, Me.Column3, Me.Color, Me.Material, Me.Stock, Me.Column8})
-        Me.dtgProductos.Location = New System.Drawing.Point(34, 158)
+        Me.dtgProductos.Location = New System.Drawing.Point(45, 194)
+        Me.dtgProductos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtgProductos.Name = "dtgProductos"
-        Me.dtgProductos.Size = New System.Drawing.Size(991, 311)
+        Me.dtgProductos.RowHeadersWidth = 51
+        Me.dtgProductos.Size = New System.Drawing.Size(1321, 383)
         Me.dtgProductos.TabIndex = 3
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Código"
+        Me.Codigo.MinimumWidth = 6
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Visible = False
+        Me.Codigo.Width = 125
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.MinimumWidth = 6
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        Me.Nombre.Width = 280
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Descripción"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 350
+        '
+        'Color
+        '
+        Me.Color.HeaderText = "Color"
+        Me.Color.MinimumWidth = 6
+        Me.Color.Name = "Color"
+        Me.Color.ReadOnly = True
+        Me.Color.Width = 125
+        '
+        'Material
+        '
+        Me.Material.HeaderText = "Material"
+        Me.Material.MinimumWidth = 6
+        Me.Material.Name = "Material"
+        Me.Material.ReadOnly = True
+        Me.Material.Width = 80
+        '
+        'Stock
+        '
+        Me.Stock.HeaderText = "Stock"
+        Me.Stock.MinimumWidth = 6
+        Me.Stock.Name = "Stock"
+        Me.Stock.ReadOnly = True
+        Me.Stock.Width = 50
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "RutaImagen"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Visible = False
+        Me.Column8.Width = 125
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtDatos)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(34, 44)
+        Me.GroupBox1.Location = New System.Drawing.Point(45, 54)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(991, 98)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1321, 121)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Buscar por"
@@ -73,17 +135,19 @@ Partial Class Frm008ii_ListadoProductos
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(51, 29)
+        Me.Label1.Location = New System.Drawing.Point(68, 36)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 15)
+        Me.Label1.Size = New System.Drawing.Size(175, 18)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Nombre / Color / Material"
         '
         'txtDatos
         '
-        Me.txtDatos.Location = New System.Drawing.Point(45, 55)
+        Me.txtDatos.Location = New System.Drawing.Point(60, 68)
+        Me.txtDatos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDatos.Name = "txtDatos"
-        Me.txtDatos.Size = New System.Drawing.Size(895, 21)
+        Me.txtDatos.Size = New System.Drawing.Size(1192, 24)
         Me.txtDatos.TabIndex = 3
         '
         'Panel_cabecera
@@ -93,8 +157,9 @@ Partial Class Frm008ii_ListadoProductos
         Me.Panel_cabecera.Controls.Add(Me.lblTitulo)
         Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_cabecera.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel_cabecera.Name = "Panel_cabecera"
-        Me.Panel_cabecera.Size = New System.Drawing.Size(1062, 31)
+        Me.Panel_cabecera.Size = New System.Drawing.Size(1416, 38)
         Me.Panel_cabecera.TabIndex = 253
         '
         'panel1
@@ -103,9 +168,10 @@ Partial Class Frm008ii_ListadoProductos
         Me.panel1.BackColor = System.Drawing.Color.Transparent
         Me.panel1.Controls.Add(Me.lkb_cerrar)
         Me.panel1.Controls.Add(Me.lkb_min)
-        Me.panel1.Location = New System.Drawing.Point(995, 0)
+        Me.panel1.Location = New System.Drawing.Point(1327, 0)
+        Me.panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panel1.Name = "panel1"
-        Me.panel1.Size = New System.Drawing.Size(68, 30)
+        Me.panel1.Size = New System.Drawing.Size(91, 37)
         Me.panel1.TabIndex = 206
         '
         'lkb_cerrar
@@ -115,9 +181,10 @@ Partial Class Frm008ii_ListadoProductos
         Me.lkb_cerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lkb_cerrar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.lkb_cerrar.LinkColor = System.Drawing.Color.White
-        Me.lkb_cerrar.Location = New System.Drawing.Point(39, 5)
+        Me.lkb_cerrar.Location = New System.Drawing.Point(52, 6)
+        Me.lkb_cerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lkb_cerrar.Name = "lkb_cerrar"
-        Me.lkb_cerrar.Size = New System.Drawing.Size(15, 18)
+        Me.lkb_cerrar.Size = New System.Drawing.Size(20, 24)
         Me.lkb_cerrar.TabIndex = 1
         Me.lkb_cerrar.TabStop = True
         Me.lkb_cerrar.Text = "x"
@@ -129,9 +196,10 @@ Partial Class Frm008ii_ListadoProductos
         Me.lkb_min.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lkb_min.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.lkb_min.LinkColor = System.Drawing.Color.White
-        Me.lkb_min.Location = New System.Drawing.Point(13, 7)
+        Me.lkb_min.Location = New System.Drawing.Point(17, 9)
+        Me.lkb_min.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lkb_min.Name = "lkb_min"
-        Me.lkb_min.Size = New System.Drawing.Size(17, 18)
+        Me.lkb_min.Size = New System.Drawing.Size(21, 24)
         Me.lkb_min.TabIndex = 0
         Me.lkb_min.TabStop = True
         Me.lkb_min.Text = "+"
@@ -141,10 +209,10 @@ Partial Class Frm008ii_ListadoProductos
         Me.lblTitulo.AutoSize = True
         Me.lblTitulo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTitulo.Location = New System.Drawing.Point(13, 9)
-        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTitulo.Location = New System.Drawing.Point(17, 11)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(124, 15)
+        Me.lblTitulo.Size = New System.Drawing.Size(146, 17)
         Me.lblTitulo.TabIndex = 205
         Me.lblTitulo.Text = "Listado de Productos"
         '
@@ -152,83 +220,38 @@ Partial Class Frm008ii_ListadoProductos
         '
         Me.bordeDerecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeDerecha.Dock = System.Windows.Forms.DockStyle.Right
-        Me.bordeDerecha.Location = New System.Drawing.Point(1060, 31)
+        Me.bordeDerecha.Location = New System.Drawing.Point(1413, 38)
+        Me.bordeDerecha.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bordeDerecha.Name = "bordeDerecha"
-        Me.bordeDerecha.Size = New System.Drawing.Size(2, 466)
+        Me.bordeDerecha.Size = New System.Drawing.Size(3, 574)
         Me.bordeDerecha.TabIndex = 258
         '
         'bordeInferior
         '
         Me.bordeInferior.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.bordeInferior.Location = New System.Drawing.Point(2, 495)
+        Me.bordeInferior.Location = New System.Drawing.Point(3, 610)
+        Me.bordeInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bordeInferior.Name = "bordeInferior"
-        Me.bordeInferior.Size = New System.Drawing.Size(1058, 2)
+        Me.bordeInferior.Size = New System.Drawing.Size(1410, 2)
         Me.bordeInferior.TabIndex = 261
         '
         'bordeIzquierda
         '
         Me.bordeIzquierda.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeIzquierda.Dock = System.Windows.Forms.DockStyle.Left
-        Me.bordeIzquierda.Location = New System.Drawing.Point(0, 31)
+        Me.bordeIzquierda.Location = New System.Drawing.Point(0, 38)
+        Me.bordeIzquierda.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.bordeIzquierda.Name = "bordeIzquierda"
-        Me.bordeIzquierda.Size = New System.Drawing.Size(2, 466)
+        Me.bordeIzquierda.Size = New System.Drawing.Size(3, 574)
         Me.bordeIzquierda.TabIndex = 260
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        Me.Codigo.Visible = False
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        Me.Nombre.Width = 280
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Descripción"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 350
-        '
-        'Color
-        '
-        Me.Color.HeaderText = "Color"
-        Me.Color.Name = "Color"
-        Me.Color.ReadOnly = True
-        '
-        'Material
-        '
-        Me.Material.HeaderText = "Material"
-        Me.Material.Name = "Material"
-        Me.Material.ReadOnly = True
-        Me.Material.Width = 80
-        '
-        'Stock
-        '
-        Me.Stock.HeaderText = "Stock"
-        Me.Stock.Name = "Stock"
-        Me.Stock.ReadOnly = True
-        Me.Stock.Width = 50
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "RutaImagen"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Visible = False
         '
         'Frm008ii_ListadoProductos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1062, 497)
+        Me.ClientSize = New System.Drawing.Size(1416, 612)
         Me.Controls.Add(Me.bordeInferior)
         Me.Controls.Add(Me.bordeIzquierda)
         Me.Controls.Add(Me.bordeDerecha)
@@ -236,6 +259,7 @@ Partial Class Frm008ii_ListadoProductos
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dtgProductos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Frm008ii_ListadoProductos"
         Me.Text = "FrmListadoProductos"
         CType(Me.dtgProductos, System.ComponentModel.ISupportInitialize).EndInit()
