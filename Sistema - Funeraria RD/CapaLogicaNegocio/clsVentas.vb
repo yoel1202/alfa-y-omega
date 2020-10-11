@@ -7,13 +7,13 @@ Public Class clsVentas
 
     'Propiedades de la Venta
     Public Property CodigoCliente() As Integer
-    Public Property CodigoPersonal() As Integer
-    Public Property Serie() As String
-    Public Property NroDocumento() As String
+    Public Property CondicionVenta() As Integer
+    Public Property Cuotas() As String
+    Public Property Plazo() As String
     Public Property FechaVenta() As Date
     Public Property Total() As Decimal
     Public Property TipoDocumento() As String
-
+    Public Property NumeroDocumento() As String
     'Propiedades del Detalle de Compras
     Public Property CodigoVenta() As Integer
     Public Property CodigoItem() As String

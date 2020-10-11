@@ -33,7 +33,7 @@ Public Class Frm009_Ventas
 
     Private Sub Generar_Serie()
         Try
-            lblSerie.Text = V.Generar_Serie()
+            'lblSerie.Text = V.Generar_Serie()
         Catch ex As Exception
             clsMensaje.mostrar_mensaje(ex.Message, "error")
         End Try
@@ -42,7 +42,7 @@ Public Class Frm009_Ventas
     Private Sub Generar_Nro_Documento()
         Try
             V.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
-            lblNroDocumento.Text = V.Generar_Correlativo()
+            'lblNroDocumento.Text = V.Generar_Correlativo()
         Catch ex As Exception
             clsMensaje.mostrar_mensaje(ex.Message, "error")
         End Try
@@ -205,10 +205,10 @@ Public Class Frm009_Ventas
         If (permiso = "Todos") Then
             ErrorProvider1.Clear()
 
-            If (txtCementerio.Text.Trim = "") Then
-                ErrorProvider1.SetError(txtCementerio, "Ingreso nombre del Cementerio")
-            ElseIf (txtDireccionSepelio.Text.Trim = "") Then
-                ErrorProvider1.SetError(txtDireccionSepelio, "Ingreso Dirección del Sepelio")
+            If (txtplazo.Text.Trim = "") Then
+                ErrorProvider1.SetError(txtplazo, "Ingreso nombre del Cementerio")
+            ElseIf (txt_cuota.Text.Trim = "") Then
+                ErrorProvider1.SetError(txt_cuota, "Ingreso Dirección del Sepelio")
             ElseIf (txtCliente.Text.Trim = "") Then
                 ErrorProvider1.SetError(txtCliente, "Seleccione Cliente")
             ElseIf (DataGridView1.Rows.Count < 1) Then
@@ -217,12 +217,11 @@ Public Class Frm009_Ventas
                 Dim Mensaje As String = ""
                 Try
                     V.CodigoCliente = CInt(CodigoCliente)
-                    V.CodigoPersonal = Validar.Codigo_Personal_Online
                     V.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
-                    V.Serie = CStr(lblSerie.Text)
-                    V.NroDocumento = CStr(lblNroDocumento.Text)
-
-                V.Total = CDec(lblTotal.Text)
+                    V.Cuotas = txt_cuota.Text
+                    V.Plazo = txtplazo.Text
+                    V.CondicionVenta = If(chk_contado.Checked = True, "Contado", "Credito")
+                    V.Total = CDec(lblTotal.Text)
                     Mensaje = V.Registrar_Ventas()
                     If (Mensaje = "Venta Registrada correctamente") Then
                         'Registramos el detalle de la venta            
@@ -239,12 +238,12 @@ Public Class Frm009_Ventas
 
                         'Registramos la información de la venta
                         V.CodigoVenta = CInt(V.Devolver_Codigo_Ventas())
-                    V.Cementerio = CStr(txtCementerio.Text)
-                    V.DireccionSepelio = CStr(txtDireccionSepelio.Text)
+                        V.Cementerio = CStr(txtplazo.Text)
+                        V.DireccionSepelio = CStr(txt_cuota.Text)
                         V.FechaSepelio = CDate(dtpFechaSepelio.Value)
-                    V.Registrar_Informacion_Venta()
+                        V.Registrar_Informacion_Venta()
 
-                    clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                        clsMensaje.mostrar_mensaje(Mensaje, "ok")
                         Call GenerarDocumento() 'Llamamos al método para generar el comprobante de pago (BOLETA Y/O FACTURA)
                         Limpiar_controles()
                     Else
@@ -271,8 +270,8 @@ Public Class Frm009_Ventas
         'CodigoProducto = 0
         lst.Clear()
         Plan.Clear()
-        txtCementerio.Clear()
-        txtDireccionSepelio.Clear()
+        txtplazo.Clear()
+        txt_cuota.Clear()
 
         dtpFechaSepelio.Value = Now
     End Sub
@@ -319,8 +318,8 @@ Public Class Frm009_Ventas
         invoice.Documento = CStr(Documento)
 
         invoice.TipoDocumento = If(rbnBoleta.Checked = True, "BOLETA DE VENTA", "FACTURA")
-        invoice.Serie = CStr(lblSerie.Text)
-        invoice.NroCorrelativo = CStr(lblNroDocumento.Text)
+        'invoice.Serie = CStr(lblSerie.Text)
+        'invoice.NroCorrelativo = CStr(lblNroDocumento.Text)
         invoice.Igv = CDec(lblIgv.Text)
         invoice.SubTotal = CDec(lblSubTotal.Text)
         invoice.Total = CDec(lblTotal.Text)
@@ -408,7 +407,7 @@ Public Class Frm009_Ventas
     End Sub
 
     Private Sub dtgvListadoVentas_CellDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dtgvListadoVentas.CellDoubleClick
-        
+
     End Sub
 
     Private Sub Listar_Detalle_Ventas()
@@ -485,17 +484,17 @@ Public Class Frm009_Ventas
     Private Sub dtgvListadoVentas_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dtgvListadoVentas.CellClick
         If (Me.dtgvListadoVentas.Rows.Count > 0) Then
             Me.dtgvListadoVentas.Rows(Me.dtgvListadoVentas.CurrentRow.Index).Selected = True
-                Me.dtgvListadoVentas.Rows(Me.dtgvListadoVentas.CurrentRow.Index).Selected = True
-                Listar_Detalle_Ventas()
+            Me.dtgvListadoVentas.Rows(Me.dtgvListadoVentas.CurrentRow.Index).Selected = True
+            Listar_Detalle_Ventas()
         End If
     End Sub
 
     Private Sub TabControl1_Selected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TabControlEventArgs) Handles TabControl1.Selected
         If (TabControl1.SelectedTab Is TabPage2) Then
             Listar_Ventas()
-            panelComprobante.Visible = False
+            'panelComprobante.Visible = False
         Else
-            panelComprobante.Visible = True
+            'panelComprobante.Visible = True
         End If
     End Sub
 
@@ -508,7 +507,7 @@ Public Class Frm009_Ventas
     End Function
 
     Private Sub Cerrar_Form()
-        If (txtCementerio.Text.Trim = "" And txtDireccionSepelio.Text.Trim = "" And txtCliente.Text.Trim = "") Then
+        If (txtplazo.Text.Trim = "" And txt_cuota.Text.Trim = "" And txtCliente.Text.Trim = "") Then
             Close()
         Else
             Dim fr As New Frm011_MensajedeConfirmación2
