@@ -222,6 +222,7 @@ Public Class Frm008_Compras
                     C.plazo = tb_plazo.Text
                     C.cuota = tb_cuota.Text
                     Mensaje = C.Registrar_Compras()
+
                     If (Mensaje = "Compra Registrada correctamente") Then
 
                         For i = 0 To DataGridView1.RowCount - 1

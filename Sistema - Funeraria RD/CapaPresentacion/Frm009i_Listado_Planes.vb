@@ -3,7 +3,7 @@
 Public Class Frm009i_Listado_Planes
 
     Public Property Caller() As IPlanServicio
-    Dim PF As New clsPlanFunerario 'Instanciamos la clase clsPlanFunerario de la Capa Logica de Negocio para usar sus funciones
+    Dim PF As New clsProducto 'Instanciamos la clase clsPlanFunerario de la Capa Logica de Negocio para usar sus funciones
     Dim Stock_Plan = 0
     Private Sub FrmListado_Planes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Listar_Planes_Funerarios()
@@ -15,7 +15,7 @@ Public Class Frm009i_Listado_Planes
         Dim dt2, dt3 As New DataTable
 
         Try 'Manejamos una excepción de errores
-            dt = PF.Listar_Planes_Funerarios() 'Poblamos el DataTable
+            dt = PF.Listar_Productos_Ventas() 'Poblamos el DataTable
             DataGridView1.Rows.Clear() 'Limpiamos el control DataGridView1
 
             'Llenamos el DataGridView1 con todos los elementos que contiene el DataTable

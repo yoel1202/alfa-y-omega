@@ -242,6 +242,12 @@
     <Compile Include="Frm011_MensajedeConfirmación2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm012_Contratos.Designer.vb">
+      <DependentUpon>Frm012_Contratos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm012_Contratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_menu.Designer.vb">
       <DependentUpon>Frm_menu.vb</DependentUpon>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm011_MensajedeConfirmación2.resx">
       <DependentUpon>Frm011_MensajedeConfirmación2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm012_Contratos.resx">
+      <DependentUpon>Frm012_Contratos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_menu.resx">
       <DependentUpon>Frm_menu.vb</DependentUpon>

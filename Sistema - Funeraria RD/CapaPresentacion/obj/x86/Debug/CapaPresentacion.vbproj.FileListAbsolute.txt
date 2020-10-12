@@ -1242,3 +1242,4 @@ C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaPresent
 C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.exe
 C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.xml
 C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.pdb
+C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaPresentacion\obj\x86\Debug\CapaPresentacion.Frm012_Contratos.resources

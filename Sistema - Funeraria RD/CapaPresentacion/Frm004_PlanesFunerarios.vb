@@ -568,4 +568,12 @@ Public Class Frm004_PlanesFunerarios
         System.Diagnostics.Process.Start("Sample.pdf")
         MessageBox.Show("Informacion se exporto correctamente !!!", "Info")
     End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
 End Class

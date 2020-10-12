@@ -23,23 +23,23 @@ Partial Class Frm009_Ventas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCliente = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -66,10 +66,6 @@ Partial Class Frm009_Ventas
         Me.lblIgv = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Panel_cabecera = New System.Windows.Forms.Panel()
-        Me.lkbCerrar = New System.Windows.Forms.Label()
-        Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.ptbIcon = New System.Windows.Forms.PictureBox()
         Me.bordeInferior = New System.Windows.Forms.Panel()
         Me.bordeDerecha = New System.Windows.Forms.Panel()
         Me.bordeIzquierda = New System.Windows.Forms.Panel()
@@ -77,6 +73,8 @@ Partial Class Frm009_Ventas
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.chk_contado = New System.Windows.Forms.CheckBox()
+        Me.chk_credito = New System.Windows.Forms.CheckBox()
         Me.txtNroDocumento = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -124,12 +122,12 @@ Partial Class Frm009_Ventas
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VerInformacion = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.chk_credito = New System.Windows.Forms.CheckBox()
-        Me.chk_contado = New System.Windows.Forms.CheckBox()
+        Me.ptbIcon = New System.Windows.Forms.PictureBox()
+        Me.lblTitulo = New System.Windows.Forms.Label()
+        Me.lkbCerrar = New System.Windows.Forms.Label()
+        Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel_cabecera.SuspendLayout()
-        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -140,6 +138,8 @@ Partial Class Frm009_Ventas
         CType(Me.dtgvListadoDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgvListadoVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_cabecera.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -306,8 +306,8 @@ Partial Class Frm009_Ventas
         '
         'Cantidad
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Cantidad.DefaultCellStyle = DataGridViewCellStyle18
         Me.Cantidad.HeaderText = "Cantidad"
         Me.Cantidad.MinimumWidth = 6
         Me.Cantidad.Name = "Cantidad"
@@ -316,9 +316,9 @@ Partial Class Frm009_Ventas
         '
         'ColumnIgv
         '
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.ColumnIgv.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle19.Format = "C2"
+        DataGridViewCellStyle19.NullValue = Nothing
+        Me.ColumnIgv.DefaultCellStyle = DataGridViewCellStyle19
         Me.ColumnIgv.HeaderText = "IVA"
         Me.ColumnIgv.MinimumWidth = 6
         Me.ColumnIgv.Name = "ColumnIgv"
@@ -327,9 +327,9 @@ Partial Class Frm009_Ventas
         '
         'ColumnSubTotal
         '
-        DataGridViewCellStyle3.Format = "C2"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.ColumnSubTotal.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle20.Format = "C2"
+        DataGridViewCellStyle20.NullValue = Nothing
+        Me.ColumnSubTotal.DefaultCellStyle = DataGridViewCellStyle20
         Me.ColumnSubTotal.HeaderText = "SubTotal"
         Me.ColumnSubTotal.MinimumWidth = 6
         Me.ColumnSubTotal.Name = "ColumnSubTotal"
@@ -338,9 +338,9 @@ Partial Class Frm009_Ventas
         '
         'Importe
         '
-        DataGridViewCellStyle4.Format = "C2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.Importe.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle21.Format = "C2"
+        DataGridViewCellStyle21.NullValue = Nothing
+        Me.Importe.DefaultCellStyle = DataGridViewCellStyle21
         Me.Importe.HeaderText = "Importe"
         Me.Importe.MinimumWidth = 6
         Me.Importe.Name = "Importe"
@@ -420,57 +420,6 @@ Partial Class Frm009_Ventas
         Me.Label13.Size = New System.Drawing.Size(64, 17)
         Me.Label13.TabIndex = 25
         Me.Label13.Text = "TOTAL:"
-        '
-        'Panel_cabecera
-        '
-        Me.Panel_cabecera.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.Panel_cabecera.Controls.Add(Me.lkbCerrar)
-        Me.Panel_cabecera.Controls.Add(Me.lblTitulo)
-        Me.Panel_cabecera.Controls.Add(Me.ptbIcon)
-        Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_cabecera.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel_cabecera.Name = "Panel_cabecera"
-        Me.Panel_cabecera.Size = New System.Drawing.Size(1313, 49)
-        Me.Panel_cabecera.TabIndex = 255
-        '
-        'lkbCerrar
-        '
-        Me.lkbCerrar.BackColor = System.Drawing.Color.Transparent
-        Me.lkbCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lkbCerrar.Dock = System.Windows.Forms.DockStyle.Right
-        Me.lkbCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lkbCerrar.ForeColor = System.Drawing.SystemColors.Window
-        Me.lkbCerrar.Location = New System.Drawing.Point(1272, 0)
-        Me.lkbCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lkbCerrar.Name = "lkbCerrar"
-        Me.lkbCerrar.Size = New System.Drawing.Size(41, 49)
-        Me.lkbCerrar.TabIndex = 206
-        Me.lkbCerrar.Text = "X"
-        Me.lkbCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'lblTitulo
-        '
-        Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitulo.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTitulo.Location = New System.Drawing.Point(59, 12)
-        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(68, 22)
-        Me.lblTitulo.TabIndex = 205
-        Me.lblTitulo.Text = "Ventas"
-        '
-        'ptbIcon
-        '
-        Me.ptbIcon.Image = Global.CapaPresentacion.My.Resources.Resources.ic_Ventas
-        Me.ptbIcon.Location = New System.Drawing.Point(15, 5)
-        Me.ptbIcon.Margin = New System.Windows.Forms.Padding(4)
-        Me.ptbIcon.Name = "ptbIcon"
-        Me.ptbIcon.Size = New System.Drawing.Size(33, 32)
-        Me.ptbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ptbIcon.TabIndex = 162
-        Me.ptbIcon.TabStop = False
         '
         'bordeInferior
         '
@@ -571,6 +520,26 @@ Partial Class Frm009_Ventas
         Me.GroupBox5.TabIndex = 0
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Información de la Venta"
+        '
+        'chk_contado
+        '
+        Me.chk_contado.AutoSize = True
+        Me.chk_contado.Location = New System.Drawing.Point(424, 35)
+        Me.chk_contado.Name = "chk_contado"
+        Me.chk_contado.Size = New System.Drawing.Size(87, 22)
+        Me.chk_contado.TabIndex = 280
+        Me.chk_contado.Text = "Contado"
+        Me.chk_contado.UseVisualStyleBackColor = True
+        '
+        'chk_credito
+        '
+        Me.chk_credito.AutoSize = True
+        Me.chk_credito.Location = New System.Drawing.Point(207, 35)
+        Me.chk_credito.Name = "chk_credito"
+        Me.chk_credito.Size = New System.Drawing.Size(78, 22)
+        Me.chk_credito.TabIndex = 279
+        Me.chk_credito.Text = "Credito"
+        Me.chk_credito.UseVisualStyleBackColor = True
         '
         'txtNroDocumento
         '
@@ -899,8 +868,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn2
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle22
         Me.DataGridViewTextBoxColumn2.HeaderText = "Color"
         Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
@@ -909,8 +878,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn3
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle23
         Me.DataGridViewTextBoxColumn3.HeaderText = "Material"
         Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
@@ -919,8 +888,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn4
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle24
         Me.DataGridViewTextBoxColumn4.HeaderText = "Precio Venta"
         Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
@@ -929,8 +898,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn5
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle25
         Me.DataGridViewTextBoxColumn5.HeaderText = "Cantidad"
         Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
@@ -939,9 +908,9 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn6
         '
-        DataGridViewCellStyle9.Format = "C2"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle26.Format = "C2"
+        DataGridViewCellStyle26.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle26
         Me.DataGridViewTextBoxColumn6.HeaderText = "IGV"
         Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
@@ -950,9 +919,9 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn7
         '
-        DataGridViewCellStyle10.Format = "C2"
-        DataGridViewCellStyle10.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle27.Format = "C2"
+        DataGridViewCellStyle27.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle27
         Me.DataGridViewTextBoxColumn7.HeaderText = "SubTotal"
         Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
@@ -961,9 +930,9 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn8
         '
-        DataGridViewCellStyle11.Format = "C2"
-        DataGridViewCellStyle11.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle28.Format = "C2"
+        DataGridViewCellStyle28.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle28
         Me.DataGridViewTextBoxColumn8.HeaderText = "Total"
         Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
@@ -994,8 +963,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn10
         '
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle29
         Me.DataGridViewTextBoxColumn10.HeaderText = "Tipo_Doc."
         Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
@@ -1004,8 +973,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn11
         '
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle30
         Me.DataGridViewTextBoxColumn11.HeaderText = "Documento"
         Me.DataGridViewTextBoxColumn11.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
@@ -1022,8 +991,8 @@ Partial Class Frm009_Ventas
         '
         'Column2
         '
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle31
         Me.Column2.HeaderText = "Tipo_Comp."
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
@@ -1032,8 +1001,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn13
         '
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle32
         Me.DataGridViewTextBoxColumn13.HeaderText = "Comprobante"
         Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
@@ -1042,8 +1011,8 @@ Partial Class Frm009_Ventas
         '
         'DataGridViewTextBoxColumn14
         '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn14.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn14.DefaultCellStyle = DataGridViewCellStyle33
         Me.DataGridViewTextBoxColumn14.HeaderText = "Fecha Venta"
         Me.DataGridViewTextBoxColumn14.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
@@ -1052,10 +1021,10 @@ Partial Class Frm009_Ventas
         '
         'Column6
         '
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.Format = "C2"
-        DataGridViewCellStyle17.NullValue = Nothing
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle34.Format = "C2"
+        DataGridViewCellStyle34.NullValue = Nothing
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle34
         Me.Column6.HeaderText = "Total"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
@@ -1077,25 +1046,56 @@ Partial Class Frm009_Ventas
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'chk_credito
+        'ptbIcon
         '
-        Me.chk_credito.AutoSize = True
-        Me.chk_credito.Location = New System.Drawing.Point(207, 35)
-        Me.chk_credito.Name = "chk_credito"
-        Me.chk_credito.Size = New System.Drawing.Size(78, 22)
-        Me.chk_credito.TabIndex = 279
-        Me.chk_credito.Text = "Credito"
-        Me.chk_credito.UseVisualStyleBackColor = True
+        Me.ptbIcon.Image = Global.CapaPresentacion.My.Resources.Resources.ic_Ventas
+        Me.ptbIcon.Location = New System.Drawing.Point(15, 5)
+        Me.ptbIcon.Margin = New System.Windows.Forms.Padding(4)
+        Me.ptbIcon.Name = "ptbIcon"
+        Me.ptbIcon.Size = New System.Drawing.Size(33, 32)
+        Me.ptbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbIcon.TabIndex = 162
+        Me.ptbIcon.TabStop = False
         '
-        'chk_contado
+        'lblTitulo
         '
-        Me.chk_contado.AutoSize = True
-        Me.chk_contado.Location = New System.Drawing.Point(424, 35)
-        Me.chk_contado.Name = "chk_contado"
-        Me.chk_contado.Size = New System.Drawing.Size(87, 22)
-        Me.chk_contado.TabIndex = 280
-        Me.chk_contado.Text = "Contado"
-        Me.chk_contado.UseVisualStyleBackColor = True
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.ForeColor = System.Drawing.SystemColors.Window
+        Me.lblTitulo.Location = New System.Drawing.Point(59, 12)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(68, 22)
+        Me.lblTitulo.TabIndex = 205
+        Me.lblTitulo.Text = "Ventas"
+        '
+        'lkbCerrar
+        '
+        Me.lkbCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.lkbCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lkbCerrar.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lkbCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lkbCerrar.ForeColor = System.Drawing.SystemColors.Window
+        Me.lkbCerrar.Location = New System.Drawing.Point(1272, 0)
+        Me.lkbCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lkbCerrar.Name = "lkbCerrar"
+        Me.lkbCerrar.Size = New System.Drawing.Size(41, 49)
+        Me.lkbCerrar.TabIndex = 206
+        Me.lkbCerrar.Text = "X"
+        Me.lkbCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel_cabecera
+        '
+        Me.Panel_cabecera.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.Panel_cabecera.Controls.Add(Me.lkbCerrar)
+        Me.Panel_cabecera.Controls.Add(Me.lblTitulo)
+        Me.Panel_cabecera.Controls.Add(Me.ptbIcon)
+        Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_cabecera.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel_cabecera.Name = "Panel_cabecera"
+        Me.Panel_cabecera.Size = New System.Drawing.Size(1313, 49)
+        Me.Panel_cabecera.TabIndex = 255
         '
         'Frm009_Ventas
         '
@@ -1116,9 +1116,6 @@ Partial Class Frm009_Ventas
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel_cabecera.ResumeLayout(False)
-        Me.Panel_cabecera.PerformLayout()
-        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
@@ -1133,6 +1130,9 @@ Partial Class Frm009_Ventas
         CType(Me.dtgvListadoDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgvListadoVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel_cabecera.ResumeLayout(False)
+        Me.Panel_cabecera.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1155,10 +1155,6 @@ Partial Class Frm009_Ventas
     Friend WithEvents lblIgv As System.Windows.Forms.Label
     Friend WithEvents lblTotal As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Private WithEvents Panel_cabecera As System.Windows.Forms.Panel
-    Private WithEvents lkbCerrar As System.Windows.Forms.Label
-    Private WithEvents lblTitulo As System.Windows.Forms.Label
-    Private WithEvents ptbIcon As System.Windows.Forms.PictureBox
     Private WithEvents bordeInferior As System.Windows.Forms.Panel
     Private WithEvents bordeDerecha As System.Windows.Forms.Panel
     Private WithEvents bordeIzquierda As System.Windows.Forms.Panel
@@ -1222,4 +1218,8 @@ Partial Class Frm009_Ventas
     Friend WithEvents Label2 As Label
     Friend WithEvents chk_contado As CheckBox
     Friend WithEvents chk_credito As CheckBox
+    Private WithEvents Panel_cabecera As Panel
+    Private WithEvents lkbCerrar As Label
+    Private WithEvents lblTitulo As Label
+    Private WithEvents ptbIcon As PictureBox
 End Class

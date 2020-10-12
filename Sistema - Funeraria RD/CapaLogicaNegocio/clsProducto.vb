@@ -12,7 +12,7 @@ Public Class clsProducto : Inherits clsItem 'Hereda propiedades y Atributos de l
     Public Property Stock() As Integer
     Public Property RutaImagen() As String
     Public Property Datos() As String
-
+    Public Property CodigoItem() As Integer
     Public Function Listar_Productos() As DataTable 'Función para listar servicios
         Try 'Manejamos una excepción de errores
             Return M.Listado("Listar_Productos", Nothing) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
@@ -20,7 +20,13 @@ Public Class clsProducto : Inherits clsItem 'Hereda propiedades y Atributos de l
             Throw New Exception("Error al listar productos, verifique clase clsProducto") 'Creamos una nueva excepción de errores
         End Try
     End Function
-
+    Public Function Listar_Productos_Ventas() As DataTable 'Función para listar servicios
+        Try 'Manejamos una excepción de errores
+            Return M.Listado("Listar_Productos_Ventas", Nothing) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
+        Catch ex As Exception
+            Throw New Exception("Error al listar productos, verifique clase clsProducto") 'Creamos una nueva excepción de errores
+        End Try
+    End Function
     Public Function Buscar_Productos() As DataTable 'Función para listar servicios
         Dim lst As New List(Of clsParametro)
         Try 'Manejamos una excepción de errores
@@ -74,5 +80,27 @@ Public Class clsProducto : Inherits clsItem 'Hereda propiedades y Atributos de l
 
         Return Mensaje 'Retornamos el mensaje recuperado
     End Function
+    Public Function Verificar_Stock_Productos() As DataTable 'Función para listar Detalle Plane Funerario
+        Dim lst As New List(Of clsParametro)
 
+        Try 'Manejamos una excepción de errores
+            lst.Add(New clsParametro("@Codigo_items", CodigoItem))
+            Return M.Listado("Verificar_Stock_producto", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
+        Catch ex As Exception
+            Throw New Exception("Error al verificar Stock del Plan Funerario, verifique clase clsPlanFunerario") 'Creamos una nueva excepción de errores
+        End Try
+
+    End Function
+
+    Public Function Listar_Detalle_Producto() As DataTable 'Función para listar Detalle Plane Funerario
+        Dim lst As New List(Of clsParametro)
+
+        Try 'Manejamos una excepción de errores
+            lst.Add(New clsParametro("@Codigo_Items", CodigoItem))
+            Return M.Listado("Listar_Detalle_Producto", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
+        Catch ex As Exception
+            Throw New Exception("Error al listar Detalle del Plan Funerario, verifique clase clsPlanFunerario") 'Creamos una nueva excepción de errores
+        End Try
+
+    End Function
 End Class

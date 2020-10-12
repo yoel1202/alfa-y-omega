@@ -29,7 +29,7 @@ Public Class Frm008ii_ListadoProductos
             dtgProductos.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
             dtgProductos.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
             dtgProductos.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
-            dtgProductos.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
+            dtgProductos.Rows(i).Cells(5).Value = dt.Rows(i)(6).ToString()
 
 
         Next

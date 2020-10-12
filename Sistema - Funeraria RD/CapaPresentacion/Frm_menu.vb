@@ -267,15 +267,37 @@ Public Class Frm_menu
     End Sub
 
     Private Sub Panel4_Click(sender As Object, e As EventArgs) Handles pn_difuntos.Click
-        U.CodigoPersona = CStr(Codigo_Personal_Online)
-        U.tipo = "difunto"
-        Dim permiso As String = U.Devolver_permisos()
+        If (pasar) Then
 
-        If (permiso = "Todos" Or permiso = "Visualizar") Then
+            U.CodigoPersona = CStr(Codigo_Personal_Online)
+            U.tipo = "difunto"
+            Dim permiso As String = U.Devolver_permisos()
+
+            If (permiso = "Todos" Or permiso = "Visualizar") Then
+                If (Frm00_Login.FormActive = 0) Then
+
+
+                    Dim myForm As Frm006_Difunto = New Frm006_Difunto()
+
+                    myForm.TopLevel = False
+                    myForm.AutoScroll = True
+                    pn_principal.Controls.Add(myForm)
+                    myForm.Show()
+                    pn_principal.Show()
+                End If
+            Else
+                clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
+            End If
+
+
+
+
+        Else
+
             If (Frm00_Login.FormActive = 0) Then
 
 
-                Dim myForm As Frm006_Difunto = New Frm006_Difunto()
+                Dim myForm As Frm012_Contratos = New Frm012_Contratos()
 
                 myForm.TopLevel = False
                 myForm.AutoScroll = True
@@ -283,8 +305,6 @@ Public Class Frm_menu
                 myForm.Show()
                 pn_principal.Show()
             End If
-        Else
-            clsMensaje.mostrar_mensaje("no cuenta con permisos tiene acceso a esta Opción", "error")
         End If
     End Sub
 

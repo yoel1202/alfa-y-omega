@@ -74,13 +74,13 @@ Public Class clsVentas
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
             lst.Add(New clsParametro("@Codigo_Cliente", CodigoCliente))
-            lst.Add(New clsParametro("@Codigo_Personal", CodigoPersonal))
-            lst.Add(New clsParametro("@Serie", Serie))
-            lst.Add(New clsParametro("@NroComprobante", NroDocumento))
+            lst.Add(New clsParametro("@Codigo_Personal", NumeroDocumento))
+            lst.Add(New clsParametro("@Serie", NumeroDocumento))
+            lst.Add(New clsParametro("@NroComprobante", NumeroDocumento))
             lst.Add(New clsParametro("@FechaVenta", FechaVenta))
             lst.Add(New clsParametro("@Tipo_Documento", TipoDocumento))
             lst.Add(New clsParametro("@Total", Total))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Ventas", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(7).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception

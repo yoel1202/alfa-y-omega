@@ -64,6 +64,7 @@ Public Class clsCompras
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Compras", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(10).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+
         Catch ex As Exception
             Throw New Exception("Error al registrar compras, verifique clase clsCompras") 'Creamos una nueva excepción de errores
         End Try
@@ -131,6 +132,7 @@ Public Class clsCompras
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
             lst.Add(New clsParametro("@Codigo_Comprass", CodigoCompras))
+
             lst.Add(New clsParametro("@Codigo_Items", CodigoItem))
             lst.Add(New clsParametro("@Precio_Compras", PrecioCompra))
             lst.Add(New clsParametro("@utilidades", utilidad))

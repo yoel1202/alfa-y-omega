@@ -82,17 +82,7 @@ Public Class clsPlanFunerario
         Return Mensaje 'Retornamos el mensaje recuperado
     End Function
 
-    Public Function Listar_Detalle_Producto() As DataTable 'Función para listar Detalle Plane Funerario
-        Dim lst As New List(Of clsParametro)
 
-        Try 'Manejamos una excepción de errores
-            lst.Add(New clsParametro("@Codigo_Items", CodigoItem))
-            Return M.Listado("Listar_Detalle_Producto", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
-        Catch ex As Exception
-            Throw New Exception("Error al listar Detalle del Plan Funerario, verifique clase clsPlanFunerario") 'Creamos una nueva excepción de errores
-        End Try
-
-    End Function
     Public Function Listar_Detalle_Plane_Funerario() As DataTable 'Función para listar Detalle Plane Funerario
         Dim lst As New List(Of clsParametro)
 
@@ -105,17 +95,7 @@ Public Class clsPlanFunerario
 
     End Function
 
-    Public Function Verificar_Stock_Productos() As DataTable 'Función para listar Detalle Plane Funerario
-        Dim lst As New List(Of clsParametro)
 
-        Try 'Manejamos una excepción de errores
-            lst.Add(New clsParametro("@Codigo_items", CodigoItem))
-            Return M.Listado("Verificar_Stock_producto", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
-        Catch ex As Exception
-            Throw New Exception("Error al verificar Stock del Plan Funerario, verifique clase clsPlanFunerario") 'Creamos una nueva excepción de errores
-        End Try
-
-    End Function
 
     Public Function Eliminar_Detalle_Plan_Funerario() As String 'Función para Eliminar Detalle  Plan Funerario
         Dim Mensaje As String = "" 'Declaramos la variable para recuperar el Mensaje
