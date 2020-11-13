@@ -55,9 +55,9 @@ Partial Class Frm006_Difunto
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.ptbActa = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.cbxEstadoCivil = New System.Windows.Forms.ComboBox()
@@ -131,7 +131,7 @@ Partial Class Frm006_Difunto
         Me.DataGridView1.Location = New System.Drawing.Point(25, 126)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(1177, 181)
+        Me.DataGridView1.Size = New System.Drawing.Size(1177, 147)
         Me.DataGridView1.TabIndex = 8
         '
         'Codigo
@@ -412,32 +412,6 @@ Partial Class Frm006_Difunto
         Me.TabPage2.Text = "Mantenimiento Difuntos"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.btnLimpiar.FlatAppearance.BorderSize = 0
-        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnLimpiar.Location = New System.Drawing.Point(737, 334)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(150, 40)
-        Me.btnLimpiar.TabIndex = 2
-        Me.btnLimpiar.Text = "&Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = False
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
-        Me.btnGuardar.FlatAppearance.BorderSize = 0
-        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnGuardar.Location = New System.Drawing.Point(893, 332)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(150, 40)
-        Me.btnGuardar.TabIndex = 1
-        Me.btnGuardar.Text = "&Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = False
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.btnGuardar)
@@ -472,6 +446,32 @@ Partial Class Frm006_Difunto
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del Fallecido"
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.ForeColor = System.Drawing.SystemColors.Window
+        Me.btnGuardar.Location = New System.Drawing.Point(893, 332)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(150, 40)
+        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.Text = "&Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = False
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(103, Byte), Integer))
+        Me.btnLimpiar.FlatAppearance.BorderSize = 0
+        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.Window
+        Me.btnLimpiar.Location = New System.Drawing.Point(737, 334)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(150, 40)
+        Me.btnLimpiar.TabIndex = 2
+        Me.btnLimpiar.Text = "&Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
         '
         'ptbActa
         '

@@ -139,7 +139,7 @@ Public Class Frm003_ProductosyServicios
                         S.Codigo_Tipo = 1
                         S.Nombre = txtNombreProducto.Text
                         Mensaje = S.Actualizar_Item() 'Ejecutamos la función Actualizar Servicio
-                        MsgBox(Mensaje)
+                     
                         If (Mensaje = "Actualizado Correctamente") Then 'Varificamos si se actualizó correctamente
                             Dim NombreFoto As String = "Ataud-" & Codigo
                             RutaImgen = Imagen.copiarImagen(ptbImagen.ImageLocation, NombreFoto, rutaAntigua, 1)

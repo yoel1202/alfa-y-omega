@@ -25,6 +25,8 @@ Partial Class FrmDocumento
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.EDocumentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EArticuloBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.panel1 = New System.Windows.Forms.Panel()
@@ -34,13 +36,19 @@ Partial Class FrmDocumento
         Me.bordeInferior = New System.Windows.Forms.Panel()
         Me.bordeDerecha = New System.Windows.Forms.Panel()
         Me.bordeIzquierda = New System.Windows.Forms.Panel()
-        Me.EDocumentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EArticuloBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Panel_cabecera.SuspendLayout()
-        Me.panel1.SuspendLayout()
         CType(Me.EDocumentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EArticuloBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_cabecera.SuspendLayout()
+        Me.panel1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'EDocumentoBindingSource
+        '
+        Me.EDocumentoBindingSource.DataSource = GetType(CapaPresentacion.EDocumento)
+        '
+        'EArticuloBindingSource
+        '
+        Me.EArticuloBindingSource.DataSource = GetType(CapaPresentacion.EArticulo)
         '
         'ReportViewer1
         '
@@ -54,7 +62,7 @@ Partial Class FrmDocumento
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Report1.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 31)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(665, 474)
+        Me.ReportViewer1.Size = New System.Drawing.Size(665, 359)
         Me.ReportViewer1.TabIndex = 0
         '
         'Panel_cabecera
@@ -124,7 +132,7 @@ Partial Class FrmDocumento
         '
         Me.bordeInferior.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.bordeInferior.Location = New System.Drawing.Point(0, 503)
+        Me.bordeInferior.Location = New System.Drawing.Point(0, 388)
         Me.bordeInferior.Name = "bordeInferior"
         Me.bordeInferior.Size = New System.Drawing.Size(663, 2)
         Me.bordeInferior.TabIndex = 263
@@ -135,7 +143,7 @@ Partial Class FrmDocumento
         Me.bordeDerecha.Dock = System.Windows.Forms.DockStyle.Right
         Me.bordeDerecha.Location = New System.Drawing.Point(663, 31)
         Me.bordeDerecha.Name = "bordeDerecha"
-        Me.bordeDerecha.Size = New System.Drawing.Size(2, 474)
+        Me.bordeDerecha.Size = New System.Drawing.Size(2, 359)
         Me.bordeDerecha.TabIndex = 262
         '
         'bordeIzquierda
@@ -144,22 +152,14 @@ Partial Class FrmDocumento
         Me.bordeIzquierda.Dock = System.Windows.Forms.DockStyle.Left
         Me.bordeIzquierda.Location = New System.Drawing.Point(0, 31)
         Me.bordeIzquierda.Name = "bordeIzquierda"
-        Me.bordeIzquierda.Size = New System.Drawing.Size(2, 472)
+        Me.bordeIzquierda.Size = New System.Drawing.Size(2, 357)
         Me.bordeIzquierda.TabIndex = 264
-        '
-        'EDocumentoBindingSource
-        '
-        Me.EDocumentoBindingSource.DataSource = GetType(CapaPresentacion.EDocumento)
-        '
-        'EArticuloBindingSource
-        '
-        Me.EArticuloBindingSource.DataSource = GetType(CapaPresentacion.EArticulo)
         '
         'FrmDocumento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(665, 505)
+        Me.ClientSize = New System.Drawing.Size(665, 390)
         Me.Controls.Add(Me.bordeIzquierda)
         Me.Controls.Add(Me.bordeInferior)
         Me.Controls.Add(Me.bordeDerecha)
@@ -169,12 +169,12 @@ Partial Class FrmDocumento
         Me.Name = "FrmDocumento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmDocumento"
+        CType(Me.EDocumentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EArticuloBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_cabecera.ResumeLayout(False)
         Me.Panel_cabecera.PerformLayout()
         Me.panel1.ResumeLayout(False)
         Me.panel1.PerformLayout()
-        CType(Me.EDocumentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EArticuloBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

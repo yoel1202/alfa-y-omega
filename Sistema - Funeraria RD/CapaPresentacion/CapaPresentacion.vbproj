@@ -17,6 +17,21 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -44,7 +59,7 @@
     <OptionExplicit>On</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
     <OptionStrict>Off</OptionStrict>
@@ -60,9 +75,23 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Compression.Base, Version=18.2460.0.58, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
@@ -81,6 +110,7 @@
     <Reference Include="System.Text.Encoding.CodePages, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encoding.CodePages.4.4.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -108,6 +138,7 @@
     <Compile Include="clases\EItem.vb" />
     <Compile Include="clases\EPlanServicio.vb" />
     <Compile Include="clases\EProducto.vb" />
+    <Compile Include="clases\EPersonal.vb" />
     <Compile Include="clases\EProveedor.vb" />
     <Compile Include="clases\ICliente.vb" />
     <Compile Include="clases\IItem.vb" />
@@ -131,6 +162,12 @@
       <DependentUpon>Frm004ii_ModalPlanes.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm004ii_ModalPlanes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm008iiii_Listado_Abonos_Compras.Designer.vb">
+      <DependentUpon>Frm008iiii_Listado_Abonos_Compras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm008iiii_Listado_Abonos_Compras.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm00_Login.Designer.vb">
@@ -248,12 +285,25 @@
     <Compile Include="Frm012_Contratos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Frm009iiii_Listado_abonos_Ventas.Designer.vb">
+      <DependentUpon>Frm009iiii_Listado_abonos_Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm009iiii_Listado_abonos_Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm013_CreditoCobros.Designer.vb">
+      <DependentUpon>Frm013_CreditoCobros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frm013_CreditoCobros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Frm_menu.Designer.vb">
       <DependentUpon>Frm_menu.vb</DependentUpon>
     </Compile>
     <Compile Include="Frm_menu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IPersonal.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -280,6 +330,12 @@
     <Compile Include="print\DescripcionMonto.vb" />
     <Compile Include="print\EDocumento.vb" />
     <Compile Include="print\EArticulo.vb" />
+    <Compile Include="print\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="print\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="print\FrmDocumento.Designer.vb">
       <DependentUpon>FrmDocumento.vb</DependentUpon>
     </Compile>
@@ -296,6 +352,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm004ii_ModalPlanes.resx">
       <DependentUpon>Frm004ii_ModalPlanes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm008iiii_Listado_Abonos_Compras.resx">
+      <DependentUpon>Frm008iiii_Listado_Abonos_Compras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm009iiii_Listado_abonos_Ventas.resx">
+      <DependentUpon>Frm009iiii_Listado_abonos_Ventas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm00_Login.resx">
       <DependentUpon>Frm00_Login.vb</DependentUpon>
@@ -354,6 +416,9 @@
     <EmbeddedResource Include="Frm012_Contratos.resx">
       <DependentUpon>Frm012_Contratos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm013_CreditoCobros.resx">
+      <DependentUpon>Frm013_CreditoCobros.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_menu.resx">
       <DependentUpon>Frm_menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +430,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm004_PlanesFunerarios.resx">
       <DependentUpon>Frm004_PlanesFunerarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="print\FrmDocumento.resx">
       <DependentUpon>FrmDocumento.vb</DependentUpon>
@@ -427,10 +495,36 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon_App.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\ic_exclamacion.png" />
     <None Include="Resources\ic_ok.png" />
     <None Include="Resources\ic_cancel.png" />
     <None Include="Resources\ic_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />

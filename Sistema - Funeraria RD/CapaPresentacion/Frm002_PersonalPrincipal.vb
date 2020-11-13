@@ -10,6 +10,7 @@ Public Class Frm002_PersonalPrincipal
     Dim CodigoP As Integer = 0 'Variable para almacenar el código del Personal
     Dim Valor As Integer = 0 'Variable para verificar si se va a registrar o actualizar la información
     Dim ValorUsuario As Integer = 0 'Variable para verificar si se va a registrar o actualizar la información
+    Public Property Caller() As IPersonal
 
     Private Sub FrmPersonalPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Listar_Personal()
@@ -137,8 +138,7 @@ Public Class Frm002_PersonalPrincipal
     End Sub
 
     Private Sub lkbCerrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lkbCerrar.Click
-        My.Forms.Frm00_Login.frm_inicio.pn_principal.Controls.Clear()
-        My.Forms.Frm00_Login.frm_inicio.pn_principal.Hide()
+        Close()
 
     End Sub
 
@@ -565,4 +565,47 @@ Public Class Frm002_PersonalPrincipal
 
     End Sub
 
+    Private Sub dgv_personal_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_personal.CellDoubleClick
+        Try
+            'Si el row en el que hicimos doble click es el encabezado del DataGridView, nos retornamos.
+            If e.RowIndex = -1 Then
+                Return
+            End If
+
+            'Obtenemos el row en el cual se hizo doble Click
+            Dim row As DataGridViewRow = dgv_personal.Rows(e.RowIndex)
+
+            'Instanciamos la clase ECliente para cargar los datos tomandolos de las celdas del row
+            'Recuerde convertir al tipo de dato correcto
+            Dim item As New EPersonal()
+            item.CodigoPersonal = Convert.ToInt32(row.Cells("Codigo").Value)
+            item.Nombre = Convert.ToString(row.Cells("Nombres").Value)
+            item.Cedula = Convert.ToString(row.Cells("Identificacion").Value)
+
+            item.Telefono = Convert.ToString(row.Cells("Teléfono").Value)
+
+
+            If Caller Is Nothing Then
+                Return
+            End If
+
+            ''Si el FrmUsuario devolvio false por haber encontrado el Cliente dentro de la lista
+            ''Informamos de lo sucedido al usuario
+            If Not Caller.LoadDataRow(item) Then
+                clsMensaje.mostrar_mensaje("El pERSONAL ya existe en la lista", "error")
+            End If
+
+            Close()
+        Catch ex As Exception
+            clsMensaje.mostrar_mensaje(ex.Message, "error")
+        End Try
+    End Sub
+
+    Private Sub rbnNDoc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles rbnNDoc.KeyPress
+        Validar.Numeros(e)
+    End Sub
+
+    Private Sub rbnNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles rbnNombre.KeyPress
+        Validar.Letras(e)
+    End Sub
 End Class

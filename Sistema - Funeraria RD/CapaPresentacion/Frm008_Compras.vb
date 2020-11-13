@@ -87,27 +87,27 @@ Public Class Frm008_Compras
         ElseIf (tb_utilidad.Text.Trim = "" Or txtPrecioCompra.Text = "0") Then
             ErrorProvider1.SetError(tb_utilidad, "Ingrese Correctamente el utilidad de Compra del Producto")
         Else
-            Dim i As Integer = DataGridView1.Rows.Count
+            Dim i As Integer = dgv_compras.Rows.Count
             Dim SubTotal As Decimal = 0
             Dim Igv As Decimal = 0
 
             Try
                 If (verificar(CodigoProducto) = False) Then
-                    DataGridView1.Rows.Add()
-                    Me.DataGridView1.Rows(i).Cells(0).Value = CodigoProducto
-                    Me.DataGridView1.Rows(i).Cells(1).Value = CStr(txtProducto.Text)
-                    Me.DataGridView1.Rows(i).Cells(2).Value = CDec(txtPrecioCompra.Text)
-                    Me.DataGridView1.Rows(i).Cells(3).Value = CDec(tb_utilidad.Text)
-                    Me.DataGridView1.Rows(i).Cells(4).Value = CDec(tb_precio_venta.Text)
-                    Me.DataGridView1.Rows(i).Cells(5).Value = CInt(txtCantidad.Value)
+                    dgv_compras.Rows.Add()
+                    Me.dgv_compras.Rows(i).Cells(0).Value = CodigoProducto
+                    Me.dgv_compras.Rows(i).Cells(1).Value = CStr(txtProducto.Text)
+                    Me.dgv_compras.Rows(i).Cells(2).Value = CDec(txtPrecioCompra.Text)
+                    Me.dgv_compras.Rows(i).Cells(3).Value = CDec(tb_utilidad.Text)
+                    Me.dgv_compras.Rows(i).Cells(4).Value = CDec(tb_precio_venta.Text)
+                    Me.dgv_compras.Rows(i).Cells(5).Value = CInt(txtCantidad.Value)
                     SubTotal = CDec(tb_precio_venta.Text) * CDec(txtCantidad.Value)
                     Igv = SubTotal * 0.13
-                    Me.DataGridView1.Rows(i).Cells(6).Value = Math.Round(Igv, 2)
-                    Me.DataGridView1.Rows(i).Cells(7).Value = Math.Round(SubTotal, 2)
-                    Me.DataGridView1.Rows(i).Cells(8).Value = Math.Round(CDec(SubTotal + Igv), 2)
-                    Me.DataGridView1.Rows(i).Cells(9).Value = "Eliminar"
+                    Me.dgv_compras.Rows(i).Cells(6).Value = Math.Round(Igv, 2)
+                    Me.dgv_compras.Rows(i).Cells(7).Value = Math.Round(SubTotal, 2)
+                    Me.dgv_compras.Rows(i).Cells(8).Value = Math.Round(CDec(SubTotal + Igv), 2)
+                    Me.dgv_compras.Rows(i).Cells(9).Value = "Eliminar"
 
-                    Me.DataGridView1.ClearSelection()
+                    Me.dgv_compras.ClearSelection()
                     Call asignar_color_boton()
                     lblTotal.Text = CalcularTotal()
                     lblIgv.Text = CalcularIgv()
@@ -123,17 +123,25 @@ Public Class Frm008_Compras
     End Sub
 
     Private Sub asignar_color_boton()
-        For Each row As DataGridViewRow In DataGridView1.Rows
+        For Each row As DataGridViewRow In dgv_compras.Rows
             Dim button1 As DataGridViewButtonCell = CType(row.Cells(9), DataGridViewButtonCell)
             button1.Style.BackColor = Color.FromArgb(217, 83, 79)
             button1.Style.ForeColor = Color.White
             button1.Style.Font = New Font("Arial", 9, FontStyle.Bold)
         Next
     End Sub
+    Private Sub asignar_color_botoncredito()
+        For Each row As DataGridViewRow In dgv_creditos.Rows
+            Dim button1 As DataGridViewButtonCell = CType(row.Cells(8), DataGridViewButtonCell)
+            button1.Style.BackColor = Color.FromArgb(92, 184, 92)
+            button1.Style.ForeColor = Color.White
+            button1.Style.Font = New Font("Arial", 9, FontStyle.Bold)
+        Next
+    End Sub
 
     Private Function verificar(ByVal CodigoProducto As Integer) As Boolean
-        For i = 0 To DataGridView1.RowCount - 1
-            If (DataGridView1.Rows(i).Cells(0).Value = CodigoProducto) Then
+        For i = 0 To dgv_compras.RowCount - 1
+            If (dgv_compras.Rows(i).Cells(0).Value = CodigoProducto) Then
                 Return True
             End If
         Next
@@ -142,34 +150,34 @@ Public Class Frm008_Compras
 
     Private Function CalcularTotal() As Decimal
         Dim Total As Decimal = 0
-        For i = 0 To DataGridView1.RowCount - 1
-            Total += CDec(DataGridView1.Rows(i).Cells(8).Value)
+        For i = 0 To dgv_compras.RowCount - 1
+            Total += CDec(dgv_compras.Rows(i).Cells(8).Value)
         Next
         Return Total
     End Function
 
     Private Function CalcularIgv() As Decimal
         Dim igv As Decimal = 0
-        For i = 0 To DataGridView1.RowCount - 1
-            igv += ((CDec(DataGridView1.Rows(i).Cells(4).Value) * CInt(DataGridView1.Rows(i).Cells(5).Value)) * 0.13)
+        For i = 0 To dgv_compras.RowCount - 1
+            igv += ((CDec(dgv_compras.Rows(i).Cells(4).Value) * CInt(dgv_compras.Rows(i).Cells(5).Value)) * 0.13)
         Next
         Return Math.Round(igv, 2)
     End Function
 
     Private Function CalcularSubTotal() As Decimal
         Dim SubTotal As Decimal = 0
-        For i = 0 To DataGridView1.RowCount - 1
-            SubTotal += (CDec(DataGridView1.Rows(i).Cells(4).Value) * CInt(DataGridView1.Rows(i).Cells(5).Value))
+        For i = 0 To dgv_compras.RowCount - 1
+            SubTotal += (CDec(dgv_compras.Rows(i).Cells(4).Value) * CInt(dgv_compras.Rows(i).Cells(5).Value))
         Next
         Return Math.Round(SubTotal, 2)
     End Function
 
-    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgv_compras.CellContentClick
         Try
-            If (Me.DataGridView1.Columns(e.ColumnIndex).Name.Equals("Eliminar")) Then
+            If (Me.dgv_compras.Columns(e.ColumnIndex).Name.Equals("Eliminar")) Then
                 Dim Total As Double = 0
-                Dim i As Integer = DataGridView1.CurrentRow.Index
-                DataGridView1.Rows.RemoveAt(i)
+                Dim i As Integer = dgv_compras.CurrentRow.Index
+                dgv_compras.Rows.RemoveAt(i)
                 lblTotal.Text = CalcularTotal()
                 lblIgv.Text = CalcularIgv()
                 lblSubTotal.Text = CalcularSubTotal()
@@ -206,7 +214,7 @@ Public Class Frm008_Compras
                 '    ErrorProvider1.SetError(ckb_gasto, "Debe Ingresar Número de Comprobante")
                 'ElseIf (rbnFactura.Checked Or rbnBoleta.Checked) Then
                 '    ErrorProvider1.SetError(rbnFactura, "Debe Ingresar Número de Comprobante")
-            ElseIf (DataGridView1.Rows.Count < 1) Then
+            ElseIf (dgv_compras.Rows.Count < 1) Then
                 clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
             Else
                 Dim Mensaje As String = ""
@@ -225,16 +233,16 @@ Public Class Frm008_Compras
 
                     If (Mensaje = "Compra Registrada correctamente") Then
 
-                        For i = 0 To DataGridView1.RowCount - 1
+                        For i = 0 To dgv_compras.RowCount - 1
                             C.CodigoCompras = CInt(C.Devolver_Codigo_Compras())
-                            C.CodigoItem = CInt(DataGridView1.Rows(i).Cells(0).Value)
-                            C.PrecioCompra = CDec(DataGridView1.Rows(i).Cells(2).Value)
-                            C.utilidad = CDec(DataGridView1.Rows(i).Cells(3).Value)
-                            C.Precioventa = CDec(DataGridView1.Rows(i).Cells(4).Value)
+                            C.CodigoItem = CInt(dgv_compras.Rows(i).Cells(0).Value)
+                            C.PrecioCompra = CDec(dgv_compras.Rows(i).Cells(2).Value)
+                            C.utilidad = CDec(dgv_compras.Rows(i).Cells(3).Value)
+                            C.Precioventa = CDec(dgv_compras.Rows(i).Cells(4).Value)
 
-                            C.Cantidad = CInt(DataGridView1.Rows(i).Cells(5).Value)
-                            C.Igv = CDec(DataGridView1.Rows(i).Cells(6).Value)
-                            C.SubTotal = CDec(DataGridView1.Rows(i).Cells(7).Value)
+                            C.Cantidad = CInt(dgv_compras.Rows(i).Cells(5).Value)
+                            C.Igv = CDec(dgv_compras.Rows(i).Cells(6).Value)
+                            C.SubTotal = CDec(dgv_compras.Rows(i).Cells(7).Value)
                             C.Registrar_Detalle_Compras()
                         Next
                         clsMensaje.mostrar_mensaje(Mensaje, "ok")
@@ -262,7 +270,7 @@ Public Class Frm008_Compras
         txtPrecioCompra.Clear()
         txtSerie.Clear()
         txtNroDocumento.Clear()
-        DataGridView1.Rows.Clear()
+        dgv_compras.Rows.Clear()
         lblIgv.Text = "0.0"
         lblSubTotal.Text = "0.0"
         lblTotal.Text = "0.0"
@@ -286,8 +294,11 @@ Public Class Frm008_Compras
                 dtgvListadoCompras.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
                 dtgvListadoCompras.Rows(i).Cells(4).Value = Format(dt.Rows(i)(4), "dd/MM/yyyy")
                 dtgvListadoCompras.Rows(i).Cells(5).Value = Math.Round(dt.Rows(i)(5), 2)
+
+
+                Me.dgv_compras.ClearSelection()
             Next
-            Me.DataGridView1.ClearSelection()
+            Me.dgv_compras.ClearSelection()
         Catch ex As Exception
             clsMensaje.mostrar_mensaje(ex.Message, "error")
         End Try
@@ -306,9 +317,11 @@ Public Class Frm008_Compras
                 dgv_creditos.Rows(i).Cells(5).Value = Math.Round(dt.Rows(i)(5), 2)
                 dgv_creditos.Rows(i).Cells(6).Value = dt.Rows(i)(6).ToString()
                 dgv_creditos.Rows(i).Cells(7).Value = dt.Rows(i)(7).ToString()
+                dgv_creditos.Rows(i).Cells(8).Value = "Ver Abonos"
 
             Next
-            Me.DataGridView1.ClearSelection()
+            Me.dgv_compras.ClearSelection()
+            Call asignar_color_botoncredito()
         Catch ex As Exception
             clsMensaje.mostrar_mensaje(ex.Message, "error")
         End Try
@@ -589,14 +602,27 @@ Public Class Frm008_Compras
     End Sub
 
     Private Sub dgv_creditos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_creditos.CellContentClick
-        CodigoCompra = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
-        tb_monto_abono.Text = dgv_creditos.CurrentRow.Cells(7).Value.ToString()
-        lb_total.Text = dgv_creditos.CurrentRow.Cells(5).Value.ToString()
-        lb_subtotal.Text = CDec(dgv_creditos.CurrentRow.Cells(5).Value.ToString()) / 1.13
-        lb_iva.Text = (CDec(dgv_creditos.CurrentRow.Cells(5).Value.ToString()) / 1.13) * 0.13
-        C.CodigoComprass = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
-        tb_monto_actual.Text = C.Devolver_monto_credito()
-        selecionar_credito = True
+        Try
+
+            If (Me.dgv_creditos.Columns(e.ColumnIndex).Name.Equals("Opción")) Then
+                Dim frm As Frm008iiii_Listado_Abonos_Compras = New Frm008iiii_Listado_Abonos_Compras
+                frm.C.CodigoCompras = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+                frm.Show()
+            Else
+                CodigoCompra = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+                tb_monto_abono.Text = dgv_creditos.CurrentRow.Cells(7).Value.ToString()
+                lb_total.Text = dgv_creditos.CurrentRow.Cells(5).Value.ToString()
+                lb_subtotal.Text = CDec(dgv_creditos.CurrentRow.Cells(5).Value.ToString()) / 1.13
+                lb_iva.Text = (CDec(dgv_creditos.CurrentRow.Cells(5).Value.ToString()) / 1.13) * 0.13
+                C.CodigoComprass = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+                tb_monto_actual.Text = C.Devolver_monto_credito()
+                selecionar_credito = True
+            End If
+        Catch ex As Exception
+            clsMensaje.mostrar_mensaje(ex.Message, "error")
+        End Try
+
+
     End Sub
 
     Private Sub btn_abonar_Click(sender As Object, e As EventArgs) Handles btn_abonar.Click
@@ -670,5 +696,13 @@ Public Class Frm008_Compras
         Else
             Validar.Letras(e)
         End If
+    End Sub
+
+    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
+
+    End Sub
+
+    Private Sub tb_fecha_TextChanged(sender As Object, e As EventArgs) Handles tb_fecha.TextChanged
+
     End Sub
 End Class

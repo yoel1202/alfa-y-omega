@@ -392,7 +392,6 @@ C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegoc
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\MySql.Data.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\Renci.SshNet.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaLogicaNegocio\bin\Debug\System.Buffers.dll

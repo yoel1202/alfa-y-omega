@@ -49,25 +49,39 @@ Public Class Frm_menu
     End Sub
 
     Private Sub pn_personal(sender As Object, e As EventArgs) Handles pn_personales.Click
-        U.CodigoPersona = CStr(Codigo_Personal_Online)
-        U.tipo = "personal"
-        Dim permiso As String = U.Devolver_permisos()
+        If (pasar) Then
+            U.CodigoPersona = CStr(Codigo_Personal_Online)
+            U.tipo = "personal"
+            Dim permiso As String = U.Devolver_permisos()
 
-        If (permiso = "Todos" Or permiso = "Visualizar") Then
+            If (permiso = "Todos" Or permiso = "Visualizar") Then
+                If (Frm00_Login.FormActive = 0) Then
+                    'comprobar_focus(1)
+                    Dim myForm As Frm002_PersonalPrincipal = New Frm002_PersonalPrincipal()
+
+                    myForm.TopLevel = False
+                    myForm.AutoScroll = True
+                    pn_principal.Controls.Add(myForm)
+                    myForm.Show()
+
+                    pn_principal.Show()
+
+                End If
+            Else
+                clsMensaje.mostrar_mensaje("Solo el administrador tiene acceso a esta Opción", "error")
+            End If
+        Else
             If (Frm00_Login.FormActive = 0) Then
-                'comprobar_focus(1)
-                Dim myForm As Frm002_PersonalPrincipal = New Frm002_PersonalPrincipal()
+
+
+                Dim myForm As Frm013_CreditoCobros = New Frm013_CreditoCobros()
 
                 myForm.TopLevel = False
                 myForm.AutoScroll = True
                 pn_principal.Controls.Add(myForm)
                 myForm.Show()
-
                 pn_principal.Show()
-
             End If
-        Else
-            clsMensaje.mostrar_mensaje("Solo el administrador tiene acceso a esta Opción", "error")
         End If
 
     End Sub

@@ -14,46 +14,31 @@ Public Class Frm009_Ventas
     Private Shared ReadOnly Plan As New List(Of EPlanServicio)()
     'Private Shared ReadOnly Producto As New List(Of EProducto)()
     'Private Shared ReadOnly Item As New List(Of EItem)()
-
+    Dim Tipo_Dato As Integer = 0 'Variable para verificar si el texto Ingresado es Letra o Número (0=Letras | 1=Números)
     Dim CodigoCliente As Integer = 0
     Dim DireccionCliente As String = ""
     Dim TipoDocumento As String = ""
     Dim Documento As String = ""
     Dim SubTotal As Decimal = 0
     Dim Igv As Decimal = 0
-
+    Dim CodigoVenta As Integer = 0
+    Dim selecionar_credito = False
     Private Sub FrmVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Generar_Serie() 'Llamamos al método generar serie del documento
 
+        tb_fecha.Text = DateTime.Now
         Call Listar_Ventas()
         If (Plan IsNot Nothing) Then 'Verificamos si la lista genérica es diferente a vacía
-            Call Listar_planes() 'Llamamos al método Listar_planes
+            Call Listar_Productos() 'Llamamos al método Listar_Productos
         End If
     End Sub
 
-    Private Sub Generar_Serie()
-        Try
-            'lblSerie.Text = V.Generar_Serie()
-        Catch ex As Exception
-            clsMensaje.mostrar_mensaje(ex.Message, "error")
-        End Try
-    End Sub
-
-    Private Sub Generar_Nro_Documento()
-        Try
-            V.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
-            'lblNroDocumento.Text = V.Generar_Correlativo()
-        Catch ex As Exception
-            clsMensaje.mostrar_mensaje(ex.Message, "error")
-        End Try
-    End Sub
 
     Private Sub rbnBoleta_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbnBoleta.CheckedChanged
-        Generar_Nro_Documento() 'Llamamos al método generar Nro comprobante
+
     End Sub
 
     Private Sub rbnFactura_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rbnFactura.CheckedChanged
-        Generar_Nro_Documento() 'Llamamos al método generar Nro comprobante
+
     End Sub
 
     Public Function LoadDataRow1(ByVal planServico As EPlanServicio) As Boolean Implements IPlanServicio.LoadDataRow1
@@ -64,7 +49,7 @@ Public Class Frm009_Ventas
             Plan.Add(planServico)
 
             Try
-                Call Listar_planes() 'Llamamos al método Listar_planes
+                Call Listar_Productos() 'Llamamos al método Listar_Productos
 
                 lblTotal.Text = CalcularTotal()
                 lblIgv.Text = CalcularIgv()
@@ -205,8 +190,8 @@ Public Class Frm009_Ventas
         If (permiso = "Todos") Then
             ErrorProvider1.Clear()
 
-            If (txtplazo.Text.Trim = "") Then
-                ErrorProvider1.SetError(txtplazo, "Ingreso nombre del Cementerio")
+            If (txt_plazo.Text.Trim = "") Then
+                ErrorProvider1.SetError(txt_plazo, "Ingreso nombre del Cementerio")
             ElseIf (txt_cuota.Text.Trim = "") Then
                 ErrorProvider1.SetError(txt_cuota, "Ingreso Dirección del Sepelio")
             ElseIf (txtCliente.Text.Trim = "") Then
@@ -218,10 +203,12 @@ Public Class Frm009_Ventas
                 Try
                     V.CodigoCliente = CInt(CodigoCliente)
                     V.TipoDocumento = If(rbnBoleta.Checked = True, "Boleta", "Factura")
-                    V.Cuotas = txt_cuota.Text
-                    V.Plazo = txtplazo.Text
+                    V.Cuotas = CDec(txt_cuota.Text)
+                    V.Plazo = CDec(txt_plazo.Text)
                     V.CondicionVenta = If(chk_contado.Checked = True, "Contado", "Credito")
                     V.Total = CDec(lblTotal.Text)
+                    V.FechaVenta = CDate(dtpFecha.Value)
+                    V.NumeroDocumento = txtNroDocumento.Text
                     Mensaje = V.Registrar_Ventas()
                     If (Mensaje = "Venta Registrada correctamente") Then
                         'Registramos el detalle de la venta            
@@ -236,15 +223,15 @@ Public Class Frm009_Ventas
                             V.Registrar_Detalle_Ventas()
                         Next
 
-                        'Registramos la información de la venta
-                        V.CodigoVenta = CInt(V.Devolver_Codigo_Ventas())
-                        V.Cementerio = CStr(txtplazo.Text)
-                        V.DireccionSepelio = CStr(txt_cuota.Text)
-                        V.FechaSepelio = CDate(dtpFechaSepelio.Value)
-                        V.Registrar_Informacion_Venta()
+                        ''Registramos la información de la venta
+                        'V.CodigoVenta = CInt(V.Devolver_Codigo_Ventas())
+                        'V.Cementerio = CStr(txt_plazo.Text)
+                        'V.DireccionSepelio = CStr(txt_cuota.Text)
+                        'V.FechaSepelio = CDate(dtpFecha.Value)
+                        'V.Registrar_Informacion_Venta()
 
                         clsMensaje.mostrar_mensaje(Mensaje, "ok")
-                        Call GenerarDocumento() 'Llamamos al método para generar el comprobante de pago (BOLETA Y/O FACTURA)
+                        GenerarDocumento() 'Llamamos al método para generar el comprobante de pago (BOLETA Y/O FACTURA)
                         Limpiar_controles()
                     Else
                         clsMensaje.mostrar_mensaje(Mensaje, "error")
@@ -265,18 +252,18 @@ Public Class Frm009_Ventas
         DataGridView1.Rows.Clear()
         txtCliente.Clear()
 
-        Generar_Nro_Documento()
+
         CodigoCliente = 0
         'CodigoProducto = 0
         lst.Clear()
         Plan.Clear()
-        txtplazo.Clear()
+        txt_plazo.Clear()
         txt_cuota.Clear()
 
-        dtpFechaSepelio.Value = Now
+        dtpFecha.Value = Now
     End Sub
 
-    Private Sub Listar_planes()
+    Private Sub Listar_Productos()
         Try
             DataGridView1.Rows.Clear()
             For i = 0 To Plan.Count - 1
@@ -350,10 +337,10 @@ Public Class Frm009_Ventas
         'Usamos las propiedades publicas del formulario, aqui es donde enviamos el valor
         'que se mostrara en los parametros creados en el LocalReport, para este ejemplo
         'estamos Seteando los valores directamente pero usted puede usar algun control
-        frm.Titulo = "Este es un ejemplo de Factura"
-        frm.Empresa = "Este es un ejemplo del Nombre de la Empresa"
-        frm.Direccion = "Av. Balta N° 1534 - Chiclayo Perú"
-        frm.Telefonos = "Teléfono: 3462581 / Celular: 984635364 / RPM: *47583"
+        frm.Titulo = "Recibo de pago"
+        frm.Empresa = "Funeraria Alfa & Omega"
+        frm.Direccion = "Enfrente Megasuper - Corredores Ciudad Neily"
+        frm.Telefonos = "Teléfono: 27833753 / Celular: 87077545 "
 
         'Usamos el metod Add porque Invoice es una lista e invoice es una entidad simple
         frm.Invoice.Add(invoice)
@@ -378,15 +365,16 @@ Public Class Frm009_Ventas
                 dtgvListadoVentas.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
                 dtgvListadoVentas.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
                 dtgvListadoVentas.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
-                dtgvListadoVentas.Rows(i).Cells(4).Value = dt.Rows(i)(5).ToString()
-                dtgvListadoVentas.Rows(i).Cells(5).Value = dt.Rows(i)(4).ToString()
-                dtgvListadoVentas.Rows(i).Cells(6).Value = Format(dt.Rows(i)(6), "dd/MM/yyyy")
-                dtgvListadoVentas.Rows(i).Cells(7).Value = Math.Round(dt.Rows(i)(7), 2)
-                dtgvListadoVentas.Rows(i).Cells(8).Value = "Ver Información"
+                dtgvListadoVentas.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
+                dtgvListadoVentas.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
+                dtgvListadoVentas.Rows(i).Cells(6).Value = dt.Rows(i)(6).ToString()
+                dtgvListadoVentas.Rows(i).Cells(7).Value = Format(dt.Rows(i)(7), "dd/MM/yyyy")
+                dtgvListadoVentas.Rows(i).Cells(8).Value = Math.Round(dt.Rows(i)(8), 2)
+                dtgvListadoVentas.Rows(i).Cells(9).Value = "Ver Información"
             Next
             Me.dtgvListadoVentas.ClearSelection()
             For Each row As DataGridViewRow In dtgvListadoVentas.Rows
-                Dim button1 As DataGridViewButtonCell = CType(row.Cells(8), DataGridViewButtonCell)
+                Dim button1 As DataGridViewButtonCell = CType(row.Cells(9), DataGridViewButtonCell)
                 button1.Style.BackColor = Color.FromArgb(92, 184, 92)
                 button1.Style.ForeColor = Color.White
                 button1.Style.Font = New Font("Arial", 9, FontStyle.Bold)
@@ -446,9 +434,9 @@ Public Class Frm009_Ventas
             Next
             Me.dtgvListadoDetalle.ClearSelection()
             lblTotal2.Text = Math.Round(Total, 2)
-            SubTotal = Total / 1.18
+            SubTotal = Total / 1.13
             lblSubTotal2.Text = Math.Round(SubTotal, 2)
-            Igv = SubTotal * 0.18
+            Igv = SubTotal * 0.13
             lblIgv2.Text = Math.Round(Igv, 2)
         Catch ex As Exception
             clsMensaje.mostrar_mensaje(ex.Message, "error")
@@ -475,9 +463,9 @@ Public Class Frm009_Ventas
 
     Private Sub dtgvListadoVentas_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dtgvListadoVentas.CellContentClick
         If (Me.dtgvListadoVentas.Columns(e.ColumnIndex).Name.Equals("VerInformacion")) Then
-            Dim frm As New Frm009iii_VerInformacion()
-            frm.CodigoVenta = CInt(Me.dtgvListadoVentas.CurrentRow.Cells(0).Value)
-            frm.ShowDialog()
+            'Dim frm As New Frm009iii_VerInformacion()
+            'frm.CodigoVenta = CInt(Me.dtgvListadoVentas.CurrentRow.Cells(0).Value)
+            'frm.ShowDialog()
         End If
     End Sub
 
@@ -507,7 +495,7 @@ Public Class Frm009_Ventas
     End Function
 
     Private Sub Cerrar_Form()
-        If (txtplazo.Text.Trim = "" And txt_cuota.Text.Trim = "" And txtCliente.Text.Trim = "") Then
+        If (txt_plazo.Text.Trim = "" And txt_cuota.Text.Trim = "" And txtCliente.Text.Trim = "") Then
             Close()
         Else
             Dim fr As New Frm011_MensajedeConfirmación2
@@ -524,5 +512,194 @@ Public Class Frm009_Ventas
 
     Private Sub GroupBox5_Enter(sender As Object, e As EventArgs) Handles GroupBox5.Enter
 
+    End Sub
+
+    Private Sub txt_cuota_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cuota.KeyPress
+        Validar.Numeros(e)
+    End Sub
+
+    Private Sub txtplazo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_plazo.KeyPress
+        Validar.Numeros(e)
+    End Sub
+
+    Private Sub txtplazo_TextChanged(sender As Object, e As EventArgs) Handles txt_plazo.TextChanged
+        If (lblTotal.Text.Length > 3 And txt_plazo.Text <> "" And txt_plazo.Text <> "0") Then
+            txt_cuota.Text = CDec(lblTotal.Text) / CDec(txt_plazo.Text)
+        End If
+    End Sub
+
+    Private Sub lblTotal_TextChanged(sender As Object, e As EventArgs) Handles lblTotal.TextChanged
+        If (lblTotal.Text.Length > 3 And txt_plazo.Text <> "" And txt_plazo.Text <> "0") Then
+            txt_cuota.Text = CDec(lblTotal.Text) / CDec(txt_plazo.Text)
+        End If
+    End Sub
+
+    Private Sub txtDatos_TextChanged(sender As Object, e As EventArgs) Handles txtDatos.TextChanged
+        If (txtDatos.Text.Trim() <> "") Then
+            Try
+                V.datos = txtDatos.Text
+                Listar_Creditos()
+            Catch ex As Exception
+                clsMensaje.mostrar_mensaje(ex.Message, "error")
+            End Try
+        Else
+
+        End If
+    End Sub
+    Private Sub Listar_Creditos()
+        Llenar_Grilla_credito(V.Listar_creditos())
+    End Sub
+    Private Sub Llenar_Grilla_credito(ByVal dt As DataTable)
+        Try
+            dgv_creditos.Rows.Clear()
+
+            For i = 0 To dt.Rows.Count - 1
+                dgv_creditos.Rows.Add(dt.Rows(i)(0))
+                dgv_creditos.Rows(i).Cells(0).Value = dt.Rows(i)(0).ToString()
+                dgv_creditos.Rows(i).Cells(1).Value = dt.Rows(i)(1).ToString()
+                dgv_creditos.Rows(i).Cells(2).Value = dt.Rows(i)(2).ToString()
+                dgv_creditos.Rows(i).Cells(3).Value = dt.Rows(i)(3).ToString()
+                dgv_creditos.Rows(i).Cells(4).Value = dt.Rows(i)(4).ToString()
+                dgv_creditos.Rows(i).Cells(5).Value = dt.Rows(i)(5).ToString()
+                dgv_creditos.Rows(i).Cells(6).Value = dt.Rows(i)(6).ToString()
+                dgv_creditos.Rows(i).Cells(7).Value = Format(dt.Rows(i)(7), "dd/MM/yyyy")
+                dgv_creditos.Rows(i).Cells(8).Value = Math.Round(dt.Rows(i)(8), 2)
+                dgv_creditos.Rows(i).Cells(9).Value = "Ver Información"
+            Next
+            Me.dgv_creditos.ClearSelection()
+            For Each row As DataGridViewRow In dgv_creditos.Rows
+                Dim button1 As DataGridViewButtonCell = CType(row.Cells(9), DataGridViewButtonCell)
+                button1.Style.BackColor = Color.FromArgb(92, 184, 92)
+                button1.Style.ForeColor = Color.White
+                button1.Style.Font = New Font("Arial", 9, FontStyle.Bold)
+            Next
+        Catch ex As Exception
+            clsMensaje.mostrar_mensaje(ex.Message, "error")
+        End Try
+    End Sub
+
+    Private Sub txtDatos_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDatos.KeyPress
+        If (Tipo_Dato = 0) Then
+            Validar.Numeros(e)
+        Else
+            Validar.Letras(e)
+        End If
+    End Sub
+
+    Private Sub rbnNombre_CheckedChanged(sender As Object, e As EventArgs) Handles rbnNombre.CheckedChanged
+        Listar_Creditos()
+        txtDatos.MaxLength = 256
+        txtDatos.Clear()
+        Tipo_Dato = 1
+        txtDatos.Focus()
+
+    End Sub
+
+    Private Sub rbnNDoc_CheckedChanged(sender As Object, e As EventArgs) Handles rbnNDoc.CheckedChanged
+
+        Listar_Creditos()
+        txtDatos.MaxLength = 8
+        txtDatos.Clear()
+        Tipo_Dato = 0
+        txtDatos.Focus()
+    End Sub
+
+    Private Sub dgv_creditos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_creditos.CellContentClick
+        Try
+
+            If (Me.dgv_creditos.Columns(e.ColumnIndex).Name.Equals("Opción")) Then
+                Dim frm As Frm009iiii_Listado_abonos_Ventas = New Frm009iiii_Listado_abonos_Ventas
+                frm.V.CodigoVentass = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+                frm.Show()
+            Else
+                CodigoVenta = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+                tb_monto_abono.Text = dgv_creditos.CurrentRow.Cells(4).Value.ToString()
+                lb_total.Text = dgv_creditos.CurrentRow.Cells(8).Value.ToString()
+                lb_subtotal.Text = CDec(dgv_creditos.CurrentRow.Cells(8).Value.ToString()) / 1.13
+                lb_iva.Text = (CDec(dgv_creditos.CurrentRow.Cells(8).Value.ToString()) / 1.13) * 0.13
+                V.CodigoVentass = dgv_creditos.CurrentRow.Cells(0).Value.ToString()
+                tb_monto_actual.Text = V.Devolver_monto_credito()
+                selecionar_credito = True
+            End If
+        Catch ex As Exception
+            clsMensaje.mostrar_mensaje(ex.Message, "error")
+        End Try
+    End Sub
+
+    Private Sub btn_abonar_Click(sender As Object, e As EventArgs) Handles btn_abonar.Click
+        U.CodigoPersona = CStr(Codigo_Personal_Online)
+        U.tipo = "personal"
+        Dim permiso As String = U.Devolver_permisos()
+
+        If (permiso = "Todos") Then
+            ErrorProvider1.Clear()
+
+            If (tb_monto_abono.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_monto_abono, "Debe Ingresar el Monto del Abono")
+            ElseIf (tb_monto_actual.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_monto_actual, "Debe Ingresar monto actual")
+            ElseIf (tb_comprobante.Text.Trim() = "") Then
+                ErrorProvider1.SetError(tb_comprobante, "Debe Ingresar Número de Comprobante")
+
+            ElseIf (dgv_creditos.Rows.Count < 1) Then
+                clsMensaje.mostrar_mensaje("No hay ningún Ítem agregado al carrito de Compra", "error")
+            Else
+                If (selecionar_credito) Then
+                    Dim Mensaje As String = ""
+                    Try
+                        Dim resultado = 0
+                        resultado = CDec(tb_monto_actual.Text) - CDec(tb_monto_abono.Text)
+                        If (resultado >= 0) Then
+                            V.MontoAbono = tb_monto_abono.Text
+                            V.MontoActual = resultado
+                            V.FechaAbono = CDate(tb_fecha.Text)
+                            V.NComprobante = tb_comprobante.Text
+                            Mensaje = V.Registrar_Abono()
+                            clsMensaje.mostrar_mensaje(Mensaje, "ok")
+                            tb_monto_actual.Text = V.Devolver_monto_credito()
+                        Else
+                            clsMensaje.mostrar_mensaje("el monto del abono supera el monto actual", "error")
+                        End If
+
+                    Catch ex As Exception
+                        clsMensaje.mostrar_mensaje(ex.Message, "error")
+                    End Try
+                End If
+
+            End If
+
+        End If
+    End Sub
+
+    Private Sub chk_credito_CheckedChanged(sender As Object, e As EventArgs) Handles chk_credito.CheckedChanged
+        If (chk_contado.Checked) Then
+            chk_contado.Checked = False
+        End If
+        txt_cuota.Show()
+        txt_plazo.Show()
+        lb_plazo.Show()
+        lb_cuota.Show()
+    End Sub
+
+    Private Sub chk_contado_CheckedChanged(sender As Object, e As EventArgs) Handles chk_contado.CheckedChanged
+        If (chk_credito.Checked) Then
+            chk_credito.Checked = False
+        End If
+        txt_cuota.Hide()
+        txt_plazo.Hide()
+        lb_plazo.Hide()
+        lb_cuota.Hide()
+    End Sub
+
+    Private Sub TabPage2_Click(sender As Object, e As EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub Panel_cabecera_Paint(sender As Object, e As PaintEventArgs) Handles Panel_cabecera.Paint
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        GenerarDocumento()
     End Sub
 End Class

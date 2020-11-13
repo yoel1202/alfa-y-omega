@@ -7,9 +7,9 @@ Public Class clsVentas
 
     'Propiedades de la Venta
     Public Property CodigoCliente() As Integer
-    Public Property CondicionVenta() As Integer
-    Public Property Cuotas() As String
-    Public Property Plazo() As String
+    Public Property CondicionVenta() As String
+    Public Property Cuotas() As Decimal
+    Public Property Plazo() As Decimal
     Public Property FechaVenta() As Date
     Public Property Total() As Decimal
     Public Property TipoDocumento() As String
@@ -34,7 +34,13 @@ Public Class clsVentas
     'Propiedades para Consultar Ventas por Rangos de Fecha
     Public Property Fecha1() As Date
     Public Property Fecha2() As Date
+    Public Property CodigoVentass() As Integer
+    Public Property datos() As String
 
+    Public Property MontoAbono() As Decimal
+    Public Property MontoActual() As Decimal
+    Public Property NComprobante() As String
+    Public Property FechaAbono() As Date
     Public Function Generar_Serie() As String
         Dim Serie As String = "" 'Declaramos la variable para recuperar la Serie de la BD
         Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
@@ -73,18 +79,21 @@ Public Class clsVentas
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Cliente", CodigoCliente))
-            lst.Add(New clsParametro("@Codigo_Personal", NumeroDocumento))
-            lst.Add(New clsParametro("@Serie", NumeroDocumento))
-            lst.Add(New clsParametro("@NroComprobante", NumeroDocumento))
-            lst.Add(New clsParametro("@FechaVenta", FechaVenta))
-            lst.Add(New clsParametro("@Tipo_Documento", TipoDocumento))
-            lst.Add(New clsParametro("@Total", Total))
+
+            lst.Add(New clsParametro("@Codigo_Clientes", CodigoCliente))
+            lst.Add(New clsParametro("@Tipo_Documentos", TipoDocumento))
+            lst.Add(New clsParametro("@Condicion_ventas", CondicionVenta))
+            lst.Add(New clsParametro("@Cuotass", Cuotas))
+            lst.Add(New clsParametro("@Plazos", Plazo))
+            lst.Add(New clsParametro("@FechaVentas", FechaVenta))
+            lst.Add(New clsParametro("@Totals", Total))
+            lst.Add(New clsParametro("@numero_documentos", NumeroDocumento))
             lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Ventas", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
-            Mensaje = lst(7).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+            Mensaje = lst(8).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+
         Catch ex As Exception
-            Throw New Exception("Error al registrar ventas, verifique clase clsVentas") 'Creamos una nueva excepción de errores
+            Throw New Exception("Error al registrar ventas, verifique clase clsVentas" + ex.Message) 'Creamos una nueva excepción de errores
         End Try
 
         Return Mensaje 'Retornamos el mensaje recuperado
@@ -112,14 +121,14 @@ Public Class clsVentas
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_Ventas", CodigoVenta))
-            lst.Add(New clsParametro("@Codigo_Item", CodigoItem))
-            lst.Add(New clsParametro("@Cantidad", Cantidad))
-            lst.Add(New clsParametro("@Precio_Venta", PrecioVenta))
-            lst.Add(New clsParametro("@Igv", Igv))
-            lst.Add(New clsParametro("@Dscto", Descuento))
-            lst.Add(New clsParametro("@Sub_Total", SubTotal))
-            lst.Add(New clsParametro("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            lst.Add(New clsParametro("@Codigo_Ventass", CodigoVenta))
+            lst.Add(New clsParametro("@Codigo_Items", CodigoItem))
+            lst.Add(New clsParametro("@Cantidads", Cantidad))
+            lst.Add(New clsParametro("@Precio_Ventas", PrecioVenta))
+            lst.Add(New clsParametro("@Igvs", Igv))
+            lst.Add(New clsParametro("@Dsctos", Descuento))
+            lst.Add(New clsParametro("@Sub_Totals", SubTotal))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
             M.EjecutarSP("Registrar_Detalle_Venta", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
             Mensaje = lst(7).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
         Catch ex As Exception
@@ -222,10 +231,65 @@ Public Class clsVentas
         Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
 
         Try 'Manejamos una excepción de errores
-            lst.Add(New clsParametro("@CodigoItem", CodigoItem))
+            lst.Add(New clsParametro("@CodigoItems", CodigoItem))
             Return M.Listado("Mostrar_Detalle_Item", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
         Catch ex As Exception
             Throw New Exception("Error al listar Información de Ventas, verifique clase clsVentas") 'Creamos una nueva excepción de errores
+        End Try
+    End Function
+    Public Function Listar_creditos() As DataTable 'Función para listar Compras
+        Dim lst As New List(Of clsParametro)
+        Try 'Manejamos una excepción de errores
+            lst.Add(New clsParametro("@Datos", datos))
+            Return M.Listado("Buscar_facturas_credito_Ventas", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
+        Catch ex As Exception
+            Throw New Exception("Error al filtrar Personal, verifique clase clsVentas") 'Creamos una nueva excepción de errores
+        End Try
+    End Function
+    Public Function Devolver_monto_credito() As Integer
+        Dim monto As Decimal = 0
+
+        Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
+        Try 'Manejamos una excepción de errores
+            'Agregamos a la lista genérica el nombre y valor de los parámetros
+
+            lst.Add(New clsParametro("@Codigo_Ventass", CodigoVentass))
+            lst.Add(New clsParametro("@monto", "", MySqlDbType.Decimal, ParameterDirection.Output, 5)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            M.EjecutarSP("Devolver_monto_credito_Venta", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
+            monto = lst(1).Valor.ToString() 'Recuperamos el monto de la Base de Datos
+        Catch ex As Exception
+            Throw New Exception("Error al devolver el código de la compra, verifique clase clsVentas") 'Creamos una nueva excepción de errores
+        End Try
+        Return monto 'Retornamos el monto recuperado
+    End Function
+    Public Function Registrar_Abono() As String 'Función para registrar Compras
+        Dim Mensaje As String = "" 'Declaramos la variable para recuperar el Mensaje
+
+        Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
+
+        Try 'Manejamos una excepción de errores
+            'Agregamos a la lista genérica el nombre y valor de los parámetros
+            lst.Add(New clsParametro("@Codigo_Ventass", CodigoVentass))
+            lst.Add(New clsParametro("@Monto_abonos", MontoAbono))
+            lst.Add(New clsParametro("@Monto_actuals", MontoActual))
+            lst.Add(New clsParametro("@Fecha_abonos", FechaAbono))
+            lst.Add(New clsParametro("@NComprobantes", NComprobante))
+            lst.Add(New clsParametro("@Mensaje", "", MySqlDbType.VarChar, ParameterDirection.Output, 100)) 'Especificamos que el parámetro @Mensaje es de tipo salida
+            M.EjecutarSP("Registrar_Abono_Ventas", lst) 'Enviamos el nombre de nuestro Procedimiento almacenado con la lista de los parámetros para su ejecución
+            Mensaje = lst(5).Valor.ToString() 'Recuperamos el mensaje de la Base de Datos
+        Catch ex As Exception
+            Throw New Exception("Error al registrar compras, verifique clase clsVentas") 'Creamos una nueva excepción de errores
+        End Try
+
+        Return Mensaje 'Retornamos el mensaje recuperado
+    End Function
+    Public Function Listar_Abonos_Ventas() As DataTable 'Función para listar Compras
+        Dim lst As New List(Of clsParametro)
+        Try 'Manejamos una excepción de errores
+            lst.Add(New clsParametro("@Codigoventas", CodigoVentass))
+            Return M.Listado("Listar_Abonos_Ventas", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
+        Catch ex As Exception
+            Throw New Exception("Error al listar compras, verifique clase clsVentas") 'Creamos una nueva excepción de errores
         End Try
     End Function
 End Class

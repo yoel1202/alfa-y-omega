@@ -326,4 +326,7 @@ Public Class Frm005_Cliente
         End If
     End Sub
 
+    Private Sub Panel_cabecera_Paint(sender As Object, e As PaintEventArgs) Handles Panel_cabecera.Paint
+
+    End Sub
 End Class

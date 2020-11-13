@@ -29,6 +29,15 @@ Partial Class Frm005_Cliente
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NroDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.segunda = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.lkbCerrar = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -43,6 +52,8 @@ Partial Class Frm005_Cliente
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.tb_segunda_direccion = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -57,17 +68,6 @@ Partial Class Frm005_Cliente
         Me.rbnNatural = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.tb_segunda_direccion = New System.Windows.Forms.TextBox()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NroDoc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.segunda = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_cabecera.SuspendLayout()
@@ -147,6 +147,67 @@ Partial Class Frm005_Cliente
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(1157, 266)
         Me.DataGridView1.TabIndex = 6
+        '
+        'Codigo
+        '
+        Me.Codigo.HeaderText = "Codigo Cliente"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Tipo Persona"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'NroDoc
+        '
+        Me.NroDoc.HeaderText = "Nro Doc."
+        Me.NroDoc.Name = "NroDoc"
+        Me.NroDoc.ReadOnly = True
+        '
+        'Nombres
+        '
+        Me.Nombres.HeaderText = "Nombres"
+        Me.Nombres.Name = "Nombres"
+        Me.Nombres.ReadOnly = True
+        Me.Nombres.Width = 230
+        '
+        'Direccion
+        '
+        Me.Direccion.HeaderText = "Dirección"
+        Me.Direccion.Name = "Direccion"
+        Me.Direccion.ReadOnly = True
+        Me.Direccion.Width = 230
+        '
+        'segunda
+        '
+        Me.segunda.HeaderText = "Segunda Direccion"
+        Me.segunda.Name = "segunda"
+        Me.segunda.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Teléfono"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 90
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Email"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 200
+        '
+        'Button
+        '
+        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button.HeaderText = "Editar"
+        Me.Button.Name = "Button"
+        Me.Button.ReadOnly = True
+        Me.Button.Width = 80
         '
         'Panel_cabecera
         '
@@ -321,6 +382,22 @@ Partial Class Frm005_Cliente
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del Cliente"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(19, 162)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(115, 15)
+        Me.Label4.TabIndex = 12
+        Me.Label4.Text = "Segunda Dirección:"
+        '
+        'tb_segunda_direccion
+        '
+        Me.tb_segunda_direccion.Location = New System.Drawing.Point(181, 159)
+        Me.tb_segunda_direccion.Name = "tb_segunda_direccion"
+        Me.tb_segunda_direccion.Size = New System.Drawing.Size(393, 21)
+        Me.tb_segunda_direccion.TabIndex = 11
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -438,83 +515,6 @@ Partial Class Frm005_Cliente
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(19, 162)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(115, 15)
-        Me.Label4.TabIndex = 12
-        Me.Label4.Text = "Segunda Dirección:"
-        '
-        'tb_segunda_direccion
-        '
-        Me.tb_segunda_direccion.Location = New System.Drawing.Point(181, 159)
-        Me.tb_segunda_direccion.Name = "tb_segunda_direccion"
-        Me.tb_segunda_direccion.Size = New System.Drawing.Size(393, 21)
-        Me.tb_segunda_direccion.TabIndex = 11
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Codigo Cliente"
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        Me.Codigo.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Tipo Persona"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'NroDoc
-        '
-        Me.NroDoc.HeaderText = "Nro Doc."
-        Me.NroDoc.Name = "NroDoc"
-        Me.NroDoc.ReadOnly = True
-        '
-        'Nombres
-        '
-        Me.Nombres.HeaderText = "Nombres"
-        Me.Nombres.Name = "Nombres"
-        Me.Nombres.ReadOnly = True
-        Me.Nombres.Width = 230
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "Dirección"
-        Me.Direccion.Name = "Direccion"
-        Me.Direccion.ReadOnly = True
-        Me.Direccion.Width = 230
-        '
-        'segunda
-        '
-        Me.segunda.HeaderText = "Segunda Direccion"
-        Me.segunda.Name = "segunda"
-        Me.segunda.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Teléfono"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 90
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Email"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 200
-        '
-        'Button
-        '
-        Me.Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button.HeaderText = "Editar"
-        Me.Button.Name = "Button"
-        Me.Button.ReadOnly = True
-        Me.Button.Width = 80
         '
         'Frm005_Cliente
         '

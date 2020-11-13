@@ -78,7 +78,7 @@ Public Class clsCompras
 
         Try 'Manejamos una excepción de errores
             'Agregamos a la lista genérica el nombre y valor de los parámetros
-            lst.Add(New clsParametro("@Codigo_compras", CodigoComprass))
+            lst.Add(New clsParametro("@Codigo_comprass", CodigoComprass))
             lst.Add(New clsParametro("@Monto_abonos", MontoAbono))
             lst.Add(New clsParametro("@Monto_actuals", MontoActual))
             lst.Add(New clsParametro("@Fecha_abonos", FechaAbono))
@@ -166,7 +166,15 @@ Public Class clsCompras
             Throw New Exception("Error al filtrar Personal, verifique clase clsPersonal") 'Creamos una nueva excepción de errores
         End Try
     End Function
-
+    Public Function Listar_Abonos_Compras() As DataTable 'Función para listar Compras
+        Dim lst As New List(Of clsParametro)
+        Try 'Manejamos una excepción de errores
+            lst.Add(New clsParametro("@CodigoCompras", CodigoCompras))
+            Return M.Listado("Listar_Abonos_Compras", lst) 'Pasamos el nombre de nuestro procedimiento almacenado sin ningún parámetro
+        Catch ex As Exception
+            Throw New Exception("Error al listar compras, verifique clase clsCompras") 'Creamos una nueva excepción de errores
+        End Try
+    End Function
     Public Function Listar_Detalle_Compras() As DataTable 'Función para listar Detalle de Compras
         Dim lst As New List(Of clsParametro) 'Instanciamos nuestra lista genérica con la clase clsParametro
 

@@ -72,7 +72,7 @@ Partial Class Frm008_Compras
         Me.Label8 = New System.Windows.Forms.Label()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.lkbAgregar = New System.Windows.Forms.LinkLabel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv_compras = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -155,6 +155,7 @@ Partial Class Frm008_Compras
         Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Plazo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cuota = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Opción = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.bordeIzquierda = New System.Windows.Forms.Panel()
         Me.bordeDerecha = New System.Windows.Forms.Panel()
         Me.bordeInferior = New System.Windows.Forms.Panel()
@@ -167,7 +168,7 @@ Partial Class Frm008_Compras
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_compras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -206,29 +207,27 @@ Partial Class Frm008_Compras
         Me.GroupBox2.Controls.Add(Me.rbnBoleta)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(48, 8)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Location = New System.Drawing.Point(36, 6)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(749, 193)
+        Me.GroupBox2.Size = New System.Drawing.Size(562, 157)
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Proveedor"
         '
         'tb_cuota
         '
-        Me.tb_cuota.Location = New System.Drawing.Point(370, 161)
-        Me.tb_cuota.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_cuota.Location = New System.Drawing.Point(278, 131)
         Me.tb_cuota.Name = "tb_cuota"
-        Me.tb_cuota.Size = New System.Drawing.Size(176, 24)
+        Me.tb_cuota.Size = New System.Drawing.Size(133, 21)
         Me.tb_cuota.TabIndex = 26
         '
         'chk_contado
         '
         Me.chk_contado.AutoSize = True
-        Me.chk_contado.Location = New System.Drawing.Point(370, 138)
+        Me.chk_contado.Location = New System.Drawing.Point(278, 112)
+        Me.chk_contado.Margin = New System.Windows.Forms.Padding(2)
         Me.chk_contado.Name = "chk_contado"
-        Me.chk_contado.Size = New System.Drawing.Size(87, 22)
+        Me.chk_contado.Size = New System.Drawing.Size(72, 19)
         Me.chk_contado.TabIndex = 16
         Me.chk_contado.Text = "Contado"
         Me.chk_contado.UseVisualStyleBackColor = True
@@ -238,9 +237,10 @@ Partial Class Frm008_Compras
         Me.chk_Credito.AutoSize = True
         Me.chk_Credito.Checked = True
         Me.chk_Credito.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chk_Credito.Location = New System.Drawing.Point(183, 137)
+        Me.chk_Credito.Location = New System.Drawing.Point(137, 111)
+        Me.chk_Credito.Margin = New System.Windows.Forms.Padding(2)
         Me.chk_Credito.Name = "chk_Credito"
-        Me.chk_Credito.Size = New System.Drawing.Size(78, 22)
+        Me.chk_Credito.Size = New System.Drawing.Size(65, 19)
         Me.chk_Credito.TabIndex = 15
         Me.chk_Credito.Text = "Credito"
         Me.chk_Credito.UseVisualStyleBackColor = True
@@ -248,39 +248,37 @@ Partial Class Frm008_Compras
         'lb_cuota
         '
         Me.lb_cuota.AutoSize = True
-        Me.lb_cuota.Location = New System.Drawing.Point(311, 161)
-        Me.lb_cuota.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_cuota.Location = New System.Drawing.Point(233, 131)
         Me.lb_cuota.Name = "lb_cuota"
-        Me.lb_cuota.Size = New System.Drawing.Size(52, 18)
+        Me.lb_cuota.Size = New System.Drawing.Size(42, 15)
         Me.lb_cuota.TabIndex = 25
         Me.lb_cuota.Text = "Cuota:"
         '
         'lb_tipo_pago
         '
         Me.lb_tipo_pago.AutoSize = True
-        Me.lb_tipo_pago.Location = New System.Drawing.Point(21, 142)
-        Me.lb_tipo_pago.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_tipo_pago.Location = New System.Drawing.Point(16, 115)
         Me.lb_tipo_pago.Name = "lb_tipo_pago"
-        Me.lb_tipo_pago.Size = New System.Drawing.Size(88, 18)
+        Me.lb_tipo_pago.Size = New System.Drawing.Size(72, 15)
         Me.lb_tipo_pago.TabIndex = 14
         Me.lb_tipo_pago.Text = " Tipo  Pago:"
         '
         'ckb_reventa
         '
         Me.ckb_reventa.AutoSize = True
-        Me.ckb_reventa.Location = New System.Drawing.Point(370, 108)
+        Me.ckb_reventa.Location = New System.Drawing.Point(278, 88)
+        Me.ckb_reventa.Margin = New System.Windows.Forms.Padding(2)
         Me.ckb_reventa.Name = "ckb_reventa"
-        Me.ckb_reventa.Size = New System.Drawing.Size(84, 22)
+        Me.ckb_reventa.Size = New System.Drawing.Size(71, 19)
         Me.ckb_reventa.TabIndex = 13
         Me.ckb_reventa.Text = "Reventa"
         Me.ckb_reventa.UseVisualStyleBackColor = True
         '
         'tb_plazo
         '
-        Me.tb_plazo.Location = New System.Drawing.Point(183, 161)
-        Me.tb_plazo.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_plazo.Location = New System.Drawing.Point(137, 131)
         Me.tb_plazo.Name = "tb_plazo"
-        Me.tb_plazo.Size = New System.Drawing.Size(103, 24)
+        Me.tb_plazo.Size = New System.Drawing.Size(78, 21)
         Me.tb_plazo.TabIndex = 24
         '
         'ckb_gasto
@@ -288,9 +286,10 @@ Partial Class Frm008_Compras
         Me.ckb_gasto.AutoSize = True
         Me.ckb_gasto.Checked = True
         Me.ckb_gasto.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ckb_gasto.Location = New System.Drawing.Point(183, 108)
+        Me.ckb_gasto.Location = New System.Drawing.Point(137, 88)
+        Me.ckb_gasto.Margin = New System.Windows.Forms.Padding(2)
         Me.ckb_gasto.Name = "ckb_gasto"
-        Me.ckb_gasto.Size = New System.Drawing.Size(71, 22)
+        Me.ckb_gasto.Size = New System.Drawing.Size(58, 19)
         Me.ckb_gasto.TabIndex = 11
         Me.ckb_gasto.Text = "Gasto"
         Me.ckb_gasto.UseVisualStyleBackColor = True
@@ -298,50 +297,45 @@ Partial Class Frm008_Compras
         'lb_plazo
         '
         Me.lb_plazo.AutoSize = True
-        Me.lb_plazo.Location = New System.Drawing.Point(29, 167)
-        Me.lb_plazo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_plazo.Location = New System.Drawing.Point(22, 136)
         Me.lb_plazo.Name = "lb_plazo"
-        Me.lb_plazo.Size = New System.Drawing.Size(50, 18)
+        Me.lb_plazo.Size = New System.Drawing.Size(41, 15)
         Me.lb_plazo.TabIndex = 23
         Me.lb_plazo.Text = "Plazo:"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(20, 113)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label18.Location = New System.Drawing.Point(15, 92)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(107, 18)
+        Me.Label18.Size = New System.Drawing.Size(87, 15)
         Me.Label18.TabIndex = 8
         Me.Label18.Text = " Tipo  Compra:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(25, 31)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(19, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 18)
+        Me.Label1.Size = New System.Drawing.Size(66, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Proveedor:"
         '
         'txtProveedor
         '
         Me.txtProveedor.BackColor = System.Drawing.SystemColors.Window
-        Me.txtProveedor.Location = New System.Drawing.Point(183, 17)
-        Me.txtProveedor.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtProveedor.Location = New System.Drawing.Point(137, 14)
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.ReadOnly = True
-        Me.txtProveedor.Size = New System.Drawing.Size(408, 24)
+        Me.txtProveedor.Size = New System.Drawing.Size(307, 21)
         Me.txtProveedor.TabIndex = 1
         '
         'lkbBuscar
         '
         Me.lkbBuscar.AutoSize = True
-        Me.lkbBuscar.Location = New System.Drawing.Point(625, 26)
-        Me.lkbBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lkbBuscar.Location = New System.Drawing.Point(469, 21)
         Me.lkbBuscar.Name = "lkbBuscar"
-        Me.lkbBuscar.Size = New System.Drawing.Size(55, 18)
+        Me.lkbBuscar.Size = New System.Drawing.Size(45, 15)
         Me.lkbBuscar.TabIndex = 7
         Me.lkbBuscar.TabStop = True
         Me.lkbBuscar.Text = "Buscar"
@@ -349,40 +343,36 @@ Partial Class Frm008_Compras
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 59)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(19, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 18)
+        Me.Label2.Size = New System.Drawing.Size(44, 15)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Fecha:"
         '
         'rbnFactura
         '
         Me.rbnFactura.AutoSize = True
-        Me.rbnFactura.Location = New System.Drawing.Point(375, 84)
-        Me.rbnFactura.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbnFactura.Location = New System.Drawing.Point(281, 68)
         Me.rbnFactura.Name = "rbnFactura"
-        Me.rbnFactura.Size = New System.Drawing.Size(79, 22)
+        Me.rbnFactura.Size = New System.Drawing.Size(66, 19)
         Me.rbnFactura.TabIndex = 6
         Me.rbnFactura.Text = "Factura"
         Me.rbnFactura.UseVisualStyleBackColor = True
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(183, 50)
-        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpFecha.Location = New System.Drawing.Point(137, 41)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(331, 24)
+        Me.dtpFecha.Size = New System.Drawing.Size(249, 21)
         Me.dtpFecha.TabIndex = 4
         '
         'rbnBoleta
         '
         Me.rbnBoleta.AutoSize = True
         Me.rbnBoleta.Checked = True
-        Me.rbnBoleta.Location = New System.Drawing.Point(183, 81)
-        Me.rbnBoleta.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbnBoleta.Location = New System.Drawing.Point(137, 66)
         Me.rbnBoleta.Name = "rbnBoleta"
-        Me.rbnBoleta.Size = New System.Drawing.Size(71, 22)
+        Me.rbnBoleta.Size = New System.Drawing.Size(60, 19)
         Me.rbnBoleta.TabIndex = 6
         Me.rbnBoleta.TabStop = True
         Me.rbnBoleta.Text = "Boleta"
@@ -391,10 +381,9 @@ Partial Class Frm008_Compras
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(20, 85)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(15, 69)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(127, 18)
+        Me.Label3.Size = New System.Drawing.Size(104, 15)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = " Tipo Documento:"
         '
@@ -406,59 +395,52 @@ Partial Class Frm008_Compras
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(828, 8)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(621, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(403, 164)
+        Me.GroupBox1.Size = New System.Drawing.Size(302, 133)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         '
         'txtNroDocumento
         '
-        Me.txtNroDocumento.Location = New System.Drawing.Point(135, 102)
-        Me.txtNroDocumento.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNroDocumento.Location = New System.Drawing.Point(101, 83)
         Me.txtNroDocumento.MaxLength = 7
         Me.txtNroDocumento.Name = "txtNroDocumento"
-        Me.txtNroDocumento.Size = New System.Drawing.Size(200, 24)
+        Me.txtNroDocumento.Size = New System.Drawing.Size(151, 21)
         Me.txtNroDocumento.TabIndex = 3
         '
         'txtSerie
         '
-        Me.txtSerie.Location = New System.Drawing.Point(135, 59)
-        Me.txtSerie.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSerie.Location = New System.Drawing.Point(101, 48)
         Me.txtSerie.MaxLength = 3
         Me.txtSerie.Name = "txtSerie"
-        Me.txtSerie.Size = New System.Drawing.Size(127, 24)
+        Me.txtSerie.Size = New System.Drawing.Size(96, 21)
         Me.txtSerie.TabIndex = 3
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(108, 23)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(81, 19)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(158, 18)
+        Me.Label6.Size = New System.Drawing.Size(131, 15)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Comprobante de Pago"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(40, 110)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(30, 89)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 18)
+        Me.Label5.Size = New System.Drawing.Size(49, 15)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "N° Doc:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(40, 63)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(30, 51)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(46, 18)
+        Me.Label4.Size = New System.Drawing.Size(39, 15)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Serie:"
         '
@@ -477,117 +459,104 @@ Partial Class Frm008_Compras
         Me.GroupBox3.Controls.Add(Me.LinkLabel3)
         Me.GroupBox3.Controls.Add(Me.lkbAgregar)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(48, 203)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Location = New System.Drawing.Point(36, 165)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox3.Size = New System.Drawing.Size(749, 130)
+        Me.GroupBox3.Size = New System.Drawing.Size(562, 106)
         Me.GroupBox3.TabIndex = 17
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Producto"
         '
         'tb_utilidad
         '
-        Me.tb_utilidad.Location = New System.Drawing.Point(140, 97)
-        Me.tb_utilidad.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_utilidad.Location = New System.Drawing.Point(105, 79)
         Me.tb_utilidad.Name = "tb_utilidad"
-        Me.tb_utilidad.Size = New System.Drawing.Size(128, 24)
+        Me.tb_utilidad.Size = New System.Drawing.Size(97, 21)
         Me.tb_utilidad.TabIndex = 22
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(36, 102)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label17.Location = New System.Drawing.Point(27, 83)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(60, 18)
+        Me.Label17.Size = New System.Drawing.Size(52, 15)
         Me.Label17.TabIndex = 21
         Me.Label17.Text = "Utilidad:"
         '
         'tb_precio_venta
         '
-        Me.tb_precio_venta.Location = New System.Drawing.Point(463, 97)
-        Me.tb_precio_venta.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_precio_venta.Location = New System.Drawing.Point(347, 79)
         Me.tb_precio_venta.Name = "tb_precio_venta"
-        Me.tb_precio_venta.Size = New System.Drawing.Size(128, 24)
+        Me.tb_precio_venta.Size = New System.Drawing.Size(97, 21)
         Me.tb_precio_venta.TabIndex = 20
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(303, 102)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Location = New System.Drawing.Point(227, 83)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(96, 18)
+        Me.Label16.Size = New System.Drawing.Size(79, 15)
         Me.Label16.TabIndex = 19
         Me.Label16.Text = "Precio Venta:"
         '
         'txtPrecioCompra
         '
-        Me.txtPrecioCompra.Location = New System.Drawing.Point(463, 58)
-        Me.txtPrecioCompra.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPrecioCompra.Location = New System.Drawing.Point(347, 47)
         Me.txtPrecioCompra.Name = "txtPrecioCompra"
-        Me.txtPrecioCompra.Size = New System.Drawing.Size(128, 24)
+        Me.txtPrecioCompra.Size = New System.Drawing.Size(97, 21)
         Me.txtPrecioCompra.TabIndex = 18
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(303, 63)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(227, 51)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(113, 18)
+        Me.Label9.Size = New System.Drawing.Size(92, 15)
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Precio Compra:"
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(140, 58)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCantidad.Location = New System.Drawing.Point(105, 47)
         Me.txtCantidad.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.txtCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(73, 24)
+        Me.txtCantidad.Size = New System.Drawing.Size(55, 21)
         Me.txtCantidad.TabIndex = 16
         Me.txtCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(36, 63)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(27, 51)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(70, 18)
+        Me.Label7.Size = New System.Drawing.Size(59, 15)
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Cantidad:"
         '
         'txtProducto
         '
         Me.txtProducto.BackColor = System.Drawing.SystemColors.Window
-        Me.txtProducto.Location = New System.Drawing.Point(140, 18)
-        Me.txtProducto.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtProducto.Location = New System.Drawing.Point(105, 15)
         Me.txtProducto.Name = "txtProducto"
         Me.txtProducto.ReadOnly = True
-        Me.txtProducto.Size = New System.Drawing.Size(451, 24)
+        Me.txtProducto.Size = New System.Drawing.Size(339, 21)
         Me.txtProducto.TabIndex = 14
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(36, 27)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(27, 22)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 18)
+        Me.Label8.Size = New System.Drawing.Size(59, 15)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "Producto:"
         '
         'LinkLabel3
         '
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(625, 22)
-        Me.LinkLabel3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LinkLabel3.Location = New System.Drawing.Point(469, 18)
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(55, 18)
+        Me.LinkLabel3.Size = New System.Drawing.Size(45, 15)
         Me.LinkLabel3.TabIndex = 13
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "Buscar"
@@ -595,26 +564,24 @@ Partial Class Frm008_Compras
         'lkbAgregar
         '
         Me.lkbAgregar.AutoSize = True
-        Me.lkbAgregar.Location = New System.Drawing.Point(625, 65)
-        Me.lkbAgregar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lkbAgregar.Location = New System.Drawing.Point(469, 53)
         Me.lkbAgregar.Name = "lkbAgregar"
-        Me.lkbAgregar.Size = New System.Drawing.Size(59, 18)
+        Me.lkbAgregar.Size = New System.Drawing.Size(50, 15)
         Me.lkbAgregar.TabIndex = 13
         Me.lkbAgregar.TabStop = True
         Me.lkbAgregar.Text = "Agregar"
         '
-        'DataGridView1
+        'dgv_compras
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Window
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Utilidad, Me.Preciov, Me.Column4, Me.Column7, Me.Column5, Me.Column8, Me.Eliminar})
-        Me.DataGridView1.Location = New System.Drawing.Point(48, 341)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.Size = New System.Drawing.Size(1196, 149)
-        Me.DataGridView1.TabIndex = 18
+        Me.dgv_compras.AllowUserToAddRows = False
+        Me.dgv_compras.BackgroundColor = System.Drawing.SystemColors.Window
+        Me.dgv_compras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_compras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Utilidad, Me.Preciov, Me.Column4, Me.Column7, Me.Column5, Me.Column8, Me.Eliminar})
+        Me.dgv_compras.Location = New System.Drawing.Point(36, 277)
+        Me.dgv_compras.Name = "dgv_compras"
+        Me.dgv_compras.RowHeadersWidth = 51
+        Me.dgv_compras.Size = New System.Drawing.Size(897, 121)
+        Me.dgv_compras.TabIndex = 18
         '
         'Column1
         '
@@ -702,10 +669,9 @@ Partial Class Frm008_Compras
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1037, 503)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(778, 409)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 17)
+        Me.Label10.Size = New System.Drawing.Size(51, 13)
         Me.Label10.TabIndex = 19
         Me.Label10.Text = "TOTAL:"
         '
@@ -715,10 +681,9 @@ Partial Class Frm008_Compras
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnGuardar.Location = New System.Drawing.Point(84, 41)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGuardar.Location = New System.Drawing.Point(63, 33)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(240, 62)
+        Me.btnGuardar.Size = New System.Drawing.Size(180, 50)
         Me.btnGuardar.TabIndex = 21
         Me.btnGuardar.Text = "Registrar"
         Me.btnGuardar.UseVisualStyleBackColor = False
@@ -726,10 +691,9 @@ Partial Class Frm008_Compras
         'lblTotal
         '
         Me.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblTotal.Location = New System.Drawing.Point(1113, 498)
-        Me.lblTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTotal.Location = New System.Drawing.Point(835, 405)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(115, 28)
+        Me.lblTotal.Size = New System.Drawing.Size(87, 23)
         Me.lblTotal.TabIndex = 22
         Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -737,20 +701,18 @@ Partial Class Frm008_Compras
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(573, 507)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(430, 412)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(47, 17)
+        Me.Label11.Size = New System.Drawing.Size(39, 13)
         Me.Label11.TabIndex = 23
         Me.Label11.Text = "I.V.A."
         '
         'lblIgv
         '
         Me.lblIgv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblIgv.Location = New System.Drawing.Point(637, 498)
-        Me.lblIgv.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblIgv.Location = New System.Drawing.Point(478, 405)
         Me.lblIgv.Name = "lblIgv"
-        Me.lblIgv.Size = New System.Drawing.Size(115, 28)
+        Me.lblIgv.Size = New System.Drawing.Size(87, 23)
         Me.lblIgv.TabIndex = 22
         Me.lblIgv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -758,20 +720,18 @@ Partial Class Frm008_Compras
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(784, 505)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(588, 410)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(100, 17)
+        Me.Label12.Size = New System.Drawing.Size(80, 13)
         Me.Label12.TabIndex = 24
         Me.Label12.Text = "SUB TOTAL:"
         '
         'lblSubTotal
         '
         Me.lblSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblSubTotal.Location = New System.Drawing.Point(899, 498)
-        Me.lblSubTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSubTotal.Location = New System.Drawing.Point(674, 405)
         Me.lblSubTotal.Name = "lblSubTotal"
-        Me.lblSubTotal.Size = New System.Drawing.Size(115, 28)
+        Me.lblSubTotal.Size = New System.Drawing.Size(87, 23)
         Me.lblSubTotal.TabIndex = 22
         Me.lblSubTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -781,11 +741,10 @@ Partial Class Frm008_Compras
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 49)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabControl1.Location = New System.Drawing.Point(0, 40)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1291, 719)
+        Me.TabControl1.Size = New System.Drawing.Size(968, 584)
         Me.TabControl1.TabIndex = 26
         '
         'TabPage1
@@ -797,25 +756,25 @@ Partial Class Frm008_Compras
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.GroupBox3)
         Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
+        Me.TabPage1.Controls.Add(Me.dgv_compras)
         Me.TabPage1.Controls.Add(Me.lblSubTotal)
         Me.TabPage1.Controls.Add(Me.lblIgv)
         Me.TabPage1.Controls.Add(Me.lblTotal)
         Me.TabPage1.Controls.Add(Me.Label10)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage1.Size = New System.Drawing.Size(1283, 690)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(960, 558)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Realizar Compras"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(59, 505)
+        Me.Button1.Location = New System.Drawing.Point(44, 410)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(56, 19)
         Me.Button1.TabIndex = 27
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
@@ -823,11 +782,9 @@ Partial Class Frm008_Compras
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.btnGuardar)
-        Me.GroupBox4.Location = New System.Drawing.Point(828, 180)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox4.Location = New System.Drawing.Point(621, 146)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox4.Size = New System.Drawing.Size(403, 153)
+        Me.GroupBox4.Size = New System.Drawing.Size(302, 124)
         Me.GroupBox4.TabIndex = 26
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Opciones"
@@ -844,11 +801,10 @@ Partial Class Frm008_Compras
         Me.TabPage2.Controls.Add(Me.Label19)
         Me.TabPage2.Controls.Add(Me.dtgvListadoDetalle)
         Me.TabPage2.Controls.Add(Me.dtgvListadoCompras)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage2.Size = New System.Drawing.Size(1283, 690)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(960, 558)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listado de Compras"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -856,11 +812,9 @@ Partial Class Frm008_Compras
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.btnConsultar)
-        Me.GroupBox6.Location = New System.Drawing.Point(975, 12)
-        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox6.Location = New System.Drawing.Point(731, 10)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox6.Size = New System.Drawing.Size(265, 80)
+        Me.GroupBox6.Size = New System.Drawing.Size(199, 65)
         Me.GroupBox6.TabIndex = 50
         Me.GroupBox6.TabStop = False
         '
@@ -872,10 +826,9 @@ Partial Class Frm008_Compras
         Me.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConsultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConsultar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnConsultar.Location = New System.Drawing.Point(29, 22)
-        Me.btnConsultar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnConsultar.Location = New System.Drawing.Point(22, 18)
         Me.btnConsultar.Name = "btnConsultar"
-        Me.btnConsultar.Size = New System.Drawing.Size(207, 43)
+        Me.btnConsultar.Size = New System.Drawing.Size(155, 35)
         Me.btnConsultar.TabIndex = 47
         Me.btnConsultar.Text = "&Consultar"
         Me.btnConsultar.UseVisualStyleBackColor = False
@@ -888,11 +841,9 @@ Partial Class Frm008_Compras
         Me.GroupBox5.Controls.Add(Me.Label13)
         Me.GroupBox5.Controls.Add(Me.dtpFechaFinal)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(36, 12)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox5.Location = New System.Drawing.Point(27, 10)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox5.Size = New System.Drawing.Size(931, 80)
+        Me.GroupBox5.Size = New System.Drawing.Size(698, 65)
         Me.GroupBox5.TabIndex = 49
         Me.GroupBox5.TabStop = False
         '
@@ -900,19 +851,17 @@ Partial Class Frm008_Compras
         '
         Me.dtpFechaInicial.Enabled = False
         Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicial.Location = New System.Drawing.Point(300, 30)
-        Me.dtpFechaInicial.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpFechaInicial.Location = New System.Drawing.Point(225, 24)
         Me.dtpFechaInicial.Name = "dtpFechaInicial"
-        Me.dtpFechaInicial.Size = New System.Drawing.Size(225, 24)
+        Me.dtpFechaInicial.Size = New System.Drawing.Size(170, 21)
         Me.dtpFechaInicial.TabIndex = 45
         '
         'ckbConsultar
         '
         Me.ckbConsultar.AutoSize = True
-        Me.ckbConsultar.Location = New System.Drawing.Point(25, 33)
-        Me.ckbConsultar.Margin = New System.Windows.Forms.Padding(4)
+        Me.ckbConsultar.Location = New System.Drawing.Point(19, 27)
         Me.ckbConsultar.Name = "ckbConsultar"
-        Me.ckbConsultar.Size = New System.Drawing.Size(94, 22)
+        Me.ckbConsultar.Size = New System.Drawing.Size(78, 19)
         Me.ckbConsultar.TabIndex = 48
         Me.ckbConsultar.Text = "Consultar"
         Me.ckbConsultar.UseVisualStyleBackColor = True
@@ -920,20 +869,18 @@ Partial Class Frm008_Compras
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(187, 34)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label20.Location = New System.Drawing.Point(140, 28)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(93, 18)
+        Me.Label20.Size = New System.Drawing.Size(79, 15)
         Me.Label20.TabIndex = 43
         Me.Label20.Text = "Fecha Inicial:"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(553, 34)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Location = New System.Drawing.Point(415, 28)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(88, 18)
+        Me.Label13.Size = New System.Drawing.Size(74, 15)
         Me.Label13.TabIndex = 46
         Me.Label13.Text = "Fecha Final:"
         '
@@ -941,20 +888,18 @@ Partial Class Frm008_Compras
         '
         Me.dtpFechaFinal.Enabled = False
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(668, 30)
-        Me.dtpFechaFinal.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(501, 24)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
-        Me.dtpFechaFinal.Size = New System.Drawing.Size(225, 24)
+        Me.dtpFechaFinal.Size = New System.Drawing.Size(170, 21)
         Me.dtpFechaFinal.TabIndex = 44
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(576, 450)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Location = New System.Drawing.Point(432, 366)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(100, 17)
+        Me.Label14.Size = New System.Drawing.Size(80, 13)
         Me.Label14.TabIndex = 42
         Me.Label14.Text = "SUB TOTAL:"
         '
@@ -962,40 +907,36 @@ Partial Class Frm008_Compras
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(839, 450)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label15.Location = New System.Drawing.Point(629, 366)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(42, 17)
+        Me.Label15.Size = New System.Drawing.Size(35, 13)
         Me.Label15.TabIndex = 41
         Me.Label15.Text = "I.V.A"
         '
         'lblSubTotal2
         '
         Me.lblSubTotal2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblSubTotal2.Location = New System.Drawing.Point(691, 444)
-        Me.lblSubTotal2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblSubTotal2.Location = New System.Drawing.Point(518, 361)
         Me.lblSubTotal2.Name = "lblSubTotal2"
-        Me.lblSubTotal2.Size = New System.Drawing.Size(115, 28)
+        Me.lblSubTotal2.Size = New System.Drawing.Size(87, 23)
         Me.lblSubTotal2.TabIndex = 38
         Me.lblSubTotal2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblIgv2
         '
         Me.lblIgv2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblIgv2.Location = New System.Drawing.Point(900, 443)
-        Me.lblIgv2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblIgv2.Location = New System.Drawing.Point(675, 360)
         Me.lblIgv2.Name = "lblIgv2"
-        Me.lblIgv2.Size = New System.Drawing.Size(115, 28)
+        Me.lblIgv2.Size = New System.Drawing.Size(87, 23)
         Me.lblIgv2.TabIndex = 39
         Me.lblIgv2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblTotal2
         '
         Me.lblTotal2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblTotal2.Location = New System.Drawing.Point(1117, 443)
-        Me.lblTotal2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTotal2.Location = New System.Drawing.Point(838, 360)
         Me.lblTotal2.Name = "lblTotal2"
-        Me.lblTotal2.Size = New System.Drawing.Size(115, 28)
+        Me.lblTotal2.Size = New System.Drawing.Size(87, 23)
         Me.lblTotal2.TabIndex = 40
         Me.lblTotal2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -1003,10 +944,9 @@ Partial Class Frm008_Compras
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(1043, 449)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label19.Location = New System.Drawing.Point(782, 365)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(64, 17)
+        Me.Label19.Size = New System.Drawing.Size(51, 13)
         Me.Label19.TabIndex = 37
         Me.Label19.Text = "TOTAL:"
         '
@@ -1016,11 +956,10 @@ Partial Class Frm008_Compras
         Me.dtgvListadoDetalle.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dtgvListadoDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgvListadoDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
-        Me.dtgvListadoDetalle.Location = New System.Drawing.Point(36, 266)
-        Me.dtgvListadoDetalle.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtgvListadoDetalle.Location = New System.Drawing.Point(27, 216)
         Me.dtgvListadoDetalle.Name = "dtgvListadoDetalle"
         Me.dtgvListadoDetalle.RowHeadersWidth = 51
-        Me.dtgvListadoDetalle.Size = New System.Drawing.Size(1204, 155)
+        Me.dtgvListadoDetalle.Size = New System.Drawing.Size(903, 126)
         Me.dtgvListadoDetalle.TabIndex = 3
         '
         'DataGridViewTextBoxColumn1
@@ -1102,11 +1041,10 @@ Partial Class Frm008_Compras
         Me.dtgvListadoCompras.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dtgvListadoCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtgvListadoCompras.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.Column6})
-        Me.dtgvListadoCompras.Location = New System.Drawing.Point(36, 110)
-        Me.dtgvListadoCompras.Margin = New System.Windows.Forms.Padding(4)
+        Me.dtgvListadoCompras.Location = New System.Drawing.Point(27, 89)
         Me.dtgvListadoCompras.Name = "dtgvListadoCompras"
         Me.dtgvListadoCompras.RowHeadersWidth = 51
-        Me.dtgvListadoCompras.Size = New System.Drawing.Size(1204, 149)
+        Me.dtgvListadoCompras.Size = New System.Drawing.Size(903, 121)
         Me.dtgvListadoCompras.TabIndex = 2
         '
         'DataGridViewTextBoxColumn9
@@ -1179,10 +1117,11 @@ Partial Class Frm008_Compras
         Me.TabPage3.Controls.Add(Me.lb_total)
         Me.TabPage3.Controls.Add(Me.Label29)
         Me.TabPage3.Controls.Add(Me.dgv_creditos)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TabPage3.Size = New System.Drawing.Size(1283, 690)
+        Me.TabPage3.Size = New System.Drawing.Size(960, 558)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Listado de Credito"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1190,11 +1129,9 @@ Partial Class Frm008_Compras
         'GroupBox7
         '
         Me.GroupBox7.Controls.Add(Me.btn_abonar)
-        Me.GroupBox7.Location = New System.Drawing.Point(986, 25)
-        Me.GroupBox7.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox7.Location = New System.Drawing.Point(740, 20)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox7.Size = New System.Drawing.Size(265, 236)
+        Me.GroupBox7.Size = New System.Drawing.Size(199, 192)
         Me.GroupBox7.TabIndex = 60
         Me.GroupBox7.TabStop = False
         '
@@ -1205,10 +1142,9 @@ Partial Class Frm008_Compras
         Me.btn_abonar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_abonar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_abonar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btn_abonar.Location = New System.Drawing.Point(30, 95)
-        Me.btn_abonar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btn_abonar.Location = New System.Drawing.Point(22, 77)
         Me.btn_abonar.Name = "btn_abonar"
-        Me.btn_abonar.Size = New System.Drawing.Size(207, 43)
+        Me.btn_abonar.Size = New System.Drawing.Size(155, 35)
         Me.btn_abonar.TabIndex = 48
         Me.btn_abonar.Text = "Abonar"
         Me.btn_abonar.UseVisualStyleBackColor = False
@@ -1227,106 +1163,94 @@ Partial Class Frm008_Compras
         Me.GroupBox8.Controls.Add(Me.rbnNDoc)
         Me.GroupBox8.Controls.Add(Me.lb_monto_abono)
         Me.GroupBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox8.Location = New System.Drawing.Point(47, 25)
-        Me.GroupBox8.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox8.Location = New System.Drawing.Point(35, 20)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox8.Size = New System.Drawing.Size(931, 236)
+        Me.GroupBox8.Size = New System.Drawing.Size(698, 192)
         Me.GroupBox8.TabIndex = 59
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Abonos"
         '
         'tb_fecha
         '
-        Me.tb_fecha.Location = New System.Drawing.Point(636, 123)
-        Me.tb_fecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_fecha.Location = New System.Drawing.Point(477, 100)
         Me.tb_fecha.Name = "tb_fecha"
         Me.tb_fecha.ReadOnly = True
-        Me.tb_fecha.Size = New System.Drawing.Size(251, 24)
+        Me.tb_fecha.Size = New System.Drawing.Size(189, 21)
         Me.tb_fecha.TabIndex = 71
         '
         'lb_fecha
         '
         Me.lb_fecha.AutoSize = True
-        Me.lb_fecha.Location = New System.Drawing.Point(496, 129)
-        Me.lb_fecha.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_fecha.Location = New System.Drawing.Point(372, 105)
         Me.lb_fecha.Name = "lb_fecha"
-        Me.lb_fecha.Size = New System.Drawing.Size(53, 18)
+        Me.lb_fecha.Size = New System.Drawing.Size(44, 15)
         Me.lb_fecha.TabIndex = 70
         Me.lb_fecha.Text = "Fecha:"
         '
         'tb_comprobante
         '
-        Me.tb_comprobante.Location = New System.Drawing.Point(636, 78)
-        Me.tb_comprobante.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_comprobante.Location = New System.Drawing.Point(477, 63)
         Me.tb_comprobante.Name = "tb_comprobante"
-        Me.tb_comprobante.Size = New System.Drawing.Size(251, 24)
+        Me.tb_comprobante.Size = New System.Drawing.Size(189, 21)
         Me.tb_comprobante.TabIndex = 67
         '
         'lb_comprobante
         '
         Me.lb_comprobante.AutoSize = True
-        Me.lb_comprobante.Location = New System.Drawing.Point(482, 81)
-        Me.lb_comprobante.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_comprobante.Location = New System.Drawing.Point(362, 66)
         Me.lb_comprobante.Name = "lb_comprobante"
-        Me.lb_comprobante.Size = New System.Drawing.Size(124, 18)
+        Me.lb_comprobante.Size = New System.Drawing.Size(102, 15)
         Me.lb_comprobante.TabIndex = 66
         Me.lb_comprobante.Text = "N° Comprobante:"
         '
         'tb_monto_actual
         '
-        Me.tb_monto_actual.Location = New System.Drawing.Point(242, 129)
-        Me.tb_monto_actual.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_monto_actual.Location = New System.Drawing.Point(182, 105)
         Me.tb_monto_actual.Name = "tb_monto_actual"
         Me.tb_monto_actual.ReadOnly = True
-        Me.tb_monto_actual.Size = New System.Drawing.Size(134, 24)
+        Me.tb_monto_actual.Size = New System.Drawing.Size(102, 21)
         Me.tb_monto_actual.TabIndex = 65
         '
         'lb_monto_actual
         '
         Me.lb_monto_actual.AutoSize = True
-        Me.lb_monto_actual.Location = New System.Drawing.Point(88, 132)
-        Me.lb_monto_actual.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_monto_actual.Location = New System.Drawing.Point(66, 107)
         Me.lb_monto_actual.Name = "lb_monto_actual"
-        Me.lb_monto_actual.Size = New System.Drawing.Size(121, 18)
+        Me.lb_monto_actual.Size = New System.Drawing.Size(101, 15)
         Me.lb_monto_actual.TabIndex = 64
         Me.lb_monto_actual.Text = "Monto del actual:"
         '
         'txtDatos
         '
-        Me.txtDatos.Location = New System.Drawing.Point(58, 43)
-        Me.txtDatos.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtDatos.Location = New System.Drawing.Point(44, 35)
         Me.txtDatos.Name = "txtDatos"
-        Me.txtDatos.Size = New System.Drawing.Size(829, 24)
+        Me.txtDatos.Size = New System.Drawing.Size(623, 21)
         Me.txtDatos.TabIndex = 61
         '
         'rbnNombre
         '
         Me.rbnNombre.AutoSize = True
-        Me.rbnNombre.Location = New System.Drawing.Point(336, 12)
-        Me.rbnNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbnNombre.Location = New System.Drawing.Point(252, 10)
         Me.rbnNombre.Name = "rbnNombre"
-        Me.rbnNombre.Size = New System.Drawing.Size(154, 22)
+        Me.rbnNombre.Size = New System.Drawing.Size(129, 19)
         Me.rbnNombre.TabIndex = 63
         Me.rbnNombre.Text = "Nombre / Apellidos"
         Me.rbnNombre.UseVisualStyleBackColor = True
         '
         'tb_monto_abono
         '
-        Me.tb_monto_abono.Location = New System.Drawing.Point(242, 78)
-        Me.tb_monto_abono.Margin = New System.Windows.Forms.Padding(4)
+        Me.tb_monto_abono.Location = New System.Drawing.Point(182, 63)
         Me.tb_monto_abono.Name = "tb_monto_abono"
-        Me.tb_monto_abono.Size = New System.Drawing.Size(134, 24)
+        Me.tb_monto_abono.Size = New System.Drawing.Size(102, 21)
         Me.tb_monto_abono.TabIndex = 62
         '
         'rbnNDoc
         '
         Me.rbnNDoc.AutoSize = True
         Me.rbnNDoc.Checked = True
-        Me.rbnNDoc.Location = New System.Drawing.Point(91, 13)
-        Me.rbnNDoc.Margin = New System.Windows.Forms.Padding(4)
+        Me.rbnNDoc.Location = New System.Drawing.Point(68, 11)
         Me.rbnNDoc.Name = "rbnNDoc"
-        Me.rbnNDoc.Size = New System.Drawing.Size(172, 22)
+        Me.rbnNDoc.Size = New System.Drawing.Size(145, 19)
         Me.rbnNDoc.TabIndex = 62
         Me.rbnNDoc.TabStop = True
         Me.rbnNDoc.Text = "Número Identificacion"
@@ -1335,10 +1259,9 @@ Partial Class Frm008_Compras
         'lb_monto_abono
         '
         Me.lb_monto_abono.AutoSize = True
-        Me.lb_monto_abono.Location = New System.Drawing.Point(88, 84)
-        Me.lb_monto_abono.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_monto_abono.Location = New System.Drawing.Point(66, 68)
         Me.lb_monto_abono.Name = "lb_monto_abono"
-        Me.lb_monto_abono.Size = New System.Drawing.Size(124, 18)
+        Me.lb_monto_abono.Size = New System.Drawing.Size(103, 15)
         Me.lb_monto_abono.TabIndex = 61
         Me.lb_monto_abono.Text = "Monto del abono:"
         '
@@ -1346,10 +1269,9 @@ Partial Class Frm008_Compras
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(587, 484)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label24.Location = New System.Drawing.Point(440, 393)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(100, 17)
+        Me.Label24.Size = New System.Drawing.Size(80, 13)
         Me.Label24.TabIndex = 58
         Me.Label24.Text = "SUB TOTAL:"
         '
@@ -1357,40 +1279,36 @@ Partial Class Frm008_Compras
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(850, 484)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label25.Location = New System.Drawing.Point(638, 393)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(42, 17)
+        Me.Label25.Size = New System.Drawing.Size(35, 13)
         Me.Label25.TabIndex = 57
         Me.Label25.Text = "I.V.A"
         '
         'lb_subtotal
         '
         Me.lb_subtotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lb_subtotal.Location = New System.Drawing.Point(702, 478)
-        Me.lb_subtotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_subtotal.Location = New System.Drawing.Point(526, 388)
         Me.lb_subtotal.Name = "lb_subtotal"
-        Me.lb_subtotal.Size = New System.Drawing.Size(115, 28)
+        Me.lb_subtotal.Size = New System.Drawing.Size(87, 23)
         Me.lb_subtotal.TabIndex = 54
         Me.lb_subtotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lb_iva
         '
         Me.lb_iva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lb_iva.Location = New System.Drawing.Point(911, 477)
-        Me.lb_iva.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_iva.Location = New System.Drawing.Point(683, 388)
         Me.lb_iva.Name = "lb_iva"
-        Me.lb_iva.Size = New System.Drawing.Size(115, 28)
+        Me.lb_iva.Size = New System.Drawing.Size(87, 23)
         Me.lb_iva.TabIndex = 55
         Me.lb_iva.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lb_total
         '
         Me.lb_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lb_total.Location = New System.Drawing.Point(1128, 477)
-        Me.lb_total.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lb_total.Location = New System.Drawing.Point(846, 388)
         Me.lb_total.Name = "lb_total"
-        Me.lb_total.Size = New System.Drawing.Size(115, 28)
+        Me.lb_total.Size = New System.Drawing.Size(87, 23)
         Me.lb_total.TabIndex = 56
         Me.lb_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -1398,10 +1316,9 @@ Partial Class Frm008_Compras
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(1054, 483)
-        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Location = New System.Drawing.Point(790, 392)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(64, 17)
+        Me.Label29.Size = New System.Drawing.Size(51, 13)
         Me.Label29.TabIndex = 53
         Me.Label29.Text = "TOTAL:"
         '
@@ -1410,12 +1327,11 @@ Partial Class Frm008_Compras
         Me.dgv_creditos.AllowUserToAddRows = False
         Me.dgv_creditos.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dgv_creditos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_creditos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.Plazo, Me.Cuota})
-        Me.dgv_creditos.Location = New System.Drawing.Point(47, 310)
-        Me.dgv_creditos.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgv_creditos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.Plazo, Me.Cuota, Me.Opción})
+        Me.dgv_creditos.Location = New System.Drawing.Point(35, 252)
         Me.dgv_creditos.Name = "dgv_creditos"
         Me.dgv_creditos.RowHeadersWidth = 51
-        Me.dgv_creditos.Size = New System.Drawing.Size(1204, 149)
+        Me.dgv_creditos.Size = New System.Drawing.Size(903, 121)
         Me.dgv_creditos.TabIndex = 51
         '
         'DataGridViewTextBoxColumn22
@@ -1491,34 +1407,37 @@ Partial Class Frm008_Compras
         Me.Cuota.Name = "Cuota"
         Me.Cuota.Width = 125
         '
+        'Opción
+        '
+        Me.Opción.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Opción.HeaderText = "Opción"
+        Me.Opción.Name = "Opción"
+        '
         'bordeIzquierda
         '
         Me.bordeIzquierda.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeIzquierda.Dock = System.Windows.Forms.DockStyle.Left
-        Me.bordeIzquierda.Location = New System.Drawing.Point(0, 49)
-        Me.bordeIzquierda.Margin = New System.Windows.Forms.Padding(4)
+        Me.bordeIzquierda.Location = New System.Drawing.Point(0, 40)
         Me.bordeIzquierda.Name = "bordeIzquierda"
-        Me.bordeIzquierda.Size = New System.Drawing.Size(3, 719)
+        Me.bordeIzquierda.Size = New System.Drawing.Size(2, 584)
         Me.bordeIzquierda.TabIndex = 255
         '
         'bordeDerecha
         '
         Me.bordeDerecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeDerecha.Dock = System.Windows.Forms.DockStyle.Right
-        Me.bordeDerecha.Location = New System.Drawing.Point(1288, 49)
-        Me.bordeDerecha.Margin = New System.Windows.Forms.Padding(4)
+        Me.bordeDerecha.Location = New System.Drawing.Point(966, 40)
         Me.bordeDerecha.Name = "bordeDerecha"
-        Me.bordeDerecha.Size = New System.Drawing.Size(3, 719)
+        Me.bordeDerecha.Size = New System.Drawing.Size(2, 584)
         Me.bordeDerecha.TabIndex = 256
         '
         'bordeInferior
         '
         Me.bordeInferior.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
         Me.bordeInferior.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.bordeInferior.Location = New System.Drawing.Point(3, 766)
-        Me.bordeInferior.Margin = New System.Windows.Forms.Padding(4)
+        Me.bordeInferior.Location = New System.Drawing.Point(2, 622)
         Me.bordeInferior.Name = "bordeInferior"
-        Me.bordeInferior.Size = New System.Drawing.Size(1285, 2)
+        Me.bordeInferior.Size = New System.Drawing.Size(964, 2)
         Me.bordeInferior.TabIndex = 257
         '
         'ErrorProvider1
@@ -1528,10 +1447,9 @@ Partial Class Frm008_Compras
         'ptbIcon
         '
         Me.ptbIcon.Image = Global.CapaPresentacion.My.Resources.Resources.ic_Compras
-        Me.ptbIcon.Location = New System.Drawing.Point(15, 5)
-        Me.ptbIcon.Margin = New System.Windows.Forms.Padding(4)
+        Me.ptbIcon.Location = New System.Drawing.Point(11, 4)
         Me.ptbIcon.Name = "ptbIcon"
-        Me.ptbIcon.Size = New System.Drawing.Size(33, 32)
+        Me.ptbIcon.Size = New System.Drawing.Size(25, 26)
         Me.ptbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbIcon.TabIndex = 162
         Me.ptbIcon.TabStop = False
@@ -1541,10 +1459,10 @@ Partial Class Frm008_Compras
         Me.lblTitulo.AutoSize = True
         Me.lblTitulo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblTitulo.Location = New System.Drawing.Point(59, 12)
-        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        Me.lblTitulo.Location = New System.Drawing.Point(44, 10)
+        Me.lblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(88, 22)
+        Me.lblTitulo.Size = New System.Drawing.Size(69, 17)
         Me.lblTitulo.TabIndex = 205
         Me.lblTitulo.Text = "Compras"
         '
@@ -1555,10 +1473,9 @@ Partial Class Frm008_Compras
         Me.lkbCerrar.Dock = System.Windows.Forms.DockStyle.Right
         Me.lkbCerrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lkbCerrar.ForeColor = System.Drawing.SystemColors.Window
-        Me.lkbCerrar.Location = New System.Drawing.Point(1250, 0)
-        Me.lkbCerrar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lkbCerrar.Location = New System.Drawing.Point(937, 0)
         Me.lkbCerrar.Name = "lkbCerrar"
-        Me.lkbCerrar.Size = New System.Drawing.Size(41, 49)
+        Me.lkbCerrar.Size = New System.Drawing.Size(31, 40)
         Me.lkbCerrar.TabIndex = 206
         Me.lkbCerrar.Text = "X"
         Me.lkbCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -1571,24 +1488,22 @@ Partial Class Frm008_Compras
         Me.Panel_cabecera.Controls.Add(Me.ptbIcon)
         Me.Panel_cabecera.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel_cabecera.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_cabecera.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel_cabecera.Name = "Panel_cabecera"
-        Me.Panel_cabecera.Size = New System.Drawing.Size(1291, 49)
+        Me.Panel_cabecera.Size = New System.Drawing.Size(968, 40)
         Me.Panel_cabecera.TabIndex = 254
         '
         'Frm008_Compras
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1291, 768)
+        Me.ClientSize = New System.Drawing.Size(968, 624)
         Me.Controls.Add(Me.bordeInferior)
         Me.Controls.Add(Me.bordeDerecha)
         Me.Controls.Add(Me.bordeIzquierda)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel_cabecera)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Frm008_Compras"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmCompras"
@@ -1599,7 +1514,7 @@ Partial Class Frm008_Compras
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         CType(Me.txtCantidad, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_compras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -1648,7 +1563,7 @@ Partial Class Frm008_Compras
     Friend WithEvents txtPrecioCompra As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgv_compras As System.Windows.Forms.DataGridView
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents lblTotal As System.Windows.Forms.Label
@@ -1735,14 +1650,6 @@ Partial Class Frm008_Compras
     Friend WithEvents lb_monto_actual As Label
     Friend WithEvents tb_monto_abono As TextBox
     Friend WithEvents lb_monto_abono As Label
-    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
-    Friend WithEvents Plazo As DataGridViewTextBoxColumn
-    Friend WithEvents Cuota As DataGridViewTextBoxColumn
     Friend WithEvents tb_comprobante As TextBox
     Friend WithEvents lb_comprobante As Label
     Friend WithEvents tb_fecha As TextBox
@@ -1753,4 +1660,13 @@ Partial Class Frm008_Compras
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
+    Friend WithEvents Plazo As DataGridViewTextBoxColumn
+    Friend WithEvents Cuota As DataGridViewTextBoxColumn
+    Friend WithEvents Opción As DataGridViewButtonColumn
 End Class

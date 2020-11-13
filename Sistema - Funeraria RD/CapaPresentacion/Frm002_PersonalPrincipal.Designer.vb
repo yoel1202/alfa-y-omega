@@ -23,9 +23,9 @@ Partial Class Frm002_PersonalPrincipal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel_cabecera = New System.Windows.Forms.Panel()
         Me.lkbCerrar = New System.Windows.Forms.Label()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -55,6 +55,18 @@ Partial Class Frm002_PersonalPrincipal
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.btnGuardarUsuario = New System.Windows.Forms.Button()
         Me.dtgvUsuario = New System.Windows.Forms.DataGridView()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Personal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.planes = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.difunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Provedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Compra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Venta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.txtClave = New System.Windows.Forms.TextBox()
         Me.txtUsuario = New System.Windows.Forms.TextBox()
@@ -93,29 +105,17 @@ Partial Class Frm002_PersonalPrincipal
         Me.rbnNombre = New System.Windows.Forms.RadioButton()
         Me.dgv_personal = New System.Windows.Forms.DataGridView()
         Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Identificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombres = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Apellidos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Teléfono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Estado = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Button = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Usuario = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Personal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.planes = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.difunto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Provedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Compra = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Venta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel_cabecera.SuspendLayout()
         CType(Me.ptbIcon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -430,6 +430,72 @@ Partial Class Frm002_PersonalPrincipal
         Me.dtgvUsuario.Name = "dtgvUsuario"
         Me.dtgvUsuario.Size = New System.Drawing.Size(1116, 150)
         Me.dtgvUsuario.TabIndex = 7
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "CodigoPersonal"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Visible = False
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Personal"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 270
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Usuario"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Contraseña"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Personal
+        '
+        Me.Personal.HeaderText = "Personal"
+        Me.Personal.Name = "Personal"
+        '
+        'producto
+        '
+        Me.producto.HeaderText = "Productos y Servicios"
+        Me.producto.Name = "producto"
+        '
+        'planes
+        '
+        Me.planes.HeaderText = "Planes Funerarios"
+        Me.planes.Name = "planes"
+        '
+        'cliente
+        '
+        Me.cliente.HeaderText = "Clientes"
+        Me.cliente.Name = "cliente"
+        '
+        'difunto
+        '
+        Me.difunto.HeaderText = "Difuntos"
+        Me.difunto.Name = "difunto"
+        '
+        'Provedor
+        '
+        Me.Provedor.HeaderText = "Provedores"
+        Me.Provedor.Name = "Provedor"
+        '
+        'Compra
+        '
+        Me.Compra.HeaderText = "Compras"
+        Me.Compra.Name = "Compra"
+        '
+        'Venta
+        '
+        Me.Venta.HeaderText = "Ventas"
+        Me.Venta.Name = "Venta"
         '
         'GroupBox3
         '
@@ -801,35 +867,35 @@ Partial Class Frm002_PersonalPrincipal
         Me.dgv_personal.AllowUserToAddRows = False
         Me.dgv_personal.AllowUserToDeleteRows = False
         Me.dgv_personal.BackgroundColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_personal.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_personal.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv_personal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_personal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Column2, Me.Nombres, Me.Apellidos, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Estado, Me.Button, Me.Usuario})
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv_personal.DefaultCellStyle = DataGridViewCellStyle11
+        Me.dgv_personal.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Identificacion, Me.Nombres, Me.Apellidos, Me.Column5, Me.Column6, Me.Teléfono, Me.Column8, Me.Estado, Me.Button, Me.Usuario})
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_personal.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgv_personal.Location = New System.Drawing.Point(27, 123)
         Me.dgv_personal.Name = "dgv_personal"
         Me.dgv_personal.ReadOnly = True
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv_personal.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv_personal.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgv_personal.Size = New System.Drawing.Size(1114, 271)
         Me.dgv_personal.TabIndex = 7
         '
@@ -840,12 +906,12 @@ Partial Class Frm002_PersonalPrincipal
         Me.Codigo.ReadOnly = True
         Me.Codigo.Visible = False
         '
-        'Column2
+        'Identificacion
         '
-        Me.Column2.HeaderText = "Identificacion"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 70
+        Me.Identificacion.HeaderText = "Identificacion"
+        Me.Identificacion.Name = "Identificacion"
+        Me.Identificacion.ReadOnly = True
+        Me.Identificacion.Width = 70
         '
         'Nombres
         '
@@ -874,12 +940,12 @@ Partial Class Frm002_PersonalPrincipal
         Me.Column6.ReadOnly = True
         Me.Column6.Width = 170
         '
-        'Column7
+        'Teléfono
         '
-        Me.Column7.HeaderText = "Teléfono"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 70
+        Me.Teléfono.HeaderText = "Teléfono"
+        Me.Teléfono.Name = "Teléfono"
+        Me.Teléfono.ReadOnly = True
+        Me.Teléfono.Width = 70
         '
         'Column8
         '
@@ -926,72 +992,6 @@ Partial Class Frm002_PersonalPrincipal
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(1175, 463)
         Me.TabControl1.TabIndex = 2
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "CodigoPersonal"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Visible = False
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Personal"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 270
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Usuario"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Contraseña"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Personal
-        '
-        Me.Personal.HeaderText = "Personal"
-        Me.Personal.Name = "Personal"
-        '
-        'producto
-        '
-        Me.producto.HeaderText = "Productos y Servicios"
-        Me.producto.Name = "producto"
-        '
-        'planes
-        '
-        Me.planes.HeaderText = "Planes Funerarios"
-        Me.planes.Name = "planes"
-        '
-        'cliente
-        '
-        Me.cliente.HeaderText = "Clientes"
-        Me.cliente.Name = "cliente"
-        '
-        'difunto
-        '
-        Me.difunto.HeaderText = "Difuntos"
-        Me.difunto.Name = "difunto"
-        '
-        'Provedor
-        '
-        Me.Provedor.HeaderText = "Provedores"
-        Me.Provedor.Name = "Provedor"
-        '
-        'Compra
-        '
-        Me.Compra.HeaderText = "Compras"
-        Me.Compra.Name = "Compra"
-        '
-        'Venta
-        '
-        Me.Venta.HeaderText = "Ventas"
-        Me.Venta.Name = "Venta"
         '
         'Frm002_PersonalPrincipal
         '
@@ -1100,17 +1100,6 @@ Partial Class Frm002_PersonalPrincipal
     Friend WithEvents cb_personal As ComboBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
-    Friend WithEvents Codigo As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Nombres As DataGridViewTextBoxColumn
-    Friend WithEvents Apellidos As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Estado As DataGridViewButtonColumn
-    Friend WithEvents Button As DataGridViewButtonColumn
-    Friend WithEvents Usuario As DataGridViewButtonColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
@@ -1123,4 +1112,15 @@ Partial Class Frm002_PersonalPrincipal
     Friend WithEvents Provedor As DataGridViewTextBoxColumn
     Friend WithEvents Compra As DataGridViewTextBoxColumn
     Friend WithEvents Venta As DataGridViewTextBoxColumn
+    Friend WithEvents Codigo As DataGridViewTextBoxColumn
+    Friend WithEvents Identificacion As DataGridViewTextBoxColumn
+    Friend WithEvents Nombres As DataGridViewTextBoxColumn
+    Friend WithEvents Apellidos As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Teléfono As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Estado As DataGridViewButtonColumn
+    Friend WithEvents Button As DataGridViewButtonColumn
+    Friend WithEvents Usuario As DataGridViewButtonColumn
 End Class

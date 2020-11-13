@@ -308,7 +308,6 @@ C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\MySql.Data.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\Renci.SshNet.dll
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\System.Buffers.dll
@@ -327,7 +326,6 @@ C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\System.Memory.xml
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.vbprojAssemblyReference.cache
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.Resources.resources
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.vbproj.GenerateResource.cache
 C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.vbproj.CoreCompileInputs.cache
@@ -599,3 +597,4 @@ C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoD
 C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
 C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.xml
 C:\Users\Jerson\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
+C:\Users\HP\Documents\GitHub\alfa-y-omega\Sistema - Funeraria RD\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.vbprojAssemblyReference.cache
